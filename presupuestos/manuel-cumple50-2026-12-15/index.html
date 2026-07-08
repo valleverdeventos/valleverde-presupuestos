@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Presupuesto — VALLEVERDE Eventos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
 <style>
 
 * { box-sizing: border-box; }
@@ -37,11 +40,9 @@ img { max-width: 100%; }
 .vv-feat { display: flex; margin-bottom: 22px; }
 .vv-feat-title { font: 700 14px/1.3 'Poppins', sans-serif; color: #F7F1E6; margin: 0 0 6px; }
 
-table.vv-table { width: 100%; border-collapse: collapse; font: 400 13px/1.5 'Poppins', sans-serif; }
+table.vv-table { width: 100%; border-collapse: collapse; font: 400 13px/1.5 'Poppins', sans-serif; table-layout: fixed; }
 table.vv-table th { text-align: left; font: 600 10px/1.3 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1.5px; color: #E8792B; padding: 9px 8px; border-bottom: 1px solid rgba(247,241,230,0.25); }
 table.vv-table td { padding: 11px 8px; border-bottom: 1px solid rgba(247,241,230,0.12); color: rgba(247,241,230,0.85); }
-table.vv-table { overflow-x: auto; display: block; }
-table.vv-table tbody, table.vv-table tr { display: table; width: 100%; table-layout: fixed; }
 
 .vv-row { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
 .vv-row-photo { flex: 1 1 260px; max-width: 320px; height: 200px; }
@@ -95,12 +96,32 @@ table.vv-table tbody, table.vv-table tr { display: table; width: 100%; table-lay
 .vv-closing-inner { padding: 40px 6vw 56px; display: flex; flex-direction: column; gap: 24px; }
 
 @media (max-width: 700px) {
+  .vv-section { padding: 40px 22px; }
+  .vv-section-inner { padding: 32px 0; }
+  .vv-band { padding: 36px 22px 26px; }
+  .vv-cover-info { padding: 22px 22px 32px; }
+  .vv-closing-inner { padding: 32px 22px 44px; }
+  .vv-title { font-size: clamp(24px,7vw,32px) !important; }
   .vv-grid-2 { grid-template-columns: 1fr; }
   .vv-bar-grid { grid-template-columns: 1fr; }
   .vv-split-text, .vv-split-photo { flex-basis: 100%; }
+  .vv-split-text { padding: 40px 22px; }
   .vv-cover-info { flex-direction: column; }
   .vv-cover-info > div:last-child { text-align: left !important; }
-  table.vv-table { font-size: 12px; }
+  .vv-row { gap: 16px; margin-bottom: 20px; }
+  .vv-row-photo { max-width: 100%; height: 190px; }
+  .vv-menu-row { gap: 24px; }
+  .vv-menu-side { max-width: 100%; }
+  .vv-cover-photo { height: 48vh; min-height: 300px; }
+  .vv-closing-photo { height: 36vh; min-height: 240px; }
+
+  /* Tabla de inversión / capacidad como tarjetas apiladas en mobile */
+  table.vv-table thead { display: none; }
+  table.vv-table, table.vv-table tbody, table.vv-table tr, table.vv-table td { display: block; width: 100%; }
+  table.vv-table tr { margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(247,241,230,0.15); }
+  table.vv-table td { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; border-bottom: none; text-align: right; }
+  table.vv-table td[data-label]::before { content: attr(data-label); font: 600 10px/1.3 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1px; color: rgba(247,241,230,0.5); text-align: left; }
+  table.vv-table td:empty { display: none; }
 }
 
 </style>
@@ -174,10 +195,11 @@ table.vv-table tbody, table.vv-table tr { display: table; width: 100%; table-lay
 
       <div class="vv-eyebrow">Espacio y capacidad</div>
       <table class="vv-table">
-        <tbody><tr><th>Formato</th><th>Capacidad</th><th>Uso recomendado</th></tr>
-        <tr><td>Cóctel / de pie</td><td>90 personas</td><td>Activaciones, networking</td></tr>
-        <tr><td>Mesas banquete</td><td>90 personas</td><td>Casamientos, cenas corporativas</td></tr>
-        <tr><td>Auditorio</td><td>60 personas</td><td>Presentaciones, charlas</td></tr>
+        <thead><tr><th>Formato</th><th>Capacidad</th><th>Uso recomendado</th></tr></thead>
+        <tbody>
+        <tr><td data-label="Formato">Cóctel / de pie</td><td data-label="Capacidad">90 personas</td><td data-label="Uso recomendado">Activaciones, networking</td></tr>
+        <tr><td data-label="Formato">Mesas banquete</td><td data-label="Capacidad">90 personas</td><td data-label="Uso recomendado">Casamientos, cenas corporativas</td></tr>
+        <tr><td data-label="Formato">Auditorio</td><td data-label="Capacidad">60 personas</td><td data-label="Uso recomendado">Presentaciones, charlas</td></tr>
       </tbody></table>
     </div>
   </div>
@@ -471,12 +493,14 @@ table.vv-table tbody, table.vv-table tr { display: table; width: 100%; table-lay
     </div>
     <div class="vv-section-inner" style="padding:44px 0 0;">
       <table class="vv-table">
-        <tr><th>Servicio</th><th>Precio / inv.</th><th>Cant.</th><th>Total</th></tr>
-        <tr><td>Salón</td><td>$27.079</td><td>50</td><td>$1.353.953</td></tr>
-        <tr><td>Barra adultos</td><td>$18.414</td><td>50</td><td>$920.688</td></tr>
-        <tr><td>Finger Food</td><td>$27.079</td><td>50</td><td>$1.353.953</td></tr>
-        <tr><td>Mesa de Postres</td><td>$15.706</td><td>50</td><td>$785.293</td></tr>
-        <tr><td style="font-weight:700; color:#F7F1E6;">Total</td><td></td><td></td><td style="font-weight:700; color:#F7F1E6;">$4.413.887</td></tr>
+        <thead><tr><th>Servicio</th><th>Precio / inv.</th><th>Cant.</th><th>Total</th></tr></thead>
+        <tbody>
+        <tr><td data-label="Servicio">Salón</td><td data-label="Precio / inv.">$27.079</td><td data-label="Cant.">50</td><td data-label="Total">$1.353.953</td></tr>
+        <tr><td data-label="Servicio">Barra adultos</td><td data-label="Precio / inv.">$18.414</td><td data-label="Cant.">50</td><td data-label="Total">$920.688</td></tr>
+        <tr><td data-label="Servicio">Finger Food</td><td data-label="Precio / inv.">$27.079</td><td data-label="Cant.">50</td><td data-label="Total">$1.353.953</td></tr>
+        <tr><td data-label="Servicio">Mesa de Postres</td><td data-label="Precio / inv.">$15.706</td><td data-label="Cant.">50</td><td data-label="Total">$785.293</td></tr>
+        <tr><td data-label="Servicio" style="font-weight:700; color:#F7F1E6;">Total</td><td data-label="Precio / inv."></td><td data-label="Cant."></td><td data-label="Total" style="font-weight:700; color:#F7F1E6;">$4.413.887</td></tr>
+        </tbody>
       </table>
       <p class="vv-body" style="font-size:12px; opacity:0.6; font-style:italic; margin-top:14px;">Valores sujetos a actualización por inflación oficial hasta la fecha del evento.</p>
       <div class="vv-eyebrow" style="margin-top:22px;">Modalidad de pago</div>
