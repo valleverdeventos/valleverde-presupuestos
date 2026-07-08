@@ -2,137 +2,170 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presupuesto — VALLEVERDE Eventos</title>
 <style>
 
-    doc-page:not(:defined) { visibility: hidden; }
-    .vv-doc { color: #F7F1E6; }
-    .vv-page { position: relative; margin: -0.75in -0.75in 0; box-sizing: border-box; min-height: 11in; overflow: hidden; background: #141414; }
-    .vv-page + .vv-page { break-before: page; }
-    .vv-glow { position: absolute; right: 0; bottom: 0; width: 60%; height: 55%; z-index: 0; pointer-events: none; }
-    .vv-glow-warm { background: radial-gradient(circle at 100% 100%, rgba(142,14,62,0.55) 0%, rgba(142,14,62,0.20) 44%, transparent 74%); }
-    .vv-glow-lines { background-image: repeating-linear-gradient(128deg, rgba(247,241,230,0.16) 0px, rgba(247,241,230,0.16) 1px, transparent 1px, transparent 30px); -webkit-mask-image: radial-gradient(circle at 100% 100%, black 0%, transparent 68%); mask-image: radial-gradient(circle at 100% 100%, black 0%, transparent 68%); }
-    .vv-band { position: relative; background: #C7C0B5; padding: 0.55in 0.75in 0.4in; box-sizing: border-box; }
-    .vv-band::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: #E8792B; }
-    .vv-band .vv-title, .vv-band .vv-eyebrow { color: #141414; }
-    .vv-band .vv-body { color: rgba(20,20,20,0.72); }
-    .vv-band .vv-num { color: rgba(20,20,20,0.5); }
-    .vv-num { position: absolute; top: 0.55in; right: 0.75in; font: 600 10px/1.3 'Poppins', sans-serif; letter-spacing: 2px; color: rgba(247,241,230,0.45); z-index: 2; }
-    .vv-title { font: 300 40px/1.15 'Poppins', sans-serif; color: #F7F1E6; margin: 0 0 6px; }
-    .vv-eyebrow { font: 700 11px/1.3 'Poppins', sans-serif; letter-spacing: 2.5px; text-transform: uppercase; color: #E8792B; margin: 0 0 12px; }
-    .vv-body { font: 300 14px/1.65 'Poppins', sans-serif; color: rgba(247,241,230,0.8); margin: 0; }
-    .vv-rule { width: 44px; height: 2px; background: #E8792B; margin: 16px 0 20px; }
-    .vv-photo { background: #1e1e1e; border: 1px dashed rgba(247,241,230,0.22); display: flex; align-items: center; justify-content: center; text-align: center; font: 300 12px/1.5 'Poppins', sans-serif; color: rgba(247,241,230,0.35); box-sizing: border-box; padding: 12px; overflow: hidden; }
-    .vv-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .vv-tri { display: inline-block; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 8px solid #E8792B; margin-right: 12px; flex-shrink: 0; transform: translateY(4px); }
-    .vv-feat { display: flex; margin-bottom: 22px; }
-    .vv-feat-title { font: 700 14px/1.3 'Poppins', sans-serif; color: #F7F1E6; margin: 0 0 6px; }
-    table.vv-table { width: 100%; border-collapse: collapse; font: 400 13px/1.5 'Poppins', sans-serif; }
-    table.vv-table th { text-align: left; font: 600 10px/1.3 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1.5px; color: #E8792B; padding: 9px 8px; border-bottom: 1px solid rgba(247,241,230,0.25); }
-    table.vv-table td { padding: 11px 8px; border-bottom: 1px solid rgba(247,241,230,0.12); color: rgba(247,241,230,0.85); }
-
-    /* --- gastronomy / bar specific --- */
-    .vv-menu-col { display: flex; flex-direction: column; }
-    .vv-menu-tag { display: inline-block; font: 700 10px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; color: #141414; background: #E8792B; padding: 4px 10px; margin-bottom: 12px; }
-    .vv-menu-name { font: 300 22px/1.2 'Poppins', sans-serif; color: #F7F1E6; margin: 0 0 14px; }
-    .vv-menu-sub { font: 600 10px/1.3 'Poppins', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: rgba(247,241,230,0.5); margin: 18px 0 10px; }
-    .vv-menu-list { list-style: none; margin: 0; padding: 0; }
-    .vv-menu-list li { font: 300 13.5px/1.55 'Poppins', sans-serif; color: rgba(247,241,230,0.85); padding: 7px 0; border-bottom: 1px solid rgba(247,241,230,0.1); }
-    .vv-menu-list li:first-child { padding-top: 0; }
-    .vv-menu-note { font: 300 12px/1.55 'Poppins', sans-serif; font-style: italic; color: rgba(247,241,230,0.5); margin-top: 12px; }
-    .vv-menu-row { display: flex; gap: 40px; align-items: flex-start; }
-    .vv-menu-photo-cap { font: 300 11.5px/1.4 'Poppins', sans-serif; font-style: italic; color: rgba(247,241,230,0.5); margin-top: 8px; text-align: center; }
-
-    /* bar tiles — no ingredients, flavor only */
-    .vv-bar-section { margin-bottom: 34px; }
-    .vv-bar-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; }
-    .vv-bar-head .num { font: 700 22px/1 'Poppins', sans-serif; color: #E8792B; }
-    .vv-bar-head .label { font: 700 12px/1.3 'Poppins', sans-serif; letter-spacing: 2.5px; text-transform: uppercase; color: #F7F1E6; }
-    .vv-bar-head .sub { font: 300 12px/1.4 'Poppins', sans-serif; color: rgba(247,241,230,0.55); }
-    .vv-bar-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(247,241,230,0.14); border: 1px solid rgba(247,241,230,0.14); }
-    .vv-bar-tile { background: #141414; padding: 16px 18px; display: flex; flex-direction: column; gap: 9px; min-height: 0.95in; box-sizing: border-box; justify-content: center; }
-    .vv-bar-tile .name { font: 700 15px/1.2 'Poppins', sans-serif; color: #F7F1E6; }
-    .vv-chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
-    .vv-chip { font: 600 9px/1.3 'Poppins', sans-serif; letter-spacing: 1px; text-transform: uppercase; color: rgba(247,241,230,0.7); border: 1px solid rgba(247,241,230,0.25); padding: 3px 8px; }
-    .vv-chip-accent { color: #E8792B; border-color: rgba(232,121,43,0.45); }
-  
-
-/* --- overflow fix: compress bar tiles to fit one page --- */
-.vv-bar-section { margin-bottom: 18px; }
-.vv-bar-tile { padding: 11px 16px; min-height: 0.74in; gap: 6px; }
-.vv-bar-head { margin-bottom: 12px; }
-
-
-@page { size: 8.5in 11in; margin: 0; }
 * { box-sizing: border-box; }
-body { margin: 0; font-family: 'Poppins', Arial, sans-serif; }
-.vv-page { position: relative; margin: 0 !important; width: 8.5in; height: 11in; overflow: hidden; page-break-after: always; }
+html, body { margin: 0; }
+body { font-family: 'Poppins', Arial, sans-serif; background: #141414; }
+.vv-doc { color: #F7F1E6; overflow-x: hidden; }
+img { max-width: 100%; }
+
+.vv-glow { position: absolute; right: 0; bottom: 0; width: 60%; height: 55%; z-index: 0; pointer-events: none; }
+.vv-glow-warm { background: radial-gradient(circle at 100% 100%, rgba(142,14,62,0.55) 0%, rgba(142,14,62,0.20) 44%, transparent 74%); }
+.vv-glow-lines { background-image: repeating-linear-gradient(128deg, rgba(247,241,230,0.16) 0px, rgba(247,241,230,0.16) 1px, transparent 1px, transparent 30px); -webkit-mask-image: radial-gradient(circle at 100% 100%, black 0%, transparent 68%); mask-image: radial-gradient(circle at 100% 100%, black 0%, transparent 68%); }
+
+.vv-section { position: relative; overflow: hidden; background: #141414; padding: 64px 6vw; }
+.vv-section-inner { position: relative; z-index: 2; max-width: 1080px; margin: 0 auto; }
+
+.vv-band { position: relative; background: #C7C0B5; padding: 56px 6vw 40px; overflow: hidden; }
+.vv-band::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: #E8792B; }
+.vv-band-inner { position: relative; z-index: 2; max-width: 1080px; margin: 0 auto; }
+.vv-band .vv-title, .vv-band .vv-eyebrow { color: #141414; }
+.vv-band .vv-body { color: rgba(20,20,20,0.72); }
+
+.vv-title { font: 300 clamp(28px,5vw,42px)/1.15 'Poppins', sans-serif; color: #F7F1E6; margin: 0 0 6px; }
+.vv-eyebrow { font: 700 11px/1.3 'Poppins', sans-serif; letter-spacing: 2.5px; text-transform: uppercase; color: #E8792B; margin: 0 0 12px; }
+.vv-body { font: 300 15px/1.7 'Poppins', sans-serif; color: rgba(247,241,230,0.8); margin: 0; }
+.vv-rule { width: 44px; height: 2px; background: #E8792B; margin: 16px 0 20px; }
+
+.vv-photo { background: #1e1e1e; border: 1px dashed rgba(247,241,230,0.22); overflow: hidden; }
+.vv-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.vv-tri { display: inline-block; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 8px solid #E8792B; margin-right: 12px; flex-shrink: 0; transform: translateY(4px); }
+.vv-feat { display: flex; margin-bottom: 22px; }
+.vv-feat-title { font: 700 14px/1.3 'Poppins', sans-serif; color: #F7F1E6; margin: 0 0 6px; }
+
+table.vv-table { width: 100%; border-collapse: collapse; font: 400 13px/1.5 'Poppins', sans-serif; }
+table.vv-table th { text-align: left; font: 600 10px/1.3 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1.5px; color: #E8792B; padding: 9px 8px; border-bottom: 1px solid rgba(247,241,230,0.25); }
+table.vv-table td { padding: 11px 8px; border-bottom: 1px solid rgba(247,241,230,0.12); color: rgba(247,241,230,0.85); }
+table.vv-table { overflow-x: auto; display: block; }
+table.vv-table tbody, table.vv-table tr { display: table; width: 100%; table-layout: fixed; }
+
+.vv-row { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
+.vv-row-photo { flex: 1 1 260px; max-width: 320px; height: 200px; }
+.vv-row-text { flex: 2 1 320px; }
+
+.vv-menu-col { display: flex; flex-direction: column; }
+.vv-menu-tag { display: inline-block; font: 700 10px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; color: #141414; background: #E8792B; padding: 4px 10px; margin-bottom: 12px; }
+.vv-menu-name { font: 300 24px/1.2 'Poppins', sans-serif; color: #F7F1E6; margin: 0 0 14px; }
+.vv-menu-sub { font: 600 10px/1.3 'Poppins', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: rgba(247,241,230,0.5); margin: 18px 0 10px; }
+.vv-menu-list { list-style: none; margin: 0; padding: 0; }
+.vv-menu-list li { font: 300 13.5px/1.55 'Poppins', sans-serif; color: rgba(247,241,230,0.85); padding: 7px 0; border-bottom: 1px solid rgba(247,241,230,0.1); }
+.vv-menu-list li:first-child { padding-top: 0; }
+.vv-menu-note { font: 300 12px/1.55 'Poppins', sans-serif; font-style: italic; color: rgba(247,241,230,0.5); margin-top: 12px; }
+.vv-menu-row { display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; }
+.vv-menu-main { flex: 2 1 380px; }
+.vv-menu-side { flex: 1 1 220px; max-width: 280px; }
+.vv-menu-side .vv-photo { height: 280px; }
+.vv-menu-photo-cap { font: 300 11.5px/1.4 'Poppins', sans-serif; font-style: italic; color: rgba(247,241,230,0.5); margin-top: 8px; text-align: center; }
+.vv-menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+
+.vv-bar-section { margin-bottom: 28px; }
+.vv-bar-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.vv-bar-head .num { font: 700 22px/1 'Poppins', sans-serif; color: #E8792B; }
+.vv-bar-head .label { font: 700 12px/1.3 'Poppins', sans-serif; letter-spacing: 2.5px; text-transform: uppercase; color: #F7F1E6; }
+.vv-bar-head .sub { font: 300 12px/1.4 'Poppins', sans-serif; color: rgba(247,241,230,0.55); }
+.vv-bar-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(247,241,230,0.14); border: 1px solid rgba(247,241,230,0.14); }
+.vv-bar-tile { background: #141414; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; min-height: 74px; box-sizing: border-box; justify-content: center; }
+.vv-bar-tile .name { font: 700 15px/1.2 'Poppins', sans-serif; color: #F7F1E6; }
+.vv-chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.vv-chip { font: 600 9px/1.3 'Poppins', sans-serif; letter-spacing: 1px; text-transform: uppercase; color: rgba(247,241,230,0.7); border: 1px solid rgba(247,241,230,0.25); padding: 3px 8px; }
+.vv-chip-accent { color: #E8792B; border-color: rgba(232,121,43,0.45); }
+
+.vv-cover-photo { width: 100%; height: 62vh; min-height: 360px; max-height: 640px; overflow: hidden; background: #141414; }
+.vv-cover-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.vv-cover-info { padding: 28px 6vw 44px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+.vv-cover-info .vv-body { font-size: 13.5px; }
+
+.vv-split { display: flex; flex-wrap: wrap; }
+.vv-split-text { flex: 1 1 340px; padding: 56px 6vw; background: #C7C0B5; display: flex; flex-direction: column; justify-content: center; }
+.vv-split-photo { flex: 1 1 340px; min-height: 320px; }
+.vv-split-photo img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 320px; }
+
+.vv-grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px 32px; }
+
+.vv-timeline-row { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 30px; }
+.vv-timeline-col-a { flex: 3 1 320px; }
+.vv-timeline-col-b { flex: 2 1 240px; }
+
+.vv-closing-photo { width: 100%; height: 52vh; min-height: 320px; max-height: 520px; }
+.vv-closing-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.vv-closing-inner { padding: 40px 6vw 56px; display: flex; flex-direction: column; gap: 24px; }
+
+@media (max-width: 700px) {
+  .vv-grid-2 { grid-template-columns: 1fr; }
+  .vv-bar-grid { grid-template-columns: 1fr; }
+  .vv-split-text, .vv-split-photo { flex-basis: 100%; }
+  .vv-cover-info { flex-direction: column; }
+  .vv-cover-info > div:last-child { text-align: left !important; }
+  table.vv-table { font-size: 12px; }
+}
 
 </style>
 </head>
 <body>
 
 <div class="vv-doc">
-  <!-- PAGE 1 — Portada -->
-  <div class="vv-page">
-    <div class="vv-glow vv-glow-warm"></div>
-    <div class="vv-glow vv-glow-lines"></div>
-    <div style="position:absolute; top:0; left:0; right:0; height:78%; overflow:hidden; background:#141414; z-index:2;">
-      <img src="https://drive.google.com/thumbnail?id=1R7AlTgBV2sHSZ0TBN5UmO8IUHCYF8zEC&sz=w1600" alt="Foto de portada" style="width:100%; height:100%;object-fit:contain;object-position:center;display:block;">
+
+  <!-- 1 — Portada -->
+  <div class="vv-section" style="padding:0;">
+    <div class="vv-cover-photo">
+      <img src="https://drive.google.com/thumbnail?id=1R7AlTgBV2sHSZ0TBN5UmO8IUHCYF8zEC&sz=w1600" alt="Foto de portada">
     </div>
-    <div style="position:absolute; left:0; right:0; bottom:0; top:78%; padding:0.35in 0.75in; box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; gap:10px;">
-      <div style="display:flex; justify-content:space-between; align-items:flex-end;">
-        <div class="vv-body" style="font-size:13px;">
-          <div style="font-weight:700; color:#F7F1E6; margin-bottom:2px;">15/12/2026</div>
-          <div>Preparado para MANUEL — Cumple 50</div>
-          <div>50 invitados &middot; 21:00 a 03:00 hs</div>
-          <div style="margin-top:4px;">Vigencia: hasta el 15/11/2026</div>
-        </div>
-        <div class="vv-body" style="font-size:12px; text-align:right;">
-          <div>email: salonvalleverde@gmail.com</div>
-          <div>Teléfono / WhatsApp 291 539-4401</div>
-          <div>Instagram: valleverde_eventos</div>
-        </div>
+    <div class="vv-cover-info">
+      <div class="vv-body">
+        <div style="font-weight:700; color:#F7F1E6; margin-bottom:2px;">15/12/2026</div>
+        <div>Preparado para MANUEL — Cumple 50</div>
+        <div>50 invitados &middot; 21:00 a 03:00 hs</div>
+        <div style="margin-top:4px;">Vigencia: hasta el 15/11/2026</div>
+      </div>
+      <div class="vv-body" style="text-align:right;">
+        <div>email: salonvalleverde@gmail.com</div>
+        <div>Teléfono / WhatsApp 291 539-4401</div>
+        <div>Instagram: valleverde_eventos</div>
       </div>
     </div>
   </div>
 
-  <!-- PAGE 2 — Bienvenida -->
-  <div class="vv-page">
-    <div class="vv-glow vv-glow-warm"></div>
-    <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-num">PÁG. 02</div>
-    <div style="display:flex; height:100%;">
-      <div style="width:44%; padding:1in 0.5in 0.75in 0.75in; box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; background:#C7C0B5;">
+  <!-- 2 — Bienvenida -->
+  <div class="vv-section" style="padding:0;">
+    <div class="vv-split">
+      <div class="vv-split-text">
         <div class="vv-title" style="color:#141414;">Bienvenidos a<br>VALLEVERDE Eventos</div>
         <div class="vv-rule" style="background:#E8792B;"></div>
         <p class="vv-body" style="color:rgba(20,20,20,0.72);">Un salón industrial moderno en Bahía Blanca, pensado para eventos sociales y corporativos con identidad propia. Espacios claros y organizados, con una estética cálida que se aleja de lo genérico.</p>
         <p class="vv-body" style="margin-top:14px; color:rgba(20,20,20,0.72);">Trabajamos junto a vos para que cada detalle — montaje, iluminación, catering — refleje la esencia de tu evento, manteniendo siempre un servicio atento y sin sobresaltos.</p>
       </div>
-      <div class="vv-photo" style="width:56%; margin:0.75in 0.75in 0.75in 0; padding:0;"><span style="display:block; width:100%; height:9.5in;"><img src="https://drive.google.com/thumbnail?id=1tir1R-oqmQKQTdcJdZgg7NsfmHMv_8G_&sz=w1600" alt="Interior del salón" style="width:100%;height:100%;object-fit:cover;display:block;"></span></div>
+      <div class="vv-split-photo">
+        <img src="https://drive.google.com/thumbnail?id=1tir1R-oqmQKQTdcJdZgg7NsfmHMv_8G_&sz=w1600" alt="Interior del salón">
+      </div>
     </div>
   </div>
 
-  <!-- PAGE 3 — Servicios y paquetes -->
-  <div class="vv-page">
+  <!-- 3 — Servicios y paquetes -->
+  <div class="vv-section" style="padding:0;">
     <div class="vv-glow vv-glow-warm"></div>
     <div class="vv-glow vv-glow-lines"></div>
     <div class="vv-band">
-      <div class="vv-num">PÁG. 03</div>
-      <div class="vv-title" style="font-size:32px;">Servicios y paquetes</div>
-      <p class="vv-body" style="max-width:5.5in; margin:10px 0 0; color:rgba(20,20,20,0.72);">Diseñamos cada propuesta a medida del evento, con paquetes flexibles que se ajustan a lo social y lo corporativo.</p>
+      <div class="vv-band-inner">
+        <div class="vv-title" style="font-size:32px;">Servicios y paquetes</div>
+        <p class="vv-body" style="max-width:560px; margin:10px 0 0; color:rgba(20,20,20,0.72);">Diseñamos cada propuesta a medida del evento, con paquetes flexibles que se ajustan a lo social y lo corporativo.</p>
+      </div>
     </div>
-    <div style="padding:0.5in 0.75in 0.75in;">
-      <div style="display:flex; gap:22px; margin-bottom:24px; align-items:center;">
-        <div class="vv-photo" style="width:260px; height:190px; flex-shrink:0; padding:0;"><img src="https://drive.google.com/thumbnail?id=18vTnSCFoZLa31IRvro1s_HiHxUatrhEr&sz=w1600" alt="Evento corporativo" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-        <div>
+    <div class="vv-section-inner" style="padding:44px 0;">
+      <div class="vv-row">
+        <div class="vv-photo vv-row-photo"><img src="https://drive.google.com/thumbnail?id=18vTnSCFoZLa31IRvro1s_HiHxUatrhEr&sz=w1600" alt="Evento corporativo"></div>
+        <div class="vv-row-text">
           <div class="vv-eyebrow">Corporativo</div>
           <div class="vv-feat-title">Lanzamientos y activaciones</div>
           <p class="vv-body">Presentaciones de producto, jornadas de empresa y eventos de networking, con montaje y equipo técnico incluidos.</p>
         </div>
       </div>
-      <div style="display:flex; gap:22px; margin-bottom:24px; align-items:center;">
-        <div class="vv-photo" style="width:260px; height:190px; flex-shrink:0; padding:0;"><img src="https://drive.google.com/thumbnail?id=1ySTydFByCDi08OxysVnndGIyeAHAmjxD&sz=w1600" alt="Celebración social" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-        <div>
+      <div class="vv-row">
+        <div class="vv-photo vv-row-photo"><img src="https://drive.google.com/thumbnail?id=1ySTydFByCDi08OxysVnndGIyeAHAmjxD&sz=w1600" alt="Celebración social"></div>
+        <div class="vv-row-text">
           <div class="vv-eyebrow">Social</div>
           <div class="vv-feat-title">Casamientos y celebraciones</div>
           <p class="vv-body">Casamientos, cumpleaños y celebraciones íntimas o de gran escala, con formato de montaje flexible.</p>
@@ -149,58 +182,54 @@ body { margin: 0; font-family: 'Poppins', Arial, sans-serif; }
     </div>
   </div>
 
-  <!-- PAGE 4 — Qué incluye -->
-  <div class="vv-page">
+  <!-- 4 — Qué incluye -->
+  <div class="vv-section">
     <div class="vv-glow vv-glow-warm"></div>
     <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-band" style="padding-bottom:0.3in;">
-      <div class="vv-num">PÁG. 04</div>
-      <div class="vv-title" style="font-size:32px;">Qué incluye tu evento</div>
-    </div>
-    <div style="padding:0.35in 0.75in 0.75in;">
-      <div style="display:grid; grid-template-columns:1.9in 1fr; gap:20px; align-items:center; margin-bottom:20px;">
-        <div class="vv-photo" style="height:1.9in; padding:0;"><img src="https://drive.google.com/thumbnail?id=1jvrQFx6Jgalq6VNnJi9imX1cmiSJ5StS&sz=w1600" alt="Iluminación nocturna" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-        <div>
+    <div class="vv-section-inner">
+      <div class="vv-title" style="font-size:32px; margin-bottom:32px;">Qué incluye tu evento</div>
+      <div class="vv-row">
+        <div class="vv-photo vv-row-photo"><img src="https://drive.google.com/thumbnail?id=1jvrQFx6Jgalq6VNnJi9imX1cmiSJ5StS&sz=w1600" alt="Iluminación nocturna"></div>
+        <div class="vv-row-text">
           <div class="vv-feat-title">Iluminación y ambientación</div>
           <p class="vv-body">Iluminación cálida propia del espacio y detalles industriales que arman el clima de tu evento sin necesidad de decoración adicional.</p>
         </div>
       </div>
-      <div style="display:grid; grid-template-columns:1.9in 1fr; gap:20px; align-items:center; margin-bottom:20px;">
-        <div class="vv-photo" style="height:1.9in; padding:0;"><img src="https://drive.google.com/thumbnail?id=1rRwp7aB--O99oqQJbSEx-K7cQwhBn4Oc&sz=w1600" alt="Montaje del salón" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-        <div>
+      <div class="vv-row">
+        <div class="vv-photo vv-row-photo"><img src="https://drive.google.com/thumbnail?id=1rRwp7aB--O99oqQJbSEx-K7cQwhBn4Oc&sz=w1600" alt="Montaje del salón"></div>
+        <div class="vv-row-text">
           <div class="vv-feat-title">Montaje flexible</div>
           <p class="vv-body">Mobiliario base y disposición de mesas y sillas adaptada al formato elegido, de cóctel a banquete.</p>
         </div>
       </div>
-      <div style="display:grid; grid-template-columns:1.9in 1fr; gap:20px; align-items:center; margin-bottom:20px;">
-        <div class="vv-photo" style="height:1.9in; padding:0;"><img src="https://drive.google.com/thumbnail?id=1yJEeVx2Vli7b7QY53xqIKU6rmRCNsTbc&sz=w1600" alt="Detalle de catering" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-        <div>
+      <div class="vv-row" style="margin-bottom:0;">
+        <div class="vv-photo vv-row-photo"><img src="https://drive.google.com/thumbnail?id=1yJEeVx2Vli7b7QY53xqIKU6rmRCNsTbc&sz=w1600" alt="Detalle de catering"></div>
+        <div class="vv-row-text">
           <div class="vv-feat-title">Catering a medida</div>
           <p class="vv-body">Buffet americano, finger food o pizzas gourmet: se come con las manos y sin pausar la fiesta.</p>
         </div>
       </div>
-
-      <p class="vv-body" style="opacity:0.6; font-style:italic; margin-top:8px;"><br></p>
     </div>
   </div>
 
-  <!-- PAGE 5 — Propuesta Gastronómica: intro + Opción A -->
-  <div class="vv-page">
+  <!-- 5 — Gastronómica: Opción A -->
+  <div class="vv-section" style="padding:0;">
     <div class="vv-glow vv-glow-warm"></div>
     <div class="vv-glow vv-glow-lines"></div>
     <div class="vv-band">
-      <div class="vv-num">PÁG. 05</div>
-      <div class="vv-eyebrow">Propuesta gastronómica</div>
-      <div class="vv-title" style="font-size:32px;">Formato buffet americano</div>
-      <p class="vv-body" style="max-width:5.6in; margin:10px 0 0; color:rgba(20,20,20,0.72);">Dos opciones de menú, cada una con recepción, plato principal y mesa de postres. Bebidas de mesa a cargo del cliente, con cantidades sugeridas.</p>
+      <div class="vv-band-inner">
+        <div class="vv-eyebrow">Propuesta gastronómica</div>
+        <div class="vv-title" style="font-size:32px;">Formato buffet americano</div>
+        <p class="vv-body" style="max-width:560px; margin:10px 0 0; color:rgba(20,20,20,0.72);">Dos opciones de menú, cada una con recepción, plato principal y mesa de postres. Bebidas de mesa a cargo del cliente, con cantidades sugeridas.</p>
+      </div>
     </div>
-    <div style="padding:0.45in 0.75in 0.75in;">
+    <div class="vv-section-inner" style="padding:44px 0;">
       <div class="vv-menu-row">
-        <div style="flex:1;">
+        <div class="vv-menu-main">
           <div class="vv-menu-tag">Opción A</div>
           <div class="vv-menu-name">Finger Food</div>
           <div class="vv-rule" style="margin:0 0 16px;"></div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 40px;">
+          <div class="vv-menu-grid">
             <div class="vv-menu-col">
               <div class="vv-menu-sub">Recepción</div>
               <ul class="vv-menu-list">
@@ -225,26 +254,25 @@ body { margin: 0; font-family: 'Poppins', Arial, sans-serif; }
             </div>
           </div>
         </div>
-        <div style="width:2.15in; flex-shrink:0;">
-          <div class="vv-photo" style="height:2.9in; padding:0;"><img src="https://drive.google.com/thumbnail?id=1yJEeVx2Vli7b7QY53xqIKU6rmRCNsTbc&sz=w1600" alt="Foto de la mesa de bocaditos" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="vv-menu-side">
+          <div class="vv-photo"><img src="https://drive.google.com/thumbnail?id=1yJEeVx2Vli7b7QY53xqIKU6rmRCNsTbc&sz=w1600" alt="Foto de la mesa de bocaditos"></div>
           <p class="vv-menu-photo-cap">Mesa de bocaditos, Opción A</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- PAGE 6 — Opción B + Postres + Bebidas -->
-  <div class="vv-page">
+  <!-- 6 — Opción B + Postres + Bebidas -->
+  <div class="vv-section">
     <div class="vv-glow vv-glow-warm"></div>
     <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-num">PÁG. 06</div>
-    <div style="padding:0.75in 0.75in 0;">
+    <div class="vv-section-inner">
       <div class="vv-menu-row">
-        <div style="flex:1;">
+        <div class="vv-menu-main">
           <div class="vv-menu-tag">Opción B</div>
           <div class="vv-menu-name">Degustación de pizzas</div>
           <div class="vv-rule" style="margin:0 0 16px;"></div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 40px;">
+          <div class="vv-menu-grid">
             <div class="vv-menu-col">
               <div class="vv-menu-sub">Recepción</div>
               <ul class="vv-menu-list">
@@ -267,15 +295,14 @@ body { margin: 0; font-family: 'Poppins', Arial, sans-serif; }
             </div>
           </div>
         </div>
-        <div style="width:2.15in; flex-shrink:0;">
-          <div class="vv-photo" style="height:2.9in; padding:0;"><img src="https://drive.google.com/thumbnail?id=1_wMShVO9j8bgdAMeMenHauBKDAod1DeL&sz=w1600" alt="Foto de la degustación de pizzas" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="vv-menu-side">
+          <div class="vv-photo"><img src="https://drive.google.com/thumbnail?id=1_wMShVO9j8bgdAMeMenHauBKDAod1DeL&sz=w1600" alt="Foto de la degustación de pizzas"></div>
           <p class="vv-menu-photo-cap">Degustación de pizzas, Opción B</p>
         </div>
       </div>
-    </div>
-    <div style="padding:0.4in 0.75in 0.75in; margin-top:auto;">
-      <div class="vv-rule"></div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 40px;">
+
+      <div class="vv-rule" style="margin-top:36px;"></div>
+      <div class="vv-grid-2">
         <div>
           <div class="vv-eyebrow" style="margin-bottom:8px;">MESA DE POSTRES NO INCLUIDA EN EL CATERING SALADO</div>
           <p class="vv-body">Variedad de tortas, tartas frutales y shots.</p>
@@ -288,17 +315,18 @@ body { margin: 0; font-family: 'Poppins', Arial, sans-serif; }
     </div>
   </div>
 
-  <!-- PAGE 7 — Variedad de Tragos -->
-  <div class="vv-page">
+  <!-- 7 — Variedad de tragos -->
+  <div class="vv-section" style="padding:0;">
     <div class="vv-glow vv-glow-warm"></div>
     <div class="vv-glow vv-glow-lines"></div>
     <div class="vv-band">
-      <div class="vv-num">PÁG. 07</div>
-      <div class="vv-eyebrow">Variedad de tragos</div>
-      <div class="vv-title" style="font-size:32px;">Barra fija del salón</div>
-      <p class="vv-body" style="max-width:5.6in; margin:10px 0 0; color:rgba(20,20,20,0.72);">Incluida en el servicio base, con opción adicional de barra sin alcohol para adolescentes.</p>
+      <div class="vv-band-inner">
+        <div class="vv-eyebrow">Variedad de tragos</div>
+        <div class="vv-title" style="font-size:32px;">Barra fija del salón</div>
+        <p class="vv-body" style="max-width:560px; margin:10px 0 0; color:rgba(20,20,20,0.72);">Incluida en el servicio base, con opción adicional de barra sin alcohol para adolescentes.</p>
+      </div>
     </div>
-    <div style="padding:0.45in 0.75in 0.7in;">
+    <div class="vv-section-inner" style="padding:44px 0;">
 
       <div class="vv-bar-section">
         <div class="vv-bar-head">
@@ -337,16 +365,13 @@ body { margin: 0; font-family: 'Poppins', Arial, sans-serif; }
     </div>
   </div>
 
-  <!-- PAGE 8 — Soluciones a medida -->
-  <div class="vv-page" style="display:flex; flex-direction:column;">
+  <!-- 8 — Soluciones a medida -->
+  <div class="vv-section">
     <div class="vv-glow vv-glow-warm"></div>
     <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-band">
-      <div class="vv-num">PÁG. 08</div>
+    <div class="vv-section-inner">
       <div class="vv-title" style="font-size:32px;">Soluciones a medida</div>
-      <p class="vv-body" style="margin:8px 0 0; color:rgba(20,20,20,0.72);">Experiencias diseñadas alrededor de tu visión, no de un catálogo cerrado.</p>
-    </div>
-    <div style="padding:0.4in 0.75in 0; display:flex; flex-direction:column; flex:1; box-sizing:border-box;">
+      <p class="vv-body" style="margin:8px 0 32px; color:rgba(247,241,230,0.7);">Experiencias diseñadas alrededor de tu visión, no de un catálogo cerrado.</p>
       <div class="vv-feat">
         <span class="vv-tri"></span>
         <div>
@@ -354,66 +379,67 @@ body { margin: 0; font-family: 'Poppins', Arial, sans-serif; }
           <p class="vv-body">Acompañamos cada decisión — desde la ambientación hasta el recorrido de invitados — para que el evento sea único y memorable.</p>
         </div>
       </div>
-      <div class="vv-feat">
+      <div class="vv-feat" style="margin-bottom:28px;">
         <span class="vv-tri"></span>
         <div>
           <div class="vv-feat-title">Experiencias interactivas para invitados</div>
           <p class="vv-body">Sumamos estaciones y momentos pensados para generar conexión real entre los invitados, no solo espectáculo.</p>
         </div>
       </div>
-
-      <div class="vv-photo" style="flex:1; margin:12px 0 0.75in; padding:0;"><span style="display:block; width:100%; height:5in;"><img src="https://drive.google.com/thumbnail?id=1kLqXu-pvYKkf9Q-6BmJJ4kQGxetqwWKJ&sz=w1600" alt="Terraza de noche" style="width:100%;height:100%;object-fit:cover;display:block;"></span></div>
+      <div class="vv-photo" style="height:340px;"><img src="https://drive.google.com/thumbnail?id=1kLqXu-pvYKkf9Q-6BmJJ4kQGxetqwWKJ&sz=w1600" alt="Terraza de noche"></div>
     </div>
   </div>
 
-  <!-- PAGE 9 — Identidad propia -->
-  <div class="vv-page" style="display:flex; flex-direction:column;">
+  <!-- 9 — Identidad propia -->
+  <div class="vv-section" style="padding:0;">
     <div class="vv-glow vv-glow-warm"></div>
     <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-band">
-      <div class="vv-num">PÁG. 09</div>
-      <div class="vv-eyebrow">Identidad propia</div>
-      <div class="vv-title" style="font-size:32px;">Un salón que no se parece a otro</div>
+    <div class="vv-band" style="padding-bottom:0;">
+      <div class="vv-band-inner">
+        <div class="vv-eyebrow">Identidad propia</div>
+        <div class="vv-title" style="font-size:32px; padding-bottom:32px;">Un salón que no se parece a otro</div>
+      </div>
     </div>
-    <div style="display:flex; flex:1;">
-      <div style="width:50%; padding:0.5in 0.6in 0.75in 0.75in; box-sizing:border-box; display:flex; flex-direction:column; justify-content:center;">
+    <div class="vv-split">
+      <div class="vv-split-text" style="background:#141414;">
         <p class="vv-body" style="font-size:15px; line-height:1.75;">VALLEVERDE no es un salón de fiestas más: es un espacio industrial moderno pensado para quienes buscan identidad propia, no una fórmula repetida.</p>
         <div class="vv-rule"></div>
         <p class="vv-body" style="font-size:15px; line-height:1.75;">Mientras otros ofrecen ambientes genéricos o decorados de forma excesiva, trabajamos con líneas limpias, materiales nobles y una calidez que no necesita artificios.</p>
         <p class="vv-body" style="font-size:15px; line-height:1.75; margin-top:14px;">Cada evento se diseña a medida — sin paquetes cerrados ni piezas prearmadas — acompañado por un equipo que se ocupa de que todo funcione sin sobresaltos.</p>
       </div>
-      <div style="width:50%; padding:0.75in 0.75in 0.75in 0; box-sizing:border-box; display:flex; flex-direction:column; gap:10px;">
-        <div class="vv-photo" style="flex:1; padding:0;"><span style="display:block; width:100%; height:3.6in;"><img src="https://drive.google.com/thumbnail?id=1_wMShVO9j8bgdAMeMenHauBKDAod1DeL&sz=w1600" alt="Propuesta gastronómica" style="width:100%;height:100%;object-fit:cover;display:block;"></span></div>
-        <div class="vv-photo" style="flex:1; padding:0;"><span style="display:block; width:100%; height:3.6in;"><img src="https://drive.google.com/thumbnail?id=14uOflBsoTQTGKkEou2RgOMc_dxjwzYH5&sz=w1600" alt="Momento gastronómico" style="width:100%;height:100%;object-fit:cover;display:block;"></span></div>
+      <div class="vv-split-photo" style="display:flex; flex-direction:column; gap:2px;">
+        <img src="https://drive.google.com/thumbnail?id=1_wMShVO9j8bgdAMeMenHauBKDAod1DeL&sz=w1600" alt="Propuesta gastronómica" style="flex:1; min-height:160px;">
+        <img src="https://drive.google.com/thumbnail?id=14uOflBsoTQTGKkEou2RgOMc_dxjwzYH5&sz=w1600" alt="Momento gastronómico" style="flex:1; min-height:160px;">
       </div>
     </div>
   </div>
 
-  <!-- PAGE 10 — Timeline -->
-  <div class="vv-page">
+  <!-- 10 — Timeline -->
+  <div class="vv-section" style="padding:0;">
     <div class="vv-glow vv-glow-warm"></div>
     <div class="vv-glow vv-glow-lines"></div>
     <div class="vv-band">
-      <div class="vv-num">PÁG. 10</div>
-      <div class="vv-title" style="font-size:32px;">Tu camino hacia el evento</div>
-      <p class="vv-body" style="margin:8px 0 0; color:rgba(20,20,20,0.72);">Un proceso simple, pensado para que te ocupes solo de disfrutar.</p>
+      <div class="vv-band-inner">
+        <div class="vv-title" style="font-size:32px;">Tu camino hacia el evento</div>
+        <p class="vv-body" style="margin:8px 0 0; color:rgba(20,20,20,0.72);">Un proceso simple, pensado para que te ocupes solo de disfrutar.</p>
+      </div>
     </div>
-    <div style="padding:0.4in 0.75in 0.75in;">
-      <div class="vv-photo" style="height:1.6in; margin-bottom:20px; padding:0;"><img src="https://drive.google.com/thumbnail?id=1yJEeVx2Vli7b7QY53xqIKU6rmRCNsTbc&sz=w1600" alt="Mesa de gastronomía" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+    <div class="vv-section-inner" style="padding:44px 0;">
+      <div class="vv-photo" style="height:220px; margin-bottom:24px;"><img src="https://drive.google.com/thumbnail?id=1yJEeVx2Vli7b7QY53xqIKU6rmRCNsTbc&sz=w1600" alt="Mesa de gastronomía"></div>
 
-      <div style="display:flex; gap:18px; align-items:flex-end; margin-bottom:30px;">
-        <div style="width:60%;">
-          <div class="vv-photo" style="height:2.3in; padding:0;"><img src="https://drive.google.com/thumbnail?id=1ZrfZ4-k1pTtGqriYhlDICccXkqS3M_Yp&sz=w1600" alt="Un trago en la barra" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+      <div class="vv-timeline-row">
+        <div class="vv-timeline-col-a">
+          <div class="vv-photo" style="height:280px;"><img src="https://drive.google.com/thumbnail?id=1ZrfZ4-k1pTtGqriYhlDICccXkqS3M_Yp&sz=w1600" alt="Un trago en la barra"></div>
           <p class="vv-body" style="margin-top:10px; font-size:12.5px; font-style:italic; color:rgba(247,241,230,0.6);">Un trago no es solo un trago cuando el lugar acompaña.</p>
         </div>
-        <div style="width:40%; padding-bottom:0.55in;">
-          <div class="vv-photo" style="height:1.65in; padding:0;"><img src="https://drive.google.com/thumbnail?id=14uOflBsoTQTGKkEou2RgOMc_dxjwzYH5&sz=w1600" alt="Disfrutando la propuesta gastronómica" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div class="vv-timeline-col-b">
+          <div class="vv-photo" style="height:200px;"><img src="https://drive.google.com/thumbnail?id=14uOflBsoTQTGKkEou2RgOMc_dxjwzYH5&sz=w1600" alt="Disfrutando la propuesta gastronómica"></div>
           <p class="vv-body" style="margin-top:10px; font-size:12.5px; font-style:italic; color:rgba(247,241,230,0.6);">Se come con las manos, se disfruta con calma.</p>
         </div>
       </div>
 
       <div class="vv-eyebrow">Recorrido de planificación</div>
-      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:18px 32px; margin-top:16px;">
+      <div class="vv-grid-2" style="margin-top:16px;">
         <div style="display:flex; gap:12px; align-items:flex-start;">
           <span style="font:700 22px/1 'Poppins', sans-serif; color:#E8792B; flex-shrink:0;">01</span>
           <div><div class="vv-feat-title" style="font-size:13px;">Consulta inicial</div><p class="vv-body" style="font-size:12px;">Conversamos tu visión y necesidades.</p></div>
@@ -434,15 +460,16 @@ body { margin: 0; font-family: 'Poppins', Arial, sans-serif; }
     </div>
   </div>
 
-  <!-- PAGE 11 — Inversión + Términos -->
-  <div class="vv-page" style="display:flex; flex-direction:column;">
+  <!-- 11 — Inversión + Términos -->
+  <div class="vv-section" style="padding:0;">
     <div class="vv-glow vv-glow-warm"></div>
     <div class="vv-glow vv-glow-lines"></div>
     <div class="vv-band">
-      <div class="vv-num">PÁG. 11</div>
-      <div class="vv-title" style="font-size:32px;">Inversión</div>
+      <div class="vv-band-inner">
+        <div class="vv-title" style="font-size:32px;">Inversión</div>
+      </div>
     </div>
-    <div style="flex:1; padding:0.4in 0.75in 0; box-sizing:border-box; display:flex; flex-direction:column;">
+    <div class="vv-section-inner" style="padding:44px 0 0;">
       <table class="vv-table">
         <tr><th>Servicio</th><th>Precio / inv.</th><th>Cant.</th><th>Total</th></tr>
         <tr><td>Salón</td><td>$27.079</td><td>50</td><td>$1.353.953</td></tr>
@@ -457,7 +484,7 @@ body { margin: 0; font-family: 'Poppins', Arial, sans-serif; }
       <p class="vv-body" style="margin-top:10px; font-weight:700; color:#F7F1E6;">Cliente: MANUEL &nbsp;·&nbsp; Evento: Cumple 50 &nbsp;·&nbsp; Fecha: 15/12/2026 &nbsp;·&nbsp; Invitados: 50 &nbsp;·&nbsp; Horario: 21:00 a 03:00 hs</p>
       <p class="vv-body" style="margin-top:4px; font-weight:700; color:#F7F1E6;">Vigencia de la propuesta: hasta el 15/11/2026</p>
     </div>
-    <div style="padding:0 0.75in 0.5in;">
+    <div class="vv-section-inner" style="padding:32px 0 56px;">
       <div class="vv-eyebrow" style="margin-bottom:16px;">Términos y condiciones</div>
       <div class="vv-feat"><span class="vv-tri"></span><p class="vv-body">Reserva de fecha sujeta a seña del 35% del total.</p></div>
       <div class="vv-feat"><span class="vv-tri"></span><p class="vv-body">Saldo a abonar hasta 15 días&nbsp;antes del evento.</p></div>
@@ -466,17 +493,19 @@ body { margin: 0; font-family: 'Poppins', Arial, sans-serif; }
     </div>
   </div>
 
-  <!-- PAGE 12 — Cierre -->
-  <div class="vv-page">
+  <!-- 12 — Cierre -->
+  <div class="vv-section" style="padding:0;">
     <div class="vv-glow vv-glow-warm"></div>
     <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-photo" style="position:absolute; top:0; left:0; right:0; height:58%; padding:0;"><img src="https://drive.google.com/thumbnail?id=1KHP567L3uXsLi8E7CuL68QplBiDbjyB0&sz=w1600" alt="Vista del salón al atardecer" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-    <div style="position:absolute; left:0; right:0; bottom:0; top:58%; padding:0.6in 0.75in 0.75in; box-sizing:border-box; display:flex; flex-direction:column; justify-content:space-between;">
+    <div class="vv-closing-photo">
+      <img src="https://drive.google.com/thumbnail?id=1KHP567L3uXsLi8E7CuL68QplBiDbjyB0&sz=w1600" alt="Vista del salón al atardecer">
+    </div>
+    <div class="vv-closing-inner">
       <div class="vv-title" style="font-size:30px;">Hablemos de<br>tu evento</div>
       <div>
         <p class="vv-body" style="margin-bottom:20px;">Escribinos para confirmar esta propuesta o coordinar una visita al salón.</p>
         <p class="vv-body" style="font-size:13px; margin-bottom:32px;">Email: salonvalleverde@gmail.com · Teléfono / WhatsApp&nbsp; 291 539-4401 · Instagram: valleverde_eventos</p>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+        <div class="vv-grid-2">
           <div style="border-top:1px solid rgba(247,241,230,0.3); padding-top:8px; font:300 12px/1.4 'Poppins', sans-serif;">VALLEVERDE Eventos</div>
           <div style="border-top:1px solid rgba(247,241,230,0.3); padding-top:8px; font:300 12px/1.4 'Poppins', sans-serif;">MANUEL</div>
         </div>
