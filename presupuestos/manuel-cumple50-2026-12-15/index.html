@@ -1,542 +1,495 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Presupuesto — VALLEVERDE Eventos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta — Cumple 50 · VALLEVERDE Eventos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+
 <style>
+  :root {
+    --bg: #141414;
+    --text: #F7F1E6;
+    --accent: #E8792B;
+    --band: #C7C0B5;
+    --band-text: #141414;
+    --maxw: 640px;
+  }
 
-* { box-sizing: border-box; }
-html, body { margin: 0; }
-body { font-family: 'Poppins', Arial, sans-serif; background: #141414; }
-.vv-doc { color: #F7F1E6; overflow-x: hidden; }
-img { max-width: 100%; }
+  * { box-sizing: border-box; }
 
-.vv-glow { position: absolute; right: 0; bottom: 0; width: 60%; height: 55%; z-index: 0; pointer-events: none; }
-.vv-glow-warm { background: radial-gradient(circle at 100% 100%, rgba(142,14,62,0.55) 0%, rgba(142,14,62,0.20) 44%, transparent 74%); }
-.vv-glow-lines { background-image: repeating-linear-gradient(128deg, rgba(247,241,230,0.16) 0px, rgba(247,241,230,0.16) 1px, transparent 1px, transparent 30px); -webkit-mask-image: radial-gradient(circle at 100% 100%, black 0%, transparent 68%); mask-image: radial-gradient(circle at 100% 100%, black 0%, transparent 68%); }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+  }
 
-.vv-section { position: relative; overflow: hidden; background: #141414; padding: 64px 6vw; }
-.vv-section-inner { position: relative; z-index: 2; max-width: 1080px; margin: 0 auto; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: #f4954f; text-decoration: underline; }
 
-.vv-band { position: relative; background: #C7C0B5; padding: 56px 6vw 40px; overflow: hidden; }
-.vv-band::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: #E8792B; }
-.vv-band-inner { position: relative; z-index: 2; max-width: 1080px; margin: 0 auto; }
-.vv-band .vv-title, .vv-band .vv-eyebrow { color: #141414; }
-.vv-band .vv-body { color: rgba(20,20,20,0.72); }
+  img { max-width: 100%; height: auto; display: block; }
 
-.vv-title { font: 300 clamp(28px,5vw,42px)/1.15 'Poppins', sans-serif; color: #F7F1E6; margin: 0 0 6px; }
-.vv-eyebrow { font: 700 11px/1.3 'Poppins', sans-serif; letter-spacing: 2.5px; text-transform: uppercase; color: #E8792B; margin: 0 0 12px; }
-.vv-body { font: 300 15px/1.7 'Poppins', sans-serif; color: rgba(247,241,230,0.8); margin: 0; }
-.vv-rule { width: 44px; height: 2px; background: #E8792B; margin: 16px 0 20px; }
+  .seccion { width: 100%; padding: 48px 20px; box-sizing: border-box; }
+  .contenido { max-width: var(--maxw); margin: 0 auto; }
 
-.vv-photo { background: #1e1e1e; border: 1px dashed rgba(247,241,230,0.22); overflow: hidden; }
-.vv-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .franja { background: var(--band); color: var(--band-text); }
+  .franja .eyebrow { color: var(--accent); }
+  .franja p { color: rgba(20,20,20,0.72); }
 
-.vv-tri { display: inline-block; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 8px solid #E8792B; margin-right: 12px; flex-shrink: 0; transform: translateY(4px); }
-.vv-feat { display: flex; margin-bottom: 22px; }
-.vv-feat-title { font: 700 14px/1.3 'Poppins', sans-serif; color: #F7F1E6; margin: 0 0 6px; }
+  .eyebrow { font: 700 11px/1.3 'Poppins', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
 
-table.vv-table { width: 100%; border-collapse: collapse; font: 400 13px/1.5 'Poppins', sans-serif; table-layout: fixed; }
-table.vv-table th { text-align: left; font: 600 10px/1.3 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1.5px; color: #E8792B; padding: 9px 8px; border-bottom: 1px solid rgba(247,241,230,0.25); }
-table.vv-table td { padding: 11px 8px; border-bottom: 1px solid rgba(247,241,230,0.12); color: rgba(247,241,230,0.85); }
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 300; margin: 0 0 10px; }
+  h1 { font-size: 30px; line-height: 1.2; }
+  h2 { font-size: 24px; line-height: 1.2; }
+  h3 { font-size: 16px; font-weight: 700; line-height: 1.3; margin-bottom: 6px; }
 
-.vv-row { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
-.vv-row-photo { flex: 1 1 260px; max-width: 320px; height: 200px; }
-.vv-row-text { flex: 2 1 320px; }
+  .regla { width: 40px; height: 2px; background: var(--accent); margin: 16px 0 18px; border: none; }
 
-.vv-menu-col { display: flex; flex-direction: column; }
-.vv-menu-tag { display: inline-block; font: 700 10px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; color: #141414; background: #E8792B; padding: 4px 10px; margin-bottom: 12px; }
-.vv-menu-name { font: 300 24px/1.2 'Poppins', sans-serif; color: #F7F1E6; margin: 0 0 14px; }
-.vv-menu-sub { font: 600 10px/1.3 'Poppins', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: rgba(247,241,230,0.5); margin: 18px 0 10px; }
-.vv-menu-list { list-style: none; margin: 0; padding: 0; }
-.vv-menu-list li { font: 300 13.5px/1.55 'Poppins', sans-serif; color: rgba(247,241,230,0.85); padding: 7px 0; border-bottom: 1px solid rgba(247,241,230,0.1); }
-.vv-menu-list li:first-child { padding-top: 0; }
-.vv-menu-note { font: 300 12px/1.55 'Poppins', sans-serif; font-style: italic; color: rgba(247,241,230,0.5); margin-top: 12px; }
-.vv-menu-row { display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; }
-.vv-menu-main { flex: 2 1 380px; }
-.vv-menu-side { flex: 1 1 220px; max-width: 280px; }
-.vv-menu-side .vv-photo { height: 280px; }
-.vv-menu-photo-cap { font: 300 11.5px/1.4 'Poppins', sans-serif; font-style: italic; color: rgba(247,241,230,0.5); margin-top: 8px; text-align: center; }
-.vv-menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  p { margin: 0 0 12px; font-size: 14px; color: rgba(247,241,230,0.85); }
+  .franja p { font-size: 14px; }
 
-.vv-bar-section { margin-bottom: 28px; }
-.vv-bar-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
-.vv-bar-head .num { font: 700 22px/1 'Poppins', sans-serif; color: #E8792B; }
-.vv-bar-head .label { font: 700 12px/1.3 'Poppins', sans-serif; letter-spacing: 2.5px; text-transform: uppercase; color: #F7F1E6; }
-.vv-bar-head .sub { font: 300 12px/1.4 'Poppins', sans-serif; color: rgba(247,241,230,0.55); }
-.vv-bar-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(247,241,230,0.14); border: 1px solid rgba(247,241,230,0.14); }
-.vv-bar-tile { background: #141414; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; min-height: 74px; box-sizing: border-box; justify-content: center; }
-.vv-bar-tile .name { font: 700 15px/1.2 'Poppins', sans-serif; color: #F7F1E6; }
-.vv-chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
-.vv-chip { font: 600 9px/1.3 'Poppins', sans-serif; letter-spacing: 1px; text-transform: uppercase; color: rgba(247,241,230,0.7); border: 1px solid rgba(247,241,230,0.25); padding: 3px 8px; }
-.vv-chip-accent { color: #E8792B; border-color: rgba(232,121,43,0.45); }
+  ul.lista { list-style: none; margin: 0; padding: 0; }
+  ul.lista li { font-size: 13.5px; padding: 8px 0; border-bottom: 1px solid rgba(247,241,230,0.12); color: rgba(247,241,230,0.85); }
+  .franja ul.lista li { border-bottom-color: rgba(20,20,20,0.15); color: rgba(20,20,20,0.75); }
+  ul.lista li:first-child { padding-top: 0; }
 
-.vv-cover-photo { width: 100%; height: 62vh; min-height: 360px; max-height: 640px; overflow: hidden; background: #141414; }
-.vv-cover-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.vv-cover-info { padding: 28px 6vw 44px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-.vv-cover-info .vv-body { font-size: 13.5px; }
+  .subtitulo-menu { font: 600 10px/1.3 'Poppins', sans-serif; letter-spacing: 1.8px; text-transform: uppercase; color: rgba(247,241,230,0.5); margin: 22px 0 8px; }
+  .subtitulo-menu:first-of-type { margin-top: 4px; }
 
-.vv-split { display: flex; flex-wrap: wrap; }
-.vv-split-text { flex: 1 1 340px; padding: 56px 6vw; background: #C7C0B5; display: flex; flex-direction: column; justify-content: center; }
-.vv-split-photo { flex: 1 1 340px; min-height: 320px; }
-.vv-split-photo img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 320px; }
+  .nota { font-size: 12px; font-style: italic; color: rgba(247,241,230,0.5); margin-top: 8px; }
 
-.vv-grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px 32px; }
+  .foto { width: 100%; aspect-ratio: 4 / 3; border-radius: 2px; overflow: hidden; background: #1e1e1e; margin-bottom: 20px; }
+  .foto img { width: 100%; height: 100%; object-fit: cover; font-size: 0; color: transparent; }
+  .foto-cap { font-size: 11.5px; font-style: italic; color: rgba(247,241,230,0.5); text-align: center; margin: -12px 0 20px; }
 
-.vv-timeline-row { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 30px; }
-.vv-timeline-col-a { flex: 3 1 320px; }
-.vv-timeline-col-b { flex: 2 1 240px; }
+  .tag { display: inline-block; font: 700 10px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; color: #141414; background: var(--accent); padding: 4px 10px; margin-bottom: 12px; }
 
-.vv-closing-photo { width: 100%; height: 52vh; min-height: 320px; max-height: 520px; }
-.vv-closing-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.vv-closing-inner { padding: 40px 6vw 56px; display: flex; flex-direction: column; gap: 24px; }
+  .portada { padding: 0; position: relative; }
+  .portada .foto-portada { width: 100%; min-height: 60vh; min-height: 60dvh; background: #1e1e1e; overflow: hidden; }
+  .portada .foto-portada img { width: 100%; height: 100%; object-fit: cover; font-size: 0; color: transparent; }
+  .portada .datos { padding: 28px 20px 36px; }
+  .portada .datos-grid { display: flex; flex-direction: column; gap: 14px; margin-bottom: 18px; }
+  .portada .dato { font-size: 13px; }
+  .portada .dato .label { display: block; font: 700 10px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 3px; }
+  .portada .contacto { font-size: 12px; color: rgba(247,241,230,0.6); border-top: 1px solid rgba(247,241,230,0.15); padding-top: 14px; }
 
-@media (max-width: 700px) {
-  .vv-section { padding: 40px 22px; }
-  .vv-section-inner { padding: 32px 0; }
-  .vv-band { padding: 36px 22px 26px; }
-  .vv-cover-info { padding: 22px 22px 32px; }
-  .vv-closing-inner { padding: 32px 22px 44px; }
-  .vv-title { font-size: clamp(24px,7vw,32px) !important; }
-  .vv-grid-2 { grid-template-columns: 1fr; }
-  .vv-bar-grid { grid-template-columns: 1fr; }
-  .vv-split-text, .vv-split-photo { flex-basis: 100%; }
-  .vv-split-text { padding: 40px 22px; }
-  .vv-cover-info { flex-direction: column; }
-  .vv-cover-info > div:last-child { text-align: left !important; }
-  .vv-row { gap: 16px; margin-bottom: 20px; }
-  .vv-row-photo { max-width: 100%; height: 190px; }
-  .vv-menu-row { gap: 24px; }
-  .vv-menu-side { max-width: 100%; }
-  .vv-cover-photo { height: 48vh; min-height: 300px; }
-  .vv-closing-photo { height: 36vh; min-height: 240px; }
+  .feature { display: flex; gap: 12px; margin-bottom: 20px; align-items: flex-start; }
+  .tri { width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 8px solid var(--accent); margin-top: 6px; flex-shrink: 0; }
 
-  /* Tabla de inversión / capacidad como tarjetas apiladas en mobile */
-  table.vv-table thead { display: none; }
-  table.vv-table, table.vv-table tbody, table.vv-table tr, table.vv-table td { display: block; width: 100%; }
-  table.vv-table tr { margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid rgba(247,241,230,0.15); }
-  table.vv-table td { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; border-bottom: none; text-align: right; }
-  table.vv-table td[data-label]::before { content: attr(data-label); font: 600 10px/1.3 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1px; color: rgba(247,241,230,0.5); text-align: left; }
-  table.vv-table td:empty { display: none; }
-}
+  .barra-bloque { margin-bottom: 30px; }
+  .barra-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+  .barra-head .num { font: 700 20px/1 'Poppins', sans-serif; color: var(--accent); }
+  .barra-head .label { font: 700 12px/1.3 'Poppins', sans-serif; letter-spacing: 2px; text-transform: uppercase; }
+  .barra-head .sub { font-size: 12px; color: rgba(247,241,230,0.55); }
 
+  .barra-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: rgba(247,241,230,0.14); border: 1px solid rgba(247,241,230,0.14); }
+  .barra-tile { background: var(--bg); padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .barra-tile .name { font: 700 14px/1.2 'Poppins', sans-serif; }
+  .chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font: 600 9px/1.3 'Poppins', sans-serif; letter-spacing: 1px; text-transform: uppercase; color: rgba(247,241,230,0.7); border: 1px solid rgba(247,241,230,0.25); padding: 3px 8px; border-radius: 20px; }
+  .chip-accent { color: var(--accent); border-color: rgba(232,121,43,0.45); }
+
+  .paso { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
+  .paso .paso-num { font: 700 20px/1 'Poppins', sans-serif; color: var(--accent); flex-shrink: 0; width: 30px; }
+
+  .precio-card { background: rgba(247,241,230,0.05); border: 1px solid rgba(247,241,230,0.14); border-radius: 2px; padding: 16px 18px; margin-bottom: 12px; }
+  .precio-card .precio-servicio { font: 600 14px/1.3 'Poppins', sans-serif; margin-bottom: 10px; }
+  .precio-card .precio-datos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .precio-dato { font-size: 12px; }
+  .precio-dato .label { display: block; font: 600 9px/1.3 'Poppins', sans-serif; letter-spacing: 1px; text-transform: uppercase; color: rgba(247,241,230,0.45); margin-bottom: 2px; }
+  .precio-dato .valor { font-size: 13px; color: var(--text); }
+  .precio-dato.total .valor { color: var(--accent); font-weight: 700; }
+
+  .total-final { display: flex; justify-content: space-between; align-items: baseline; padding: 18px 0 4px; border-top: 2px solid var(--accent); margin-top: 6px; }
+  .total-final .label { font: 700 12px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; }
+  .total-final .valor { font: 700 26px/1 'Poppins', sans-serif; color: var(--accent); }
+
+  .vigencia { font-size: 12px; color: rgba(247,241,230,0.5); font-style: italic; margin-top: 10px; }
+
+  .terminos li { font-size: 13px; }
+
+  .cierre { text-align: center; }
+  .cierre .contacto-lista { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+  .cierre .contacto-item { font-size: 14px; }
+  .cierre .contacto-item .label { display: block; font: 700 10px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+  .marca-final { margin-top: 30px; font: 700 13px/1.3 'Poppins', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: rgba(247,241,230,0.5); }
+
+  @media (min-width: 600px) {
+    .seccion { padding: 64px 32px; }
+    h1 { font-size: 38px; }
+    h2 { font-size: 28px; }
+    .portada .foto-portada { min-height: 65vh; min-height: 65dvh; }
+    .barra-grid { grid-template-columns: repeat(2, 1fr); }
+    .precio-card .precio-datos { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 900px) {
+    :root { --maxw: 820px; }
+    .seccion { padding: 84px 32px; }
+    h1 { font-size: 44px; }
+    .menu-row { display: flex; gap: 40px; align-items: flex-start; }
+    .menu-row .menu-texto { flex: 1; }
+    .menu-row .menu-foto { width: 260px; flex-shrink: 0; }
+    .feature-row { display: flex; gap: 22px; align-items: center; margin-bottom: 26px; }
+    .feature-row .feature-foto { width: 280px; flex-shrink: 0; margin-bottom: 0; }
+    .portada .datos-grid { flex-direction: row; justify-content: space-between; }
+  }
 </style>
 </head>
 <body>
 
-<div class="vv-doc">
-
-  <!-- 1 — Portada -->
-  <div class="vv-section" style="padding:0;">
-    <div class="vv-cover-photo">
-      <img src="https://drive.google.com/thumbnail?id=1R7AlTgBV2sHSZ0TBN5UmO8IUHCYF8zEC&sz=w1600" alt="Foto de portada">
-    </div>
-    <div class="vv-cover-info">
-      <div class="vv-body">
-        <div style="font-weight:700; color:#F7F1E6; margin-bottom:2px;">15/12/2026</div>
-        <div>Preparado para MANUEL — Cumple 50</div>
-        <div>50 invitados &middot; 21:00 a 03:00 hs</div>
-        <div style="margin-top:4px;">Vigencia: hasta el 15/11/2026</div>
-      </div>
-      <div class="vv-body" style="text-align:right;">
-        <div>email: salonvalleverde@gmail.com</div>
-        <div>Teléfono / WhatsApp 291 539-4401</div>
-        <div>Instagram: valleverde_eventos</div>
-      </div>
-    </div>
+<section class="seccion portada">
+  <div class="foto-portada">
+    <img src="https://drive.google.com/thumbnail?id=1R7AlTgBV2sHSZ0TBN5UmO8IUHCYF8zEC&sz=w1600" alt="VALLEVERDE Eventos">
   </div>
-
-  <!-- 2 — Bienvenida -->
-  <div class="vv-section" style="padding:0;">
-    <div class="vv-split">
-      <div class="vv-split-text">
-        <div class="vv-title" style="color:#141414;">Bienvenidos a<br>VALLEVERDE Eventos</div>
-        <div class="vv-rule" style="background:#E8792B;"></div>
-        <p class="vv-body" style="color:rgba(20,20,20,0.72);">Un salón industrial moderno en Bahía Blanca, pensado para eventos sociales y corporativos con identidad propia. Espacios claros y organizados, con una estética cálida que se aleja de lo genérico.</p>
-        <p class="vv-body" style="margin-top:14px; color:rgba(20,20,20,0.72);">Trabajamos junto a vos para que cada detalle — montaje, iluminación, catering — refleje la esencia de tu evento, manteniendo siempre un servicio atento y sin sobresaltos.</p>
-      </div>
-      <div class="vv-split-photo">
-        <img src="https://drive.google.com/thumbnail?id=1tir1R-oqmQKQTdcJdZgg7NsfmHMv_8G_&sz=w1600" alt="Interior del salón">
-      </div>
+  <div class="datos">
+    <h1>Cumple 50</h1>
+    <div class="regla"></div>
+    <div class="datos-grid">
+      <div class="dato"><span class="label">Cliente</span>MANUEL</div>
+      <div class="dato"><span class="label">Fecha</span>15/12/2026</div>
+      <div class="dato"><span class="label">Horario</span>21:00 a 03:00</div>
+      <div class="dato"><span class="label">Invitados</span>50</div>
     </div>
+    <div class="contacto">salonvalleverde@gmail.com · WhatsApp 291 539-4401 · Instagram @valleverde_eventos</div>
   </div>
+</section>
 
-  <!-- 3 — Servicios y paquetes -->
-  <div class="vv-section" style="padding:0;">
-    <div class="vv-glow vv-glow-warm"></div>
-    <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-band">
-      <div class="vv-band-inner">
-        <div class="vv-title" style="font-size:32px;">Servicios y paquetes</div>
-        <p class="vv-body" style="max-width:560px; margin:10px 0 0; color:rgba(20,20,20,0.72);">Diseñamos cada propuesta a medida del evento, con paquetes flexibles que se ajustan a lo social y lo corporativo.</p>
-      </div>
-    </div>
-    <div class="vv-section-inner" style="padding:44px 0;">
-      <div class="vv-row">
-        <div class="vv-photo vv-row-photo"><img src="https://drive.google.com/thumbnail?id=18vTnSCFoZLa31IRvro1s_HiHxUatrhEr&sz=w1600" alt="Evento corporativo"></div>
-        <div class="vv-row-text">
-          <div class="vv-eyebrow">Corporativo</div>
-          <div class="vv-feat-title">Lanzamientos y activaciones</div>
-          <p class="vv-body">Presentaciones de producto, jornadas de empresa y eventos de networking, con montaje y equipo técnico incluidos.</p>
-        </div>
-      </div>
-      <div class="vv-row">
-        <div class="vv-photo vv-row-photo"><img src="https://drive.google.com/thumbnail?id=1ySTydFByCDi08OxysVnndGIyeAHAmjxD&sz=w1600" alt="Celebración social"></div>
-        <div class="vv-row-text">
-          <div class="vv-eyebrow">Social</div>
-          <div class="vv-feat-title">Casamientos y celebraciones</div>
-          <p class="vv-body">Casamientos, cumpleaños y celebraciones íntimas o de gran escala, con formato de montaje flexible.</p>
-        </div>
-      </div>
-
-      <div class="vv-eyebrow">Espacio y capacidad</div>
-      <table class="vv-table">
-        <thead><tr><th>Formato</th><th>Capacidad</th><th>Uso recomendado</th></tr></thead>
-        <tbody>
-        <tr><td data-label="Formato">Cóctel / de pie</td><td data-label="Capacidad">90 personas</td><td data-label="Uso recomendado">Activaciones, networking</td></tr>
-        <tr><td data-label="Formato">Mesas banquete</td><td data-label="Capacidad">90 personas</td><td data-label="Uso recomendado">Casamientos, cenas corporativas</td></tr>
-        <tr><td data-label="Formato">Auditorio</td><td data-label="Capacidad">60 personas</td><td data-label="Uso recomendado">Presentaciones, charlas</td></tr>
-      </tbody></table>
-    </div>
+<section class="seccion franja">
+  <div class="contenido">
+    <div class="eyebrow">Bienvenidos</div>
+    <h2>VALLEVERDE Eventos</h2>
+    <div class="regla"></div>
+    <p>Un salón industrial moderno en Bahía Blanca, pensado para eventos sociales y corporativos con identidad propia. Espacios claros y organizados, con una estética cálida que se aleja de lo genérico.</p>
+    <p>Trabajamos junto a vos para que cada detalle — montaje, iluminación, catering — refleje la esencia de tu evento, manteniendo siempre un servicio atento y sin sobresaltos.</p>
   </div>
+</section>
 
-  <!-- 4 — Qué incluye -->
-  <div class="vv-section">
-    <div class="vv-glow vv-glow-warm"></div>
-    <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-section-inner">
-      <div class="vv-title" style="font-size:32px; margin-bottom:32px;">Qué incluye tu evento</div>
-      <div class="vv-row">
-        <div class="vv-photo vv-row-photo"><img src="https://drive.google.com/thumbnail?id=1jvrQFx6Jgalq6VNnJi9imX1cmiSJ5StS&sz=w1600" alt="Iluminación nocturna"></div>
-        <div class="vv-row-text">
-          <div class="vv-feat-title">Iluminación y ambientación</div>
-          <p class="vv-body">Iluminación cálida propia del espacio y detalles industriales que arman el clima de tu evento sin necesidad de decoración adicional.</p>
-        </div>
-      </div>
-      <div class="vv-row">
-        <div class="vv-photo vv-row-photo"><img src="https://drive.google.com/thumbnail?id=1rRwp7aB--O99oqQJbSEx-K7cQwhBn4Oc&sz=w1600" alt="Montaje del salón"></div>
-        <div class="vv-row-text">
-          <div class="vv-feat-title">Montaje flexible</div>
-          <p class="vv-body">Mobiliario base y disposición de mesas y sillas adaptada al formato elegido, de cóctel a banquete.</p>
-        </div>
-      </div>
-      <div class="vv-row" style="margin-bottom:0;">
-        <div class="vv-photo vv-row-photo"><img src="https://drive.google.com/thumbnail?id=1yJEeVx2Vli7b7QY53xqIKU6rmRCNsTbc&sz=w1600" alt="Detalle de catering"></div>
-        <div class="vv-row-text">
-          <div class="vv-feat-title">Catering a medida</div>
-          <p class="vv-body">Buffet americano, finger food o pizzas gourmet: se come con las manos y sin pausar la fiesta.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="seccion">
+  <div class="contenido">
+    <div class="eyebrow">Servicios</div>
+    <h2>Servicios y paquetes</h2>
+    <p>Diseñamos cada propuesta a medida del evento, con paquetes flexibles que se ajustan a lo social y lo corporativo.</p>
 
-  <!-- 5 — Gastronómica: Opción A -->
-  <div class="vv-section" style="padding:0;">
-    <div class="vv-glow vv-glow-warm"></div>
-    <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-band">
-      <div class="vv-band-inner">
-        <div class="vv-eyebrow">Propuesta gastronómica</div>
-        <div class="vv-title" style="font-size:32px;">Formato buffet americano</div>
-        <p class="vv-body" style="max-width:560px; margin:10px 0 0; color:rgba(20,20,20,0.72);">Dos opciones de menú, cada una con recepción, plato principal y mesa de postres. Bebidas de mesa a cargo del cliente, con cantidades sugeridas.</p>
-      </div>
-    </div>
-    <div class="vv-section-inner" style="padding:44px 0;">
-      <div class="vv-menu-row">
-        <div class="vv-menu-main">
-          <div class="vv-menu-tag">Opción A</div>
-          <div class="vv-menu-name">Finger Food</div>
-          <div class="vv-rule" style="margin:0 0 16px;"></div>
-          <div class="vv-menu-grid">
-            <div class="vv-menu-col">
-              <div class="vv-menu-sub">Recepción</div>
-              <ul class="vv-menu-list">
-                <li>Canastitas de queso y calabresa</li>
-                <li>Pincho caprese cherry — mozzarella, albahaca</li>
-                <li>Variedad de pionono de atún y roquefort</li>
-                <li>Mini pizzas de tomate y mozzarella, aceite de albahaca</li>
-                <li>Chips con queso crema al pimentón y bondiola curada</li>
-                <li>Palmeritas con queso azul ahumado</li>
-                <li>Pinchos de quesos y aceitunas</li>
-                <li>Pinchos de salame y pickles</li>
-                <li>Avochips — crema de palta sobre base de masa</li>
-              </ul>
-            </div>
-            <div class="vv-menu-col">
-              <div class="vv-menu-sub">Principal — sandwiches en pan ayuya</div>
-              <ul class="vv-menu-list">
-                <li>Bola de lomo, larga cocción a las finas hierbas, feteada</li>
-                <li>Pulpa de cerdo desmenuzada, cebolla caramelizada y barbacoa</li>
-              </ul>
-              <p class="vv-menu-note">Ambas carnes acompañadas por salsa criolla, alioli y ketchup.</p>
-            </div>
-          </div>
-        </div>
-        <div class="vv-menu-side">
-          <div class="vv-photo"><img src="https://drive.google.com/thumbnail?id=1yJEeVx2Vli7b7QY53xqIKU6rmRCNsTbc&sz=w1600" alt="Foto de la mesa de bocaditos"></div>
-          <p class="vv-menu-photo-cap">Mesa de bocaditos, Opción A</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 6 — Opción B + Postres + Bebidas -->
-  <div class="vv-section">
-    <div class="vv-glow vv-glow-warm"></div>
-    <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-section-inner">
-      <div class="vv-menu-row">
-        <div class="vv-menu-main">
-          <div class="vv-menu-tag">Opción B</div>
-          <div class="vv-menu-name">Degustación de pizzas</div>
-          <div class="vv-rule" style="margin:0 0 16px;"></div>
-          <div class="vv-menu-grid">
-            <div class="vv-menu-col">
-              <div class="vv-menu-sub">Recepción</div>
-              <ul class="vv-menu-list">
-                <li>Variedad de canastitas, pionono y chips</li>
-                <li>Bocaditos de pollo en salsa de crema y verdeo</li>
-              </ul>
-            </div>
-            <div class="vv-menu-col">
-              <div class="vv-menu-sub">Principal — 6 variedades a elección</div>
-              <ul class="vv-menu-list">
-                <li>Fugazza — mozzarella, cebolla caramelizada, orégano</li>
-                <li>Vegetariana — mozzarella y verdura salteada</li>
-                <li>Napolitana — mozzarella, tomate en rodajas, albahaca</li>
-                <li>Bruschetta — mozzarella, cebolla salteada, ajo, albahaca</li>
-                <li>4 Quesos — mozzarella, pategrás, azul, parmesano</li>
-                <li>Caprese — mozzarella, tomates confitados, aceite de albahaca</li>
-                <li>Panceta ahumada — mozzarella, panceta ahumada, huevo</li>
-                <li>Tanna — mozzarella, bondiola, rúcula, tomates cherry</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="vv-menu-side">
-          <div class="vv-photo"><img src="https://drive.google.com/thumbnail?id=1_wMShVO9j8bgdAMeMenHauBKDAod1DeL&sz=w1600" alt="Foto de la degustación de pizzas"></div>
-          <p class="vv-menu-photo-cap">Degustación de pizzas, Opción B</p>
-        </div>
-      </div>
-
-      <div class="vv-rule" style="margin-top:36px;"></div>
-      <div class="vv-grid-2">
-        <div>
-          <div class="vv-eyebrow" style="margin-bottom:8px;">MESA DE POSTRES NO INCLUIDA EN EL CATERING SALADO</div>
-          <p class="vv-body">Variedad de tortas, tartas frutales y shots.</p>
-        </div>
-        <div>
-          <div class="vv-eyebrow" style="margin-bottom:8px;">BEBIDAS DE MESA A CARGO DEL CLIENTE</div>
-          <p class="vv-body">Cantidades sugeridas por nosotros:<br>cerveza en lata, vino tinto, Coca-Cola, agua saborizada, agua.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 7 — Variedad de tragos -->
-  <div class="vv-section" style="padding:0;">
-    <div class="vv-glow vv-glow-warm"></div>
-    <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-band">
-      <div class="vv-band-inner">
-        <div class="vv-eyebrow">Variedad de tragos</div>
-        <div class="vv-title" style="font-size:32px;">Barra fija del salón</div>
-        <p class="vv-body" style="max-width:560px; margin:10px 0 0; color:rgba(20,20,20,0.72);">Incluida en el servicio base, con opción adicional de barra sin alcohol para adolescentes.</p>
-      </div>
-    </div>
-    <div class="vv-section-inner" style="padding:44px 0;">
-
-      <div class="vv-bar-section">
-        <div class="vv-bar-head">
-          <span class="num">01</span>
-          <span class="label">Barra para adultos</span>
-          <span class="sub">— con alcohol</span>
-        </div>
-        <div class="vv-bar-grid">
-          <div class="vv-bar-tile"><div class="name">Gin Lemon</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Cítrico</span><span class="vv-chip">Con burbujas</span><span class="vv-chip">Refrescante</span></div></div>
-          <div class="vv-bar-tile"><div class="name">Gin con frutos rojos</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Frutal</span><span class="vv-chip">Con burbujas</span><span class="vv-chip">Refrescante</span></div></div>
-          <div class="vv-bar-tile"><div class="name">Cuba Libre</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Dulce</span><span class="vv-chip">Con burbujas</span></div></div>
-          <div class="vv-bar-tile"><div class="name">Cynar Julep</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Amargo</span><span class="vv-chip">Cítrico</span><span class="vv-chip">Con burbujas</span></div></div>
-          <div class="vv-bar-tile"><div class="name">Garibaldi</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Cítrico</span><span class="vv-chip">Frutal</span></div></div>
-          <div class="vv-bar-tile"><div class="name">Aperol Spritz</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Amargo</span><span class="vv-chip">Cítrico</span><span class="vv-chip">Con burbujas</span></div></div>
-          <div class="vv-bar-tile"><div class="name">Fernet &amp; Coca</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Amargo</span><span class="vv-chip">Dulce</span><span class="vv-chip">Con burbujas</span></div></div>
-        </div>
-      </div>
-
-      <div class="vv-bar-section" style="margin-bottom:0;">
-        <div class="vv-bar-head">
-          <span class="num">02</span>
-          <span class="label">Barra para adolescentes</span>
-          <span class="sub">— sin alcohol</span>
-        </div>
-        <div class="vv-bar-grid">
-          <div class="vv-bar-tile"><div class="name">Rojo Fresh</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Frutal</span><span class="vv-chip">Dulce</span><span class="vv-chip">Con burbujas</span></div></div>
-          <div class="vv-bar-tile"><div class="name">Dandy</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Frutal</span><span class="vv-chip">Dulce</span><span class="vv-chip">Con burbujas</span></div></div>
-          <div class="vv-bar-tile"><div class="name">Destornillador Light</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Cítrico</span><span class="vv-chip">Refrescante</span><span class="vv-chip">Con burbujas</span></div></div>
-          <div class="vv-bar-tile"><div class="name">Cítrico</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Herbal</span><span class="vv-chip">Dulce</span><span class="vv-chip">Con burbujas</span></div></div>
-          <div class="vv-bar-tile"><div class="name">Multi Mix</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Frutal</span><span class="vv-chip">Dulce</span><span class="vv-chip">Con burbujas</span></div></div>
-          <div class="vv-bar-tile"><div class="name">Limonada</div><div class="vv-chip-row"><span class="vv-chip vv-chip-accent">Herbal</span><span class="vv-chip">Liviano</span><span class="vv-chip">Dulce</span></div></div>
-        </div>
-      </div>
-
-      <p class="vv-menu-note" style="margin-top:16px;">Tragos preparados en el momento con insumos de primera marca.</p>
-    </div>
-  </div>
-
-  <!-- 8 — Soluciones a medida -->
-  <div class="vv-section">
-    <div class="vv-glow vv-glow-warm"></div>
-    <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-section-inner">
-      <div class="vv-title" style="font-size:32px;">Soluciones a medida</div>
-      <p class="vv-body" style="margin:8px 0 32px; color:rgba(247,241,230,0.7);">Experiencias diseñadas alrededor de tu visión, no de un catálogo cerrado.</p>
-      <div class="vv-feat">
-        <span class="vv-tri"></span>
-        <div>
-          <div class="vv-feat-title">Diseño de evento personalizado</div>
-          <p class="vv-body">Acompañamos cada decisión — desde la ambientación hasta el recorrido de invitados — para que el evento sea único y memorable.</p>
-        </div>
-      </div>
-      <div class="vv-feat" style="margin-bottom:28px;">
-        <span class="vv-tri"></span>
-        <div>
-          <div class="vv-feat-title">Experiencias interactivas para invitados</div>
-          <p class="vv-body">Sumamos estaciones y momentos pensados para generar conexión real entre los invitados, no solo espectáculo.</p>
-        </div>
-      </div>
-      <div class="vv-photo" style="height:340px;"><img src="https://drive.google.com/thumbnail?id=1kLqXu-pvYKkf9Q-6BmJJ4kQGxetqwWKJ&sz=w1600" alt="Terraza de noche"></div>
-    </div>
-  </div>
-
-  <!-- 9 — Identidad propia -->
-  <div class="vv-section" style="padding:0;">
-    <div class="vv-glow vv-glow-warm"></div>
-    <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-band" style="padding-bottom:0;">
-      <div class="vv-band-inner">
-        <div class="vv-eyebrow">Identidad propia</div>
-        <div class="vv-title" style="font-size:32px; padding-bottom:32px;">Un salón que no se parece a otro</div>
-      </div>
-    </div>
-    <div class="vv-split">
-      <div class="vv-split-text" style="background:#141414;">
-        <p class="vv-body" style="font-size:15px; line-height:1.75;">VALLEVERDE no es un salón de fiestas más: es un espacio industrial moderno pensado para quienes buscan identidad propia, no una fórmula repetida.</p>
-        <div class="vv-rule"></div>
-        <p class="vv-body" style="font-size:15px; line-height:1.75;">Mientras otros ofrecen ambientes genéricos o decorados de forma excesiva, trabajamos con líneas limpias, materiales nobles y una calidez que no necesita artificios.</p>
-        <p class="vv-body" style="font-size:15px; line-height:1.75; margin-top:14px;">Cada evento se diseña a medida — sin paquetes cerrados ni piezas prearmadas — acompañado por un equipo que se ocupa de que todo funcione sin sobresaltos.</p>
-      </div>
-      <div class="vv-split-photo" style="display:flex; flex-direction:column; gap:2px;">
-        <img src="https://drive.google.com/thumbnail?id=1_wMShVO9j8bgdAMeMenHauBKDAod1DeL&sz=w1600" alt="Propuesta gastronómica" style="flex:1; min-height:160px;">
-        <img src="https://drive.google.com/thumbnail?id=14uOflBsoTQTGKkEou2RgOMc_dxjwzYH5&sz=w1600" alt="Momento gastronómico" style="flex:1; min-height:160px;">
-      </div>
-    </div>
-  </div>
-
-  <!-- 10 — Timeline -->
-  <div class="vv-section" style="padding:0;">
-    <div class="vv-glow vv-glow-warm"></div>
-    <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-band">
-      <div class="vv-band-inner">
-        <div class="vv-title" style="font-size:32px;">Tu camino hacia el evento</div>
-        <p class="vv-body" style="margin:8px 0 0; color:rgba(20,20,20,0.72);">Un proceso simple, pensado para que te ocupes solo de disfrutar.</p>
-      </div>
-    </div>
-    <div class="vv-section-inner" style="padding:44px 0;">
-      <div class="vv-photo" style="height:220px; margin-bottom:24px;"><img src="https://drive.google.com/thumbnail?id=1yJEeVx2Vli7b7QY53xqIKU6rmRCNsTbc&sz=w1600" alt="Mesa de gastronomía"></div>
-
-      <div class="vv-timeline-row">
-        <div class="vv-timeline-col-a">
-          <div class="vv-photo" style="height:280px;"><img src="https://drive.google.com/thumbnail?id=1ZrfZ4-k1pTtGqriYhlDICccXkqS3M_Yp&sz=w1600" alt="Un trago en la barra"></div>
-          <p class="vv-body" style="margin-top:10px; font-size:12.5px; font-style:italic; color:rgba(247,241,230,0.6);">Un trago no es solo un trago cuando el lugar acompaña.</p>
-        </div>
-        <div class="vv-timeline-col-b">
-          <div class="vv-photo" style="height:200px;"><img src="https://drive.google.com/thumbnail?id=14uOflBsoTQTGKkEou2RgOMc_dxjwzYH5&sz=w1600" alt="Disfrutando la propuesta gastronómica"></div>
-          <p class="vv-body" style="margin-top:10px; font-size:12.5px; font-style:italic; color:rgba(247,241,230,0.6);">Se come con las manos, se disfruta con calma.</p>
-        </div>
-      </div>
-
-      <div class="vv-eyebrow">Recorrido de planificación</div>
-      <div class="vv-grid-2" style="margin-top:16px;">
-        <div style="display:flex; gap:12px; align-items:flex-start;">
-          <span style="font:700 22px/1 'Poppins', sans-serif; color:#E8792B; flex-shrink:0;">01</span>
-          <div><div class="vv-feat-title" style="font-size:13px;">Consulta inicial</div><p class="vv-body" style="font-size:12px;">Conversamos tu visión y necesidades.</p></div>
-        </div>
-        <div style="display:flex; gap:12px; align-items:flex-start;">
-          <span style="font:700 22px/1 'Poppins', sans-serif; color:#E8792B; flex-shrink:0;">02</span>
-          <div><div class="vv-feat-title" style="font-size:13px;">Visita al espacio</div><p class="vv-body" style="font-size:12px;">Recorremos el salón y definimos el formato.</p></div>
-        </div>
-        <div style="display:flex; gap:12px; align-items:flex-start;">
-          <span style="font:700 22px/1 'Poppins', sans-serif; color:#E8792B; flex-shrink:0;">03</span>
-          <div><div class="vv-feat-title" style="font-size:13px;">Definición final</div><p class="vv-body" style="font-size:12px;">Confirmamos detalles y logística.</p></div>
-        </div>
-        <div style="display:flex; gap:12px; align-items:flex-start;">
-          <span style="font:700 22px/1 'Poppins', sans-serif; color:#E8792B; flex-shrink:0;">04</span>
-          <div><div class="vv-feat-title" style="font-size:13px;">Día del evento</div><p class="vv-body" style="font-size:12px;">Disfrutás mientras nosotros coordinamos todo.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 11 — Inversión + Términos -->
-  <div class="vv-section" style="padding:0;">
-    <div class="vv-glow vv-glow-warm"></div>
-    <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-band">
-      <div class="vv-band-inner">
-        <div class="vv-title" style="font-size:32px;">Inversión</div>
-      </div>
-    </div>
-    <div class="vv-section-inner" style="padding:44px 0 0;">
-      <table class="vv-table">
-        <thead><tr><th>Servicio</th><th>Precio / inv.</th><th>Cant.</th><th>Total</th></tr></thead>
-        <tbody>
-        <tr><td data-label="Servicio">Salón</td><td data-label="Precio / inv.">$27.079</td><td data-label="Cant.">50</td><td data-label="Total">$1.353.953</td></tr>
-        <tr><td data-label="Servicio">Barra adultos</td><td data-label="Precio / inv.">$18.414</td><td data-label="Cant.">50</td><td data-label="Total">$920.688</td></tr>
-        <tr><td data-label="Servicio">Finger Food</td><td data-label="Precio / inv.">$27.079</td><td data-label="Cant.">50</td><td data-label="Total">$1.353.953</td></tr>
-        <tr><td data-label="Servicio">Mesa de Postres</td><td data-label="Precio / inv.">$15.706</td><td data-label="Cant.">50</td><td data-label="Total">$785.293</td></tr>
-        <tr><td data-label="Servicio" style="font-weight:700; color:#F7F1E6;">Total</td><td data-label="Precio / inv."></td><td data-label="Cant."></td><td data-label="Total" style="font-weight:700; color:#F7F1E6;">$4.413.887</td></tr>
-        </tbody>
-      </table>
-      <p class="vv-body" style="font-size:12px; opacity:0.6; font-style:italic; margin-top:14px;">Valores sujetos a actualización por inflación oficial hasta la fecha del evento.</p>
-      <div class="vv-eyebrow" style="margin-top:22px;">Modalidad de pago</div>
-      <p class="vv-body">Seña 35%: con la reserva del salón. Saldo 65%: 15 días antes del evento.</p>
-      <p class="vv-body" style="margin-top:10px; font-weight:700; color:#F7F1E6;">Cliente: MANUEL &nbsp;·&nbsp; Evento: Cumple 50 &nbsp;·&nbsp; Fecha: 15/12/2026 &nbsp;·&nbsp; Invitados: 50 &nbsp;·&nbsp; Horario: 21:00 a 03:00 hs</p>
-      <p class="vv-body" style="margin-top:4px; font-weight:700; color:#F7F1E6;">Vigencia de la propuesta: hasta el 15/11/2026</p>
-    </div>
-    <div class="vv-section-inner" style="padding:32px 0 56px;">
-      <div class="vv-eyebrow" style="margin-bottom:16px;">Términos y condiciones</div>
-      <div class="vv-feat"><span class="vv-tri"></span><p class="vv-body">Reserva de fecha sujeta a seña del 35% del total.</p></div>
-      <div class="vv-feat"><span class="vv-tri"></span><p class="vv-body">Saldo a abonar hasta 15 días&nbsp;antes del evento.</p></div>
-      <div class="vv-feat"><span class="vv-tri"></span><p class="vv-body">Cancelaciones no reintegran la seña.</p></div>
-      <div class="vv-feat" style="margin-bottom:0;"><span class="vv-tri"></span><p class="vv-body">Propuesta válida por 15 días desde la fecha de emisión.</p></div>
-    </div>
-  </div>
-
-  <!-- 12 — Cierre -->
-  <div class="vv-section" style="padding:0;">
-    <div class="vv-glow vv-glow-warm"></div>
-    <div class="vv-glow vv-glow-lines"></div>
-    <div class="vv-closing-photo">
-      <img src="https://drive.google.com/thumbnail?id=1KHP567L3uXsLi8E7CuL68QplBiDbjyB0&sz=w1600" alt="Vista del salón al atardecer">
-    </div>
-    <div class="vv-closing-inner">
-      <div class="vv-title" style="font-size:30px;">Hablemos de<br>tu evento</div>
+    <div class="feature-row">
+      <div class="foto feature-foto"><img src="https://drive.google.com/thumbnail?id=18vTnSCFoZLa31IRvro1s_HiHxUatrhEr&sz=w1600" alt="Evento corporativo"></div>
       <div>
-        <p class="vv-body" style="margin-bottom:20px;">Escribinos para confirmar esta propuesta o coordinar una visita al salón.</p>
-        <p class="vv-body" style="font-size:13px; margin-bottom:32px;">Email: salonvalleverde@gmail.com · Teléfono / WhatsApp&nbsp; 291 539-4401 · Instagram: valleverde_eventos</p>
-        <div class="vv-grid-2">
-          <div style="border-top:1px solid rgba(247,241,230,0.3); padding-top:8px; font:300 12px/1.4 'Poppins', sans-serif;">VALLEVERDE Eventos</div>
-          <div style="border-top:1px solid rgba(247,241,230,0.3); padding-top:8px; font:300 12px/1.4 'Poppins', sans-serif;">MANUEL</div>
-        </div>
+        <div class="eyebrow" style="margin-bottom:4px;">Corporativo</div>
+        <h3>Lanzamientos y activaciones</h3>
+        <p>Presentaciones de producto, jornadas de empresa y eventos de networking, con montaje y equipo técnico incluidos.</p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="foto feature-foto"><img src="https://drive.google.com/thumbnail?id=1ySTydFByCDi08OxysVnndGIyeAHAmjxD&sz=w1600" alt="Celebración social"></div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:4px;">Social</div>
+        <h3>Casamientos y celebraciones</h3>
+        <p>Casamientos, cumpleaños y celebraciones íntimas o de gran escala, con formato de montaje flexible.</p>
+      </div>
+    </div>
+
+    <div class="eyebrow" style="margin-top:8px;">Espacio y capacidad</div>
+    <div class="precio-card">
+      <div class="precio-servicio">Cóctel / de pie</div>
+      <p style="margin:0; font-size:13px;">90 personas — activaciones, networking</p>
+    </div>
+    <div class="precio-card">
+      <div class="precio-servicio">Mesas banquete</div>
+      <p style="margin:0; font-size:13px;">90 personas — casamientos, cenas corporativas</p>
+    </div>
+    <div class="precio-card">
+      <div class="precio-servicio">Auditorio</div>
+      <p style="margin:0; font-size:13px;">60 personas — presentaciones, charlas</p>
+    </div>
+  </div>
+</section>
+
+<section class="seccion franja">
+  <div class="contenido">
+    <h2>Qué incluye tu evento</h2>
+    <div class="regla"></div>
+
+    <div class="foto"><img src="https://drive.google.com/thumbnail?id=1jvrQFx6Jgalq6VNnJi9imX1cmiSJ5StS&sz=w1600" alt="Iluminación nocturna"></div>
+    <h3>Iluminación y ambientación</h3>
+    <p>Iluminación cálida propia del espacio y detalles industriales que arman el clima de tu evento sin necesidad de decoración adicional.</p>
+
+    <div class="foto" style="margin-top:24px;"><img src="https://drive.google.com/thumbnail?id=1rRwp7aB--O99oqQJbSEx-K7cQwhBn4Oc&sz=w1600" alt="Montaje del salón"></div>
+    <h3>Montaje flexible</h3>
+    <p>Mobiliario base y disposición de mesas y sillas adaptada al formato elegido, de cóctel a banquete.</p>
+
+    <div class="foto" style="margin-top:24px;"><img src="https://drive.google.com/thumbnail?id=1yJEeVx2Vli7b7QY53xqIKU6rmRCNsTbc&sz=w1600" alt="Detalle de catering"></div>
+    <h3>Catering a medida</h3>
+    <p>Coordinación con proveedores gastronómicos de confianza, con propuestas de menú adaptadas a cada evento.</p>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="contenido">
+    <div class="eyebrow">Propuesta gastronómica</div>
+    <h2>Formato buffet americano</h2>
+    <p>Dos opciones de menú, cada una con recepción, plato principal y mesa de postres.</p>
+
+    <div class="menu-row">
+      <div class="menu-texto">
+        <div class="tag">Opción A</div>
+        <h3 style="font-size:20px; font-weight:300;">Finger Food</h3>
+        <div class="regla" style="margin:0 0 14px;"></div>
+
+        <div class="subtitulo-menu">Recepción</div>
+        <ul class="lista">
+          <li>Canastitas de queso y calabresa</li>
+          <li>Pincho caprese cherry — mozzarella, albahaca</li>
+          <li>Variedad de pionono de atún y roquefort</li>
+          <li>Mini pizzas de tomate y mozzarella, aceite de albahaca</li>
+          <li>Chips con queso crema al pimentón y bondiola curada</li>
+          <li>Palmeritas con queso azul ahumado</li>
+          <li>Pinchos de quesos y aceitunas</li>
+          <li>Pinchos de salame y pickles</li>
+          <li>Avochips — crema de palta sobre base de masa</li>
+        </ul>
+
+        <div class="subtitulo-menu">Principal — sandwiches en pan ayuya</div>
+        <ul class="lista">
+          <li>Bola de lomo, larga cocción a las finas hierbas, feteada</li>
+          <li>Pulpa de cerdo desmenuzada, cebolla caramelizada y barbacoa</li>
+        </ul>
+        <p class="nota">Ambas carnes acompañadas por salsa criolla, alioli y ketchup.</p>
+      </div>
+      <div class="menu-foto">
+        <div class="foto" style="margin-bottom:8px;"><img src="https://drive.google.com/thumbnail?id=1yJEeVx2Vli7b7QY53xqIKU6rmRCNsTbc&sz=w1600" alt="Mesa de bocaditos, Opción A"></div>
+        <div class="foto-cap">Mesa de bocaditos, Opción A</div>
       </div>
     </div>
   </div>
+</section>
 
-</div>
+<section class="seccion franja">
+  <div class="contenido">
+    <div class="menu-row">
+      <div class="menu-texto">
+        <div class="tag" style="background:#141414; color:#F7F1E6;">Opción B</div>
+        <h3 style="font-size:20px; font-weight:300;">Degustación de pizzas</h3>
+        <div class="regla" style="margin:0 0 14px;"></div>
+
+        <div class="subtitulo-menu">Recepción</div>
+        <ul class="lista">
+          <li>Variedad de canastitas, pionono y chips</li>
+          <li>Bocaditos de pollo en salsa de crema y verdeo</li>
+        </ul>
+
+        <div class="subtitulo-menu">Principal — 6 variedades a elección</div>
+        <ul class="lista">
+          <li>Fugazza — mozzarella, cebolla caramelizada, orégano</li>
+          <li>Vegetariana — mozzarella y verdura salteada</li>
+          <li>Napolitana — mozzarella, tomate en rodajas, albahaca</li>
+          <li>Bruschetta — mozzarella, cebolla salteada, ajo, albahaca</li>
+          <li>4 Quesos — mozzarella, pategrás, azul, parmesano</li>
+          <li>Caprese — mozzarella, tomates confitados, aceite de albahaca</li>
+          <li>Panceta ahumada — mozzarella, panceta ahumada, huevo</li>
+          <li>Tanna — mozzarella, bondiola, rúcula, tomates cherry</li>
+        </ul>
+      </div>
+      <div class="menu-foto">
+        <div class="foto" style="margin-bottom:8px;"><img src="https://drive.google.com/thumbnail?id=1_wMShVO9j8bgdAMeMenHauBKDAod1DeL&sz=w1600" alt="Degustación de pizzas, Opción B"></div>
+        <div class="foto-cap" style="color:rgba(20,20,20,0.5);">Degustación de pizzas, Opción B</div>
+      </div>
+    </div>
+
+    <div class="regla" style="margin-top:10px;"></div>
+    <div class="eyebrow" style="margin-top:10px;">Mesa de postres — no incluida en el catering salado</div>
+    <p>Variedad de tortas, tartas frutales y shots.</p>
+
+    <div class="eyebrow" style="margin-top:14px;">Bebidas de mesa — a cargo del cliente</div>
+    <p>Cantidades sugeridas por nosotros: cerveza en lata, vino tinto, Coca-Cola, agua saborizada, agua.</p>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="contenido">
+    <div class="eyebrow">Variedad de tragos</div>
+    <h2>Barra fija del salón</h2>
+    <p>Incluida en el servicio base, con opción adicional de barra sin alcohol para adolescentes.</p>
+
+    <div class="barra-bloque">
+      <div class="barra-head">
+        <span class="num">01</span>
+        <span class="label">Barra para adultos</span>
+        <span class="sub">— con alcohol</span>
+      </div>
+      <div class="barra-grid">
+        <div class="barra-tile"><div class="name">Gin Lemon</div><div class="chip-row"><span class="chip chip-accent">Cítrico</span><span class="chip">Con burbujas</span><span class="chip">Refrescante</span></div></div>
+        <div class="barra-tile"><div class="name">Gin con frutos rojos</div><div class="chip-row"><span class="chip chip-accent">Frutal</span><span class="chip">Con burbujas</span><span class="chip">Refrescante</span></div></div>
+        <div class="barra-tile"><div class="name">Cuba Libre</div><div class="chip-row"><span class="chip chip-accent">Dulce</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Cynar Julep</div><div class="chip-row"><span class="chip chip-accent">Amargo</span><span class="chip">Cítrico</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Garibaldi</div><div class="chip-row"><span class="chip chip-accent">Cítrico</span><span class="chip">Frutal</span></div></div>
+        <div class="barra-tile"><div class="name">Aperol Spritz</div><div class="chip-row"><span class="chip chip-accent">Amargo</span><span class="chip">Cítrico</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Fernet &amp; Coca</div><div class="chip-row"><span class="chip chip-accent">Amargo</span><span class="chip">Dulce</span><span class="chip">Con burbujas</span></div></div>
+      </div>
+    </div>
+
+    <div class="barra-bloque" style="margin-bottom:10px;">
+      <div class="barra-head">
+        <span class="num">02</span>
+        <span class="label">Barra para adolescentes</span>
+        <span class="sub">— sin alcohol</span>
+      </div>
+      <div class="barra-grid">
+        <div class="barra-tile"><div class="name">Rojo Fresh</div><div class="chip-row"><span class="chip chip-accent">Frutal</span><span class="chip">Dulce</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Dandy</div><div class="chip-row"><span class="chip chip-accent">Frutal</span><span class="chip">Dulce</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Destornillador Light</div><div class="chip-row"><span class="chip chip-accent">Cítrico</span><span class="chip">Refrescante</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Cítrico</div><div class="chip-row"><span class="chip chip-accent">Herbal</span><span class="chip">Dulce</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Multi Mix</div><div class="chip-row"><span class="chip chip-accent">Frutal</span><span class="chip">Dulce</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Limonada</div><div class="chip-row"><span class="chip chip-accent">Herbal</span><span class="chip">Liviano</span><span class="chip">Dulce</span></div></div>
+      </div>
+    </div>
+
+    <p class="nota">Tragos preparados en el momento con insumos de primera marca.</p>
+  </div>
+</section>
+
+<section class="seccion franja">
+  <div class="contenido">
+    <h2>Soluciones a medida</h2>
+    <p>Experiencias diseñadas alrededor de tu visión, no de un catálogo cerrado.</p>
+
+    <div class="feature">
+      <span class="tri"></span>
+      <div>
+        <h3>Diseño de evento personalizado</h3>
+        <p>Acompañamos cada decisión — desde la ambientación hasta el recorrido de invitados — para que el evento sea único y memorable.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <span class="tri"></span>
+      <div>
+        <h3>Experiencias interactivas para invitados</h3>
+        <p>Sumamos estaciones y momentos pensados para generar conexión real entre los invitados, no solo espectáculo.</p>
+      </div>
+    </div>
+
+    <div class="foto" style="margin-top:8px;"><img src="https://drive.google.com/thumbnail?id=1kLqXu-pvYKkf9Q-6BmJJ4kQGxetqwWKJ&sz=w1600" alt="Terraza de noche"></div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="contenido">
+    <div class="eyebrow">Identidad propia</div>
+    <h2>Un salón que no se parece a otro</h2>
+    <div class="regla"></div>
+    <p style="font-size:15px; line-height:1.75;">VALLEVERDE no es un salón de fiestas más: es un espacio industrial moderno pensado para quienes buscan identidad propia, no una fórmula repetida.</p>
+    <p style="font-size:15px; line-height:1.75;">Mientras otros ofrecen ambientes genéricos o decorados de forma excesiva, trabajamos con líneas limpias, materiales nobles y una calidez que no necesita artificios.</p>
+    <p style="font-size:15px; line-height:1.75;">Cada evento se diseña a medida — sin paquetes cerrados ni piezas prearmadas — acompañado por un equipo que se ocupa de que todo funcione sin sobresaltos.</p>
+
+    <div class="foto" style="margin-top:16px;"><img src="https://drive.google.com/thumbnail?id=1_wMShVO9j8bgdAMeMenHauBKDAod1DeL&sz=w1600" alt="Propuesta gastronómica"></div>
+    <div class="foto"><img src="https://drive.google.com/thumbnail?id=14uOflBsoTQTGKkEou2RgOMc_dxjwzYH5&sz=w1600" alt="Momento gastronómico"></div>
+  </div>
+</section>
+
+<section class="seccion franja">
+  <div class="contenido">
+    <h2>Tu camino hacia el evento</h2>
+    <p>Un proceso simple, pensado para que te ocupes solo de disfrutar.</p>
+
+    <div class="foto"><img src="https://drive.google.com/thumbnail?id=1yJEeVx2Vli7b7QY53xqIKU6rmRCNsTbc&sz=w1600" alt="Mesa de gastronomía"></div>
+
+    <div class="eyebrow" style="margin-top:20px;">Recorrido de planificación</div>
+    <div class="paso" style="margin-top:12px;">
+      <span class="paso-num">01</span>
+      <div><h3>Consulta inicial</h3><p>Conversamos tu visión y necesidades.</p></div>
+    </div>
+    <div class="paso">
+      <span class="paso-num">02</span>
+      <div><h3>Visita al espacio</h3><p>Recorremos el salón y definimos el formato.</p></div>
+    </div>
+    <div class="paso">
+      <span class="paso-num">03</span>
+      <div><h3>Definición final</h3><p>Confirmamos detalles y logística.</p></div>
+    </div>
+    <div class="paso" style="margin-bottom:0;">
+      <span class="paso-num">04</span>
+      <div><h3>Día del evento</h3><p>Disfrutás mientras nosotros coordinamos todo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="contenido">
+    <div class="eyebrow">Inversión</div>
+    <h2>Presupuesto</h2>
+    <div class="regla"></div>
+
+    <div id="filas-precios"><div class="precio-card">
+        <div class="precio-servicio">Salón</div>
+        <div class="precio-datos">
+          <div class="precio-dato"><span class="label">Cantidad</span><span class="valor">50</span></div>
+          <div class="precio-dato"><span class="label">Precio unit.</span><span class="valor">$27.079</span></div>
+          <div class="precio-dato total"><span class="label">Total</span><span class="valor">$1.353.953</span></div>
+        </div>
+      </div>
+      <div class="precio-card">
+        <div class="precio-servicio">Barra adultos</div>
+        <div class="precio-datos">
+          <div class="precio-dato"><span class="label">Cantidad</span><span class="valor">50</span></div>
+          <div class="precio-dato"><span class="label">Precio unit.</span><span class="valor">$18.414</span></div>
+          <div class="precio-dato total"><span class="label">Total</span><span class="valor">$920.688</span></div>
+        </div>
+      </div>
+      <div class="precio-card">
+        <div class="precio-servicio">Finger Food</div>
+        <div class="precio-datos">
+          <div class="precio-dato"><span class="label">Cantidad</span><span class="valor">50</span></div>
+          <div class="precio-dato"><span class="label">Precio unit.</span><span class="valor">$27.079</span></div>
+          <div class="precio-dato total"><span class="label">Total</span><span class="valor">$1.353.953</span></div>
+        </div>
+      </div>
+      <div class="precio-card">
+        <div class="precio-servicio">Mesa de Postres</div>
+        <div class="precio-datos">
+          <div class="precio-dato"><span class="label">Cantidad</span><span class="valor">50</span></div>
+          <div class="precio-dato"><span class="label">Precio unit.</span><span class="valor">$15.706</span></div>
+          <div class="precio-dato total"><span class="label">Total</span><span class="valor">$785.293</span></div>
+        </div>
+      </div></div>
+
+    <div class="total-final">
+      <span class="label">Total</span>
+      <span class="valor">$4.413.887</span>
+    </div>
+    <p class="vigencia">Vigencia de la propuesta: hasta el 15/11/2026.</p>
+
+    <div class="eyebrow" style="margin-top:32px;">Términos y condiciones</div>
+    <ul class="lista terminos" style="margin-top:12px;">
+      <li>Reserva de fecha sujeta a seña del 35% del total.</li>
+      <li>Saldo a abonar hasta 15 días antes del evento.</li>
+      <li>Cancelaciones no reintegran la seña.</li>
+      <li style="border-bottom:none;">Propuesta válida por 15 días desde la fecha de emisión.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="seccion franja cierre">
+  <div class="contenido">
+    <div class="foto" style="margin-bottom:24px;"><img src="https://drive.google.com/thumbnail?id=1KHP567L3uXsLi8E7CuL68QplBiDbjyB0&sz=w1600" alt="Vista del salón al atardecer"></div>
+    <h2>Hablemos de tu evento</h2>
+    <p>Escribinos para confirmar esta propuesta o coordinar una visita al salón.</p>
+
+    <div class="contacto-lista">
+      <div class="contacto-item"><span class="label">Email</span><a href="mailto:salonvalleverde@gmail.com">salonvalleverde@gmail.com</a></div>
+      <div class="contacto-item"><span class="label">WhatsApp</span><a href="https://wa.me/5492915394401">291 539-4401</a></div>
+      <div class="contacto-item"><span class="label">Instagram</span><a href="https://instagram.com/valleverde_eventos">@valleverde_eventos</a></div>
+    </div>
+
+    <div class="marca-final">VALLEVERDE Eventos — MANUEL</div>
+  </div>
+</section>
+
 </body>
 </html>
