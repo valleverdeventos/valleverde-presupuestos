@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta — Cumple 50 · VALLEVERDE Eventos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#141414; --text:#F7F1E6; --accent:#E8792B; --band:#C7C0B5; --band-text:#141414; --maxw:1100px; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family:'Poppins',sans-serif; font-weight:300; line-height:1.6; -webkit-text-size-adjust:100%; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { color:#f4954f; text-decoration:underline; }
+  img { max-width:100%; height:auto; display:block; }
+  .seccion { width:100%; padding:48px 20px; position:relative; overflow:hidden; }
+  .contenido { max-width:var(--maxw); margin:0 auto; position:relative; z-index:1; }
+  .pag-num { position:absolute; top:20px; right:20px; font:600 10px/1.3 'Poppins',sans-serif; letter-spacing:2px; color:rgba(247,241,230,0.45); z-index:2; }
+  .franja .pag-num { color:rgba(20,20,20,0.45); }
+  .incluye-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:24px; max-width:340px; }
+  .incluye-badge { aspect-ratio:1/1; border-radius:2px; overflow:hidden; background:#000; }
+  .incluye-badge img { width:100%; height:100%; object-fit:contain; display:block; padding:6px; box-sizing:border-box; }
+  @media (min-width:700px){ .incluye-grid{ grid-template-columns:repeat(5,1fr); max-width:480px; } }
+  .franja { background:var(--band); color:var(--band-text); }
+  .franja .eyebrow { color:var(--accent); }
+  .franja p { color:rgba(20,20,20,0.72); }
+  .eyebrow { font:700 11px/1.3 'Poppins',sans-serif; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin:0 0 10px; }
+  h1,h2,h3 { font-family:'Poppins',sans-serif; font-weight:300; margin:0 0 10px; }
+  h1 { font-size:32px; line-height:1.15; }
+  h2 { font-size:26px; line-height:1.2; }
+  h3 { font-size:16px; font-weight:700; line-height:1.3; margin-bottom:6px; }
+  .regla { width:40px; height:2px; background:var(--accent); margin:16px 0 18px; border:none; }
+  p { margin:0 0 12px; font-size:14px; color:rgba(247,241,230,0.85); }
+  .franja p { font-size:14px; }
+  ul.lista { list-style:none; margin:0; padding:0; }
+  ul.lista li { font-size:13.5px; padding:8px 0; border-bottom:1px solid rgba(247,241,230,0.12); color:rgba(247,241,230,0.85); }
+  .foto { width:100%; aspect-ratio:4/3; border-radius:2px; overflow:hidden; background:#1e1e1e; margin-bottom:20px; }
+  .foto img { width:100%; height:100%; object-fit:cover; }
+  .foto-cap { font-size:11.5px; font-style:italic; color:rgba(247,241,230,0.5); text-align:center; margin:-12px 0 20px; }
+  .portada { padding:0; }
+  .portada .foto-portada { width:100%; aspect-ratio:788/1400; background:#1e1e1e; overflow:hidden; }
+  .portada .foto-portada img { width:100%; height:100%; object-fit:cover; }
+  .portada .datos { padding:28px 20px 36px; }
+  .portada .datos-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:4px; }
+  .portada .dato { font:600 17px/1.3 'Poppins',sans-serif; }
+  .portada .dato .label { display:block; font:700 11px/1.3 'Poppins',sans-serif; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:3px; }
+  .portada .contacto { font-size:12px; color:rgba(247,241,230,0.6); border-top:1px solid rgba(247,241,230,0.15); padding-top:14px; margin-top:14px; }
+  .portada .aviso-precio { margin-top:20px; padding:18px 16px; border:2px solid var(--accent); border-radius:3px; background:rgba(232,121,43,0.12); font:700 18px/1.35 'Poppins',sans-serif; letter-spacing:0.3px; color:var(--accent); text-align:center; text-transform:uppercase; }
+  .feature { display:flex; gap:12px; margin-bottom:20px; align-items:flex-start; }
+  .tri { width:0; height:0; border-left:5px solid transparent; border-right:5px solid transparent; border-bottom:8px solid var(--accent); margin-top:6px; flex-shrink:0; }
+  table.tabla { width:100%; border-collapse:collapse; font:400 13px/1.5 'Poppins',sans-serif; }
+  table.tabla th { text-align:left; font:600 10px/1.3 'Poppins',sans-serif; text-transform:uppercase; letter-spacing:1.5px; color:var(--accent); padding:9px 8px; border-bottom:1px solid rgba(247,241,230,0.25); }
+  table.tabla td { padding:11px 8px; border-bottom:1px solid rgba(247,241,230,0.12); color:rgba(247,241,230,0.85); }
+  .barra-bloque { margin-bottom:30px; }
+  .barra-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:10px; margin-bottom:14px; }
+  .barra-head .num { font:700 20px/1 'Poppins',sans-serif; color:var(--accent); }
+  .barra-head .label { font:700 12px/1.3 'Poppins',sans-serif; letter-spacing:2px; text-transform:uppercase; }
+  .barra-head .sub { font-size:12px; color:rgba(247,241,230,0.55); }
+  .barra-grid { display:grid; grid-template-columns:1fr; gap:1px; background:rgba(247,241,230,0.14); border:1px solid rgba(247,241,230,0.14); }
+  .barra-tile { background:var(--bg); padding:14px 16px; display:flex; flex-direction:column; gap:8px; }
+  .barra-tile .name { font:700 14px/1.2 'Poppins',sans-serif; }
+  .chip-row { display:flex; flex-wrap:wrap; gap:6px; }
+  .chip { font:600 9px/1.3 'Poppins',sans-serif; letter-spacing:1px; text-transform:uppercase; color:rgba(247,241,230,0.7); border:1px solid rgba(247,241,230,0.25); padding:3px 8px; border-radius:20px; }
+  .chip-accent { color:var(--accent); border-color:rgba(232,121,43,0.45); }
+  .paso { display:flex; gap:14px; align-items:flex-start; margin-bottom:20px; }
+  .paso .paso-num { font:700 20px/1 'Poppins',sans-serif; color:var(--accent); flex-shrink:0; width:30px; }
+  .cierre { text-align:center; }
+  .cierre .contacto-lista { display:flex; flex-direction:column; gap:10px; margin:20px 0; }
+  .cierre .contacto-item { font-size:14px; }
+  .cierre .contacto-item .label { display:block; font:700 10px/1.3 'Poppins',sans-serif; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:2px; }
+  .marca-final { margin-top:30px; font:700 13px/1.3 'Poppins',sans-serif; letter-spacing:2px; text-transform:uppercase; color:rgba(247,241,230,0.5); }
+  @media (min-width:600px){ .seccion{padding:64px 32px;} h1{font-size:42px;} h2{font-size:30px;} .barra-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (min-width:900px){
+    .seccion{padding:84px 40px;} h1{font-size:50px;}
+    .feature-row{display:flex; gap:24px; margin-bottom:26px; align-items:center;}
+    .feature-row .feature-foto{width:300px; flex-shrink:0; margin-bottom:0;}
+    .bienvenida-row{display:flex; align-items:stretch; gap:0;}
+    .bienvenida-row .bienvenida-texto{width:42%; padding:60px 40px; display:flex; flex-direction:column; justify-content:center;}
+    .bienvenida-row .bienvenida-foto{width:58%; aspect-ratio:auto; margin:40px 40px 40px 0;}
+    .identidad-row{display:flex; gap:40px; align-items:center;}
+    .identidad-row .identidad-texto{flex:1;}
+    .identidad-row .identidad-fotos{width:340px; flex-shrink:0; display:flex; flex-direction:column; gap:12px;}
+    .identidad-row .identidad-fotos .foto{margin-bottom:0; flex:1;}
+    .portada .datos-grid{grid-template-columns:repeat(4,1fr);}
+  }
+  .precio-card { background:rgba(247,241,230,0.05); border:1px solid rgba(247,241,230,0.14); border-radius:2px; padding:16px 18px; margin-bottom:12px; }
+  .precio-card .precio-servicio { font:600 17px/1.3 'Poppins',sans-serif; margin-bottom:10px; }
+  .precio-card .precio-datos { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+  .precio-dato { font-size:14px; }
+  .precio-dato .label { display:block; font:600 10px/1.3 'Poppins',sans-serif; letter-spacing:1px; text-transform:uppercase; color:rgba(247,241,230,0.45); margin-bottom:2px; }
+  .precio-dato .valor { font-size:17px; color:var(--text); }
+  .precio-dato.total .valor { color:var(--accent); font-weight:700; }
+  .total-final { display:flex; justify-content:space-between; align-items:baseline; padding:18px 0 4px; border-top:2px solid var(--accent); margin-top:6px; }
+  .total-final .label { font:700 12px/1.3 'Poppins',sans-serif; letter-spacing:1.5px; text-transform:uppercase; }
+  .total-final .valor { font:700 32px/1 'Poppins',sans-serif; color:var(--accent); }
+</style>
+</head>
+<body>
+
+<section class="seccion portada" data-screen-label="01">
+  <div class="foto-portada"><img src="../manuel-cumple50-2026-12-15/assets/photos-web/cover-design.jpg" alt="VALLEVERDE Eventos"></div>
+  <div class="datos">
+    <h1 style="margin-bottom:4px;">Cumple 50</h1>
+    <div class="regla"></div>
+    <div class="datos-grid">
+      <div class="dato"><span class="label">Cliente</span>ANDRÉS LLINAS</div>
+      <div class="dato"><span class="label">Fecha</span>09/08/2026</div>
+      <div class="dato"><span class="label">Horario</span>12:30 a 18:30</div>
+      <div class="dato"><span class="label">Invitados</span>60 adultos</div>
+    </div>
+    <div class="aviso-precio">Los valores de la propuesta se encuentran en la última sección del documento.</div>
+    <div class="contacto">email: salonvalleverde@gmail.com · WhatsApp 291 539-4401 · Instagram: valleverde_eventos</div>
+  </div>
+</section>
+
+<section class="seccion franja" data-screen-label="02">
+  <span class="pag-num">PÁG. 02</span>
+  <div class="contenido bienvenida-row">
+    <div class="bienvenida-texto">
+      <h1>Bienvenidos a VALLEVERDE Eventos</h1>
+      <div class="regla"></div>
+      <p>Un salón industrial moderno en Bahía Blanca, pensado para eventos sociales y corporativos con identidad propia. Espacios claros y organizados, con una estética cálida que se aleja de lo genérico.</p>
+      <p>Trabajamos junto a vos para que cada detalle — montaje, iluminación, ambientación — refleje la esencia de tu evento, manteniendo siempre un servicio atento y sin sobresaltos.</p>
+    </div>
+    <div class="foto bienvenida-foto"><img src="../manuel-cumple50-2026-12-15/assets/photos-web/bienvenida.jpg" alt="Fachada del salón VALLEVERDE"></div>
+  </div>
+</section>
+
+<section class="seccion" data-screen-label="03">
+  <span class="pag-num">PÁG. 03</span>
+  <div class="contenido">
+    <h2>Espacio y capacidad</h2>
+    <p>El salón se adapta a distintos formatos según la cantidad de invitados y el tipo de evento.</p>
+    <table class="tabla">
+      <tr><th>Formato</th><th>Capacidad</th><th>Uso recomendado</th></tr>
+      <tr><td>Cóctel / de pie</td><td>90 personas</td><td>Activaciones, networking</td></tr>
+      <tr><td>Mesas banquete</td><td>90 personas</td><td>Casamientos, cumpleaños</td></tr>
+      <tr><td>Auditorio</td><td>60 personas</td><td>Presentaciones, charlas</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="seccion franja" data-screen-label="04">
+  <span class="pag-num">PÁG. 04</span>
+  <div class="contenido">
+    <h2>Qué incluye tu evento</h2>
+    <div class="regla"></div>
+    <div class="feature-row">
+      <div class="foto feature-foto"><img src="../manuel-cumple50-2026-12-15/assets/photos-web/night-interior.jpg" alt="Iluminación nocturna"></div>
+      <div>
+        <h3>Iluminación y ambientación</h3>
+        <p>Iluminación cálida propia del espacio y detalles industriales que arman el clima de tu evento sin necesidad de decoración adicional.</p>
+      </div>
+    </div>
+    <div class="feature-row" style="margin-bottom:0;">
+      <div class="foto feature-foto"><img src="../manuel-cumple50-2026-12-15/assets/photos-web/bespoke.jpg" alt="Montaje del salón"></div>
+      <div>
+        <h3>Montaje flexible</h3>
+        <p>Mobiliario base y disposición de mesas y sillas adaptada al formato elegido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" data-screen-label="05">
+  <span class="pag-num">PÁG. 05</span>
+  <div class="contenido">
+    <div class="eyebrow">Variedad de tragos</div>
+    <h2>Barra fija del salón</h2>
+    <p>Incluida en el servicio de barra, tragos preparados en el momento con insumos de primera marca.</p>
+    <div class="barra-bloque" style="margin-bottom:10px;">
+      <div class="barra-head">
+        <span class="num">01</span>
+        <span class="label">Barra para adultos</span>
+        <span class="sub">— con alcohol</span>
+      </div>
+      <div class="barra-grid">
+        <div class="barra-tile"><div class="name">Gin Lemon</div><div class="chip-row"><span class="chip chip-accent">Cítrico</span><span class="chip">Con burbujas</span><span class="chip">Refrescante</span></div></div>
+        <div class="barra-tile"><div class="name">Gin con frutos rojos</div><div class="chip-row"><span class="chip chip-accent">Frutal</span><span class="chip">Con burbujas</span><span class="chip">Refrescante</span></div></div>
+        <div class="barra-tile"><div class="name">Cuba Libre</div><div class="chip-row"><span class="chip chip-accent">Dulce</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Cynar Julep</div><div class="chip-row"><span class="chip chip-accent">Amargo</span><span class="chip">Cítrico</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Garibaldi</div><div class="chip-row"><span class="chip chip-accent">Cítrico</span><span class="chip">Frutal</span></div></div>
+        <div class="barra-tile"><div class="name">Aperol Spritz</div><div class="chip-row"><span class="chip chip-accent">Amargo</span><span class="chip">Cítrico</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Fernet &amp; Coca</div><div class="chip-row"><span class="chip chip-accent">Amargo</span><span class="chip">Dulce</span><span class="chip">Con burbujas</span></div></div>
+      </div>
+    </div>
+    <p class="nota">Tragos preparados en el momento con insumos de primera marca.</p>
+  </div>
+</section>
+
+<section class="seccion franja" data-screen-label="06">
+  <span class="pag-num">PÁG. 06</span>
+  <div class="contenido identidad-row">
+    <div class="identidad-texto">
+      <div class="eyebrow">Identidad propia</div>
+      <h2>Un salón que no se parece a otro</h2>
+      <div class="regla"></div>
+      <p style="font-size:15px; line-height:1.75;">VALLEVERDE no es un salón de fiestas más: es un espacio industrial moderno pensado para quienes buscan identidad propia, no una fórmula repetida.</p>
+      <p style="font-size:15px; line-height:1.75;">Cada evento se diseña a medida — sin paquetes cerrados ni piezas prearmadas — acompañado por un equipo que se ocupa de que todo funcione sin sobresaltos.</p>
+    </div>
+    <div class="identidad-fotos">
+      <div class="foto" style="margin-bottom:12px;"><img src="../manuel-cumple50-2026-12-15/fotos/corporativo.jpg" alt="Parque de VALLEVERDE con luces"></div>
+      <div class="foto"><img src="../manuel-cumple50-2026-12-15/fotos/identidad.jpg" alt="Fachada de VALLEVERDE"></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" data-screen-label="07">
+  <span class="pag-num">PÁG. 07</span>
+  <div class="contenido">
+    <h2>Tu camino hacia el evento</h2>
+    <p>Un proceso simple, pensado para que te ocupes solo de disfrutar.</p>
+    <div class="paso" style="margin-top:12px;"><span class="paso-num">01</span><div><h3>Consulta inicial</h3><p>Conversamos tu visión y necesidades.</p></div></div>
+    <div class="paso"><span class="paso-num">02</span><div><h3>Visita al espacio</h3><p>Recorremos el salón y definimos el formato.</p></div></div>
+    <div class="paso"><span class="paso-num">03</span><div><h3>Definición final</h3><p>Confirmamos detalles y logística.</p></div></div>
+    <div class="paso" style="margin-bottom:0;"><span class="paso-num">04</span><div><h3>Día del evento</h3><p>Disfrutás mientras nosotros coordinamos todo.</p></div></div>
+  </div>
+</section>
+
+<section class="seccion franja" data-screen-label="08">
+  <span class="pag-num">PÁG. 08</span>
+  <div class="contenido">
+    <h2>Valores de los servicios mencionados</h2>
+    <div class="regla"></div>
+    <div id="tabla-precios">
+      <div class="precio-card">
+        <div class="precio-servicio">Salón</div>
+        <div class="precio-datos">
+          <div class="precio-dato"><span class="label">Cantidad</span><span class="valor">60</span></div>
+          <div class="precio-dato"><span class="label">Precio unit.</span><span class="valor">$24.617</span></div>
+          <div class="precio-dato total"><span class="label">Total</span><span class="valor">$1.477.020</span></div>
+        </div>
+      </div>
+      <div class="precio-card">
+        <div class="precio-servicio">Barra adultos</div>
+        <div class="precio-datos">
+          <div class="precio-dato"><span class="label">Cantidad</span><span class="valor">60</span></div>
+          <div class="precio-dato"><span class="label">Precio unit.</span><span class="valor">$17.537</span></div>
+          <div class="precio-dato total"><span class="label">Total</span><span class="valor">$1.052.220</span></div>
+        </div>
+      </div>
+      <div class="total-final">
+        <span class="label">Total</span>
+        <span class="valor">$2.529.240</span>
+      </div>
+    </div>
+    <div class="eyebrow" style="margin-top:32px;">Términos y condiciones</div>
+    <div class="feature"><span class="tri"></span><p>Reserva de fecha sujeta a seña del 35% del total.</p></div>
+    <div class="feature"><span class="tri"></span><p>Saldo a abonar hasta 15 días antes del evento.</p></div>
+    <div class="feature"><span class="tri"></span><p>Cancelaciones no reintegran la seña.</p></div>
+    <div class="feature" style="margin-bottom:0;"><span class="tri"></span><p>Propuesta válida por 15 días desde la fecha de emisión.</p></div>
+  </div>
+</section>
+
+<section class="seccion cierre" data-screen-label="09">
+  <div class="foto" style="aspect-ratio:16/9; max-width:520px; margin:0 auto 24px;"><img src="../manuel-cumple50-2026-12-15/assets/photos-web/closing.jpg" alt="Vista del salón al atardecer"></div>
+  <div class="contenido">
+    <h2>Hablemos de tu evento</h2>
+    <p>Escribinos para confirmar esta propuesta o coordinar una visita al salón.</p>
+    <div class="contacto-lista">
+      <div class="contacto-item"><span class="label">Email</span><a href="mailto:salonvalleverde@gmail.com">salonvalleverde@gmail.com</a></div>
+      <div class="contacto-item"><span class="label">WhatsApp</span><a href="https://wa.me/5492915394401">291 539-4401</a></div>
+      <div class="contacto-item"><span class="label">Instagram</span><a href="https://instagram.com/valleverde_eventos">@valleverde_eventos</a></div>
+    </div>
+    <div class="marca-final">VALLEVERDE Eventos — Propuesta confidencial</div>
+  </div>
+</section>
+
+</body>
+</html>
