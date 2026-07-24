@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VALLEVERDE Eventos — Plantilla de presupuesto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #141414;
+    --text: #F7F1E6;
+    --accent: #E8792B;
+    --band: #C7C0B5;
+    --band-text: #141414;
+    --maxw: 1100px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Poppins', sans-serif; font-weight: 300; line-height: 1.6; -webkit-text-size-adjust: 100%; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: #f4954f; text-decoration: underline; }
+  img { max-width: 100%; height: auto; display: block; }
+
+  .seccion { width: 100%; padding: 48px 20px; position: relative; overflow: hidden; }
+  .contenido { max-width: var(--maxw); margin: 0 auto; position: relative; z-index: 1; }
+  .pag-num { position: absolute; top: 20px; right: 20px; font: 600 10px/1.3 'Poppins', sans-serif; letter-spacing: 2px; color: rgba(247,241,230,0.45); z-index: 2; }
+  .franja .pag-num { color: rgba(20,20,20,0.45); }
+
+  .glow { position: absolute; right: 0; bottom: 0; width: 60%; height: 55%; z-index: 0; pointer-events: none; }
+  .glow-warm { background: radial-gradient(circle at 100% 100%, rgba(142,14,62,0.55) 0%, rgba(142,14,62,0.20) 44%, transparent 74%); }
+  .glow-lines { background-image: repeating-linear-gradient(128deg, rgba(247,241,230,0.16) 0px, rgba(247,241,230,0.16) 1px, transparent 1px, transparent 30px); -webkit-mask-image: radial-gradient(circle at 100% 100%, black 0%, transparent 68%); mask-image: radial-gradient(circle at 100% 100%, black 0%, transparent 68%); }
+
+  .incluye-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 24px; max-width: 340px; }
+  .incluye-badge { aspect-ratio: 1/1; border-radius: 2px; overflow: hidden; background: #000; }
+  .incluye-badge img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 6px; box-sizing: border-box; }
+  @media (min-width: 700px) {
+    .incluye-grid { grid-template-columns: repeat(5, 1fr); max-width: 480px; }
+  }
+
+  .franja { background: var(--band); color: var(--band-text); }
+  .franja .eyebrow { color: var(--accent); }
+  .franja p { color: rgba(20,20,20,0.72); }
+
+  .eyebrow { font: 700 11px/1.3 'Poppins', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 300; margin: 0 0 10px; }
+  h1 { font-size: 32px; line-height: 1.15; }
+  h2 { font-size: 26px; line-height: 1.2; }
+  h3 { font-size: 16px; font-weight: 700; line-height: 1.3; margin-bottom: 6px; }
+  .regla { width: 40px; height: 2px; background: var(--accent); margin: 16px 0 18px; border: none; }
+  p { margin: 0 0 12px; font-size: 14px; color: rgba(247,241,230,0.85); }
+  .franja p { font-size: 14px; }
+
+  ul.lista { list-style: none; margin: 0; padding: 0; }
+  ul.lista li { font-size: 13.5px; padding: 8px 0; border-bottom: 1px solid rgba(247,241,230,0.12); color: rgba(247,241,230,0.85); }
+  .franja ul.lista li { border-bottom-color: rgba(20,20,20,0.15); color: rgba(20,20,20,0.75); }
+  ul.lista li:first-child { padding-top: 0; }
+
+  .subtitulo-menu { font: 600 10px/1.3 'Poppins', sans-serif; letter-spacing: 1.8px; text-transform: uppercase; color: var(--accent); margin: 22px 0 8px; }
+  .subtitulo-menu:first-of-type { margin-top: 4px; }
+  .franja .subtitulo-menu { color: #8E0E3E; }
+  .franja .eyebrow.fuchsia-b { color: #8E0E3E; }
+  .nota { font-size: 12px; font-style: italic; color: var(--accent); margin-top: 8px; }
+
+  .foto { width: 100%; aspect-ratio: 4/3; border-radius: 2px; overflow: hidden; background: #1e1e1e; margin-bottom: 20px; }
+  .foto img { width: 100%; height: 100%; object-fit: cover; }
+  .foto-cap { font-size: 11.5px; font-style: italic; color: rgba(247,241,230,0.5); text-align: center; margin: -12px 0 20px; }
+
+  .tag { display: inline-block; font: 700 10px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; color: #141414; background: var(--accent); padding: 4px 10px; margin-bottom: 12px; }
+
+  /* portada */
+  .portada { padding: 0; }
+  .portada .foto-portada { width: 100%; aspect-ratio: 788/1400; background: #1e1e1e; overflow: hidden; }
+  .portada .foto-portada img { width: 100%; height: 100%; object-fit: cover; }
+  .portada .datos { padding: 28px 20px 36px; }
+  .portada .datos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 4px; }
+  .portada .dato { font: 600 17px/1.3 'Poppins', sans-serif; }
+  .portada .dato .label { display: block; font: 700 11px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 3px; }
+  .portada .contacto { font-size: 12px; color: rgba(247,241,230,0.6); border-top: 1px solid rgba(247,241,230,0.15); padding-top: 14px; margin-top: 14px; }
+  .portada .aviso-precio { margin-top: 20px; padding: 18px 16px; border: 2px solid var(--accent); border-radius: 3px; background: rgba(232,121,43,0.12); font: 700 18px/1.35 'Poppins', sans-serif; letter-spacing: 0.3px; color: var(--accent); text-align: center; text-transform: uppercase; }
+
+  /* feature con triángulo */
+  .feature { display: flex; gap: 12px; margin-bottom: 20px; align-items: flex-start; }
+  .tri { width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 8px solid var(--accent); margin-top: 6px; flex-shrink: 0; }
+
+  table.tabla { width: 100%; border-collapse: collapse; font: 400 13px/1.5 'Poppins', sans-serif; }
+  table.tabla th { text-align: left; font: 600 10px/1.3 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); padding: 9px 8px; border-bottom: 1px solid rgba(247,241,230,0.25); }
+  table.tabla td { padding: 11px 8px; border-bottom: 1px solid rgba(247,241,230,0.12); color: rgba(247,241,230,0.85); }
+
+  /* barras de tragos */
+  .barra-bloque { margin-bottom: 30px; }
+  .barra-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+  .barra-head .num { font: 700 20px/1 'Poppins', sans-serif; color: var(--accent); }
+  .barra-head .label { font: 700 12px/1.3 'Poppins', sans-serif; letter-spacing: 2px; text-transform: uppercase; }
+  .barra-head .sub { font-size: 12px; color: rgba(247,241,230,0.55); }
+  .barra-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: rgba(247,241,230,0.14); border: 1px solid rgba(247,241,230,0.14); }
+  .barra-tile { background: var(--bg); padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .barra-tile .name { font: 700 14px/1.2 'Poppins', sans-serif; }
+  .chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font: 600 9px/1.3 'Poppins', sans-serif; letter-spacing: 1px; text-transform: uppercase; color: rgba(247,241,230,0.7); border: 1px solid rgba(247,241,230,0.25); padding: 3px 8px; border-radius: 20px; }
+  .chip-accent { color: var(--accent); border-color: rgba(232,121,43,0.45); }
+
+  /* timeline / proceso */
+  .paso { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
+  .paso .paso-num { font: 700 20px/1 'Poppins', sans-serif; color: var(--accent); flex-shrink: 0; width: 30px; }
+
+  .timeline-fotos { display: flex; flex-direction: column; gap: 20px; margin-bottom: 20px; }
+  .timeline-fotos .foto { margin-bottom: 0; }
+  .timeline-fotos .foto-cap { text-align: left; margin: 8px 0 0; }
+
+  /* inversión */
+  .terminos li { font-size: 13px; }
+
+  /* cierre / contacto */
+  .cierre { text-align: center; }
+  .cierre .contacto-lista { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+  .cierre .contacto-item { font-size: 14px; }
+  .cierre .contacto-item .label { display: block; font: 700 10px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+  .marca-final { margin-top: 30px; font: 700 13px/1.3 'Poppins', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: rgba(247,241,230,0.5); }
+
+  /* ============ Desktop / tablet ============ */
+  @media (min-width: 600px) {
+    .seccion { padding: 64px 32px; }
+    h1 { font-size: 42px; }
+    h2 { font-size: 30px; }
+    .barra-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .seccion { padding: 84px 40px; }
+    h1 { font-size: 50px; }
+    .menu-row { display: flex; gap: 40px; align-items: flex-start; }
+    .menu-row .menu-texto { flex: 1; }
+    .menu-row .menu-foto { width: 280px; flex-shrink: 0; }
+    .feature-row { display: flex; gap: 24px; margin-bottom: 26px; align-items: center; }
+    .feature-row .feature-foto { width: 300px; flex-shrink: 0; margin-bottom: 0; }
+    .bienvenida-row { display: flex; align-items: stretch; gap: 0; }
+    .bienvenida-row .bienvenida-texto { width: 42%; padding: 60px 40px; display: flex; flex-direction: column; justify-content: center; }
+    .bienvenida-row .bienvenida-foto { width: 58%; aspect-ratio: auto; margin: 40px 40px 40px 0; }
+    .identidad-row { display: flex; gap: 40px; align-items: center; }
+    .identidad-row .identidad-texto { flex: 1; }
+    .identidad-row .identidad-fotos { width: 340px; flex-shrink: 0; display: flex; flex-direction: column; gap: 12px; }
+    .identidad-row .identidad-fotos .foto { margin-bottom: 0; flex: 1; }
+    .portada .datos-grid { grid-template-columns: repeat(4, 1fr); }
+    .timeline-fotos { flex-direction: row; align-items: flex-end; }
+    .timeline-fotos .col-bar { width: 60%; }
+    .timeline-fotos .col-eating { width: 40%; }
+  }
+
+  /* tabla de precios como tarjetas */
+  .precio-card { background: rgba(247,241,230,0.05); border: 1px solid rgba(247,241,230,0.14); border-radius: 2px; padding: 16px 18px; margin-bottom: 12px; }
+  .precio-card .precio-servicio { font: 600 17px/1.3 'Poppins', sans-serif; margin-bottom: 10px; }
+  .precio-card .precio-datos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .precio-dato { font-size: 14px; }
+  .precio-dato .label { display: block; font: 600 10px/1.3 'Poppins', sans-serif; letter-spacing: 1px; text-transform: uppercase; color: rgba(247,241,230,0.45); margin-bottom: 2px; }
+  .precio-dato .valor { font-size: 17px; color: var(--text); }
+  .precio-dato.total .valor { color: var(--accent); font-weight: 700; }
+  .total-final { display: flex; justify-content: space-between; align-items: baseline; padding: 18px 0 4px; border-top: 2px solid var(--accent); margin-top: 6px; }
+  .total-final .label { font: 700 12px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; }
+  .total-final .valor { font: 700 32px/1 'Poppins', sans-serif; color: var(--accent); }
+  .vigencia { font-size: 12px; color: rgba(247,241,230,0.5); font-style: italic; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<!-- 1. PORTADA -->
+<section class="seccion portada" data-screen-label="01">
+  <div class="foto-portada"><img src="../recursos-visuales/assets/photos-web/cover-design.jpg" alt="VALLEVERDE Eventos"></div>
+  <div class="datos">
+    <h1 style="margin-bottom:4px;">Cumple de 15 años</h1>
+    <div class="regla"></div>
+    <div class="datos-grid">
+      <div class="dato"><span class="label">Cliente</span>CECILIA ECHEVERRIA</div>
+      <div class="dato"><span class="label">Fecha</span>12/12/2026</div>
+      <div class="dato"><span class="label">Horario</span>21:00 a 03:00</div>
+      <div class="dato"><span class="label">Invitados</span>60</div>
+    </div>
+    <div class="aviso-precio">Los valores de la propuesta se encuentran en la última sección del documento.</div>
+    <div class="contacto">
+      email: salonvalleverde@gmail.com · WhatsApp 291 539-4401 · Instagram: valleverde_eventos
+    </div>
+  </div>
+</section>
+
+<!-- 2. BIENVENIDA -->
+<section class="seccion franja" data-screen-label="02">
+  <span class="pag-num">PÁG. 02</span>
+  <div class="contenido bienvenida-row">
+    <div class="bienvenida-texto">
+      <h1>Bienvenidos a VALLEVERDE Eventos</h1>
+      <div class="regla"></div>
+      <p>Un salón industrial moderno en Bahía Blanca, pensado para eventos sociales y corporativos con identidad propia. Espacios claros y organizados, con una estética cálida que se aleja de lo genérico.</p>
+      <p>Trabajamos junto a vos para que cada detalle — montaje, iluminación, catering — refleje la esencia de tu evento, manteniendo siempre un servicio atento y sin sobresaltos.</p>
+    </div>
+    <div class="foto bienvenida-foto"><img src="../recursos-visuales/assets/photos-web/bienvenida.jpg" alt="Fachada del salón VALLEVERDE"></div>
+  </div>
+</section>
+
+<!-- 3. SERVICIOS Y PAQUETES -->
+<section class="seccion" data-screen-label="03">
+  <span class="pag-num">PÁG. 03</span>
+  <div class="contenido">
+    <h2>Servicios y paquetes</h2>
+    <p>Diseñamos cada propuesta a medida del evento, con paquetes flexibles que se ajustan a lo social y lo corporativo.</p>
+
+    <div class="feature-row">
+      <div class="foto feature-foto"><img src="../recursos-visuales/fotos/corporativo.jpg" alt="Evento corporativo"></div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:4px;">Corporativo</div>
+        <h3>Lanzamientos y activaciones</h3>
+        <p>Presentaciones de producto, jornadas de empresa y eventos de networking, con montaje y equipo técnico incluidos.</p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="foto feature-foto"><img src="../recursos-visuales/assets/photos-web/struttura-luces-social.jpg" alt="Celebración social"></div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:4px;">Social</div>
+        <h3>Casamientos y celebraciones</h3>
+        <p>Casamientos, cumpleaños y celebraciones íntimas o de gran escala, con formato de montaje flexible.</p>
+      </div>
+    </div>
+
+    <div class="eyebrow" style="margin-top:8px;">Espacio y capacidad</div>
+    <table class="tabla">
+      <tr><th>Formato</th><th>Capacidad</th><th>Uso recomendado</th></tr>
+      <tr><td>Cóctel / de pie</td><td>90 personas</td><td>Activaciones, networking</td></tr>
+      <tr><td>Mesas banquete</td><td>90 personas</td><td>Casamientos, cenas corporativas</td></tr>
+      <tr><td>Auditorio</td><td>60 personas</td><td>Presentaciones, charlas</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 4. QUÉ INCLUYE -->
+<section class="seccion franja" data-screen-label="04">
+  <span class="pag-num">PÁG. 04</span>
+  <div class="contenido">
+    <h2>Qué incluye tu evento</h2>
+    <div class="regla"></div>
+
+    <div class="feature-row">
+      <div class="foto feature-foto"><img src="../recursos-visuales/assets/photos-web/night-interior.jpg" alt="Iluminación nocturna"></div>
+      <div>
+        <h3>Iluminación y ambientación</h3>
+        <p>Iluminación cálida propia del espacio y detalles industriales que arman el clima de tu evento sin necesidad de decoración adicional.</p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="foto feature-foto"><img src="../recursos-visuales/assets/photos-web/bespoke.jpg" alt="Montaje del salón"></div>
+      <div>
+        <h3>Montaje flexible</h3>
+        <p>Mobiliario base y disposición de mesas y sillas adaptada al formato elegido, de cóctel a banquete.</p>
+      </div>
+    </div>
+
+    <div class="feature-row" style="margin-bottom:0;">
+      <div class="foto feature-foto"><img src="../recursos-visuales/assets/photos-web/gastronomy-ff2.jpg" alt="Detalle de catering"></div>
+      <div>
+        <h3>Catering a medida</h3>
+        <p>Buffet americano, finger food o pizzas gourmet: se come con las manos y sin pausar la fiesta.</p>
+      </div>
+    </div>
+
+    <div class="incluye-grid">
+      <div class="incluye-badge"><img src="../recursos-visuales/assets/icons/dj-incluido.jpg" alt="DJ incluido"></div>
+      <div class="incluye-badge"><img src="../recursos-visuales/assets/icons/ambientacion-base.jpg" alt="Ambientación base"></div>
+      <div class="incluye-badge"><img src="../recursos-visuales/assets/icons/mesa-postres.jpg" alt="Mesa de postres"></div>
+      <div class="incluye-badge"><img src="../recursos-visuales/assets/icons/coordinacion-evento.jpg" alt="Coordinación del evento"></div>
+      <div class="incluye-badge"><img src="../recursos-visuales/assets/icons/barra-sin-alcohol.jpg" alt="Barra sin alcohol"></div>
+      <div class="incluye-badge"><img src="../recursos-visuales/assets/icons/barra-tragos.jpg" alt="Barra de tragos"></div>
+      <div class="incluye-badge"><img src="../recursos-visuales/assets/icons/espacio-exterior.jpg" alt="Espacio exterior"></div>
+      <div class="incluye-badge"><img src="../recursos-visuales/assets/icons/salon-equipado.jpg" alt="Salón equipado"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. PROPUESTA GASTRONÓMICA — OPCIÓN A -->
+<section class="seccion" data-screen-label="05">
+  <span class="pag-num">PÁG. 05</span>
+  <div class="contenido">
+    <div class="eyebrow">Propuesta gastronómica</div>
+    <h2>Formato buffet americano</h2>
+    <p>Dos opciones de menú, cada una con recepción, plato principal y mesa de postres. Bebidas de mesa a cargo del cliente, con cantidades sugeridas.</p>
+
+    <div class="menu-row">
+      <div class="menu-texto">
+        <div class="tag">Opción A</div>
+        <h3 style="font-size:20px; font-weight:300;">Finger Food</h3>
+        <div class="regla" style="margin:0 0 14px;"></div>
+
+        <div class="subtitulo-menu">Recepción</div>
+        <ul class="lista">
+          <li>Canastitas de queso y calabresa</li>
+          <li>Pincho caprese cherry — mozzarella, albahaca</li>
+          <li>Variedad de pionono de atún y roquefort</li>
+          <li>Mini pizzas de tomate y mozzarella, aceite de albahaca</li>
+          <li>Chips con queso crema al pimentón y bondiola curada</li>
+          <li>Palmeritas con queso azul ahumado</li>
+          <li>Pinchos de quesos y aceitunas</li>
+          <li>Pinchos de salame y pickles</li>
+          <li>Avochips — crema de palta sobre base de masa</li>
+        </ul>
+
+        <div class="subtitulo-menu">Principal — sandwiches en pan ayuya</div>
+        <ul class="lista">
+          <li>Bola de lomo, larga cocción a las finas hierbas, feteada</li>
+          <li>Pulpa de cerdo desmenuzada, cebolla caramelizada y barbacoa</li>
+        </ul>
+        <p class="nota">Ambas carnes acompañadas por salsa criolla, alioli y ketchup.</p>
+      </div>
+      <div class="menu-foto">
+        <div class="foto" style="margin-bottom:8px;"><img src="../recursos-visuales/assets/photos-web/gastronomy-ff1.jpg" alt="Mesa de bocaditos, Opción A"></div>
+        <div class="foto-cap">Mesa de bocaditos, Opción A</div>
+      </div>
+    </div>
+
+    <div class="regla" style="margin-top:10px;"></div>
+    <div class="eyebrow" style="margin-top:10px;">Mesa de postres — no incluida en el catering salado</div>
+    <p>Variedad de tortas, tartas frutales y shots.</p>
+
+    <div class="eyebrow" style="margin-top:14px;">Bebidas de mesa — a cargo del cliente</div>
+    <p>Cantidades sugeridas por nosotros: cerveza en lata, vino tinto, Coca-Cola, agua saborizada, agua.</p>
+  </div>
+</section>
+
+<!-- 6. OPCIÓN B + POSTRES/BEBIDAS -->
+<section class="seccion franja" data-screen-label="06">
+  <span class="pag-num">PÁG. 06</span>
+  <div class="contenido">
+    <div class="menu-row">
+      <div class="menu-texto">
+        <div class="tag" style="background:#141414; color:#F7F1E6;">Opción B</div>
+        <h3 style="font-size:20px; font-weight:300;">Degustación de pizzas</h3>
+        <div class="regla" style="margin:0 0 14px;"></div>
+
+        <div class="subtitulo-menu">Recepción</div>
+        <ul class="lista">
+          <li>Variedad de canastitas, pionono y chips</li>
+          <li>Bocaditos de pollo en salsa de crema y verdeo</li>
+        </ul>
+
+        <div class="subtitulo-menu">Principal — 6 variedades a elección</div>
+        <ul class="lista">
+          <li>Fugazza — mozzarella, cebolla caramelizada, orégano</li>
+          <li>Vegetariana — mozzarella y verdura salteada</li>
+          <li>Napolitana — mozzarella, tomate en rodajas, albahaca</li>
+          <li>Bruschetta — mozzarella, cebolla salteada, ajo, albahaca</li>
+          <li>4 Quesos — mozzarella, pategrás, azul, parmesano</li>
+          <li>Caprese — mozzarella, tomates confitados, aceite de albahaca</li>
+          <li>Panceta ahumada — mozzarella, panceta ahumada, huevo</li>
+          <li>Tanna — mozzarella, bondiola, rúcula, tomates cherry</li>
+        </ul>
+      </div>
+      <div class="menu-foto">
+        <div class="foto" style="margin-bottom:8px;"><img src="../recursos-visuales/assets/photos-web/gastronomy-pizza.jpg" alt="Degustación de pizzas, Opción B"></div>
+        <div class="foto-cap" style="color:rgba(20,20,20,0.5);">Degustación de pizzas, Opción B</div>
+      </div>
+    </div>
+
+    <div class="regla" style="margin-top:10px;"></div>
+    <div class="eyebrow fuchsia-b" style="margin-top:10px;">Mesa de postres — no incluida en el catering salado</div>
+    <p>Variedad de tortas, tartas frutales y shots.</p>
+
+    <div class="eyebrow fuchsia-b" style="margin-top:14px;">Bebidas de mesa — a cargo del cliente</div>
+    <p>Cantidades sugeridas por nosotros: cerveza en lata, vino tinto, Coca-Cola, agua saborizada, agua.</p>
+  </div>
+</section>
+
+<!-- 7. VARIEDAD DE TRAGOS / BARRA -->
+<section class="seccion" data-screen-label="07">
+  <span class="pag-num">PÁG. 07</span>
+  <div class="contenido">
+    <div class="eyebrow">Variedad de tragos</div>
+    <h2>Barra fija del salón</h2>
+    <p>Incluida en el servicio base, con opción adicional de barra sin alcohol para adolescentes.</p>
+
+    <div class="barra-bloque">
+      <div class="barra-head">
+        <span class="num">01</span>
+        <span class="label">Barra para adultos</span>
+        <span class="sub">— con alcohol</span>
+      </div>
+      <div class="barra-grid">
+        <div class="barra-tile"><div class="name">Gin Lemon</div><div class="chip-row"><span class="chip chip-accent">Cítrico</span><span class="chip">Con burbujas</span><span class="chip">Refrescante</span></div></div>
+        <div class="barra-tile"><div class="name">Gin con frutos rojos</div><div class="chip-row"><span class="chip chip-accent">Frutal</span><span class="chip">Con burbujas</span><span class="chip">Refrescante</span></div></div>
+        <div class="barra-tile"><div class="name">Cuba Libre</div><div class="chip-row"><span class="chip chip-accent">Dulce</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Cynar Julep</div><div class="chip-row"><span class="chip chip-accent">Amargo</span><span class="chip">Cítrico</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Garibaldi</div><div class="chip-row"><span class="chip chip-accent">Cítrico</span><span class="chip">Frutal</span></div></div>
+        <div class="barra-tile"><div class="name">Aperol Spritz</div><div class="chip-row"><span class="chip chip-accent">Amargo</span><span class="chip">Cítrico</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Fernet &amp; Coca</div><div class="chip-row"><span class="chip chip-accent">Amargo</span><span class="chip">Dulce</span><span class="chip">Con burbujas</span></div></div>
+      </div>
+    </div>
+
+    <div class="barra-bloque" style="margin-bottom:10px;">
+      <div class="barra-head">
+        <span class="num">02</span>
+        <span class="label">Barra para adolescentes</span>
+        <span class="sub">— sin alcohol</span>
+      </div>
+      <div class="barra-grid">
+        <div class="barra-tile"><div class="name">Rojo Fresh</div><div class="chip-row"><span class="chip chip-accent">Frutal</span><span class="chip">Dulce</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Dandy</div><div class="chip-row"><span class="chip chip-accent">Frutal</span><span class="chip">Dulce</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Destornillador Light</div><div class="chip-row"><span class="chip chip-accent">Cítrico</span><span class="chip">Refrescante</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Cítrico</div><div class="chip-row"><span class="chip chip-accent">Herbal</span><span class="chip">Dulce</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Multi Mix</div><div class="chip-row"><span class="chip chip-accent">Frutal</span><span class="chip">Dulce</span><span class="chip">Con burbujas</span></div></div>
+        <div class="barra-tile"><div class="name">Limonada</div><div class="chip-row"><span class="chip chip-accent">Herbal</span><span class="chip">Liviano</span><span class="chip">Dulce</span></div></div>
+      </div>
+    </div>
+
+    <p class="nota">Tragos preparados en el momento con insumos de primera marca.</p>
+  </div>
+</section>
+
+<!-- 8. SOLUCIONES A MEDIDA -->
+<section class="seccion franja" data-screen-label="08">
+  <span class="pag-num">PÁG. 08</span>
+  <div class="contenido">
+    <h2>Soluciones a medida</h2>
+    <p>Experiencias diseñadas alrededor de tu visión, no de un catálogo cerrado.</p>
+
+    <div class="feature">
+      <span class="tri"></span>
+      <div>
+        <h3>Diseño de evento personalizado</h3>
+        <p>Acompañamos cada decisión — desde la ambientación hasta el recorrido de invitados — para que el evento sea único y memorable.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <span class="tri"></span>
+      <div>
+        <h3>Experiencias interactivas para invitados</h3>
+        <p>Sumamos estaciones y momentos pensados para generar conexión real entre los invitados, no solo espectáculo.</p>
+      </div>
+    </div>
+
+    <div class="foto" style="margin-top:8px;"><img src="../recursos-visuales/assets/photos-web/night-terrace.jpg" alt="Terraza de noche"></div>
+  </div>
+</section>
+
+<!-- 9. IDENTIDAD PROPIA -->
+<section class="seccion" data-screen-label="09">
+  <span class="pag-num">PÁG. 09</span>
+  <div class="contenido identidad-row">
+    <div class="identidad-texto">
+      <div class="eyebrow">Identidad propia</div>
+      <h2>Un salón que no se parece a otro</h2>
+      <div class="regla"></div>
+      <p style="font-size:15px; line-height:1.75;">VALLEVERDE no es un salón de fiestas más: es un espacio industrial moderno pensado para quienes buscan identidad propia, no una fórmula repetida.</p>
+      <p style="font-size:15px; line-height:1.75;">Mientras otros ofrecen ambientes genéricos o decorados de forma excesiva, trabajamos con líneas limpias, materiales nobles y una calidez que no necesita artificios.</p>
+      <p style="font-size:15px; line-height:1.75;">Cada evento se diseña a medida — sin paquetes cerrados ni piezas prearmadas — acompañado por un equipo que se ocupa de que todo funcione sin sobresaltos.</p>
+    </div>
+    <div class="identidad-fotos">
+      <div class="foto" style="margin-bottom:12px;"><img src="../recursos-visuales/fotos/corporativo.jpg" alt="Parque de VALLEVERDE con luces"></div>
+      <div class="foto"><img src="../recursos-visuales/fotos/identidad.jpg" alt="Fachada de VALLEVERDE"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. TIMELINE / PROCESO -->
+<section class="seccion franja" data-screen-label="10">
+  <span class="pag-num">PÁG. 10</span>
+  <div class="contenido">
+    <h2>Tu camino hacia el evento</h2>
+    <p>Un proceso simple, pensado para que te ocupes solo de disfrutar.</p>
+
+    <div class="foto"><img src="../recursos-visuales/assets/photos-web/closing.jpg" alt="Detalle de arte en el salón"></div>
+
+    <div class="timeline-fotos">
+      <div class="col-bar">
+        <div class="foto" style="aspect-ratio:3/2;"><img src="../recursos-visuales/assets/photos-web/gastronomy-bar1.jpg" alt="Un trago en la barra"></div>
+        <p class="foto-cap">Un trago no es solo un trago cuando el lugar acompaña.</p>
+      </div>
+      <div class="col-eating">
+        <div class="foto" style="aspect-ratio:4/3;"><img src="../recursos-visuales/assets/photos-web/gastronomy-eating.jpg" alt="Disfrutando la propuesta gastronómica"></div>
+        <p class="foto-cap">Se come con las manos, se disfruta con calma.</p>
+      </div>
+    </div>
+
+    <div class="eyebrow" style="margin-top:20px;">Recorrido de planificación</div>
+    <div class="paso" style="margin-top:12px;">
+      <span class="paso-num">01</span>
+      <div><h3>Consulta inicial</h3><p>Conversamos tu visión y necesidades.</p></div>
+    </div>
+    <div class="paso">
+      <span class="paso-num">02</span>
+      <div><h3>Visita al espacio</h3><p>Recorremos el salón y definimos el formato.</p></div>
+    </div>
+    <div class="paso">
+      <span class="paso-num">03</span>
+      <div><h3>Definición final</h3><p>Confirmamos detalles y logística.</p></div>
+    </div>
+    <div class="paso" style="margin-bottom:0;">
+      <span class="paso-num">04</span>
+      <div><h3>Día del evento</h3><p>Disfrutás mientras nosotros coordinamos todo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. INVERSIÓN -->
+<section class="seccion" data-screen-label="11">
+  <span class="pag-num">PÁG. 11</span>
+  <div class="contenido">
+    <h2>Valores de los servicios mencionados</h2>
+    <div class="regla"></div>
+
+    <!-- Espacio reservado: acá se incrusta la tabla de precios del presupuesto -->
+    <div id="tabla-precios">
+      <div class="precio-card">
+        <div class="precio-servicio">Salón (adultos)</div>
+        <div class="precio-datos">
+          <div class="precio-dato"><span class="label">Cantidad</span><span class="valor">30</span></div>
+          <div class="precio-dato"><span class="label">Precio unit.</span><span class="valor">$24.617</span></div>
+          <div class="precio-dato total"><span class="label">Total</span><span class="valor">$738.510</span></div>
+        </div>
+      </div>
+      <div class="precio-card">
+        <div class="precio-servicio">Salón (adolescentes)</div>
+        <div class="precio-datos">
+          <div class="precio-dato"><span class="label">Cantidad</span><span class="valor">30</span></div>
+          <div class="precio-dato"><span class="label">Precio unit.</span><span class="valor">$24.617</span></div>
+          <div class="precio-dato total"><span class="label">Total</span><span class="valor">$738.510</span></div>
+        </div>
+      </div>
+      <div class="precio-card">
+        <div class="precio-servicio">Barra de tragos (adultos, con alcohol)</div>
+        <div class="precio-datos">
+          <div class="precio-dato"><span class="label">Cantidad</span><span class="valor">30</span></div>
+          <div class="precio-dato"><span class="label">Precio unit.</span><span class="valor">$19.500</span></div>
+          <div class="precio-dato total"><span class="label">Total</span><span class="valor">$585.000</span></div>
+        </div>
+      </div>
+      <div class="precio-card">
+        <div class="precio-servicio">Barra de tragos (adolescentes, sin alcohol)</div>
+        <div class="precio-datos">
+          <div class="precio-dato"><span class="label">Cantidad</span><span class="valor">30</span></div>
+          <div class="precio-dato"><span class="label">Precio unit.</span><span class="valor">$13.650</span></div>
+          <div class="precio-dato total"><span class="label">Total</span><span class="valor">$409.500</span></div>
+        </div>
+      </div>
+      <div class="precio-card">
+        <div class="precio-servicio">Mesa de Postres</div>
+        <div class="precio-datos">
+          <div class="precio-dato"><span class="label">Cantidad</span><span class="valor">60</span></div>
+          <div class="precio-dato"><span class="label">Precio unit.</span><span class="valor">$15.706</span></div>
+          <div class="precio-dato total"><span class="label">Total</span><span class="valor">$942.360</span></div>
+        </div>
+      </div>
+      <div class="total-final">
+        <span class="label">Total</span>
+        <span class="valor">$3.413.880</span>
+      </div>
+    </div>
+
+    <div class="eyebrow" style="margin-top:32px;">Términos y condiciones</div>
+    <div class="feature"><span class="tri"></span><p>Reserva de fecha sujeta a seña del 35% del total.</p></div>
+    <div class="feature"><span class="tri"></span><p>Saldo a abonar hasta 15 días antes del evento.</p></div>
+    <div class="feature"><span class="tri"></span><p>Cancelaciones no reintegran la seña.</p></div>
+    <div class="feature" style="margin-bottom:0;"><span class="tri"></span><p>Propuesta válida por 15 días desde la fecha de emisión.</p></div>
+  </div>
+</section>
+
+<!-- 12. CIERRE / CONTACTO -->
+<section class="seccion franja cierre" data-screen-label="12">
+  <span class="pag-num">PÁG. 12</span>
+  <div class="foto" style="aspect-ratio:16/9; max-width:520px; margin:0 auto 24px;"><img src="../recursos-visuales/assets/photos-web/closing.jpg" alt="Vista del salón al atardecer"></div>
+  <div class="contenido">
+    <h2>Hablemos de tu evento</h2>
+    <p>Escribinos para confirmar esta propuesta o coordinar una visita al salón.</p>
+    <div class="contacto-lista">
+      <div class="contacto-item"><span class="label">Email</span><a href="mailto:salonvalleverde@gmail.com">salonvalleverde@gmail.com</a></div>
+      <div class="contacto-item"><span class="label">WhatsApp</span><a href="https://wa.me/5492915394401">291 539-4401</a></div>
+      <div class="contacto-item"><span class="label">Instagram</span><a href="https://instagram.com/valleverde_eventos">@valleverde_eventos</a></div>
+    </div>
+    <div class="marca-final">VALLEVERDE Eventos — Propuesta confidencial</div>
+  </div>
+</section>
+
+</body>
+</html>
