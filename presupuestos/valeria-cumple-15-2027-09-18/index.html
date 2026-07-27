@@ -76,7 +76,12 @@
   .portada .datos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 4px; }
   .portada .dato { font: 600 17px/1.3 'Poppins', sans-serif; }
   .portada .dato .label { display: block; font: 700 11px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 3px; }
-  .portada .contacto { font-size: 12px; color: rgba(247,241,230,0.6); border-top: 1px solid rgba(247,241,230,0.15); padding-top: 14px; margin-top: 14px; }
+  .portada .contacto { border-top: 1px solid rgba(247,241,230,0.15); padding-top: 22px; margin-top: 20px; display: flex; flex-direction: column; gap: 14px; }
+  .portada .contacto-item { display: flex; align-items: center; gap: 10px; font-size: 17px; line-height: 1.4; color: rgba(247,241,230,0.92); flex-wrap: wrap; }
+  .portada .contacto-item .c-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  .portada .contacto-item b { font: 700 11px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-right: 2px; }
+  .portada .contacto-item a { color: rgba(247,241,230,0.92); font-weight: 600; }
+  .portada .contacto-item a:hover { color: var(--accent); }
   .portada .aviso-precio { margin-top: 20px; padding: 18px 16px; border: 2px solid var(--accent); border-radius: 3px; background: rgba(232,121,43,0.12); font: 700 18px/1.35 'Poppins', sans-serif; letter-spacing: 0.3px; color: var(--accent); text-align: center; text-transform: uppercase; }
 
   /* feature con triángulo */
@@ -114,7 +119,7 @@
   /* cierre / contacto */
   .cierre { text-align: center; }
   .cierre .contacto-lista { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
-  .cierre .contacto-item { font-size: 14px; }
+  .cierre .contacto-item { font-size: 16px; }
   .cierre .contacto-item .label { display: block; font: 700 10px/1.3 'Poppins', sans-serif; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
   .marca-final { margin-top: 30px; font: 700 13px/1.3 'Poppins', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: rgba(247,241,230,0.5); }
 
@@ -183,7 +188,9 @@
     </div>
     <div class="aviso-precio">Los valores de la propuesta se encuentran en la última sección del documento.</div>
     <div class="contacto">
-      email: salonvalleverde@gmail.com · WhatsApp 291 539-4401 · Instagram: valleverde_eventos
+      <div class="contacto-item"><span class="c-dot"></span><b>Email</b><a href="mailto:salonvalleverde@gmail.com">salonvalleverde@gmail.com</a></div>
+      <div class="contacto-item"><span class="c-dot"></span><b>WhatsApp</b><a href="https://wa.me/5492915394401">291 539-4401</a></div>
+      <div class="contacto-item"><span class="c-dot"></span><b>Instagram</b><a href="https://instagram.com/valleverde_eventos">@valleverde_eventos</a></div>
     </div>
   </div>
 </section>
