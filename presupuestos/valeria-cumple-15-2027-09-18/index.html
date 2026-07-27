@@ -159,9 +159,12 @@
   .total-final .valor { font: 700 32px/1 'Poppins', sans-serif; color: var(--accent); }
   .vigencia { font-size: 12px; color: rgba(247,241,230,0.5); font-style: italic; margin-top: 10px; }
   .aviso-catering { margin: 18px 0 24px; padding: 20px 22px; background: rgba(232,121,43,0.16); border: 1px solid rgba(232,121,43,0.4); border-left: 5px solid var(--accent); border-radius: 3px; font-size: 16px; line-height: 1.65; color: var(--text); font-weight: 400; }
-  .total-opciones { display: flex; flex-direction: column; gap: 22px; margin-top: 8px; }
-  .total-opcion .tag { margin-bottom: 8px; }
-  .total-opcion .total-final { margin-top: 0; }
+  .total-opciones { display: flex; flex-direction: column; gap: 24px; margin-top: 10px; }
+  .total-opcion { border: 1px solid rgba(247,241,230,0.18); border-radius: 4px; overflow: hidden; background: rgba(247,241,230,0.03); }
+  .total-opcion .tag { display: block; width: 100%; box-sizing: border-box; text-align: center; font-size: 15px; letter-spacing: 2px; padding: 14px 16px; margin: 0; border-radius: 0; }
+  .total-opcion .total-final { padding: 20px 22px; margin-top: 0; border-top: none; }
+  .total-opcion .total-final .label { font-size: 13px; }
+  .total-opcion .total-final .valor { font-size: 36px; }
 </style>
 </head>
 <body>
@@ -584,7 +587,7 @@
         <div class="total-opcion">
           <span class="tag" style="background:#141414; color:#F7F1E6;">Opción B — Degustación de Pizzas</span>
           <div class="total-final">
-            <span class="label">Total (incluye Salón, Barra, Pizzas, Mesa de Postres y Bebida)</span>
+            <span class="label">Total (incluye Salón, Barra, Degustación de Pizzas, Mesa de Postres y Bebida)</span>
             <span class="valor">$7.902.450</span>
           </div>
         </div>
