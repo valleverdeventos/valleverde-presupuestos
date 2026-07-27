@@ -159,6 +159,9 @@
   .total-final .valor { font: 700 32px/1 'Poppins', sans-serif; color: var(--accent); }
   .vigencia { font-size: 12px; color: rgba(247,241,230,0.5); font-style: italic; margin-top: 10px; }
   .aviso-catering { margin: 18px 0 24px; padding: 20px 22px; background: rgba(232,121,43,0.16); border: 1px solid rgba(232,121,43,0.4); border-left: 5px solid var(--accent); border-radius: 3px; font-size: 16px; line-height: 1.65; color: var(--text); font-weight: 400; }
+  .total-opciones { display: flex; flex-direction: column; gap: 22px; margin-top: 8px; }
+  .total-opcion .tag { margin-bottom: 8px; }
+  .total-opcion .total-final { margin-top: 0; }
 </style>
 </head>
 <body>
@@ -563,9 +566,28 @@
           <div class="precio-dato total"><span class="label">Total</span><span class="valor">$1.025.600</span></div>
         </div>
       </div>
-      <div class="total-final">
-        <span class="label">Total</span>
-        <span class="valor">$10.139.450</span>
+      <div class="total-opciones">
+        <div class="total-opcion">
+          <span class="tag" style="background:#8E0E3E; color:#F7F1E6;">Opción Base — Salón + Barra</span>
+          <div class="total-final">
+            <span class="label">Total (Salón + Barra de tragos)</span>
+            <span class="valor">$3.881.850</span>
+          </div>
+        </div>
+        <div class="total-opcion">
+          <span class="tag">Opción A — Finger Food</span>
+          <div class="total-final">
+            <span class="label">Total (incluye Salón, Barra, Finger Food, Mesa de Postres y Bebida)</span>
+            <span class="valor">$8.715.050</span>
+          </div>
+        </div>
+        <div class="total-opcion">
+          <span class="tag" style="background:#141414; color:#F7F1E6;">Opción B — Degustación de Pizzas</span>
+          <div class="total-final">
+            <span class="label">Total (incluye Salón, Barra, Pizzas, Mesa de Postres y Bebida)</span>
+            <span class="valor">$7.902.450</span>
+          </div>
+        </div>
       </div>
     </div>
 
