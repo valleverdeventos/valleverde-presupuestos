@@ -63,6 +63,12 @@ Campos:
 - `aviso_clase` es opcional: `aviso-catering` (naranja, para propuestas con opciones) o
   `aviso-valores` (neutro). Si no está, se elige según haya opciones o no.
 - `nota` es opcional: un párrafo al pie de la tabla de precios.
+- `cliente` es opcional. Si no está, la portada sale con 3 columnas (Fecha / Horario /
+  Invitados), sin el campo Cliente, tal como pide la regla de "presupuesto sin nombre".
+- `cliente_label` es opcional: cambia el rótulo de esa celda, por ejemplo a `"Teléfono"`
+  cuando hay WhatsApp pero no nombre.
+- `invitados_texto` es opcional: cambia sólo lo que se muestra en la portada, sin tocar
+  el número que se usa para calcular.
 - `opciones` es opcional. Sin ella se muestra un total único con la suma de todos los
   servicios. Con ella se muestra un total por opción:
 

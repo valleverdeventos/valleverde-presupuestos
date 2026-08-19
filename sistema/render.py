@@ -16,7 +16,8 @@ RAIZ = SISTEMA.parent
 DATOS = SISTEMA / "datos"
 PLANTILLA = SISTEMA / "plantilla.html"
 
-COLORES = ["#8E0E3E", "#2F6690", "#3A7D44", "#8A6D3B", "#4A4A4A"]
+# Colores de etiqueta ya calibrados: base, catering mas barato, catering mas caro.
+COLORES = ["#8E0E3E", "#2F6690", ""]
 
 
 def pesos(n):
@@ -26,6 +27,23 @@ def pesos(n):
 
 def total_de(servicio, invitados):
     return servicio["precio"] * servicio.get("cantidad", invitados)
+
+
+def bloque_datos(d):
+    """Grilla de portada. Sin nombre de cliente va a 3 columnas."""
+    campos = []
+    if d.get("cliente"):
+        campos.append((d.get("cliente_label", "Cliente"), d["cliente"]))
+    campos.append(("Fecha", d["fecha"]))
+    campos.append(("Horario", d["horario"]))
+    campos.append(("Invitados", d.get("invitados_texto", d["invitados"])))
+
+    estilo = "" if len(campos) == 4 else ' style="grid-template-columns: repeat(3, 1fr);"'
+    filas = [
+        f'        <div class="dato"><span class="label">{k}</span>{v}</div>'
+        for k, v in campos
+    ]
+    return (f'<div class="datos-grid"{estilo}>\n' + "\n".join(filas) + "\n      </div>")
 
 
 def tarjeta(servicio, invitados):
@@ -54,7 +72,7 @@ def bloque_precios(d):
         <span class="valor">{pesos(total)}</span>
       </div>""")
     elif all(op.get("simple") for op in opciones):
-        # Forma vieja: totales sueltos, uno debajo del otro.
+        # Forma vieja: totales sueltos, uno debajo del otro, sin etiqueta.
         for op in opciones:
             total = sum(total_de(servicios[j], invitados) for j in op["servicios"])
             color = op.get("color", "")
@@ -68,9 +86,10 @@ def bloque_precios(d):
         partes.append('      <div class="total-opciones">')
         for i, op in enumerate(opciones):
             total = sum(total_de(servicios[j], invitados) for j in op["servicios"])
-            color = op.get("color") or COLORES[i % len(COLORES)]
+            color = op.get("color", COLORES[i] if i < len(COLORES) else "")
+            tag = f'<span class="tag" style="background:{color}; color:#F7F1E6;">' if color else '<span class="tag">'
             partes.append(f"""        <div class="total-opcion">
-          <span class="tag" style="background:{color}; color:#F7F1E6;">{op['tag']}</span>
+          {tag}{op['tag']}</span>
           <div class="total-final">
             <span class="label">{op['label']}</span>
             <span class="valor">{pesos(total)}</span>
@@ -100,10 +119,7 @@ def render(slug):
     clase = d.get("aviso_clase") or ("aviso-catering" if d.get("opciones") else "aviso-valores")
     reemplazos = {
         "TITULO": d["titulo"],
-        "CLIENTE": d["cliente"],
-        "FECHA": d["fecha"],
-        "HORARIO": d["horario"],
-        "INVITADOS": str(d["invitados"]),
+        "DATOS_GRID": bloque_datos(d),
         "AVISO": f'<div class="{clase}">{d["aviso"]}</div>' if d.get("aviso") else "",
         "TABLA_PRECIOS": bloque_precios(d).lstrip(),
         "TERMINOS": bloque_terminos(d).lstrip(),

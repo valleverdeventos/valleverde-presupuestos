@@ -11,10 +11,10 @@ BASE = RAIZ / "presupuestos" / "valeria-cumple-15-2027-09-18" / "index.html"
 SALIDA = pathlib.Path(__file__).resolve().parent / "plantilla.html"
 
 CSS_FALTANTE = (
-    "  .aviso-valores { margin: 18px 0 24px; padding: 20px 22px; "
-    "background: rgba(247,241,230,0.04); border: 1px solid rgba(247,241,230,0.18); "
-    "border-left: 5px solid var(--accent); border-radius: 3px; font-size: 16px; "
-    "line-height: 1.65; color: var(--text); }\n"
+    "  .aviso-valores { margin: 18px 0 24px; padding: 18px 16px; "
+    "border: 2px solid var(--accent); border-radius: 3px; "
+    "background: rgba(232,121,43,0.12); font: 700 16px/1.55 'Poppins', sans-serif; "
+    "letter-spacing: 0.2px; color: var(--accent); text-align: center; }\n"
 )
 
 html = BASE.read_text(encoding="utf-8")
@@ -26,14 +26,15 @@ if ".aviso-valores" not in html:
 # 2. Titulo del evento en la portada.
 html = re.sub(r'(<h1 style="margin-bottom:4px;">)[^<]*(</h1>)', r"\1{{TITULO}}\2", html, count=1)
 
-# 3. Datos del cliente.
-for campo in ("Cliente", "Fecha", "Horario", "Invitados"):
-    html = re.sub(
-        r'(<span class="label">%s</span>)[^<]*(</div>)' % campo,
-        r"\1{{%s}}\2" % campo.upper(),
-        html,
-        count=1,
-    )
+# 3. Grilla de datos: la arma el renderizador, porque lleva 3 o 4 columnas segun
+#    haya nombre de cliente o no.
+html = re.sub(
+    r'[ \t]*<div class="datos-grid".*?\n[ \t]*</div>\n',
+    "      {{DATOS_GRID}}\n",
+    html,
+    count=1,
+    flags=re.S,
+)
 
 # 4. Aviso previo a la tabla: cambia de texto y de clase segun la propuesta.
 html = re.sub(

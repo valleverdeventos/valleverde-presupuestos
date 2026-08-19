@@ -170,7 +170,7 @@
   .total-opcion .total-final { padding: 20px 22px; margin-top: 0; border-top: none; }
   .total-opcion .total-final .label { font-size: 13px; }
   .total-opcion .total-final .valor { font-size: 36px; }
-  .aviso-valores { margin: 18px 0 24px; padding: 20px 22px; background: rgba(247,241,230,0.04); border: 1px solid rgba(247,241,230,0.18); border-left: 5px solid var(--accent); border-radius: 3px; font-size: 16px; line-height: 1.65; color: var(--text); }
+  .aviso-valores { margin: 18px 0 24px; padding: 18px 16px; border: 2px solid var(--accent); border-radius: 3px; background: rgba(232,121,43,0.12); font: 700 16px/1.55 'Poppins', sans-serif; letter-spacing: 0.2px; color: var(--accent); text-align: center; }
 </style>
 </head>
 <body>
@@ -181,12 +181,7 @@
   <div class="datos">
     <h1 style="margin-bottom:4px;">{{TITULO}}</h1>
     <div class="regla"></div>
-    <div class="datos-grid">
-      <div class="dato"><span class="label">Cliente</span>{{CLIENTE}}</div>
-      <div class="dato"><span class="label">Fecha</span>{{FECHA}}</div>
-      <div class="dato"><span class="label">Horario</span>{{HORARIO}}</div>
-      <div class="dato"><span class="label">Invitados</span>{{INVITADOS}}</div>
-    </div>
+      {{DATOS_GRID}}
     <div class="aviso-precio">Los valores de la propuesta se encuentran en la última sección del documento.</div>
     <div class="contacto">
       <div class="contacto-item"><span class="c-dot"></span><b>Email</b><a href="mailto:salonvalleverde@gmail.com">salonvalleverde@gmail.com</a></div>
