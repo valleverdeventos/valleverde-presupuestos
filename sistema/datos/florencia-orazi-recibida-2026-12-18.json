@@ -1,0 +1,28 @@
+{
+  "titulo": "Recibida",
+  "cliente": "FLORENCIA ORAZI",
+  "fecha": "18/12/2026",
+  "horario": "21:00 a 04:00",
+  "invitados": 120,
+  "aviso_clase": "aviso-valores",
+  "aviso": "",
+  "servicios": [
+    {
+      "nombre": "Salón",
+      "precio": 25849,
+      "cantidad": 120
+    },
+    {
+      "nombre": "Barra adultos",
+      "precio": 22750,
+      "cantidad": 120
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión."
+  ]
+}

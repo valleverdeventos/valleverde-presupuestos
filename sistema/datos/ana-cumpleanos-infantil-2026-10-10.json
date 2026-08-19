@@ -1,0 +1,23 @@
+{
+  "titulo": "Cumpleaños infantil",
+  "cliente": "Ana",
+  "fecha": "10/10/2026",
+  "horario": "13:00 a 17:00",
+  "invitados": 402020,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Esta propuesta corresponde al alquiler del salón con personal mínimo de cocina, para el total de invitados. No incluye barra de tragos, DJ, animación ni catering — quedan a cargo de la familia.",
+  "servicios": [
+    {
+      "nombre": "Salón (personal mínimo de cocina)",
+      "precio": 11000,
+      "cantidad": 40
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

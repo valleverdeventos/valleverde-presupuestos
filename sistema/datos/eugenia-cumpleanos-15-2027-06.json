@@ -1,0 +1,61 @@
+{
+  "titulo": "Cumple de 15 años",
+  "cliente": "Eugenia",
+  "fecha": "Junio 2027 (sujeto a disponibilidad)",
+  "horario": "21:00 a 04:00",
+  "invitados": 601050,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Esta propuesta contempla dos alternativas: nuestra opción base &quot;Salón + Barra de tragos&quot;, y una propuesta con catering — Opción B (Degustación de pizzas) + mesa de postres — para el total de invitados. La barra de tragos aplica únicamente a los 50 adolescentes; los 10 adultos no consumen de la barra.",
+  "servicios": [
+    {
+      "nombre": "Salón (incluye 1 hora extra)",
+      "precio": 28720,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Barra de tragos (adolescentes, sin alcohol, incluye 1 hora extra)",
+      "precio": 17558,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Degustación de Pizzas",
+      "precio": 16523,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 60
+    }
+  ],
+  "opciones": [
+    {
+      "tag": "Opción Base — Salón + Barra",
+      "color": "#8E0E3E",
+      "label": "Total (Salón + Barra de tragos)",
+      "servicios": [
+        0,
+        1
+      ]
+    },
+    {
+      "tag": "Opción B — con Degustación de Pizzas",
+      "color": "",
+      "label": "Total (incluye Salón, Barra, Degustación de Pizzas y Mesa de Postres)",
+      "servicios": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

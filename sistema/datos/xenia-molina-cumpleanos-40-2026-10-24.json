@@ -1,0 +1,43 @@
+{
+  "titulo": "Cumpleaños de 40 años",
+  "cliente": "Xenia Molina",
+  "fecha": "24/10/2026",
+  "horario": "21:00 a 03:00",
+  "invitados": 50,
+  "aviso_clase": "aviso-valores",
+  "aviso": "<p style=\"margin:0 0 10px;\">Propuesta: Salón + Barra de tragos + Finger Food + Mesa de Postres.</p>\n      <ul style=\"text-align:left; margin:0; padding-left:22px; list-style:disc; font-weight:700;\">\n        <li>Bebida de mesa incluida en esta propuesta: cerveza Schneider/Andes en la media de 3 latas/invitado, Coca Cola, Sprite y Agua natural.</li>\n      </ul>",
+  "servicios": [
+    {
+      "nombre": "Salón",
+      "precio": 27079,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Barra de tragos con alcohol",
+      "precio": 21500,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 27079,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Bebida de mesa",
+      "precio": 14000,
+      "cantidad": 50
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Seña 35% ($1.843.870): con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

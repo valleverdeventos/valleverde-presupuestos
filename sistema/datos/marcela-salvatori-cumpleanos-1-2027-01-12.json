@@ -1,0 +1,24 @@
+{
+  "titulo": "Cumpleaños de 1 año",
+  "cliente": "Marcela Salvatori Laiuppa",
+  "fecha": "12/01/2027",
+  "horario": "12:30 a 18:30",
+  "invitados": 24,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Esta propuesta contempla el alquiler del salón con personal de servicio, pensada para quienes ya cuentan con su propio catering y ambientación. La barra de tragos y las opciones de catering quedan disponibles para cotizar aparte, si en algún momento les interesa sumarlas. La bebida de mesa, como en todos nuestros eventos, corre por cuenta del cliente.",
+  "servicios": [
+    {
+      "nombre": "Salón (con personal)",
+      "precio": 700000,
+      "cantidad": 1
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

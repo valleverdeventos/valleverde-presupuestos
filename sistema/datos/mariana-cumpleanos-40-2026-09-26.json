@@ -1,0 +1,33 @@
+{
+  "titulo": "Cumpleaños 40 años",
+  "cliente": "Mariana",
+  "fecha": "26/09/2026",
+  "horario": "21:00 a 03:00",
+  "invitados": 50,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Propuesta: Salón + Barra de tragos + Finger Food, para el total de invitados. El servicio de salón incluye personal completo y DJ. Mesa de postres y bebida de mesa no están contempladas en esta propuesta.",
+  "servicios": [
+    {
+      "nombre": "Salón (incluye personal completo y DJ — 21:00 a 03:00)",
+      "precio": 26200,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Barra de tragos (con alcohol)",
+      "precio": 21000,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 25800,
+      "cantidad": 50
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "titulo": "Cumple 50",
+  "cliente": "ANDRÉS LLINAS",
+  "fecha": "09/08/2026",
+  "horario": "12:30 a 18:30",
+  "invitados": 60,
+  "aviso_clase": "aviso-valores",
+  "aviso": "",
+  "servicios": [
+    {
+      "nombre": "Salón",
+      "precio": 24617,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Barra adultos",
+      "precio": 19500,
+      "cantidad": 60
+    }
+  ],
+  "nota": "Tragos preparados en el momento con insumos de primera marca.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión."
+  ]
+}

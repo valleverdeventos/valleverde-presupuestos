@@ -1,0 +1,24 @@
+{
+  "titulo": "Cumpleaños de 23 años",
+  "cliente": "Paolo",
+  "fecha": "19/09/2026",
+  "horario": "21:00 a 04:00",
+  "invitados": 120,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Esta propuesta corresponde únicamente al alquiler del salón, con DJ, 5 mozas, 3 barmanes y 1 personal de cocina. El catering, la bebida alcohólica, la mesa de postres y la bebida de mesa quedan a cargo del cliente.",
+  "servicios": [
+    {
+      "nombre": "Salón (incluye DJ, 5 mozas, 3 barmanes y 1 personal de cocina)",
+      "precio": 22000,
+      "cantidad": 120
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

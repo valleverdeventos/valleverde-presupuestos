@@ -1,0 +1,28 @@
+{
+  "titulo": "Cumpleaños de 40",
+  "cliente": "VANESA",
+  "fecha": "19/09/2026",
+  "horario": "21:00 a 03:00",
+  "invitados": 60,
+  "aviso_clase": "aviso-valores",
+  "aviso": "",
+  "servicios": [
+    {
+      "nombre": "Salón",
+      "precio": 24617,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Barra de tragos (adultos, con alcohol)",
+      "precio": 19500,
+      "cantidad": 60
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión."
+  ]
+}

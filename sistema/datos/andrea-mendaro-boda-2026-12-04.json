@@ -1,0 +1,77 @@
+{
+  "titulo": "Casamiento",
+  "cliente": "Andrea Mendaro",
+  "fecha": "04/12/2026",
+  "horario": "21:00 a 04:00",
+  "invitados": 50,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Esta propuesta contempla dos opciones de catering (Degustación de Pizzas y Finger Food), ambas con mesa de postres incluida, a modo de referencia de valores. El presupuesto final se ajusta según los servicios que efectivamente se elijan, manteniendo siempre nuestra opción base &quot;Salón + Barra de tragos&quot;. El DJ está incluido en el valor del salón. La bebida de mesa queda a cargo del cliente, con cantidades sugeridas por nosotros.",
+  "servicios": [
+    {
+      "nombre": "Salón (incluye DJ y 1 hora extra)",
+      "precio": 31592,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Barra de tragos con alcohol (incluye 1 hora extra)",
+      "precio": 22750,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 27079,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Degustación de Pizzas",
+      "precio": 17662,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 50
+    }
+  ],
+  "opciones": [
+    {
+      "tag": "Opción Base — Salón + Barra",
+      "color": "#8E0E3E",
+      "label": "Total (Salón + Barra de tragos)",
+      "servicios": [
+        0,
+        1
+      ]
+    },
+    {
+      "tag": "Opción A — Degustación de Pizzas",
+      "color": "#2F6690",
+      "label": "Total (incluye Salón, Barra, Degustación de Pizzas y Mesa de Postres)",
+      "servicios": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "tag": "Opción B — Finger Food",
+      "color": "",
+      "label": "Total (incluye Salón, Barra, Finger Food y Mesa de Postres)",
+      "servicios": [
+        0,
+        1,
+        2,
+        4
+      ]
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

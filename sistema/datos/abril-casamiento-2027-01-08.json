@@ -1,0 +1,28 @@
+{
+  "titulo": "Casamiento",
+  "cliente": "Abril",
+  "fecha": "8 o 9 de enero de 2027 (a confirmar)",
+  "horario": "21:00 a 04:00",
+  "invitados": 100,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Esta propuesta corresponde a nuestra opción base &quot;Salón + Barra de tragos&quot; para el total de invitados. El catering puede estar a cargo del cliente; si están interesados, les enviamos aparte el presupuesto actualizado con nuestro catering (finger food, degustación de pizzas, mesa de postres, bebida de mesa) a elección. El servicio de salón incluye personal completo (mozas, cocina, DJ y barman).",
+  "servicios": [
+    {
+      "nombre": "Salón (incluye personal completo, DJ y barman)",
+      "precio": 28500,
+      "cantidad": 100
+    },
+    {
+      "nombre": "Barra de tragos (con alcohol)",
+      "precio": 23000,
+      "cantidad": 100
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

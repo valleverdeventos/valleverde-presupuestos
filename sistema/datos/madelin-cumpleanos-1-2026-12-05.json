@@ -1,0 +1,28 @@
+{
+  "titulo": "Cumpleaños de 1 año",
+  "cliente": "MADELIN",
+  "fecha": "5 o 6/12/2026 (a confirmar)",
+  "horario": "12:30 a 17:30",
+  "invitados": 65,
+  "aviso_clase": "aviso-valores",
+  "aviso": "",
+  "servicios": [
+    {
+      "nombre": "Salón",
+      "precio": 24617,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Niños (<12) - Tarifa 50% Salón",
+      "precio": 12308,
+      "cantidad": 15
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión."
+  ]
+}

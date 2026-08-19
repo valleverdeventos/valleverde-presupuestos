@@ -1,0 +1,33 @@
+{
+  "titulo": "Cumpleáños de adulto",
+  "cliente": "AGUSTINA REISS",
+  "fecha": "06/09/2026",
+  "horario": "12:00 a 18:00",
+  "invitados": 55,
+  "aviso_clase": "aviso-valores",
+  "aviso": "",
+  "servicios": [
+    {
+      "nombre": "Salón",
+      "precio": 27079,
+      "cantidad": 55
+    },
+    {
+      "nombre": "Barra de tragos (adultos, con alcohol)",
+      "precio": 21500,
+      "cantidad": 55
+    },
+    {
+      "nombre": "Bebida de mesa",
+      "precio": 10256,
+      "cantidad": 55
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión."
+  ]
+}

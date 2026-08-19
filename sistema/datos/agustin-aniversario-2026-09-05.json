@@ -1,0 +1,54 @@
+{
+  "titulo": "Aniversario",
+  "cliente": "Agustín",
+  "fecha": "Sábado 05/09/2026",
+  "horario": "21:00 a 04:00",
+  "invitados": 90,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Esta propuesta contempla nuestra opción base &quot;Salón + Barra de tragos&quot;, más una alternativa de catering salado a modo de referencia de valores (Degustación de Pizzas). La mesa de postres y la bebida de mesa quedan a cargo del cliente; si lo desean, a su discreción también podemos presupuestarles estos dos servicios por separado. El servicio de salón incluye personal completo (mozos, cocina, DJ y barman).",
+  "servicios": [
+    {
+      "nombre": "Salón (incluye mozos, cocina, DJ y barman — 21:00 a 04:00)",
+      "precio": 22156,
+      "cantidad": 90
+    },
+    {
+      "nombre": "Barra de tragos con alcohol (21:00 a 04:00)",
+      "precio": 21500,
+      "cantidad": 90
+    },
+    {
+      "nombre": "Degustación de Pizzas",
+      "precio": 14244,
+      "cantidad": 90
+    }
+  ],
+  "opciones": [
+    {
+      "tag": "Opción Base — Salón + Barra",
+      "color": "#8E0E3E",
+      "label": "Total (Salón + Barra de tragos)",
+      "servicios": [
+        0,
+        1
+      ]
+    },
+    {
+      "tag": "Opción A — Degustación de Pizzas",
+      "color": "#2F6690",
+      "label": "Total (incluye Salón, Barra de tragos y Degustación de Pizzas)",
+      "servicios": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

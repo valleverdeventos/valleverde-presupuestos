@@ -1,0 +1,67 @@
+{
+  "titulo": "Cumple 15",
+  "cliente": "LORENA",
+  "fecha": "07/11/2026",
+  "horario": "21:00 a 04:00",
+  "invitados": 702050,
+  "aviso_clase": "aviso-valores",
+  "aviso": "",
+  "servicios": [
+    {
+      "nombre": "Barra adultos",
+      "precio": 18926,
+      "cantidad": 20
+    },
+    {
+      "nombre": "Barra adolescentes",
+      "precio": 13248,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Finger Food (Opción A)",
+      "precio": 24724,
+      "cantidad": 70
+    },
+    {
+      "nombre": "Degustación de Pizzas (Opción B)",
+      "precio": 15383,
+      "cantidad": 70
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 70
+    }
+  ],
+  "opciones": [
+    {
+      "label": "Total si el catering es Opción A (Finger Food)",
+      "color": "",
+      "simple": true,
+      "servicios": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "label": "Total si el catering es Opción B (Pizza)",
+      "color": "#8E0E3E",
+      "simple": true,
+      "servicios": [
+        0,
+        1,
+        3,
+        4
+      ]
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión."
+  ]
+}

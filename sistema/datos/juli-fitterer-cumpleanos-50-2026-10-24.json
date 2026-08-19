@@ -1,0 +1,84 @@
+{
+  "titulo": "Cumpleaños de 50 años",
+  "cliente": "Juli Fitterer",
+  "fecha": "24/10/2026",
+  "horario": "21:00 a 06:00",
+  "invitados": 68599,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Esta propuesta contempla dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores, ambas con Mesa de Postres incluida. El presupuesto final se ajusta según los servicios que efectivamente se elijan, manteniendo siempre nuestra opción base &quot;Salón + Barra de tragos&quot;. El servicio de salón incluye personal completo (mozos, cocina, DJ y barman). Los 9 niños menores de 12 años abonan el 50% del valor del salón y no consumen de la barra de tragos. La bebida de mesa queda a cargo del cliente.",
+  "servicios": [
+    {
+      "nombre": "Salón (incluye mozos, cocina, DJ y barman — 21:00 a 06:00)",
+      "precio": 41250,
+      "cantidad": 59
+    },
+    {
+      "nombre": "Niños menores de 12 años (50% valor salón)",
+      "precio": 20625,
+      "cantidad": 9
+    },
+    {
+      "nombre": "Barra de tragos con alcohol (21:00 a 06:00)",
+      "precio": 32250,
+      "cantidad": 59
+    },
+    {
+      "nombre": "Degustación de Pizzas",
+      "precio": 15383,
+      "cantidad": 64
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 24724,
+      "cantidad": 64
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 64
+    }
+  ],
+  "opciones": [
+    {
+      "tag": "Opción Base — Salón + Barra",
+      "color": "#8E0E3E",
+      "label": "Total (Salón, Niños y Barra de tragos)",
+      "servicios": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "tag": "Opción A — Degustación de Pizzas",
+      "color": "#2F6690",
+      "label": "Total (incluye Salón, Niños, Barra, Degustación de Pizzas y Mesa de Postres)",
+      "servicios": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "tag": "Opción B — Finger Food",
+      "color": "",
+      "label": "Total (incluye Salón, Niños, Barra, Finger Food y Mesa de Postres)",
+      "servicios": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ]
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

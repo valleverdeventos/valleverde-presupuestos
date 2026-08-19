@@ -1,0 +1,38 @@
+{
+  "titulo": "Cumple de 15 años",
+  "cliente": "CECILIA ECHEVERRIA",
+  "fecha": "12/12/2026",
+  "horario": "21:00 a 03:00",
+  "invitados": 60,
+  "aviso_clase": "aviso-valores",
+  "aviso": "",
+  "servicios": [
+    {
+      "nombre": "Salón",
+      "precio": 24617,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Barra de tragos (adultos, con alcohol)",
+      "precio": 21500,
+      "cantidad": 30
+    },
+    {
+      "nombre": "Barra de tragos (adolescentes, sin alcohol)",
+      "precio": 13650,
+      "cantidad": 30
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 60
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión."
+  ]
+}

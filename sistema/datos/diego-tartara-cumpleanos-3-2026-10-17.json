@@ -1,0 +1,33 @@
+{
+  "titulo": "Cumpleaños de 3",
+  "cliente": "DIEGO TARTARA",
+  "fecha": "17/10/2026",
+  "horario": "21:00 a 03:00",
+  "invitados": 80,
+  "aviso_clase": "aviso-valores",
+  "aviso": "",
+  "servicios": [
+    {
+      "nombre": "Salón",
+      "precio": 22771,
+      "cantidad": 80
+    },
+    {
+      "nombre": "Barra de tragos (adultos, con alcohol)",
+      "precio": 21500,
+      "cantidad": 80
+    },
+    {
+      "nombre": "Degustación de Pizzas",
+      "precio": 14814,
+      "cantidad": 80
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión."
+  ]
+}

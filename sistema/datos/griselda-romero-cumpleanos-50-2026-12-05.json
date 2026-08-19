@@ -1,0 +1,48 @@
+{
+  "titulo": "Cumpleaños de 50",
+  "cliente": "GRISELDA ROMERO",
+  "fecha": "05/12/2026",
+  "horario": "21:00 a 03:00",
+  "invitados": 60,
+  "aviso_clase": "aviso-valores",
+  "aviso": "",
+  "servicios": [
+    {
+      "nombre": "Salón",
+      "precio": 24617,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Barra de tragos (adultos, con alcohol)",
+      "precio": 21500,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 25902,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Degustación de Pizzas",
+      "precio": 16523,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Bebida de Mesa",
+      "precio": 10256,
+      "cantidad": 60
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "titulo": "Cumpleaños de 70",
+  "cliente": "SILVINA",
+  "fecha": "05/09/2026",
+  "horario": "12:30 a 18:30",
+  "invitados": 25,
+  "aviso_clase": "aviso-valores",
+  "aviso": "",
+  "servicios": [
+    {
+      "nombre": "Salón",
+      "precio": 51696,
+      "cantidad": 25
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 24500,
+      "cantidad": 25
+    },
+    {
+      "nombre": "Degustación de Pizzas",
+      "precio": 19941,
+      "cantidad": 25
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 25
+    },
+    {
+      "nombre": "Bebida de Mesa",
+      "precio": 12500,
+      "cantidad": 25
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión."
+  ]
+}

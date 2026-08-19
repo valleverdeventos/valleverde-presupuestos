@@ -1,0 +1,38 @@
+{
+  "titulo": "Celebración post civil",
+  "cliente": "Nato",
+  "fecha": "31/10/2026",
+  "horario": "11:00 a 19:00",
+  "invitados": 53455312,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Esta propuesta corresponde a nuestra opción base &quot;Salón + Barra de tragos&quot; para el total de invitados. El catering, la mesa de postres y la bebida de mesa quedan a cargo del cliente. El servicio de salón incluye personal completo. Los niños menores de 12 años abonan el 50% del valor del salón; los invitados mayores de 12 años abonan el 100%. Ninguno de los dos grupos consume de la barra de tragos.",
+  "servicios": [
+    {
+      "nombre": "Salón (adultos)",
+      "precio": 36105,
+      "cantidad": 45
+    },
+    {
+      "nombre": "Salón (niños menores de 12, 50%)",
+      "precio": 18052,
+      "cantidad": 5
+    },
+    {
+      "nombre": "Salón (mayores de 12 años, 100%)",
+      "precio": 36105,
+      "cantidad": 3
+    },
+    {
+      "nombre": "Barra de tragos con alcohol (adultos)",
+      "precio": 28667,
+      "cantidad": 45
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

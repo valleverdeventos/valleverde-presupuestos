@@ -1,0 +1,43 @@
+{
+  "titulo": "Fiesta de 15 años",
+  "cliente": "LEONELA DIMES GONZÁLEZ",
+  "fecha": "16/04/2027",
+  "horario": "21:00 a 03:00",
+  "invitados": 653019133,
+  "aviso_clase": "aviso-valores",
+  "aviso": "",
+  "servicios": [
+    {
+      "nombre": "Salón - Adultos",
+      "precio": 24617,
+      "cantidad": 30
+    },
+    {
+      "nombre": "Salón - Adolescentes (tarifa adulto)",
+      "precio": 24617,
+      "cantidad": 19
+    },
+    {
+      "nombre": "Salón - Niños (<12) - Tarifa 50%",
+      "precio": 12308,
+      "cantidad": 13
+    },
+    {
+      "nombre": "Barra adultos (con alcohol)",
+      "precio": 21500,
+      "cantidad": 30
+    },
+    {
+      "nombre": "Barra adolescentes (sin alcohol, incluye niños)",
+      "precio": 15050,
+      "cantidad": 32
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Reserva de fecha sujeta a seña del 35% del total.",
+    "Saldo a abonar hasta 15 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Propuesta válida por 15 días desde la fecha de emisión."
+  ]
+}

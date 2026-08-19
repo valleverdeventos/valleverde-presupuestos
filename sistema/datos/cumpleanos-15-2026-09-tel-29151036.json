@@ -1,0 +1,84 @@
+{
+  "titulo": "Cumple de 15 años",
+  "cliente": "",
+  "fecha": "Septiembre 2026 (a definir según disponibilidad del salón)",
+  "horario": "21:00 a 03:00",
+  "invitados": 35530,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Esta propuesta contempla dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores. El presupuesto final se ajusta según los servicios que efectivamente se elijan, manteniendo siempre nuestra opción base &quot;Salón + Barra de tragos&quot;. La barra con alcohol aplica a los 5 invitados adultos; la barra sin alcohol, a los 30 adolescentes. La bebida de mesa queda a cargo del cliente.",
+  "servicios": [
+    {
+      "nombre": "Salón (6 hs)",
+      "precio": 45296,
+      "cantidad": 35
+    },
+    {
+      "nombre": "Barra de tragos (adultos, con alcohol)",
+      "precio": 21500,
+      "cantidad": 5
+    },
+    {
+      "nombre": "Barra de tragos (adolescentes, sin alcohol)",
+      "precio": 15050,
+      "cantidad": 30
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 29434,
+      "cantidad": 35
+    },
+    {
+      "nombre": "Degustación de Pizzas",
+      "precio": 19941,
+      "cantidad": 35
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 35
+    }
+  ],
+  "opciones": [
+    {
+      "tag": "Opción Base — Salón + Barra",
+      "color": "#8E0E3E",
+      "label": "Total (Salón + Barra de tragos)",
+      "servicios": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "tag": "Opción A — Degustación de Pizzas",
+      "color": "#2F6690",
+      "label": "Total (incluye Salón, Barra, Degustación de Pizzas y Mesa de Postres)",
+      "servicios": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "tag": "Opción B — Finger Food",
+      "color": "",
+      "label": "Total (incluye Salón, Barra, Finger Food y Mesa de Postres)",
+      "servicios": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
