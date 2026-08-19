@@ -116,7 +116,10 @@ def render(slug):
     d = json.loads((DATOS / f"{slug}.json").read_text(encoding="utf-8"))
     html = PLANTILLA.read_text(encoding="utf-8")
 
-    clase = d.get("aviso_clase") or ("aviso-catering" if d.get("opciones") else "aviso-valores")
+    # Regla fija de Gian (02/08/2026): toda nota que aclare a que corresponde el
+    # valor va en .aviso-valores. .aviso-catering solo sobrevive en las paginas
+    # viejas que ya lo tenian, y solo si el JSON lo pide explicitamente.
+    clase = d.get("aviso_clase") or "aviso-valores"
     reemplazos = {
         "TITULO": d["titulo"],
         "DATOS_GRID": bloque_datos(d),
