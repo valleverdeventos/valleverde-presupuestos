@@ -1,0 +1,79 @@
+{
+  "titulo": "Cumple de 15 años",
+  "cliente": "Nati",
+  "fecha": "02/10/2027",
+  "horario": "21:00 a 05:00",
+  "invitados": 60,
+  "aviso": "Esta propuesta contempla dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores, ambas con Mesa de Postres incluida. El presupuesto final se ajusta según los servicios que efectivamente se elijan, manteniendo siempre nuestra opción base \"Salón + Barra de tragos\". La barra con alcohol aplica a los 30 invitados adultos; la barra sin alcohol, a los 30 adolescentes. La bebida de mesa no está contemplada en esta propuesta.",
+  "servicios": [
+    {
+      "nombre": "Salón",
+      "precio": 30000,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Barra de tragos (adultos, con alcohol)",
+      "precio": 23000,
+      "cantidad": 30
+    },
+    {
+      "nombre": "Barra de tragos (adolescentes, sin alcohol)",
+      "precio": 18000,
+      "cantidad": 30
+    },
+    {
+      "nombre": "Degustación de Pizzas",
+      "precio": 16523,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 25902,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 60
+    }
+  ],
+  "opciones": [
+    {
+      "tag": "Opción Base — Salón + Barra",
+      "label": "Total (Salón + Barra de tragos)",
+      "servicios": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "tag": "Opción A — Degustación de Pizzas",
+      "label": "Total (incluye Salón, Barra, Degustación de Pizzas y Mesa de Postres)",
+      "servicios": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "tag": "Opción B — Finger Food",
+      "label": "Total (incluye Salón, Barra, Finger Food y Mesa de Postres)",
+      "servicios": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ]
+    }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
