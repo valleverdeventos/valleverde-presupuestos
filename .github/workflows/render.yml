@@ -1,0 +1,28 @@
+name: Renderizar presupuestos
+
+on:
+  push:
+    paths:
+      - 'sistema/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Renderizar
+        run: python sistema/render.py --todos
+      - name: Commitear cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add presupuestos
+          git diff --staged --quiet || git commit -m "Render automatico de presupuestos"
+          git push
