@@ -1,0 +1,18 @@
+{
+  "titulo": "Recibida",
+  "cliente": "Emiliano Kelly",
+  "fecha": "20/11/2026",
+  "horario": "22:00 a 04:00",
+  "invitados": 120,
+  "aviso": "Esta propuesta corresponde a nuestra opción base \"Salón + Barra de tragos\" para el total de invitados. El evento contempla el uso del salón junto con su parque arbolado privado y estacionamiento. El catering puede estar a cargo del cliente; si están interesados, les enviamos aparte el presupuesto actualizado con nuestro catering (finger food, degustación de pizzas, mesa de postres, bebida de mesa) a elección.",
+  "servicios": [
+    { "nombre": "Salón (incluye personal completo y DJ)", "precio": 20000 },
+    { "nombre": "Barra de tragos (con alcohol)", "precio": 18000 }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
