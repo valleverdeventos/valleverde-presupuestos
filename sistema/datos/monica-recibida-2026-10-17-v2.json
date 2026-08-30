@@ -1,0 +1,25 @@
+{
+  "titulo": "Recibida",
+  "cliente": "Mónica",
+  "fecha": "17/10/2026",
+  "horario": "21:00 a 04:00",
+  "invitados": 80,
+  "aviso": "Esta propuesta contempla dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores. El presupuesto final se ajusta según los servicios que efectivamente se elijan, manteniendo siempre nuestra opción base \"Salón + Barra de tragos\". La mesa de postres y la bebida de mesa no están contempladas en esta propuesta.",
+  "servicios": [
+    { "nombre": "Salón (incluye personal completo y DJ)", "precio": 24000 },
+    { "nombre": "Barra de tragos (con alcohol)", "precio": 21500 },
+    { "nombre": "Degustación de Pizzas", "precio": 14814 },
+    { "nombre": "Finger Food", "precio": 23547 }
+  ],
+  "opciones": [
+    { "tag": "Opción Base — Salón + Barra", "label": "Total (Salón + Barra de tragos)", "servicios": [0, 1] },
+    { "tag": "Opción A — Degustación de Pizzas", "label": "Total (incluye Salón, Barra y Degustación de Pizzas)", "servicios": [0, 1, 2] },
+    { "tag": "Opción B — Finger Food", "label": "Total (incluye Salón, Barra y Finger Food)", "servicios": [0, 1, 3] }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
