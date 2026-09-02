@@ -1,0 +1,29 @@
+{
+  "titulo": "Cumpleaños de 15",
+  "cliente": "Trinidad",
+  "fecha": "27/09/2026",
+  "horario": "18:00 a 00:00",
+  "invitados": 30,
+  "pizza_sin_recepcion": true,
+  "aviso": "Esta propuesta incluye nuestra opción base \"Salón + Barra de tragos\" y la Degustación de Pizzas a valor acordado. Los 15 adolescentes se cotizan con barra sin alcohol.",
+  "servicios": [
+    { "nombre": "Salón (incluye personal completo y DJ)", "precio": 45296 },
+    { "nombre": "Barra de tragos (adultos, con alcohol)", "precio": 21500, "cantidad": 15 },
+    { "nombre": "Barra de tragos (adolescentes, sin alcohol)", "precio": 15050, "cantidad": 15 },
+    { "nombre": "Degustación de Pizzas", "precio": 20000, "cantidad": 30 }
+  ],
+  "opciones": [
+    { "tag": "Opción Base — Salón + Barra",
+      "label": "Total (Salón + Barra de tragos)",
+      "servicios": [0, 1, 2] },
+    { "tag": "Opción A — Degustación de Pizzas",
+      "label": "Total (incluye Salón, Barra y Degustación de Pizzas)",
+      "servicios": [0, 1, 2, 3] }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
