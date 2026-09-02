@@ -1,0 +1,22 @@
+{
+  "titulo": "Boda",
+  "cliente": "Camila",
+  "fecha": "29/11/2026",
+  "horario": "12:30 a 18:30",
+  "invitados": 125,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Esta propuesta corresponde al alquiler del salón por el horario contratado, con personal de mozas, cocina y barman. No incluye catering, DJ, música ni equipos de sonido. El alcohol permitido es exclusivamente cerveza y vino; no se incluyen bebidas de alta graduación ni tragos.",
+  "servicios": [
+    {
+      "nombre": "Salón (incluye personal de mozas, cocina y barman — 12:30 a 18:30)",
+      "precio": 30000,
+      "cantidad": 125
+    }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
