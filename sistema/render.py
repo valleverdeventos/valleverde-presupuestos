@@ -19,6 +19,16 @@ PLANTILLA = SISTEMA / "plantilla.html"
 # Colores de etiqueta ya calibrados: base, catering mas barato, catering mas caro.
 COLORES = ["#8E0E3E", "#2F6690", ""]
 
+# Bloque "Recepcion" de la Opcion A (Degustacion de pizzas). Por default se
+# muestra igual que siempre; un presupuesto puntual puede pedir omitirlo con
+# "pizza_sin_recepcion": true en su JSON, sin afectar a ningun otro cliente.
+PIZZA_RECEPCION_HTML = """        <div class="subtitulo-menu">Recepción</div>
+        <ul class="lista">
+          <li>Variedad de canastitas, pionono y chips</li>
+          <li>Bocaditos de pollo en salsa de crema y verdeo</li>
+        </ul>
+"""
+
 
 def pesos(n):
     """1310000 -> $1.310.000"""
@@ -126,6 +136,7 @@ def render(slug):
         "AVISO": f'<div class="{clase}">{d["aviso"]}</div>' if d.get("aviso") else "",
         "TABLA_PRECIOS": bloque_precios(d).lstrip(),
         "TERMINOS": bloque_terminos(d).lstrip(),
+        "PIZZA_RECEPCION": "" if d.get("pizza_sin_recepcion") else PIZZA_RECEPCION_HTML,
     }
     for k, v in reemplazos.items():
         html = html.replace("{{%s}}" % k, str(v))
