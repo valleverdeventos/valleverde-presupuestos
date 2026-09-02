@@ -1,0 +1,18 @@
+{
+  "titulo": "Cumpleaños de 43",
+  "cliente": "Jor",
+  "fecha": "23/10/2026",
+  "horario": "21:00 a 03:00",
+  "invitados": 80,
+  "aviso": "Esta propuesta corresponde a nuestra opción base \"Salón + Barra de tragos\" para el total de invitados. El catering puede estar a cargo del cliente; si están interesados, les enviamos aparte el presupuesto actualizado con nuestro catering (finger food, degustación de pizzas, mesa de postres, bebida de mesa) a elección.",
+  "servicios": [
+    { "nombre": "Salón (incluye personal completo y DJ)", "precio": 22771 },
+    { "nombre": "Barra de tragos (con alcohol)", "precio": 21500 }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
