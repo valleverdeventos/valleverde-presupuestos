@@ -1,0 +1,22 @@
+{
+  "titulo": "Demostración Essen",
+  "cliente": "Yami",
+  "fecha": "27/10/2026",
+  "horario": "12:00 a 17:00",
+  "invitados": 40,
+  "aviso_clase": "aviso-valores",
+  "aviso": "Esta propuesta corresponde al alquiler del salón por el horario contratado, con 1 persona de personal de servicio.",
+  "servicios": [
+    {
+      "nombre": "Salón (incluye 1 persona de personal de servicio — 12:00 a 17:00)",
+      "precio": 450000,
+      "cantidad": 1
+    }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
