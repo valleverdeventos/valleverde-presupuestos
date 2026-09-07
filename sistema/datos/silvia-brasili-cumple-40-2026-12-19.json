@@ -6,7 +6,7 @@
   "invitados": 65,
   "aviso": "Esta propuesta corresponde a nuestra opción base \"Salón + Barra de tragos\" para el total de invitados. El catering puede estar a cargo del cliente; si están interesados, les enviamos aparte el presupuesto actualizado con nuestro catering (finger food, degustación de pizzas, mesa de postres, bebida de mesa) a elección.",
   "servicios": [
-    { "nombre": "Salón (incluye personal completo y DJ)", "precio": 24617 },
+    { "nombre": "Salón (incluye personal completo y DJ)", "precio": 27500 },
     { "nombre": "Barra de tragos (con alcohol)", "precio": 21500 }
   ],
   "terminos": [
