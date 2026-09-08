@@ -1,0 +1,15 @@
+{
+  "titulo": "Cumpleaños 2 años",
+  "cliente": "Carla",
+  "fecha": "22/09/2026",
+  "horario": "17:30 a 20:30",
+  "invitados": 50,
+  "aviso": "Esta propuesta corresponde a la locación del salón con personal de cocina, para el total de invitados.",
+  "servicios": [
+    { "nombre": "Salón (incluye 1 personal de cocina)", "precio": 350000, "cantidad": 1 }
+  ],
+  "nota": "Opcional: se puede sumar el servicio de una moza adicional por $70.000.",
+  "terminos": [
+    "Pago total: una semana antes del evento."
+  ]
+}
