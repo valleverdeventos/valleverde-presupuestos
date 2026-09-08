@@ -1,0 +1,19 @@
+{
+  "titulo": "Casamiento",
+  "cliente": "Agustín",
+  "fecha": "Febrero 2027 (sujeto a disponibilidad)",
+  "horario": "21:00 a 04:00",
+  "invitados": 60,
+  "servicios": [
+    { "nombre": "Salón (incluye personal completo y DJ)", "precio": 28720 },
+    { "nombre": "Barra de tragos (con alcohol)", "precio": 25083 },
+    { "nombre": "Finger Food", "precio": 25902 },
+    { "nombre": "Mesa de Postres", "precio": 15706 }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
