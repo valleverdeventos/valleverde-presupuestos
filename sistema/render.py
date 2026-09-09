@@ -7,6 +7,7 @@ Lee  sistema/datos/<slug>.json
 Usa  sistema/plantilla.html
 Deja presupuestos/<slug>/index.html
 """
+import datetime
 import json
 import pathlib
 import sys
@@ -30,6 +31,18 @@ PIZZA_RECEPCION_HTML = """        <div class="subtitulo-menu">Recepción</div>
 """
 
 
+def fecha_emision(d):
+    """Fecha desde la cual corre el ajuste por inflacion.
+
+    Se toma de "emitido" en el JSON; si no esta, es la fecha de hoy y queda
+    congelada en el archivo la primera vez que se renderiza, para que un
+    re-render mas adelante no corra la fecha hacia adelante.
+    """
+    if d.get("emitido"):
+        return d["emitido"]
+    return datetime.date.today().strftime("%d/%m/%Y")
+
+
 def pesos(n):
     """1310000 -> $1.310.000"""
     return "$" + f"{int(round(n)):,}".replace(",", ".")
@@ -47,13 +60,16 @@ def bloque_datos(d):
     campos.append(("Fecha", d["fecha"]))
     campos.append(("Horario", d["horario"]))
     campos.append(("Invitados", d.get("invitados_texto", d["invitados"])))
+    campos.append(("Emitido", fecha_emision(d)))
 
-    estilo = "" if len(campos) == 4 else ' style="grid-template-columns: repeat(3, 1fr);"'
+    # 5 campos (con cliente) llevan clase propia; 4 usan el default de la
+    # plantilla, que ya son 2 columnas en móvil y 4 en escritorio.
+    clase = " cols-5" if len(campos) == 5 else ""
     filas = [
         f'        <div class="dato"><span class="label">{k}</span>{v}</div>'
         for k, v in campos
     ]
-    return (f'<div class="datos-grid"{estilo}>\n' + "\n".join(filas) + "\n      </div>")
+    return (f'<div class="datos-grid{clase}">\n' + "\n".join(filas) + "\n      </div>")
 
 
 def tarjeta(servicio, invitados):
@@ -113,8 +129,21 @@ def bloque_precios(d):
     return "\n".join(partes)
 
 
+# La clausula de inflacion se reescribe con la fecha de emision concreta, para
+# que quede escrito desde que dia corre el ajuste. Se reconoce por el arranque
+# del texto, asi los JSON viejos no hay que tocarlos.
+CLAUSULA_VIEJA = "Valores expresados a valor del día de la fecha de emisión de este presupuesto."
+CLAUSULA_NUEVA = ("Valores expresados al {fecha}, fecha de emisión de este presupuesto. "
+                  "Se actualizarán según inflación oficial (INDEC) entre esa fecha "
+                  "y la fecha del evento.")
+
+
 def bloque_terminos(d):
-    terminos = d.get("terminos") or []
+    terminos = [
+        CLAUSULA_NUEVA.format(fecha=fecha_emision(d))
+        if t.startswith(CLAUSULA_VIEJA) else t
+        for t in (d.get("terminos") or [])
+    ]
     filas = []
     for i, t in enumerate(terminos):
         ultimo = ' style="margin-bottom:0;"' if i == len(terminos) - 1 else ""

@@ -63,8 +63,13 @@ Campos:
 - `aviso_clase` es opcional: `aviso-catering` (naranja, para propuestas con opciones) o
   `aviso-valores` (neutro). Si no está, se elige según haya opciones o no.
 - `nota` es opcional: un párrafo al pie de la tabla de precios.
-- `cliente` es opcional. Si no está, la portada sale con 3 columnas (Fecha / Horario /
-  Invitados), sin el campo Cliente, tal como pide la regla de "presupuesto sin nombre".
+- `cliente` es opcional. Si no está, la portada sale sin el campo Cliente, tal como pide
+  la regla de "presupuesto sin nombre".
+- `emitido` es la fecha desde la cual corre el ajuste por inflación, en formato
+  `DD/MM/AAAA`. Aparece en la portada como "Emitido" y dentro de la cláusula de inflación
+  de los términos. **Si no está, se usa la fecha de hoy** — así que conviene escribirla en
+  el JSON apenas se publica el presupuesto, para que un re-render posterior no corra la
+  fecha hacia adelante y le cambie la referencia a un cliente que ya recibió el documento.
 - `cliente_label` es opcional: cambia el rótulo de esa celda, por ejemplo a `"Teléfono"`
   cuando hay WhatsApp pero no nombre.
 - `invitados_texto` es opcional: cambia sólo lo que se muestra en la portada, sin tocar
