@@ -1,0 +1,35 @@
+{
+  "titulo": "Cumpleaños",
+  "cliente": "+54 9 2914 49-4645",
+  "cliente_label": "Teléfono",
+  "fecha": "28/11/2026",
+  "horario": "21:00 a 03:00",
+  "invitados": 37,
+  "invitados_texto": "30 adultos + 7 niños",
+  "aviso": "Esta propuesta contempla dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores. El presupuesto final se ajusta según los servicios que efectivamente se elijan, manteniendo siempre nuestra opción base \"Salón + Barra de tragos\".",
+  "servicios": [
+    { "nombre": "Salón (incluye personal completo y DJ)", "precio": 45296, "cantidad": 30 },
+    { "nombre": "Barra de tragos (con alcohol)", "precio": 21500, "cantidad": 30 },
+    { "nombre": "Salón — niños (menores de 12)", "precio": 22648, "cantidad": 7 },
+    { "nombre": "Degustación de Pizzas", "precio": 19941, "cantidad": 34 },
+    { "nombre": "Finger Food", "precio": 29434, "cantidad": 34 },
+    { "nombre": "Mesa de Postres", "precio": 15706, "cantidad": 34 }
+  ],
+  "opciones": [
+    { "tag": "Opción Base — Salón + Barra",
+      "label": "Total (Salón + Barra de tragos)",
+      "servicios": [0, 1, 2] },
+    { "tag": "Opción A — Degustación de Pizzas",
+      "label": "Total (incluye Salón, Barra, Degustación de Pizzas y Mesa de Postres)",
+      "servicios": [0, 1, 2, 3, 5] },
+    { "tag": "Opción B — Finger Food",
+      "label": "Total (incluye Salón, Barra, Finger Food y Mesa de Postres)",
+      "servicios": [0, 1, 2, 4, 5] }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
