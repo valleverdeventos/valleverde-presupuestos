@@ -1,0 +1,22 @@
+{
+  "titulo": "Evento empresarial",
+  "cliente": "Betiana",
+  "fecha": "28/11/2026",
+  "horario": "21:00 a 03:00",
+  "emitido": "10/09/2026",
+  "invitados": 60,
+  "aviso": "Esta propuesta incluye la totalidad de los servicios solicitados: salón con patio verde, recepción, plato principal, mesa de postres, bebida de mesa, barra de tragos y musicalización. El alquiler de juegos inflables corre por cuenta del cliente.",
+  "servicios": [
+    { "nombre": "Salón (incluye personal completo y DJ)", "precio": 24617 },
+    { "nombre": "Barra de tragos (con alcohol)", "precio": 21500 },
+    { "nombre": "Finger Food", "precio": 25902 },
+    { "nombre": "Mesa de Postres", "precio": 15706 },
+    { "nombre": "Bebida de mesa", "precio": 10256 }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 10 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
