@@ -6,7 +6,7 @@
   "emitido": "10/09/2026",
   "invitados": 65,
   "invitados_texto": "35 adultos + 30 niños",
-  "aviso": "Esta propuesta corresponde al alquiler del salón por 4 horas, con 1 personal de cocina y 1 moza. El servicio de moza no incluye atención en mesa. El catering, las bebidas, la torta y la animación quedan a cargo del cliente.",
+  "aviso": "Esta propuesta corresponde al alquiler del salón por 4 horas, con 1 personal de cocina y 1 moza. El servicio de moza no incluye atención en mesa. El catering, las bebidas, la torta y la animación quedan a cargo del cliente. Para un grupo de 30 niños recomendamos contratar servicio de animación.",
   "servicios": [
     {
       "nombre": "Salón por 4 horas, con 1 personal de cocina y 1 moza",
@@ -18,6 +18,7 @@
     "Seña 35%: con la reserva del salón.",
     "Saldo 65%: 20 días antes del evento.",
     "Cancelaciones no reintegran la seña.",
+    "El cuidado y la supervisión de los menores quedan a cargo de sus padres o adultos responsables durante todo el evento.",
     "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
   ]
 }
