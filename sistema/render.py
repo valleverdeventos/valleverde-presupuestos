@@ -58,8 +58,19 @@ PIZZAS_RECIBIDA = """        <div class="subtitulo-menu">Principal — 5 varieda
           <li>Salchicha y Cebolla — mozzarella, salchicha y cebolla salteada</li>
         </ul>"""
 
-BARRA_OPCIONAL = ("Servicio opcional, no incluido en esta propuesta. "
-                  "Se cotiza aparte e incluye el personal de barra.")
+# En una recibida la barra no viene incluida ni lleva precio en el documento,
+# pero conviene que se vea: es el adicional que mas margen deja. Por eso en vez
+# de una linea de texto va un cartel grande, calcando el recuadro de la portada.
+BARRA_OPCIONAL = """No incluida en esta propuesta.</p>
+
+    <div style="margin:22px 0 6px; padding:30px 22px; border:2px solid var(--accent); border-radius:3px; background:rgba(232,121,43,0.12); text-align:center;">
+      <div style="font:700 11px/1.3 'Poppins',sans-serif; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:10px;">Servicio opcional</div>
+      <div style="font:300 32px/1.15 'Poppins',sans-serif; color:var(--accent); letter-spacing:0.5px;">Consultanos por nuestra<br><b style="font-weight:700;">Opción Barra</b></div>
+      <div style="width:40px; height:2px; background:var(--accent); margin:16px auto;"></div>
+      <div style="font:400 14px/1.5 'Poppins',sans-serif; color:var(--accent);">Barra completa con barman y tragos preparados en el momento.<br>Te pasamos el valor para tu cantidad de invitados.</div>
+    </div>
+
+    <p style="display:none;">"""
 
 
 def quitar_seccion(html, etiqueta):
