@@ -43,6 +43,58 @@ def fecha_emision(d):
     return datetime.date.today().strftime("%d/%m/%Y")
 
 
+# ---------------------------------------------------------------------------
+# Formato "recibida": propuesta economica para fiestas de egresados. El salon va
+# pelado, la comida y la bebida las trae el cliente, y el unico catering que se
+# ofrece es la degustacion de pizzas recortada a 5 gustos y sin recepcion.
+# Se activa con "formato": "recibida" en el JSON del presupuesto.
+
+PIZZAS_RECIBIDA = """        <div class="subtitulo-menu">Principal — 5 variedades</div>
+        <ul class="lista">
+          <li>Margherita — mozzarella, tomate, albahaca</li>
+          <li>Muzza y Roquefort — mozzarella y queso azul</li>
+          <li>Muzza y Mix de Tomates — mozzarella, tomates confitados y cherry</li>
+          <li>Calabresa — mozzarella y longaniza</li>
+          <li>Salchicha y Cebolla — mozzarella, salchicha y cebolla salteada</li>
+        </ul>"""
+
+BARRA_OPCIONAL = ("Servicio opcional, no incluido en esta propuesta. "
+                  "Se cotiza aparte e incluye el personal de barra.")
+
+
+def quitar_seccion(html, etiqueta):
+    """Saca del HTML la <section> con ese data-screen-label."""
+    marca = 'data-screen-label="%s"' % etiqueta
+    pos = html.find(marca)
+    if pos == -1:
+        return html
+    ini = html.rfind("<section", 0, pos)
+    fin = html.find("</section>", pos)
+    if ini == -1 or fin == -1:
+        return html
+    return html[:ini] + html[fin + len("</section>"):]
+
+
+def aplicar_formato_recibida(html):
+    """Recorta la propuesta gastronomica a lo que entra en una recibida."""
+    # Fuera la pagina entera de Finger Food.
+    html = quitar_seccion(html, "05")
+
+    # La degustacion de pizzas queda en 5 gustos, sin recepcion.
+    ini = html.find('<div class="subtitulo-menu">Principal — 6 variedades a elección</div>')
+    if ini != -1:
+        fin = html.find("</ul>", ini)
+        if fin != -1:
+            html = html[:ini] + PIZZAS_RECIBIDA + html[fin + len("</ul>"):]
+
+    # La barra se muestra, pero marcada como opcional y a cotizar aparte.
+    html = html.replace(
+        "Incluida en el servicio base, con opción adicional de barra sin alcohol "
+        "para adolescentes.", BARRA_OPCIONAL)
+
+    return html
+
+
 def pesos(n):
     """1310000 -> $1.310.000"""
     return "$" + f"{int(round(n)):,}".replace(",", ".")
@@ -165,10 +217,15 @@ def render(slug):
         "AVISO": f'<div class="{clase}">{d["aviso"]}</div>' if d.get("aviso") else "",
         "TABLA_PRECIOS": bloque_precios(d).lstrip(),
         "TERMINOS": bloque_terminos(d).lstrip(),
-        "PIZZA_RECEPCION": "" if d.get("pizza_sin_recepcion") else PIZZA_RECEPCION_HTML,
+        "PIZZA_RECEPCION": "" if (d.get("pizza_sin_recepcion")
+                                or d.get("formato") == "recibida")
+                             else PIZZA_RECEPCION_HTML,
     }
     for k, v in reemplazos.items():
         html = html.replace("{{%s}}" % k, str(v))
+
+    if d.get("formato") == "recibida":
+        html = aplicar_formato_recibida(html)
 
     destino = RAIZ / "presupuestos" / slug
     destino.mkdir(parents=True, exist_ok=True)

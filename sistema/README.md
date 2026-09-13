@@ -74,6 +74,10 @@ Campos:
   cuando hay WhatsApp pero no nombre.
 - `invitados_texto` es opcional: cambia sólo lo que se muestra en la portada, sin tocar
   el número que se usa para calcular.
+- `formato` es opcional. Con `"formato": "recibida"` el documento se recorta para
+  una fiesta de egresados: desaparece la página de Finger Food, la degustación de
+  pizzas queda en 5 variedades y sin recepción, y la barra de tragos se muestra
+  como servicio opcional a cotizar aparte.
 - `opciones` es opcional. Sin ella se muestra un total único con la suma de todos los
   servicios. Con ella se muestra un total por opción:
 
