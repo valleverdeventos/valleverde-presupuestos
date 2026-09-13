@@ -143,7 +143,11 @@ def bloque_precios(d):
     partes += [tarjeta(s, invitados) for s in servicios]
 
     opciones = d.get("opciones") or []
-    if not opciones:
+    if d.get("formato") == "recibida":
+        # En una recibida cada servicio se muestra con su propio total y no se
+        # arma una suma general: el cliente elige si suma las pizzas o no.
+        pass
+    elif not opciones:
         total = sum(total_de(s, invitados) for s in servicios)
         partes.append(f"""      <div class="total-final">
         <span class="label">Total</span>
