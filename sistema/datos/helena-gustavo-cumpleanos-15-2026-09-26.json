@@ -1,0 +1,45 @@
+{
+  "titulo": "Cumpleaños de 15",
+  "cliente": "Helena / Gustavo",
+  "fecha": "26/09/2026",
+  "horario": "12:30 a 18:30",
+  "emitido": "13/09/2026",
+  "invitados": 53,
+  "invitados_texto": "33 adultos + 20 adolescentes",
+  "aviso": "Esta propuesta actualiza la cantidad de invitados a 53 (33 adultos y 20 adolescentes), manteniendo los mismos servicios y los mismos valores por invitado de la propuesta original.",
+  "servicios": [
+    {
+      "nombre": "Salón",
+      "precio": 27079,
+      "cantidad": 53
+    },
+    {
+      "nombre": "Barra de tragos (adultos, con alcohol)",
+      "precio": 19500,
+      "cantidad": 33
+    },
+    {
+      "nombre": "Barra de tragos (adolescentes, sin alcohol)",
+      "precio": 13650,
+      "cantidad": 20
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 25902,
+      "cantidad": 53
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 53
+    }
+  ],
+  "nota": "Ambas carnes acompañadas por salsa criolla, alioli y ketchup.",
+  "terminos": [
+    "Total del servicio: $4.556.911.",
+    "Seña ya entregada: $1.502.000.",
+    "Saldo a abonar: $3.133.253, antes de la fecha del evento.",
+    "El saldo incluye la actualización por inflación oficial (INDEC): 1,7% correspondiente a agosto y 0,85% proporcional a los primeros 15 días de septiembre.",
+    "Cancelaciones no reintegran la seña."
+  ]
+}
