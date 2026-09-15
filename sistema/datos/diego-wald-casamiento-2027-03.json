@@ -2,13 +2,13 @@
   "titulo": "Casamiento",
   "cliente": "Diego Wald",
   "fecha": "Marzo 2027 (sujeto a disponibilidad)",
-  "horario": "21:00 a 03:00",
+  "horario": "21:00 a 04:00",
   "invitados": 100,
   "emitido": "15/09/2026",
   "aviso": "Esta propuesta corresponde a nuestra opción base \"Salón + Barra de tragos\" para el total de invitados. El catering puede estar a cargo del cliente; si están interesados, les enviamos aparte el presupuesto actualizado con nuestro catering (finger food, degustación de pizzas, mesa de postres, bebida de mesa) a elección. El servicio de salón incluye personal completo y DJ.",
   "servicios": [
     { "nombre": "Salón (incluye personal completo y DJ)", "precio": 28500 },
-    { "nombre": "Barra de tragos (con alcohol)", "precio": 21500 }
+    { "nombre": "Barra de tragos (con alcohol)", "precio": 23500 }
   ],
   "terminos": [
     "Seña 35%: con la reserva del salón.",
