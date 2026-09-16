@@ -106,6 +106,41 @@ def aplicar_formato_recibida(html):
     return html
 
 
+def aplicar_barra_propia(html, tragos):
+    """Reemplaza la carta de la pagina 07 por los tragos pactados para este evento.
+
+    Se activa con "barra_tragos" en el JSON: lista de {"nombre", "chips"}.
+    Saca tambien la barra de adolescentes, que no aplica a una barra acotada.
+    """
+    ini = html.find('<div class="barra-bloque">')
+    fin = html.find('<p class="nota">Tragos preparados en el momento')
+    if ini == -1 or fin == -1:
+        return html
+    tiles = []
+    for t in tragos:
+        chips = t.get("chips", [])
+        chip_html = "".join(
+            f'<span class="chip{" chip-accent" if i == 0 else ""}">{c}</span>'
+            for i, c in enumerate(chips))
+        tiles.append(f'        <div class="barra-tile"><div class="name">{t["nombre"]}</div>'
+                     f'<div class="chip-row">{chip_html}</div></div>')
+    bloque = (
+        '<div class="barra-bloque" style="margin-bottom:10px;">\n'
+        '      <div class="barra-head">\n'
+        '        <span class="num">01</span>\n'
+        '        <span class="label">Barra para adultos</span>\n'
+        '        <span class="sub">— con alcohol</span>\n'
+        '      </div>\n'
+        '      <div class="barra-grid">\n'
+        + "\n".join(tiles) + "\n"
+        '      </div>\n'
+        '    </div>\n\n    ')
+    html = html[:ini] + bloque + html[fin:]
+    return html.replace(
+        "Incluida en el servicio base, con opción adicional de barra sin alcohol "
+        "para adolescentes.", "Incluida en el servicio base.")
+
+
 def pesos(n):
     """1310000 -> $1.310.000"""
     return "$" + f"{int(round(n)):,}".replace(",", ".")
@@ -241,6 +276,8 @@ def render(slug):
 
     if d.get("formato") == "recibida":
         html = aplicar_formato_recibida(html)
+    if d.get("barra_tragos"):
+        html = aplicar_barra_propia(html, d["barra_tragos"])
 
     destino = RAIZ / "presupuestos" / slug
     destino.mkdir(parents=True, exist_ok=True)
