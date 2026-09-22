@@ -26,9 +26,9 @@ BASE = {
     40: {"salon": 30772, "barra": 20606, "finger": 28256, "pizza": 18802, "postre": 15706, "bebida": 13500},
     50: {"salon": 27079, "barra": 18414, "finger": 27079, "pizza": 17662, "postre": 15706, "bebida": 13500},
     60: {"salon": 24617, "barra": 17537, "finger": 25902, "pizza": 16523, "postre": 15706, "bebida": 13500},
-    70: {"salon": 23386, "barra": 16222, "finger": 24724, "pizza": 15383, "postre": 15706, "bebida": 13500},
-    80: {"salon": 22771, "barra": 15564, "finger": 23547, "pizza": 14814, "postre": 15706, "bebida": 13500},
-    90: {"salon": 22156, "barra": 14907, "finger": 22370, "pizza": 14244, "postre": 15706, "bebida": 13500},
+    70: {"salon": 23386, "barra": 16222, "finger": 25000, "pizza": 15383, "postre": 15706, "bebida": 13500},
+    80: {"salon": 22771, "barra": 15564, "finger": 25000, "pizza": 14814, "postre": 15706, "bebida": 13500},
+    90: {"salon": 22156, "barra": 14907, "finger": 25000, "pizza": 14244, "postre": 15706, "bebida": 13500},
 }
 
 # La barra de tragos (adultos) ya NO se busca en la tabla BASE por escala de
@@ -48,6 +48,9 @@ SALON_PISO = 29000
 # Sin catering salado (ni finger food ni pizzas) el piso del salon sube (17/09/2026).
 SALON_PISO_SIN_CATERING = 33000
 PIZZA_PISO = 18500
+
+# Finger food: desde la escala 70 va fijo a $25.000 por persona (22/09/2026).
+# Antes: 70 -> 24724, 80 -> 23547, 90 -> 22370.
 
 
 def _escala(invitados: int) -> int:
