@@ -38,8 +38,9 @@ BASE = {
 #
 # Historial del valor:
 #   11/07/2026 -> 19500
-#   03/08/2026 -> 21500  (vigente)
-BARRA_ADULTOS_FIJO = 21500
+#   03/08/2026 -> 21500
+#   22/09/2026 -> 22500  (vigente)
+BARRA_ADULTOS_FIJO = 22500
 
 # Pisos por persona (fijados por Gian el 17/09/2026). El salon y la degustacion
 # de pizzas nunca bajan de estos valores; en escalas chicas, donde la tabla ya
