@@ -1,0 +1,109 @@
+# Presupuesto automático. Lo dispara Make con un repository_dispatch
+# (event_type "presupuesto", el pedido en client_payload) o se corre a mano
+# desde la pestaña Actions pegando el pedido. Formato del pedido: sistema/auto.py.
+name: Presupuesto automático
+
+on:
+  repository_dispatch:
+    types: [presupuesto]
+  workflow_dispatch:
+    inputs:
+      pedido:
+        description: Pedido en JSON (formato en sistema/auto.py)
+        required: true
+
+# De a uno por vez, para que dos presupuestos no se pisen el push.
+concurrency:
+  group: presupuestos
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  TELEGRAM_PRESUPUESTOS_TOKEN: ${{ secrets.TELEGRAM_PRESUPUESTOS_TOKEN }}
+  TELEGRAM_PRESUPUESTOS_CHAT_ID: ${{ secrets.TELEGRAM_PRESUPUESTOS_CHAT_ID }}
+  CLOUDFLARE: https://valleverde-presupuestos.salonvalleverde.workers.dev/presupuestos/
+
+jobs:
+  armar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Guardar el pedido
+        env:
+          PEDIDO_DISPATCH: ${{ toJson(github.event.client_payload) }}
+          PEDIDO_MANUAL: ${{ github.event.inputs.pedido }}
+        run: |
+          python - <<'EOF'
+          import json, os
+          crudo = os.environ.get("PEDIDO_MANUAL") or os.environ["PEDIDO_DISPATCH"]
+          pedido = json.loads(crudo)
+          with open(os.path.join(os.environ["RUNNER_TEMP"], "pedido.json"), "w", encoding="utf-8") as f:
+              json.dump(pedido, f, ensure_ascii=False, indent=2)
+          EOF
+
+      - name: Armar el JSON con el motor de precios
+        id: armar
+        run: |
+          if ! slug=$(python sistema/auto.py "$RUNNER_TEMP/pedido.json" 2> "$RUNNER_TEMP/error.txt"); then
+            python sistema/avisar_telegram.py --error "$RUNNER_TEMP/error.txt" "$RUNNER_TEMP/pedido.json"
+            exit 1
+          fi
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+
+      - name: Renderizar
+        run: python sistema/render.py "${{ steps.armar.outputs.slug }}"
+
+      - name: Publicar
+        run: |
+          slug="${{ steps.armar.outputs.slug }}"
+          git config user.name "VALLEVERDE presupuestos"
+          git config user.email "presupuestos@users.noreply.github.com"
+          git add "sistema/datos/$slug.json" "sistema/pedidos/$slug.json" "presupuestos/$slug"
+          git commit -m "Presupuesto automático: $slug"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1
+
+      - name: Esperar a que el link responda
+        id: link
+        run: |
+          slug="${{ steps.armar.outputs.slug }}"
+          local=$(sha256sum "presupuestos/$slug/index.html" | cut -d' ' -f1)
+          pages="https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/$slug/"
+          # Pages es el default; Cloudflare sólo si Pages no sirve la versión nueva en 5 minutos.
+          for i in $(seq 1 30); do
+            remoto=$(curl -sfL "$pages?v=$GITHUB_RUN_ID" | sha256sum | cut -d' ' -f1)
+            if [ "$remoto" = "$local" ]; then echo "url=$pages" >> "$GITHUB_OUTPUT"; exit 0; fi
+            sleep 10
+          done
+          cf="$CLOUDFLARE$slug/"
+          if curl -sfL "$cf" -o /dev/null; then echo "url=$cf" >> "$GITHUB_OUTPUT"; exit 0; fi
+          echo "Ni Pages ni Cloudflare sirven $slug" > "$RUNNER_TEMP/error.txt"
+          exit 1
+
+      - name: Mandar al bot de presupuestos
+        run: |
+          slug="${{ steps.armar.outputs.slug }}"
+          python sistema/avisar_telegram.py "$slug" --url "${{ steps.link.outputs.url }}"
+          # Si el link terminó siendo el de Cloudflare, el registro cambió: se sube.
+          if ! git diff --quiet; then
+            git commit -am "Presupuesto automático: $slug (link de respaldo)"
+            git pull --rebase && git push
+          fi
+
+      - name: Avisar si algo falló
+        if: failure() && steps.armar.outcome != 'failure'
+        run: |
+          [ -s "$RUNNER_TEMP/error.txt" ] || echo "Falló el paso de publicación." > "$RUNNER_TEMP/error.txt"
+          echo "Detalle: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >> "$RUNNER_TEMP/error.txt"
+          python sistema/avisar_telegram.py --error "$RUNNER_TEMP/error.txt" "$RUNNER_TEMP/pedido.json"
