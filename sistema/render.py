@@ -141,6 +141,10 @@ def aplicar_barra_propia(html, tragos):
         "para adolescentes.", "Incluida en el servicio base.")
 
 
+BEBIDA_AVISO = ("La bebida de mesa queda a cargo del cliente, "
+                "salvo que se acuerde lo contrario.")
+
+
 def pesos(n):
     """1310000 -> $1.310.000"""
     return "$" + f"{int(round(n)):,}".replace(",", ".")
@@ -228,6 +232,13 @@ def bloque_precios(d):
     partes.append("    </div>")
     if d.get("nota"):
         partes.append(f'    <p class="nota" style="margin-top:14px;">{d["nota"]}</p>')
+    # Regla de Gian (22/09/2026): que la bebida de mesa corre por cuenta del
+    # cliente va siempre destacado debajo de los totales, no mezclado en el
+    # aviso de arriba. Se omite si se cotizó la bebida, en las recibidas (su
+    # nota ya lo dice) o con "bebida_aviso": false.
+    cotiza_bebida = any("bebida" in s["nombre"].lower() for s in servicios)
+    if not cotiza_bebida and d.get("formato") != "recibida" and d.get("bebida_aviso", True):
+        partes.append(f'    <div class="aviso-valores" style="margin-top:22px;">{BEBIDA_AVISO}</div>')
     return "\n".join(partes)
 
 
