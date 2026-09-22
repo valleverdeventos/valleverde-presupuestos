@@ -45,6 +45,10 @@ jobs:
           import json, os
           crudo = os.environ.get("PEDIDO_MANUAL") or os.environ["PEDIDO_DISPATCH"]
           pedido = json.loads(crudo)
+          # GitHub limita client_payload a 10 claves: Make manda {"pedido": {...}}.
+          if isinstance(pedido.get("pedido"), dict):
+              pedido = pedido["pedido"]
+          pedido = {k: v for k, v in pedido.items() if v not in (None, "")}
           with open(os.path.join(os.environ["RUNNER_TEMP"], "pedido.json"), "w", encoding="utf-8") as f:
               json.dump(pedido, f, ensure_ascii=False, indent=2)
           EOF
