@@ -6,19 +6,21 @@
   "totales": [
     [
       "Opción Base — Salón + Barra",
-      2970000
+      180
     ],
     [
       "Opción A — Degustación de Pizzas",
-      6048540
+      3078720
     ],
     [
       "Opción B — Finger Food",
-      6633540
+      3663720
     ]
   ],
   "avisos": [
-    "Salón (incluye personal completo y DJ): precio a mano $15.000 (tabla $29.000)."
+    "Barra de tragos adultos (con alcohol): precio a mano $1 (tabla $22.500).",
+    "Barra de tragos adolescentes (sin alcohol): precio a mano $1 (tabla $15.750).",
+    "Salón (incluye personal completo y DJ): precio a mano $1 (tabla $29.000)."
   ],
   "pedido": {
     "adolescentes": 60,
@@ -29,7 +31,9 @@
     "fecha": "2026-12-12",
     "invitados": 90,
     "precios": {
-      "salon": 15000
+      "barra": 1,
+      "barra_teen": 1,
+      "salon": 1
     },
     "tipo": "cumple_15"
   }
