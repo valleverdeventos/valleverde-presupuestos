@@ -32,6 +32,9 @@ Formato del pedido (todo lo que no es obligatorio puede faltar o venir null):
   "ninos": 0,                      menores de 12, en cualquier evento
   "catering": "si",                si | no | no_dice (no_dice = van las opciones)
   "bebida_mesa": false,            true sólo si el cliente pide que la ponga el salón
+  "precios": {"salon": 15000},     opcional: precio por persona fijado a mano por Gian,
+                                   pisa la tabla (claves: salon, barra, barra_teen, ninos,
+                                   pizza, finger, postres, bebida; null = el de la tabla)
   "conversationId": "...",         de Zernio; sin él el link se lo manda Gian
   "slug": "..."                    sólo al ajustar: reescribe ese presupuesto
 }
@@ -295,6 +298,12 @@ def armar_datos(p):
         avisos.append("El cliente no dijo si quiere catering: van las opciones A y B.")
 
     servicios, idx = servicios_con_motor(tipo, adultos, adolescentes, ninos, catering, bebida, extra)
+    # Precios que Gian fija a mano desde el bot ("poné el salón a 15.000"): pisan la tabla.
+    for clave, precio in (p.get("precios") or {}).items():
+        if precio and clave in idx:
+            s = servicios[idx[clave]]
+            avisos.append(f"{s['nombre']}: precio a mano {pesos(precio)} (tabla {pesos(s['precio'])}).")
+            s["precio"] = int(precio)
     base = [idx[k] for k in ("salon", "barra", "barra_teen", "ninos") if k in idx]
     datos["servicios"] = servicios
 
