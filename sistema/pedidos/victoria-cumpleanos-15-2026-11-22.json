@@ -6,10 +6,14 @@
   "totales": [
     [
       "Total",
-      2606250
+      100
     ]
   ],
-  "avisos": [],
+  "avisos": [
+    "Barra de tragos adultos (con alcohol): precio a mano $1 (tabla $22.500).",
+    "Barra de tragos adolescentes (sin alcohol): precio a mano $1 (tabla $15.750).",
+    "Salón (incluye personal completo y DJ): precio a mano $1 (tabla $33.000)."
+  ],
   "pedido": {
     "adolescentes": 25,
     "adultos": 25,
@@ -19,6 +23,11 @@
     "conversationId": "6ab14986f83223c04d59855b",
     "fecha": "2026-11-22",
     "invitados": 50,
+    "precios": {
+      "barra": 1,
+      "barra_teen": 1,
+      "salon": 1
+    },
     "telefono": "+5492914392468",
     "tipo": "cumple_15"
   }
