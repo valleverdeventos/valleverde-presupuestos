@@ -36,7 +36,8 @@ Formato del pedido (todo lo que no es obligatorio puede faltar o venir null):
                                    pisa la tabla (claves: salon, barra, barra_teen, ninos,
                                    pizza, finger, postres, bebida; null = el de la tabla)
   "conversationId": "...",         de Zernio; sin él el link se lo manda Gian
-  "slug": "..."                    sólo al ajustar: reescribe ese presupuesto
+  "slug": "...",                   sólo al ajustar: reescribe ese presupuesto
+  "nueva_version": true            con slug: el original ya se mandó, sale como <slug>-v2
 }
 """
 import datetime
@@ -176,9 +177,12 @@ def titulo_y_tipo(p):
 
 
 def armar_slug(p, tipo_slug, fecha_slug):
-    if p.get("slug"):
+    if p.get("slug") and not p.get("nueva_version"):
         return slugificar(p["slug"])
-    if p.get("cliente"):
+    if p.get("slug"):
+        # Ya se le mandó al cliente: no se pisa, sale como -v2, -v3 para que no pierda el rastro.
+        slug = re.sub(r"-v\d+$", "", slugificar(p["slug"]))
+    elif p.get("cliente"):
         quien = "-".join(slugificar(p["cliente"]).split("-")[:2])
         slug = f"{quien}-{tipo_slug}-{fecha_slug}"
     elif p.get("telefono"):
@@ -369,7 +373,7 @@ def procesar(p):
         "mensaje_cliente": mensaje_cliente(p, datos, url, fecha),
         "totales": [[k, v] for k, v in totales(datos)],
         "avisos": avisos,
-        "pedido": {k: v for k, v in p.items() if k != "slug"},
+        "pedido": {k: v for k, v in p.items() if k not in ("slug", "nueva_version")},
     }
     (PEDIDOS / f"{slug}.json").write_text(
         json.dumps(registro, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
