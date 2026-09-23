@@ -19,11 +19,13 @@
   ],
   "avisos": [],
   "pedido": {
-    "tipo": "cumple_15",
+    "adolescentes": 60,
+    "adultos": 30,
+    "bebida_mesa": false,
+    "catering": "si",
     "cliente": "Prueba",
     "fecha": "2026-12-12",
-    "adultos": 30,
-    "adolescentes": 60,
-    "catering": "si"
+    "invitados": 90,
+    "tipo": "cumple_15"
   }
 }
