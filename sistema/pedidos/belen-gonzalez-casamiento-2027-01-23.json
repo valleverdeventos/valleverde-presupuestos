@@ -1,0 +1,31 @@
+{
+  "slug": "belen-gonzalez-casamiento-2027-01-23",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/belen-gonzalez-casamiento-2027-01-23/",
+  "conversationId": "6ab2c520b784d5acb401b2ab",
+  "mensaje_cliente": "Hola Belén! Acá va la propuesta para tu evento del 23/01, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/belen-gonzalez-casamiento-2027-01-23/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      4635000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      7713540
+    ],
+    [
+      "Opción B — Finger Food",
+      8298540
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "si",
+    "cliente": "Belén González",
+    "conversationId": "6ab2c520b784d5acb401b2ab",
+    "fecha": "2027-01-23",
+    "invitados": 90,
+    "telefono": "+5492915740265",
+    "tipo": "casamiento"
+  }
+}
