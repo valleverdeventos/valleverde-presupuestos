@@ -25,6 +25,7 @@ Formato del pedido (todo lo que no es obligatorio puede faltar o venir null):
   "cliente": "Juan Pérez",         opcional
   "telefono": "2915123456",        opcional, se usa sólo si no hay cliente
   "fecha": "2026-12-12",           obligatorio, AAAA-MM-DD o AAAA-MM
+  "fechas_extra": ["2026-12-19"],  opcional: otras fechas a elección del cliente, mismo presupuesto
   "horario": "21:00 a 03:00",      opcional (default 21:00 a 03:00)
   "invitados": 90,                 obligatorio salvo que vengan los desgloses
   "adultos": 30,                   en cumple de 15 son obligatorios adultos
@@ -246,6 +247,11 @@ def armar_datos(p):
     """Devuelve (slug, datos para render.py, avisos internos para Gian)."""
     tipo, titulo, tipo_slug = titulo_y_tipo(p)
     fecha_txt, fecha_slug, fecha = leer_fecha(p.get("fecha"))
+    alternativas = [f for f in (p.get("fechas_extra") or []) if f and f != p.get("fecha")]
+    if alternativas:
+        # Una sola propuesta con varias fechas para que el cliente elija (pedido de Gian, 24/09).
+        textos = [leer_fecha(f)[0] for f in sorted([p.get("fecha")] + alternativas)]
+        fecha_txt = ", ".join(textos[:-1]) + " o " + textos[-1] + " (a elección)"
     horario = p.get("horario") or HORARIO_DEFAULT
     avisos = []
 
@@ -355,7 +361,9 @@ def mensaje_cliente(p, datos, url, fecha):
     """Mensaje de WhatsApp de /presu 5b, con la firma obligatoria."""
     nombre = str(p.get("cliente") or "").strip().split(" ")[0].capitalize()
     saludo = f"Hola {nombre}!" if nombre else "Hola!"
-    if fecha:
+    if p.get("fechas_extra"):
+        cuando = "con las fechas posibles que charlamos"
+    elif fecha:
         cuando = f"del {fecha:%d/%m}"
     else:
         cuando = "de " + datos["fecha"].split(" ")[0].lower()
