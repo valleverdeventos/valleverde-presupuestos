@@ -30,6 +30,7 @@ Formato del pedido (todo lo que no es obligatorio puede faltar o venir null):
   "adultos": 30,                   en cumple de 15 son obligatorios adultos
   "adolescentes": 60,              y adolescentes
   "ninos": 0,                      menores de 12, en cualquier evento
+  "sin_alcohol": 30,               opcional: adultos con barra sin alcohol (precio barra teen)
   "catering": "si",                si | no | no_dice (no_dice = van las opciones)
   "bebida_mesa": false,            true sólo si el cliente pide que la ponga el salón
   "precios": {"salon": 15000},     opcional: precio por persona fijado a mano por Gian,
@@ -196,7 +197,7 @@ def armar_slug(p, tipo_slug, fecha_slug):
     return candidato
 
 
-def servicios_con_motor(tipo, adultos, adolescentes, ninos, catering, bebida, extra):
+def servicios_con_motor(tipo, adultos, adolescentes, ninos, catering, bebida, extra, sin_alcohol=0):
     """Corre el motor y traduce sus ítems al formato de datos de render.py.
 
     Devuelve (servicios, índices por clave) con cantidades explícitas.
@@ -219,14 +220,18 @@ def servicios_con_motor(tipo, adultos, adolescentes, ninos, catering, bebida, ex
     agregar("salon", "Salón (incluye personal completo y DJ)",
             items["Salón"]["precio_unitario"], adultos + adolescentes)
     barra = items["Barra adultos"]["precio_unitario"]
+    # El motor no calcula la barra sin alcohol (adolescentes o adultos que no toman): 70% de la vigente.
+    teen = round(BARRA_ADULTOS_FIJO * (1 + extra / 6) * FACTOR_BARRA_TEEN)
     if quince:
-        agregar("barra", "Barra de tragos adultos (con alcohol)", barra, adultos)
-        if adolescentes:
-            # El motor no calcula la barra adolescentes: 70% de la barra vigente.
-            teen = round(BARRA_ADULTOS_FIJO * (1 + extra / 6) * FACTOR_BARRA_TEEN)
-            agregar("barra_teen", "Barra de tragos adolescentes (sin alcohol)", teen, adolescentes)
+        agregar("barra", "Barra de tragos adultos (con alcohol)", barra, adultos - sin_alcohol)
+        if adolescentes or sin_alcohol:
+            nombre = ("Barra de tragos adolescentes (sin alcohol)" if not sin_alcohol
+                      else "Barra de tragos sin alcohol (adolescentes y adultos)")
+            agregar("barra_teen", nombre, teen, adolescentes + sin_alcohol)
     else:
-        agregar("barra", "Barra de tragos (con alcohol)", barra, adultos)
+        agregar("barra", "Barra de tragos (con alcohol)", barra, adultos - sin_alcohol)
+        if sin_alcohol:
+            agregar("barra_teen", "Barra de tragos sin alcohol", teen, sin_alcohol)
     if ninos:
         n = items["Niños (<12) - Tarifa 50% Salón"]
         agregar("ninos", "Salón niños (menores de 12)", n["precio_unitario"], ninos)
@@ -301,7 +306,11 @@ def armar_datos(p):
     if (p.get("catering") or "no_dice") == "no_dice":
         avisos.append("El cliente no dijo si quiere catering: van las opciones A y B.")
 
-    servicios, idx = servicios_con_motor(tipo, adultos, adolescentes, ninos, catering, bebida, extra)
+    sin_alcohol = min(entero(p, "sin_alcohol"), adultos)
+    if sin_alcohol:
+        avisos.append(f"{sin_alcohol} adultos con barra sin alcohol (precio barra adolescentes).")
+    servicios, idx = servicios_con_motor(tipo, adultos, adolescentes, ninos, catering, bebida, extra,
+                                         sin_alcohol)
     # Precios que Gian fija a mano desde el bot ("poné el salón a 15.000"): pisan la tabla.
     for clave, precio in (p.get("precios") or {}).items():
         if precio and clave in idx:

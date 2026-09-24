@@ -12,10 +12,9 @@ on:
         description: Pedido en JSON (formato en sistema/auto.py)
         required: true
 
-# De a uno por vez, para que dos presupuestos no se pisen el push.
-concurrency:
-  group: presupuestos
-  cancel-in-progress: false
+# Sin grupo de concurrencia: GitHub deja uno solo en espera y cancela el resto, y un pedido
+# con varias fechas despacha varios a la vez. Los push no chocan (cada uno toca su slug) y
+# el paso Publicar reintenta con pull --rebase.
 
 permissions:
   contents: write
@@ -72,7 +71,7 @@ jobs:
           git config user.email "presupuestos@users.noreply.github.com"
           git add "sistema/datos/$slug.json" "sistema/pedidos/$slug.json" "presupuestos/$slug"
           git commit -m "Presupuesto automático: $slug"
-          for i in 1 2 3; do
+          for i in 1 2 3 4 5 6; do
             git pull --rebase && git push && exit 0
             sleep 5
           done
