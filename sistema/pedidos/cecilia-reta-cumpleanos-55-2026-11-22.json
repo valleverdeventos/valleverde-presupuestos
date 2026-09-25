@@ -1,0 +1,36 @@
+{
+  "slug": "cecilia-reta-cumpleanos-55-2026-11-22",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/cecilia-reta-cumpleanos-55-2026-11-22/",
+  "conversationId": "6ab681a1bdcf44e69d9a3293",
+  "mensaje_cliente": "Hola Cecilia! Acá va la propuesta para tu evento del 22/11, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/cecilia-reta-cumpleanos-55-2026-11-22/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2575000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      4285300
+    ],
+    [
+      "Opción B — Finger Food",
+      4714250
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Cecilia Reta",
+    "conversationId": "6ab681a1bdcf44e69d9a3293",
+    "edad": 55,
+    "fecha": "2026-11-22",
+    "fechas_extra": [],
+    "invitados": 50,
+    "sin_alcohol": 0,
+    "telefono": "+5492914140170",
+    "tipo": "cumpleanos"
+  }
+}
