@@ -1,0 +1,38 @@
+{
+  "slug": "diego-casamiento-2027-03-20",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/diego-casamiento-2027-03-20/",
+  "conversationId": "6ab14986f83223c04d598563",
+  "mensaje_cliente": "Hola Diego! Acá va la propuesta para tu evento del 20/03, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/diego-casamiento-2027-03-20/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      4947500
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      8368100
+    ],
+    [
+      "Opción B — Finger Food",
+      9018100
+    ]
+  ],
+  "avisos": [
+    "Más de 90 invitados: los unitarios salen de la escala 90.",
+    "El cliente no dijo si quiere catering: van las opciones A y B.",
+    "30 adultos con barra sin alcohol (precio barra adolescentes)."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Diego",
+    "conversationId": "6ab14986f83223c04d598563",
+    "fecha": "2027-03-20",
+    "fechas_extra": [],
+    "horario": "19:30 a 01:30",
+    "invitados": 100,
+    "sin_alcohol": 30,
+    "telefono": "+5492914139389",
+    "tipo": "casamiento"
+  }
+}
