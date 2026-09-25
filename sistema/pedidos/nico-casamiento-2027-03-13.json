@@ -1,0 +1,35 @@
+{
+  "slug": "nico-casamiento-2027-03-13",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/nico-casamiento-2027-03-13/",
+  "conversationId": "6ab6a30aad817876ff458873",
+  "mensaje_cliente": "Hola Nico! Acá va la propuesta para tu evento del 13/03, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/nico-casamiento-2027-03-13/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      3090000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      5142360
+    ],
+    [
+      "Opción B — Finger Food",
+      5586480
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Nico",
+    "conversationId": "6ab6a30aad817876ff458873",
+    "fecha": "2027-03-13",
+    "fechas_extra": [],
+    "invitados": 60,
+    "sin_alcohol": 0,
+    "telefono": "+5492916412421",
+    "tipo": "casamiento"
+  }
+}
