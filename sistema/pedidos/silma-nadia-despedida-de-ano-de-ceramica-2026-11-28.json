@@ -1,0 +1,36 @@
+{
+  "slug": "silma-nadia-despedida-de-ano-de-ceramica-2026-11-28",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/silma-nadia-despedida-de-ano-de-ceramica-2026-11-28/",
+  "conversationId": "6ab7bc635ae795a1adefffa8",
+  "mensaje_cliente": "Hola Silma! Acá va la propuesta para tu evento del 28/11, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/silma-nadia-despedida-de-ano-de-ceramica-2026-11-28/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      4120000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      6856480
+    ],
+    [
+      "Opción B — Finger Food",
+      7376480
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Silma Nadia Soledad",
+    "conversationId": "6ab7bc635ae795a1adefffa8",
+    "fecha": "2026-11-28",
+    "fechas_extra": [],
+    "invitados": 80,
+    "sin_alcohol": 0,
+    "telefono": "2914682284",
+    "tipo": "otro",
+    "titulo": "Despedida de año de cerámica"
+  }
+}
