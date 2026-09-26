@@ -1,35 +1,35 @@
 {
-  "emitido": "25/09/2026",
+  "emitido": "26/09/2026",
   "titulo": "Cumpleaños 55 años",
   "cliente": "Cecilia Reta",
-  "fecha": "Domingo 22/11/2026",
-  "horario": "21:00 a 03:00",
-  "invitados": 50,
+  "fecha": "Domingo 22/11/2026 o Lunes 23/11/2026 (a elección)",
+  "horario": "12:30 a 18:30",
+  "invitados": 45,
   "servicios": [
     {
       "nombre": "Salón (incluye personal completo y DJ)",
-      "precio": 29000,
-      "cantidad": 50
+      "precio": 30772,
+      "cantidad": 45
     },
     {
       "nombre": "Barra de tragos (con alcohol)",
       "precio": 22500,
-      "cantidad": 50
+      "cantidad": 45
     },
     {
       "nombre": "Degustación de Pizzas",
-      "precio": 18500,
-      "cantidad": 50
+      "precio": 18802,
+      "cantidad": 45
     },
     {
       "nombre": "Finger Food",
-      "precio": 27079,
-      "cantidad": 50
+      "precio": 28256,
+      "cantidad": 45
     },
     {
       "nombre": "Mesa de Postres",
       "precio": 15706,
-      "cantidad": 50
+      "cantidad": 45
     }
   ],
   "aviso": "Esta propuesta contempla dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores. El presupuesto final se ajusta según los servicios que efectivamente se elijan, manteniendo siempre nuestra opción base \"Salón + Barra de tragos\". Ambas opciones incluyen mesa de postres. El servicio de salón incluye personal completo y DJ.",
