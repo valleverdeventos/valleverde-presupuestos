@@ -42,16 +42,26 @@ BASE = {
 #   22/09/2026 -> 22500  (vigente)
 BARRA_ADULTOS_FIJO = 22500
 
-# Pisos por persona (fijados por Gian el 17/09/2026). El salon y la degustacion
-# de pizzas nunca bajan de estos valores; en escalas chicas, donde la tabla ya
-# da mas, se mantiene el valor de la tabla.
-SALON_PISO = 29000
-# Sin catering salado (ni finger food ni pizzas) el piso del salon sube (17/09/2026).
-SALON_PISO_SIN_CATERING = 33000
+# Salon: tabla propia por cantidad de invitados (fijada por Gian el 27/09/2026).
+# Es el valor final por persona para 6 horas, con o sin catering: reemplaza la
+# columna "salon" de BASE, el factor de ajuste y los pisos del salon del
+# 17/09/2026 ($29.000 y $33.000 sin catering), que dejan de regir.
+# Entre filas se toma la de abajo; menos de 25 va con 25 y mas de 90 con 90.
+# Vale para presupuestos nuevos: los ya emitidos solo se actualizan por INDEC.
+SALON_TABLA = {25: 52000, 30: 44000, 35: 38000, 40: 34000, 45: 32000,
+               50: 30000, 60: 29000, 70: 28000, 80: 27000, 90: 26000}
+
+# Piso por persona de la degustacion de pizzas (17/09/2026): nunca baja de este
+# valor; en escalas chicas, donde la tabla ya da mas, se mantiene la tabla.
 PIZZA_PISO = 18500
 
 # Finger food: desde la escala 70 va fijo a $25.000 por persona (22/09/2026).
 # Antes: 70 -> 24724, 80 -> 23547, 90 -> 22370.
+
+
+def _salon_por_persona(invitados: int) -> int:
+    filas = [n for n in SALON_TABLA if n <= invitados]
+    return SALON_TABLA[max(filas) if filas else min(SALON_TABLA)]
 
 
 def _escala(invitados: int) -> int:
@@ -120,8 +130,7 @@ def calcular(
 
     base = BASE[escala]
 
-    piso_salon = SALON_PISO if (finger_food or pizza) else SALON_PISO_SIN_CATERING
-    salon_ajustado = max(base["salon"] * factor_ajuste, piso_salon)
+    salon_ajustado = _salon_por_persona(invitados)
     barra_ajustado = BARRA_ADULTOS_FIJO
 
     salon_c_horas = round(salon_ajustado * (1 + (horas_extra / 6)))
