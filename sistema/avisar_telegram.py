@@ -18,6 +18,7 @@ import json
 import os
 import pathlib
 import sys
+import time
 import urllib.request
 
 SISTEMA = pathlib.Path(__file__).resolve().parent
@@ -64,14 +65,17 @@ def avisar_presupuesto(slug, url=None):
         lineas += [""] + [f"• {e(a)}" for a in reg["avisos"]]
     if not reg.get("conversationId"):
         lineas += ["", "No vino de un WhatsApp: el link lo mandás vos."]
-    lineas += ["", e(reg["url"]), "", "Mensaje para el cliente:",
+    # El link del bot lleva ?v=: el navegador guarda la versión anterior de la página y, tras
+    # un ajuste, Gian veía los valores viejos. El link para el cliente queda limpio.
+    fresco = f"{reg['url']}{'&' if '?' in reg['url'] else '?'}v={int(time.time())}"
+    lineas += ["", e(fresco), "", "Mensaje para el cliente:",
                f"<pre>{e(reg['mensaje_cliente'])}</pre>"]
 
     fila = []
     if reg.get("conversationId"):
         fila.append({"text": "✅ Aprobar y enviar", "callback_data": f"ok:{slug}"})
     fila.append({"text": "✏️ Ajustar", "callback_data": f"aj:{slug}"})
-    enviar("\n".join(lineas), [fila, [{"text": "Ver presupuesto", "url": reg["url"]}]])
+    enviar("\n".join(lineas), [fila, [{"text": "Ver presupuesto", "url": fresco}]])
 
 
 def avisar_error(archivo_error, archivo_pedido=None):
