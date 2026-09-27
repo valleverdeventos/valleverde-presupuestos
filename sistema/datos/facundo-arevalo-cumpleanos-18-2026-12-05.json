@@ -3,17 +3,17 @@
   "titulo": "Cumpleaños 18 años",
   "cliente": "Facundo Arevalo",
   "fecha": "Sábado 05/12/2026",
-  "horario": "21:00 a 03:00",
+  "horario": "21:00 a 04:00",
   "invitados": 60,
   "servicios": [
     {
       "nombre": "Salón (incluye personal completo y DJ)",
-      "precio": 29000,
+      "precio": 33833,
       "cantidad": 60
     },
     {
       "nombre": "Barra de tragos (con alcohol)",
-      "precio": 22500,
+      "precio": 26250,
       "cantidad": 60
     },
     {

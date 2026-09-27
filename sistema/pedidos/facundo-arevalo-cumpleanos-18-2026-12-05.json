@@ -1,36 +1,36 @@
 {
   "slug": "facundo-arevalo-cumpleanos-18-2026-12-05",
   "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/facundo-arevalo-cumpleanos-18-2026-12-05/",
-  "conversationId": "6ab97e0579f7aa88f1a715da",
+  "conversationId": null,
   "mensaje_cliente": "Hola Facundo! Acá va la propuesta para tu evento del 05/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/facundo-arevalo-cumpleanos-18-2026-12-05/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
   "totales": [
     [
       "Opción Base — Salón + Barra",
-      3090000
+      3604980
     ],
     [
       "Opción A — Degustación de Pizzas",
-      5142360
+      5657340
     ],
     [
       "Opción B — Finger Food",
-      5586480
+      6101460
     ]
   ],
   "avisos": [
+    "Horario de 7 h: salón y barra llevan 1 h extra.",
     "El cliente no dijo si quiere catering: van las opciones A y B."
   ],
   "pedido": {
     "bebida_mesa": false,
     "catering": "no_dice",
     "cliente": "Facundo Arevalo",
-    "conversationId": "6ab97e0579f7aa88f1a715da",
     "edad": 18,
     "fecha": "2026-12-05",
     "fechas_extra": [],
+    "horario": "21:00 a 04:00",
     "invitados": 60,
     "sin_alcohol": 0,
-    "telefono": "+5492914299517",
     "tipo": "cumpleanos"
   }
 }
