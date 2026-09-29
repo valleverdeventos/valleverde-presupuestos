@@ -1,0 +1,37 @@
+{
+  "slug": "ma-luz-empresarial-2026-12-28",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/ma-luz-empresarial-2026-12-28/",
+  "conversationId": "6abbcbfa5deb21eb195cc603",
+  "mensaje_cliente": "Hola Ma.! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/ma-luz-empresarial-2026-12-28/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      3347500
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      5570890
+    ],
+    [
+      "Opción B — Finger Food",
+      6052020
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Ma. Luz Staffolani",
+    "conversationId": "6abbcbfa5deb21eb195cc603",
+    "fecha": "2026-12-28",
+    "fechas_extra": [
+      "2026-12-29"
+    ],
+    "invitados": 65,
+    "sin_alcohol": 0,
+    "telefono": "+5492916447567",
+    "tipo": "empresarial"
+  }
+}
