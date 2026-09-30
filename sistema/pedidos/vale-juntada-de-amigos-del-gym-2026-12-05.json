@@ -1,0 +1,36 @@
+{
+  "slug": "vale-juntada-de-amigos-del-gym-2026-12-05",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/vale-juntada-de-amigos-del-gym-2026-12-05/",
+  "conversationId": "6abcf81d967f100e262f40d6",
+  "mensaje_cliente": "Hola Vale! Acá va la propuesta para tu evento del 05/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/vale-juntada-de-amigos-del-gym-2026-12-05/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2260000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      3640320
+    ],
+    [
+      "Opción B — Finger Food",
+      4018480
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Vale",
+    "conversationId": "6abcf81d967f100e262f40d6",
+    "fecha": "2026-12-05",
+    "fechas_extra": [],
+    "invitados": 40,
+    "sin_alcohol": 0,
+    "telefono": "+5492916415282",
+    "tipo": "otro",
+    "titulo": "Juntada de amigos del gym"
+  }
+}
