@@ -1,0 +1,35 @@
+{
+  "slug": "juan-carlos-cumpleanos-2026-10-16",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/juan-carlos-cumpleanos-2026-10-16/",
+  "conversationId": "6abd3b11ad976ee475e7d5d3",
+  "mensaje_cliente": "Hola Juan! Acá va la propuesta para tu evento del 16/10, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/juan-carlos-cumpleanos-2026-10-16/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      1862500
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      2753675
+    ],
+    [
+      "Opción B — Finger Food",
+      2991000
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Juan Carlos",
+    "conversationId": "6abd3b11ad976ee475e7d5d3",
+    "fecha": "2026-10-16",
+    "fechas_extra": [],
+    "invitados": 25,
+    "sin_alcohol": 0,
+    "telefono": "+5492914260913",
+    "tipo": "cumpleanos"
+  }
+}
