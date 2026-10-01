@@ -1,0 +1,37 @@
+{
+  "slug": "carina-solbes-casamiento-2027-02-13-v2",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/carina-solbes-casamiento-2027-02-13-v2/",
+  "conversationId": "6abe4286d4dbc5d7c1dd2249",
+  "mensaje_cliente": "Hola Carina! Acá va la propuesta para tu evento del 13/02, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/carina-solbes-casamiento-2027-02-13-v2/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      3604980
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      5657340
+    ],
+    [
+      "Opción B — Finger Food",
+      6101460
+    ]
+  ],
+  "avisos": [
+    "Horario de 7 h: salón y barra llevan 1 h extra.",
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Carina Solbes",
+    "conversationId": "6abe4286d4dbc5d7c1dd2249",
+    "fecha": "2027-02-13",
+    "fechas_extra": [],
+    "horario": "21:00 a 04:00",
+    "invitados": 60,
+    "sin_alcohol": 0,
+    "telefono": "2915747644",
+    "tipo": "casamiento"
+  }
+}
