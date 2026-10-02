@@ -1,0 +1,37 @@
+{
+  "slug": "smuk-deco-cumpleanos-3-2026-11-15",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/smuk-deco-cumpleanos-3-2026-11-15/",
+  "conversationId": "6abfb7f6a22d4177e9e6ea94",
+  "mensaje_cliente": "Hola Smuk! Acá va la propuesta para tu evento del 15/11, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/smuk-deco-cumpleanos-3-2026-11-15/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2685000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      4737360
+    ],
+    [
+      "Opción B — Finger Food",
+      5181480
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B.",
+    "60 adultos con barra sin alcohol (precio barra adolescentes)."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Smuk Deco",
+    "conversationId": "6abfb7f6a22d4177e9e6ea94",
+    "edad": 3,
+    "fecha": "2026-11-15",
+    "fechas_extra": [],
+    "invitados": 60,
+    "sin_alcohol": 60,
+    "telefono": "+5492914436115",
+    "tipo": "cumpleanos"
+  }
+}
