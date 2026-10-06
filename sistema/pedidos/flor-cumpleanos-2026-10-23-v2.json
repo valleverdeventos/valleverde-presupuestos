@@ -1,0 +1,47 @@
+{
+  "slug": "flor-cumpleanos-2026-10-23-v2",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/flor-cumpleanos-2026-10-23-v2/",
+  "conversationId": "6ac43685bdbce25f80234884",
+  "mensaje_cliente": "Hola Flor! Acá va la propuesta para tu evento del 23/10, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/flor-cumpleanos-2026-10-23-v2/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón",
+      1300000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      2191175
+    ],
+    [
+      "Opción B — Finger Food",
+      2428500
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B.",
+    "Sin barra de tragos, como pediste.",
+    "Finger Food: precio a mano $29.434 (tabla $29.434).",
+    "Degustación de Pizzas: precio a mano $19.941 (tabla $19.941).",
+    "Mesa de Postres: precio a mano $15.706 (tabla $15.706).",
+    "Salón (incluye personal completo y DJ): precio a mano $52.000 (tabla $52.000)."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Flor",
+    "conversationId": "6ac43685bdbce25f80234884",
+    "fecha": "2026-10-23",
+    "fechas_extra": [],
+    "invitados": 25,
+    "precios": {
+      "barra": 22500,
+      "finger": 29434,
+      "pizza": 19941,
+      "postres": 15706,
+      "salon": 52000
+    },
+    "sin_alcohol": 0,
+    "sin_barra": true,
+    "tipo": "cumpleanos"
+  }
+}

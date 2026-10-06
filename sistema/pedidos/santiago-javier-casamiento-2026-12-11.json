@@ -1,0 +1,47 @@
+{
+  "slug": "santiago-javier-casamiento-2026-12-11",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/santiago-javier-casamiento-2026-12-11/",
+  "conversationId": "6ac44d43e8ccbd17a556f5bc",
+  "mensaje_cliente": "Hola Santiago! Acá va la propuesta para tu evento del 11/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/santiago-javier-casamiento-2026-12-11/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      4290000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      6342360
+    ],
+    [
+      "Opción B — Finger Food",
+      6786480
+    ]
+  ],
+  "avisos": [
+    "Horario de 9 h: salón y barra llevan 3 h extra.",
+    "Barra de tragos (con alcohol): precio a mano $28.000 (tabla $33.750).",
+    "Finger Food: precio a mano $25.902 (tabla $25.902).",
+    "Degustación de Pizzas: precio a mano $18.500 (tabla $18.500).",
+    "Mesa de Postres: precio a mano $15.706 (tabla $15.706).",
+    "Salón (incluye personal completo y DJ): precio a mano $43.500 (tabla $43.500)."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "si",
+    "cliente": "Santiago Javier Escamilla",
+    "conversationId": "6ac44d43e8ccbd17a556f5bc",
+    "fecha": "2026-12-11",
+    "fechas_extra": [],
+    "horario": "18:00 a 03:00",
+    "invitados": 60,
+    "precios": {
+      "barra": 28000,
+      "finger": 25902,
+      "pizza": 18500,
+      "postres": 15706,
+      "salon": 43500
+    },
+    "sin_alcohol": 0,
+    "tipo": "casamiento"
+  }
+}

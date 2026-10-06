@@ -1,0 +1,47 @@
+{
+  "slug": "diego-wald-casamiento-2027-02-27",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/diego-wald-casamiento-2027-02-27/",
+  "conversationId": null,
+  "mensaje_cliente": "Hola Diego! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/diego-wald-casamiento-2027-02-27/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      5799250
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      9219850
+    ],
+    [
+      "Opción B — Finger Food",
+      9869850
+    ]
+  ],
+  "avisos": [
+    "Más de 90 invitados: los unitarios salen de la escala 90.",
+    "Horario de 7 h: salón y barra llevan 1 h extra.",
+    "El cliente no dijo si quiere catering: van las opciones A y B.",
+    "30 adultos con barra sin alcohol (precio barra adolescentes).",
+    "Barra de tragos (con alcohol): precio a mano $27.400 (tabla $26.250).",
+    "Salón (incluye personal completo y DJ): precio a mano $33.300 (tabla $33.833)."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Diego Wald",
+    "fecha": "2027-02-27",
+    "fechas_extra": [
+      "2027-03-13",
+      "2027-03-20"
+    ],
+    "horario": "21:00 a 04:00",
+    "invitados": 100,
+    "precios": {
+      "barra": 27400,
+      "salon": 33300
+    },
+    "sin_alcohol": 30,
+    "tipo": "casamiento",
+    "titulo": "Casamiento"
+  }
+}

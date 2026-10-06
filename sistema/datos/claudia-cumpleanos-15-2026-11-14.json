@@ -1,0 +1,88 @@
+{
+  "emitido": "29/09/2026",
+  "titulo": "Cumpleaños de 15",
+  "cliente": "Claudia",
+  "fecha": "Sábado 14/11/2026 o Viernes 27/11/2026 (a elección)",
+  "horario": "21:00 a 03:00",
+  "invitados": 70,
+  "invitados_texto": "30 adultos + 40 adolescentes",
+  "servicios": [
+    {
+      "nombre": "Salón (incluye personal completo y DJ)",
+      "precio": 28000,
+      "cantidad": 70
+    },
+    {
+      "nombre": "Barra de tragos adultos (con alcohol)",
+      "precio": 22500,
+      "cantidad": 30
+    },
+    {
+      "nombre": "Barra de tragos adolescentes (sin alcohol)",
+      "precio": 15750,
+      "cantidad": 40
+    },
+    {
+      "nombre": "Degustación de Pizzas",
+      "precio": 18500,
+      "cantidad": 70
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 25000,
+      "cantidad": 70
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 70
+    },
+    {
+      "nombre": "Fin de fiesta: sacramentos de jamón y queso (incluido en las opciones con catering)",
+      "precio": 4000,
+      "cantidad": 70
+    }
+  ],
+  "aviso": "Fin de fiesta incluido: sacramentos de jamón y queso, en la Opción A (Degustación de Pizzas) y en la Opción B (Finger Food), a $4.000 por invitado; ya está sumado en el total de cada una. Esta propuesta incluye barra de tragos con alcohol para los 30 adultos y barra sin alcohol para los 40 adolescentes. Esta propuesta contempla dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores. El presupuesto final se ajusta según los servicios que efectivamente se elijan. Ambas opciones incluyen mesa de postres. El servicio de salón incluye personal completo y DJ.",
+  "opciones": [
+    {
+      "tag": "Opción Base — Salón + Barra",
+      "label": "Total (Salón + Barra de tragos para adultos y barra sin alcohol para adolescentes)",
+      "servicios": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "tag": "Opción A — Degustación de Pizzas + fin de fiesta",
+      "label": "Total (incluye Salón, Barras, Degustación de Pizzas, Mesa de Postres y fin de fiesta con sacramentos de jamón y queso)",
+      "servicios": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "tag": "Opción B — Finger Food + fin de fiesta",
+      "label": "Total (incluye Salón, Barras, Finger Food, Mesa de Postres y fin de fiesta con sacramentos de jamón y queso)",
+      "servicios": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

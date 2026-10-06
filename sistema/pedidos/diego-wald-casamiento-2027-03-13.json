@@ -1,0 +1,31 @@
+{
+  "slug": "diego-wald-casamiento-2027-03-13",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/diego-wald-casamiento-2027-03-13/",
+  "conversationId": null,
+  "mensaje_cliente": "Hola Diego! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/diego-wald-casamiento-2027-03-13/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      5347500
+    ]
+  ],
+  "avisos": [
+    "Más de 90 invitados: los unitarios salen de la escala 90.",
+    "30 adultos con barra sin alcohol (precio barra adolescentes)."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Diego Wald",
+    "fecha": "2027-03-13",
+    "fechas_extra": [
+      "2027-03-20",
+      "2027-02-27"
+    ],
+    "horario": "21:00 a 03:00",
+    "invitados": 100,
+    "sin_alcohol": 30,
+    "tipo": "casamiento",
+    "titulo": "Casamiento"
+  }
+}

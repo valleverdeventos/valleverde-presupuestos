@@ -1,0 +1,22 @@
+{
+  "titulo": "Fiesta de Recibida",
+  "cliente": "Mica",
+  "fecha": "13/11/2026",
+  "horario": "21:00 a 03:00",
+  "emitido": "13/09/2026",
+  "formato": "recibida",
+  "invitados": 70,
+  "aviso": "Propuesta pensada para fiestas de recibida, disponible los días viernes. El salón se entrega con personal de servicio, sonido y uso de cocina; la comida y la bebida quedan a cargo de ustedes, con la degustación de pizzas como adicional a elección.",
+  "servicios": [
+    { "nombre": "Salón (incluye personal de servicio, DJ y uso de cocina)", "precio": 38000 },
+    { "nombre": "Degustación de Pizzas", "precio": 14000 }
+  ],
+  "nota": "Si les interesa sumar la barra de tragos, les pasamos el valor aparte. La mesa de postres y las bebidas quedan a cargo del cliente.",
+  "terminos": [
+    "Valor mínimo de contratación: $1.750.000.",
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

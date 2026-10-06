@@ -1,0 +1,34 @@
+{
+  "slug": "rocio-empresarial-2026-12-12",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/rocio-empresarial-2026-12-12/",
+  "conversationId": "6abecf80a327037c655a8791",
+  "mensaje_cliente": "Hola Rocío! Acá va la propuesta para tu evento del 12/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/rocio-empresarial-2026-12-12/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      1995000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      3064410
+    ],
+    [
+      "Opción B — Finger Food",
+      3349200
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Rocío",
+    "conversationId": "6abecf80a327037c655a8791",
+    "fecha": "2026-12-12",
+    "fechas_extra": [],
+    "invitados": 30,
+    "sin_alcohol": 0,
+    "tipo": "empresarial"
+  }
+}

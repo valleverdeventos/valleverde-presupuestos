@@ -1,0 +1,67 @@
+{
+  "emitido": "24/09/2026",
+  "titulo": "Casamiento",
+  "cliente": "Diego Wald",
+  "fecha": "Sábado 27/02/2027, Sábado 13/03/2027 o Sábado 20/03/2027 (a elección)",
+  "horario": "19:30 a 01:30 (6 horas) — opción de 7 horas: 19:30 a 02:30",
+  "invitados": 100,
+  "servicios": [
+    {
+      "nombre": "Salón 6 horas (incluye personal completo y DJ)",
+      "precio": 28500,
+      "cantidad": 100
+    },
+    {
+      "nombre": "Barra de tragos con alcohol — 6 horas",
+      "precio": 23500,
+      "cantidad": 70
+    },
+    {
+      "nombre": "Barra de tragos sin alcohol — 6 horas",
+      "precio": 16450,
+      "cantidad": 30
+    },
+    {
+      "nombre": "Salón 7 horas (incluye personal completo y DJ)",
+      "precio": 33250,
+      "cantidad": 100
+    },
+    {
+      "nombre": "Barra de tragos con alcohol — 7 horas",
+      "precio": 27417,
+      "cantidad": 70
+    },
+    {
+      "nombre": "Barra de tragos sin alcohol — 7 horas",
+      "precio": 19192,
+      "cantidad": 30
+    }
+  ],
+  "aviso": "Esta propuesta corresponde a nuestra opción base \"Salón + Barra de tragos\" para el total de invitados, con barra con alcohol para 70 personas y barra sin alcohol para 30. Se presentan dos duraciones, de 6 y de 7 horas, con su valor correspondiente. El catering puede estar a cargo del cliente; si están interesados, les enviamos aparte el presupuesto actualizado con nuestro catering (finger food, degustación de pizzas, mesa de postres, bebida de mesa) a elección. El servicio de salón incluye personal completo y DJ.",
+  "opciones": [
+    {
+      "tag": "Duración 6 horas — 19:30 a 01:30",
+      "label": "Total (Salón + Barra, 6 horas)",
+      "servicios": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "tag": "Duración 7 horas — 19:30 a 02:30",
+      "label": "Total (Salón + Barra, 7 horas)",
+      "servicios": [
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

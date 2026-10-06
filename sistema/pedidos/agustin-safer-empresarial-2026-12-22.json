@@ -1,0 +1,26 @@
+{
+  "slug": "agustin-safer-empresarial-2026-12-22",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/agustin-safer-empresarial-2026-12-22/",
+  "conversationId": "6ac3aca504737617ded0e065",
+  "mensaje_cliente": "Hola Agustín! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/agustin-safer-empresarial-2026-12-22/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      2117500
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Agustín - Safer Systems",
+    "conversationId": "6ac3aca504737617ded0e065",
+    "fecha": "2026-12-22",
+    "fechas_extra": [
+      "2026-12-23"
+    ],
+    "invitados": 35,
+    "sin_alcohol": 0,
+    "tipo": "empresarial"
+  }
+}

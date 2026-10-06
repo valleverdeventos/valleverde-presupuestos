@@ -1,0 +1,22 @@
+{
+  "titulo": "Cumpleaños de 15",
+  "cliente": "Mauricio y Silvina",
+  "fecha": "17/10/2026",
+  "horario": "21:00 a 03:00",
+  "emitido": "13/09/2026",
+  "invitados": 70,
+  "invitados_texto": "35 adultos + 35 adolescentes",
+  "aviso": "Esta propuesta corresponde a nuestra opción base \"Salón + Barra de tragos\" para el total de invitados. El catering puede estar a cargo del cliente; si están interesados, les enviamos aparte el presupuesto actualizado con nuestro catering (finger food, degustación de pizzas, mesa de postres, bebida de mesa) a elección.",
+  "servicios": [
+    { "nombre": "Salón (incluye personal completo y DJ)", "precio": 35000, "cantidad": 70 },
+    { "nombre": "Barra de tragos (adultos, con alcohol)", "precio": 21500, "cantidad": 35 },
+    { "nombre": "Barra de tragos (adolescentes, sin alcohol)", "precio": 15050, "cantidad": 35 }
+  ],
+  "nota": "Las barras de tragos son opcionales. Si prefieren contratar únicamente el salón, el valor pasa a $42.000 por invitado, es decir $2.940.000 en total.",
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
