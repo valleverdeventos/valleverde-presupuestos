@@ -1,0 +1,38 @@
+{
+  "emitido": "07/10/2026",
+  "titulo": "Cumpleaños",
+  "cliente": "Flor",
+  "fecha": "Viernes 23/10/2026",
+  "horario": "21:00 a 03:00",
+  "invitados": 25,
+  "servicios": [
+    {
+      "nombre": "Salón (incluye personal completo y DJ)",
+      "precio": 52000,
+      "cantidad": 25
+    },
+    {
+      "nombre": "Barra de tragos (con alcohol)",
+      "precio": 22500,
+      "cantidad": 15
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 29434,
+      "cantidad": 25
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 25
+    }
+  ],
+  "aviso": "Esta propuesta incluye el salón para 25 invitados, barra de tragos para 15 personas, catering Finger Food y mesa de postres. Cada servicio se cotiza con su propio valor y cantidad. El servicio de salón incluye personal completo y DJ.",
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ],
+  "nota": "Los valores están calculados para 25 invitados. Si cerca del evento se suman invitados, se agregan al total con el mismo valor por persona de esta propuesta."
+}
