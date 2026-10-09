@@ -2,33 +2,33 @@
   "slug": "ruben-gregorio-cumpleanos-70-2027-03-07",
   "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/ruben-gregorio-cumpleanos-70-2027-03-07/",
   "conversationId": "6ac819422db2a22ecccc2f37",
-  "mensaje_cliente": "Hola Ruben! Acá va la propuesta para tu evento del 07/03, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/ruben-gregorio-cumpleanos-70-2027-03-07/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "mensaje_cliente": "Hola Ruben! Acá va la propuesta para tu evento del 07/03, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/ruben-gregorio-cumpleanos-70-2027-03-07/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
   "totales": [
     [
-      "Opción Base — Salón + Barra",
+      "Total",
       3090000
-    ],
-    [
-      "Opción A — Degustación de Pizzas",
-      5142360
-    ],
-    [
-      "Opción B — Finger Food",
-      5586480
     ]
   ],
   "avisos": [
-    "El cliente no dijo si quiere catering: van las opciones A y B."
+    "Barra de tragos (con alcohol): precio a mano $22.500 (tabla $22.500).",
+    "Salón (incluye personal completo y DJ): precio a mano $29.000 (tabla $29.000)."
   ],
   "pedido": {
     "bebida_mesa": false,
-    "catering": "no_dice",
+    "catering": "no",
     "cliente": "Ruben Gregorio",
     "conversationId": "6ac819422db2a22ecccc2f37",
     "edad": 70,
     "fecha": "2027-03-07",
     "fechas_extra": [],
     "invitados": 60,
+    "precios": {
+      "barra": 22500,
+      "finger": 25902,
+      "pizza": 18500,
+      "postres": 15706,
+      "salon": 29000
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "cumpleanos"
