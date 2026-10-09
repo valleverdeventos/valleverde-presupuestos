@@ -234,6 +234,16 @@ def bloque_precios(d):
     partes.append("    </div>")
     if d.get("nota"):
         partes.append(f'    <p class="nota" style="margin-top:14px;">{d["nota"]}</p>')
+    # Detalle del menu en tarjetas (una por servicio), para que se lea ordenado
+    # en vez de un parrafo corrido.
+    if d.get("detalle_menu"):
+        partes.append('    <div class="detalle-menu">')
+        for bloque in d["detalle_menu"]:
+            items = "".join(f"<li>{i}</li>" for i in bloque["items"])
+            partes.append(
+                '      <div class="detalle-card"><h4>%s</h4><ul>%s</ul></div>'
+                % (bloque["titulo"], items))
+        partes.append("    </div>")
     # Regla de Gian (22/09/2026): que la bebida de mesa corre por cuenta del
     # cliente va siempre destacado debajo de los totales, no mezclado en el
     # aviso de arriba. Se omite si se cotizó la bebida, en las recibidas (su

@@ -12,11 +12,63 @@
     }
   ],
   "aviso": "Propuesta completa para el Día del Empleado Judicial: salón, recepción, asado tradicional, guarniciones, mesa de postres, bebida de mesa y barra de tragos. El valor por invitado ya incluye todos los servicios.",
-  "nota": "Recepción, 5 bocados por persona: empanada de carne · feta de pionono de roquefort · feta de pionono de jamón y queso · canastita de zucchini, cebolla caramelizada y queso · canastita de mozzarella, tomates cherry y salsa de albahaca. Menú asado tradicional: vacío, costilla, chorizos bombón y morcillas bombón, con ensalada mixta y ensalada rusa. Mesa de postres: variedad de tortas clásicas, tartas frutales y shots de chocolate con salsa de frutos rojos. Bebida de mesa: cerveza, vino, gaseosas y agua. Barra de tragos con barman incluida. Salón con personal completo, mozos y DJ.",
   "terminos": [
     "Seña 35%: con la reserva del salón.",
     "Saldo 65%: 20 días antes del evento.",
     "Cancelaciones no reintegran la seña.",
     "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ],
+  "detalle_menu": [
+    {
+      "titulo": "Recepción · 5 bocados por persona",
+      "items": [
+        "Empanada de carne",
+        "Feta de pionono de roquefort",
+        "Feta de pionono de jamón y queso",
+        "Canastita de zucchini, cebolla caramelizada y queso",
+        "Canastita de mozzarella, tomates cherry y salsa de albahaca"
+      ]
+    },
+    {
+      "titulo": "Asado tradicional con parrillero",
+      "items": [
+        "Vacío",
+        "Costilla",
+        "Chorizos bombón",
+        "Morcillas bombón"
+      ]
+    },
+    {
+      "titulo": "Guarniciones",
+      "items": [
+        "Ensalada mixta",
+        "Ensalada rusa"
+      ]
+    },
+    {
+      "titulo": "Mesa de postres",
+      "items": [
+        "Tortas clásicas",
+        "Tartas frutales",
+        "Shots de chocolate con salsa de frutos rojos"
+      ]
+    },
+    {
+      "titulo": "Bebida de mesa",
+      "items": [
+        "Cerveza",
+        "Vino",
+        "Gaseosas",
+        "Agua"
+      ]
+    },
+    {
+      "titulo": "Servicio incluido",
+      "items": [
+        "Salón con personal completo y mozos",
+        "Musicalización y DJ",
+        "Barra de tragos con barman"
+      ]
+    }
   ]
 }

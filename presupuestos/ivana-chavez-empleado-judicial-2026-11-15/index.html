@@ -171,6 +171,13 @@
   .total-opcion .total-final { padding: 20px 22px; margin-top: 0; border-top: none; }
   .total-opcion .total-final .label { font-size: 13px; }
   .total-opcion .total-final .valor { font-size: 36px; }
+  .detalle-menu { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 22px 0 6px; }
+  .detalle-card { border: 1px solid rgba(232,121,43,0.4); border-left: 4px solid var(--accent); border-radius: 3px; padding: 14px 16px; background: rgba(232,121,43,0.07); }
+  .detalle-card h4 { font: 700 12px/1.2 'Poppins', sans-serif; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .detalle-card ul { list-style: none; margin: 0; padding: 0; }
+  .detalle-card li { font-size: 15px; line-height: 1.5; padding-left: 14px; position: relative; }
+  .detalle-card li:before { content: ""; position: absolute; left: 0; top: 10px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+  @media (max-width: 720px) { .detalle-menu { grid-template-columns: 1fr; } }
   .aviso-valores { margin: 18px 0 24px; padding: 18px 16px; border: 2px solid var(--accent); border-radius: 3px; background: rgba(232,121,43,0.12); font: 700 16px/1.55 'Poppins', sans-serif; letter-spacing: 0.2px; color: var(--accent); text-align: center; }
 </style>
 </head>
@@ -536,7 +543,14 @@
         <span class="valor">$8.280.000</span>
       </div>
     </div>
-    <p class="nota" style="margin-top:14px;">Recepción, 5 bocados por persona: empanada de carne · feta de pionono de roquefort · feta de pionono de jamón y queso · canastita de zucchini, cebolla caramelizada y queso · canastita de mozzarella, tomates cherry y salsa de albahaca. Menú asado tradicional: vacío, costilla, chorizos bombón y morcillas bombón, con ensalada mixta y ensalada rusa. Mesa de postres: variedad de tortas clásicas, tartas frutales y shots de chocolate con salsa de frutos rojos. Bebida de mesa: cerveza, vino, gaseosas y agua. Barra de tragos con barman incluida. Salón con personal completo, mozos y DJ.</p>
+    <div class="detalle-menu">
+      <div class="detalle-card"><h4>Recepción · 5 bocados por persona</h4><ul><li>Empanada de carne</li><li>Feta de pionono de roquefort</li><li>Feta de pionono de jamón y queso</li><li>Canastita de zucchini, cebolla caramelizada y queso</li><li>Canastita de mozzarella, tomates cherry y salsa de albahaca</li></ul></div>
+      <div class="detalle-card"><h4>Asado tradicional con parrillero</h4><ul><li>Vacío</li><li>Costilla</li><li>Chorizos bombón</li><li>Morcillas bombón</li></ul></div>
+      <div class="detalle-card"><h4>Guarniciones</h4><ul><li>Ensalada mixta</li><li>Ensalada rusa</li></ul></div>
+      <div class="detalle-card"><h4>Mesa de postres</h4><ul><li>Tortas clásicas</li><li>Tartas frutales</li><li>Shots de chocolate con salsa de frutos rojos</li></ul></div>
+      <div class="detalle-card"><h4>Bebida de mesa</h4><ul><li>Cerveza</li><li>Vino</li><li>Gaseosas</li><li>Agua</li></ul></div>
+      <div class="detalle-card"><h4>Servicio incluido</h4><ul><li>Salón con personal completo y mozos</li><li>Musicalización y DJ</li><li>Barra de tragos con barman</li></ul></div>
+    </div>
     <div class="eyebrow" style="margin-top:32px;">Términos y condiciones</div>
     <div class="feature"><span class="tri"></span><p>Seña 35%: con la reserva del salón.</p></div>
     <div class="feature"><span class="tri"></span><p>Saldo 65%: 20 días antes del evento.</p></div>
