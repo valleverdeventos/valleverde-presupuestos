@@ -63,11 +63,23 @@
       ]
     },
     {
+      "titulo": "Barra de tragos con barman",
+      "items": [
+        "Gin Lemon",
+        "Gin con frutos rojos",
+        "Cuba Libre",
+        "Cynar Julep",
+        "Garibaldi",
+        "Aperol Spritz",
+        "Fernet &amp; Coca"
+      ]
+    },
+    {
       "titulo": "Servicio incluido",
       "items": [
         "Salón con personal completo y mozos",
         "Musicalización y DJ",
-        "Barra de tragos con barman"
+        "Barman en la barra de tragos"
       ]
     }
   ]
