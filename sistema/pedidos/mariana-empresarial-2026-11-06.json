@@ -1,0 +1,36 @@
+{
+  "slug": "mariana-empresarial-2026-11-06",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/mariana-empresarial-2026-11-06/",
+  "conversationId": "6ace6bc7bdbe7e0b7c0268d4",
+  "mensaje_cliente": "Hola Mariana! Acá va la propuesta para tu evento del 06/11, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/mariana-empresarial-2026-11-06/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      1862500
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      2753675
+    ],
+    [
+      "Opción B — Finger Food",
+      2991000
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Mariana",
+    "conversationId": "6ace6bc7bdbe7e0b7c0268d4",
+    "fecha": "2026-11-06",
+    "fechas_extra": [],
+    "horario": "08:30 a 12:30",
+    "invitados": 25,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "empresarial"
+  }
+}
