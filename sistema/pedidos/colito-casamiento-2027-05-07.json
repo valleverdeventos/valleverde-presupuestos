@@ -1,0 +1,36 @@
+{
+  "slug": "colito-casamiento-2027-05-07",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/colito-casamiento-2027-05-07/",
+  "conversationId": "6acf9c0df6308669a20b903e",
+  "mensaje_cliente": "Hola Colito! Acá va la propuesta para tu evento del 07/05, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/colito-casamiento-2027-05-07/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      5820000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      9924720
+    ],
+    [
+      "Opción B — Finger Food",
+      10704720
+    ]
+  ],
+  "avisos": [
+    "Más de 90 invitados: los unitarios salen de la escala 90.",
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Colito",
+    "conversationId": "6acf9c0df6308669a20b903e",
+    "fecha": "2027-05-07",
+    "fechas_extra": [],
+    "invitados": 120,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "casamiento"
+  }
+}
