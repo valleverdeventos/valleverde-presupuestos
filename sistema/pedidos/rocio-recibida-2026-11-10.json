@@ -20,6 +20,9 @@
     "fecha": "2026-11-10",
     "fechas_extra": [],
     "invitados": 50,
+    "precios": {
+      "salon": 38000
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "recibida"
