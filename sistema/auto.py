@@ -32,6 +32,7 @@ Formato del pedido (todo lo que no es obligatorio puede faltar o venir null):
   "ninos": 0,                      menores de 12, en cualquier evento
   "sin_alcohol": 30,               opcional: adultos con barra sin alcohol (precio barra teen)
   "sin_barra": false,              opcional: true = sale sin barra de tragos (excepción de Gian)
+  "con_barra": false,              opcional, solo "recibida": true = suma la barra de adultos ($22.500 c/u)
   "catering": "si",                si | no | no_dice (no_dice = van las opciones)
   "bebida_mesa": false,            true sólo si el cliente pide que la ponga el salón
   "precios": {"salon": 15000},     opcional: precio por persona fijado a mano por Gian,
@@ -113,6 +114,11 @@ RECIBIDA_NOTA = (
     "Adicionales a elección: degustación de pizzas, $14.000 por invitado. La barra de "
     "tragos también puede sumarse; si les interesa, les pasamos el valor aparte. La mesa "
     "de postres y las bebidas quedan a cargo del cliente."
+)
+# Recibida con barra de adultos incluida (excepción que decide Gian, 14/10/2026: el paquete cerrado no la traía).
+RECIBIDA_NOTA_CON_BARRA = (
+    "Adicionales a elección: degustación de pizzas, $14.000 por invitado. La mesa de postres "
+    "y las bebidas quedan a cargo del cliente."
 )
 
 
@@ -303,14 +309,21 @@ def armar_datos(p):
         datos["invitados_texto"] = f"{adultos} adultos + {ninos} niños"
 
     if tipo == "recibida":
+        con_barra = bool(p.get("con_barra"))
+        servicios = [{"nombre": "Salón (incluye personal de servicio, DJ y uso de cocina)",
+                      "precio": RECIBIDA_SALON}]
+        if con_barra:
+            servicios.append({"nombre": "Barra de tragos (con alcohol)", "precio": BARRA_ADULTOS_FIJO})
+            avisos.append("Con barra de tragos de adultos, como pediste.")
         datos.update({
             "formato": "recibida",
             "aviso": RECIBIDA_AVISO,
-            "servicios": [{"nombre": "Salón (incluye personal de servicio, DJ y uso de cocina)",
-                           "precio": RECIBIDA_SALON}],
-            "nota": RECIBIDA_NOTA,
+            "servicios": servicios,
+            "nota": RECIBIDA_NOTA_CON_BARRA if con_barra else RECIBIDA_NOTA,
             "terminos": [RECIBIDA_MINIMO] + TERMINOS,
         })
+        if con_barra:
+            datos["recibida_con_barra"] = True
         if fecha and fecha.weekday() != 4:
             avisos.append("La recibida se ofrece sólo viernes y la fecha pedida no es viernes.")
         return armar_slug(p, tipo_slug, fecha_slug), datos, avisos
@@ -370,6 +383,8 @@ def totales(datos):
     s = datos["servicios"]
     sub = lambda i: s[i]["precio"] * s[i].get("cantidad", inv)  # noqa: E731
     if datos.get("formato") == "recibida":
+        if datos.get("recibida_con_barra"):
+            return [("Total salón + barra", sum(sub(i) for i in range(len(s))))]
         return [("Total salón", sub(0))]
     if datos.get("opciones"):
         return [(op["tag"], sum(sub(i) for i in op["servicios"])) for op in datos["opciones"]]

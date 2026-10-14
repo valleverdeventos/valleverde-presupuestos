@@ -86,7 +86,7 @@ def quitar_seccion(html, etiqueta):
     return html[:ini] + html[fin + len("</section>"):]
 
 
-def aplicar_formato_recibida(html):
+def aplicar_formato_recibida(html, recibida_con_barra=False):
     """Recorta la propuesta gastronomica a lo que entra en una recibida."""
     # Fuera la pagina entera de Finger Food.
     html = quitar_seccion(html, "05")
@@ -99,9 +99,10 @@ def aplicar_formato_recibida(html):
             html = html[:ini] + PIZZAS_RECIBIDA + html[fin + len("</ul>"):]
 
     # La barra se muestra, pero marcada como opcional y a cotizar aparte.
-    html = html.replace(
-        "Incluida en el servicio base, con opción adicional de barra sin alcohol "
-        "para adolescentes.", BARRA_OPCIONAL)
+    if not recibida_con_barra:
+        html = html.replace(
+            "Incluida en el servicio base, con opción adicional de barra sin alcohol "
+            "para adolescentes.", BARRA_OPCIONAL)
 
     return html
 
@@ -198,7 +199,13 @@ def bloque_precios(d):
     if d.get("formato") == "recibida":
         # En una recibida cada servicio se muestra con su propio total y no se
         # arma una suma general: el cliente elige si suma las pizzas o no.
-        pass
+        # Con la barra de adultos incluida (excepción de Gian, 14/10/2026) sí hay un total salón + barra.
+        if d.get("recibida_con_barra"):
+            total = sum(total_de(s, invitados) for s in servicios)
+            partes.append(f"""      <div class="total-final">
+        <span class="label">Total (Salón + Barra de tragos)</span>
+        <span class="valor">{pesos(total)}</span>
+      </div>""")
     elif not opciones:
         total = sum(total_de(s, invitados) for s in servicios)
         partes.append(f"""      <div class="total-final">
@@ -305,7 +312,7 @@ def render(slug):
         html = html.replace("{{%s}}" % k, str(v))
 
     if d.get("formato") == "recibida":
-        html = aplicar_formato_recibida(html)
+        html = aplicar_formato_recibida(html, bool(d.get("recibida_con_barra")))
     if d.get("barra_tragos"):
         html = aplicar_barra_propia(html, d["barra_tragos"])
 
