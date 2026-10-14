@@ -1,0 +1,36 @@
+{
+  "slug": "sebastian-cumpleanos-1-2026-12-12",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/sebastian-cumpleanos-1-2026-12-12/",
+  "conversationId": "6acff231e729d931a23cb6ea",
+  "mensaje_cliente": "Hola Sebastián! Acá va la propuesta para tu evento del 12/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/sebastian-cumpleanos-1-2026-12-12/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2625000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      4335300
+    ],
+    [
+      "Opción B — Finger Food",
+      4764250
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Sebastián",
+    "conversationId": "6acff231e729d931a23cb6ea",
+    "edad": 1,
+    "fecha": "2026-12-12",
+    "fechas_extra": [],
+    "invitados": 50,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumpleanos"
+  }
+}
