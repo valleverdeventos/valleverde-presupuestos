@@ -1,0 +1,36 @@
+{
+  "slug": "guadii-cumpleanos-2026-10-17",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/guadii-cumpleanos-2026-10-17/",
+  "conversationId": "6ad10e1addcbfa5ed2a8ae8b",
+  "mensaje_cliente": "Hola Guadii! Acá va la propuesta para tu evento del 17/10, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/guadii-cumpleanos-2026-10-17/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      3960000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      6696480
+    ],
+    [
+      "Opción B — Finger Food",
+      7216480
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "guadii",
+    "con_barra": false,
+    "conversationId": "6ad10e1addcbfa5ed2a8ae8b",
+    "fecha": "2026-10-17",
+    "fechas_extra": [],
+    "invitados": 80,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumpleanos"
+  }
+}
