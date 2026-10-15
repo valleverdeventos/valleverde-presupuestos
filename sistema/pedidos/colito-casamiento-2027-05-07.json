@@ -11,8 +11,9 @@
   ],
   "avisos": [
     "Más de 90 invitados: los unitarios salen de la escala 90.",
-    "Barra de tragos (con alcohol): precio a mano $22.500 (tabla $22.500).",
-    "Salón (incluye personal completo y DJ): precio a mano $32.000 (tabla $26.000)."
+    "Horario de 7 h: salón y barra llevan 1 h extra.",
+    "Barra de tragos (con alcohol): precio a mano $22.500 (tabla $26.250).",
+    "Salón (incluye personal completo y DJ): precio a mano $32.000 (tabla $30.333)."
   ],
   "pedido": {
     "bebida_mesa": false,
@@ -22,12 +23,10 @@
     "conversationId": "6acf9c0df6308669a20b903e",
     "fecha": "2027-05-07",
     "fechas_extra": [],
+    "horario": "21:00 a 04:00",
     "invitados": 120,
     "precios": {
       "barra": 22500,
-      "finger": 25000,
-      "pizza": 18500,
-      "postres": 15706,
       "salon": 32000
     },
     "sin_alcohol": 0,
