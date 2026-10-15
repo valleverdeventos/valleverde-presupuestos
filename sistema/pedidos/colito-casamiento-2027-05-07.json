@@ -6,13 +6,13 @@
   "totales": [
     [
       "Total",
-      5820000
+      6540000
     ]
   ],
   "avisos": [
     "Más de 90 invitados: los unitarios salen de la escala 90.",
     "Barra de tragos (con alcohol): precio a mano $22.500 (tabla $22.500).",
-    "Salón (incluye personal completo y DJ): precio a mano $26.000 (tabla $26.000)."
+    "Salón (incluye personal completo y DJ): precio a mano $32.000 (tabla $26.000)."
   ],
   "pedido": {
     "bebida_mesa": false,
@@ -28,7 +28,7 @@
       "finger": 25000,
       "pizza": 18500,
       "postres": 15706,
-      "salon": 26000
+      "salon": 32000
     },
     "sin_alcohol": 0,
     "sin_barra": false,
