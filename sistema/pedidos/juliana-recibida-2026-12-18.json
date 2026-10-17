@@ -1,0 +1,26 @@
+{
+  "slug": "juliana-recibida-2026-12-18",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/juliana-recibida-2026-12-18/",
+  "conversationId": "6ad3d1cf2ce84d0dc3e84d73",
+  "mensaje_cliente": "Hola Juliana! Acá va la propuesta para tu evento del 18/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/juliana-recibida-2026-12-18/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total salón",
+      3040000
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Juliana",
+    "con_barra": false,
+    "conversationId": "6ad3d1cf2ce84d0dc3e84d73",
+    "fecha": "2026-12-18",
+    "fechas_extra": [],
+    "invitados": 80,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "recibida"
+  }
+}
