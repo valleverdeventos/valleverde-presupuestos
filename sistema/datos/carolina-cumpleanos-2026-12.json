@@ -27,7 +27,7 @@
       "precio": 15706
     }
   ],
-  "aviso": "Esta propuesta contempla dos fechas y la diferencia entre ellas es el catering. VIERNES 18 DE DICIEMBRE: salón, barra de tragos y nuestro catering, con dos opciones a elección (degustación de pizzas o finger food). SÁBADO 26 DE DICIEMBRE: salón y barra de tragos solamente; la comida la organiza el cliente, porque sobre esa fecha no tomamos catering propio. El valor del salón y de la barra es el mismo en las dos fechas: lo único que cambia es si se suma o no el catering. La mesa de postres no está incluida en ningún total: se agrega solo si la eligen, con el valor por invitado de la tabla. El servicio de salón incluye personal completo y DJ.",
+  "aviso": "Esta propuesta contempla dos fechas y la diferencia entre ellas es el catering. VIERNES 18 DE DICIEMBRE: salón, barra de tragos y nuestro catering, con dos opciones a elección (degustación de pizzas o finger food). SÁBADO 26 DE DICIEMBRE: salón y barra de tragos solamente; la comida la organiza el cliente, porque sobre esa fecha no tomamos catering propio. El valor del salón y de la barra es el mismo en las dos fechas: lo único que cambia es si se suma o no el catering. Las dos opciones del viernes 18 incluyen la mesa de postres, ya sumada en el total. El servicio de salón incluye personal completo y DJ.",
   "opciones": [
     {
       "tag": "Sábado 26/12 — Salón + Barra",
@@ -38,25 +38,27 @@
       ]
     },
     {
-      "tag": "Viernes 18/12 — con Degustación de Pizzas",
-      "label": "Total (incluye Salón, Barra y Degustación de Pizzas)",
+      "tag": "Viernes 18/12 — Pizzas y Mesa de Postres",
+      "label": "Total (incluye Salón, Barra, Degustación de Pizzas y Mesa de Postres)",
       "servicios": [
         0,
         1,
-        2
+        2,
+        4
       ]
     },
     {
-      "tag": "Viernes 18/12 — con Finger Food",
-      "label": "Total (incluye Salón, Barra y Finger Food)",
+      "tag": "Viernes 18/12 — Finger Food y Mesa de Postres",
+      "label": "Total (incluye Salón, Barra, Finger Food y Mesa de Postres)",
       "servicios": [
         0,
         1,
-        3
+        3,
+        4
       ]
     }
   ],
-  "nota": "Resumen: el sábado 26 se contrata el salón con barra y la comida la trae el cliente. El viernes 18 se puede contratar el mismo salón con barra más el catering, en cualquiera de las dos opciones. La mesa de postres se suma al total elegido, con su valor por invitado.",
+  "nota": "Resumen: el sábado 26 se contrata el salón con barra y la comida la trae el cliente. El viernes 18 se contrata el mismo salón con barra, más el catering y la mesa de postres, en cualquiera de las dos opciones.",
   "bebida_aviso": "La bebida de mesa no está incluida y pueden traerla ustedes: les pasamos las cantidades y marcas sugeridas por VALLEVERDE Eventos según la cantidad de invitados, y nuestro personal se encarga del servicio en mesa sin costo adicional. Si prefieren que la proveamos nosotros, les pasamos el presupuesto aparte.",
   "terminos": [
     "Seña 35%: con la reserva del salón.",
