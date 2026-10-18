@@ -1,0 +1,35 @@
+{
+  "slug": "caro-cumpleanos-30-2026-12-26-v2",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/caro-cumpleanos-30-2026-12-26-v2/",
+  "conversationId": "6ad4fe6440bfd54898b4cdeb",
+  "mensaje_cliente": "Hola Caro! Acá va la propuesta para tu evento del 26/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/caro-cumpleanos-30-2026-12-26-v2/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2452500
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      4005360
+    ],
+    [
+      "Opción B — Finger Food",
+      4430790
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "si",
+    "cliente": "Caro",
+    "con_barra": false,
+    "conversationId": "6ad4fe6440bfd54898b4cdeb",
+    "edad": 30,
+    "fecha": "2026-12-26",
+    "fechas_extra": [],
+    "invitados": 45,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumpleanos"
+  }
+}
