@@ -4,6 +4,9 @@ import math, json, os, html
 PAPEL = "#f6f1e7"
 GRAFITO = "#2b2733"
 LILA = "#6b3fc4"
+CREMA = "#f6f1e7"
+AMAR = "#ffd37a"
+VIOLETA = "#5a32a8"
 ROJO = "#c9474f"
 WW, WH = 4500, 7900
 
@@ -20,19 +23,19 @@ EST = [
      "t": [("Maquillaje", "Probalo con luz de noche."), ("Invitaciones", "Con fecha límite para confirmar.")]},
     {"box": (300, 5500), "num": "2", "unidad": "meses antes", "img": "zapatos", "dy": 260, "tl": "2 meses",
      "t": [("Vals", "Ensayalo con los zapatos de la fiesta."), ("Las 15 velas", "Avisá antes a las quince personas.")]},
-    {"box": (1800, 5900), "num": "2", "unidad": "semanas antes", "img": "mesas", "dy": 170, "tl": "2 semanas",
-     "t": [("Mesas", "Primero, los que no pueden estar juntos."), ("Brindis", "Leelo en voz alta tres veces.")]},
+    {"box": (1800, 5900), "num": "2", "unidad": "semanas antes", "img": "cronograma", "dy": 170, "tl": "2 semanas",
+     "t": [("Cronograma", "Una persona a cargo que no seas vos."), ("Brindis", "Leelo en voz alta tres veces.")]},
 ]
 F = (3300, 5400)
 GUIA = ["12 meses · invitados y lugar", "10 meses · foto, video y música", "6 meses · vestido y segundo look",
-        "3 meses · maquillaje e invitaciones", "2 meses · vals y las 15 velas", "2 semanas · mesas y brindis"]
+        "3 meses · maquillaje e invitaciones", "2 meses · vals y las 15 velas", "2 semanas · cronograma y brindis"]
 
 T_PULL = 2.6
 W0 = 3.8          # primer barrido
-STEP = 4.4        # barrido + parada
+STEP = 6.4        # barrido + parada (2 s extra de lectura con el texto completo)
 WHIP = 0.8
 T_FINAL_W = W0 + STEP * len(EST)
-T_END = T_FINAL_W + WHIP + 5.6
+T_END = T_FINAL_W + WHIP + 7.6
 
 ANCHO_NUM = {"12": 330, "10": 330, "6": 170, "3": 170, "2": 170}
 
@@ -120,15 +123,16 @@ for i, e in enumerate(EST):
     es6 = e["img"] is None
     if es6:
         nx, ny, fs = 80, 150, 440
-        P(paths, f"circ-{i}", garabato_elipse(bx + 200, by + 360, 190, 215, seed=2.1), GRAFITO, 7)
-        unidad = f'<div class="abs hand wo" id="u-{i}" style="left:{bx + 70}px; top:{by + 640}px; font-size:92px; transform:rotate(-4deg);">{e["unidad"]}</div>'
+        P(paths, f"circ-{i}", garabato_elipse(bx + 200, by + 360, 190, 215, seed=2.1), CREMA, 7)
+        unidad = f'<div class="abs hand wo" id="u-{i}" style="left:{bx + 70}px; top:{by + 640}px; font-size:92px; transform:rotate(-4deg); color:{CREMA};">{e["unidad"]}</div>'
         fl = flecha(bx + 600, by + 1060, bx + 760, by + 960, -0.3)
-        P(paths, f"fl-{i}-a", fl[0], GRAFITO, 5)
-        P(paths, f"fl-{i}-b", fl[1], GRAFITO, 5)
+        P(paths, f"fl-{i}-a", fl[0], CREMA, 5)
+        P(paths, f"fl-{i}-b", fl[1], CREMA, 5)
         tareas_top = 1060
         extra = f'''
+    <div class="abs page-inv" style="left:{bx - 50}px; top:{by - 40}px; width:1180px; height:2000px;"></div>
     <div class="abs card" id="card" style="left:{bx + 580}px; top:{by + 200}px; width:420px; height:720px;"><img src="assets/img/figurin-n.jpg" alt="" /></div>
-    <div class="tape" id="card-tape" style="left:{bx + 680}px; top:{by + 170}px; transform:rotate(-6deg);"></div>
+    <div class="tape" id="card-tape" style="left:{bx + 680}px; top:{by + 170}px; transform:rotate(-6deg); background:rgba(255,226,160,.92);"></div>
     <div class="abs" id="stamp" style="left:{bx + 610}px; top:{by + 720}px;">1.ª PRUEBA</div>'''
         ill = ""
     else:
@@ -155,9 +159,9 @@ for i, e in enumerate(EST):
       <div class="hand vuelta wo" id="v-{i}-{j}">{texto(v)}</div></div>''' for j, (lab, v) in enumerate(e["t"]))
     estaciones_html.append(f'''
     <!-- parada {e["tl"]} -->{ill}{extra}
-    <div class="abs num wo" id="n-{i}" style="left:{bx + nx}px; top:{by + ny}px; font-size:{fs}px;">{e["num"]}</div>
+    <div class="abs num wo" id="n-{i}" style="left:{bx + nx}px; top:{by + ny}px; font-size:{fs}px;{(" color:" + CREMA + ";") if es6 else ""}">{e["num"]}</div>
     {unidad}
-    <div class="abs tareas" style="left:{bx + 70}px; top:{by + tareas_top}px;">{tareas}</div>''')
+    <div class="abs tareas{" inv" if es6 else ""}" style="left:{bx + 70}px; top:{by + tareas_top}px;">{tareas}</div>''')
     if e["num"] == "10":
         # subrayado rojo del "NO" (posición aproximada en la segunda línea)
         P(paths, f"no-{i}", ondita(bx + 555, by + 775, 110, 2.0), ROJO, 8)
@@ -205,6 +209,10 @@ html, body {{ width:1080px; height:1920px; overflow:hidden; background:{PAPEL}; 
 .tareas {{ width:940px; display:flex; flex-direction:column; gap:34px; }}
 .lab {{ font-family:Archivo, sans-serif; font-weight:700; font-size:30px; letter-spacing:.18em; color:rgba(43,39,51,.62); margin-bottom:6px; }}
 .vuelta {{ font-size:86px; color:{LILA}; }}
+.inv .lab {{ color:rgba(246,241,231,.72); }}
+.inv .vuelta {{ color:{AMAR}; }}
+.page-inv {{ background-color:{VIOLETA}; background-image:url("assets/img/papel.jpg"); background-size:1882px 600px;
+  background-blend-mode:multiply; box-shadow:0 30px 70px rgba(43,39,51,.35); transform:rotate(-1.2deg); }}
 .tl-lab {{ opacity:0; white-space:nowrap; }}
 
 #fig {{ left:70px; top:330px; width:940px; height:1670px; }}
@@ -219,8 +227,8 @@ html, body {{ width:1080px; height:1920px; overflow:hidden; background:{PAPEL}; 
 .card {{ background:#fffdf8; padding:16px; box-shadow:0 22px 50px rgba(43,39,51,.25); }}
 .card img {{ width:100%; height:100%; object-fit:cover; object-position:50% 25%; }}
 .tape {{ position:absolute; width:220px; height:64px; background:rgba(242,185,104,.62); box-shadow:0 2px 6px rgba(0,0,0,.08); }}
-#stamp {{ font-family:Archivo, sans-serif; font-weight:700; font-size:58px; letter-spacing:.08em; color:{ROJO};
-  border:7px solid {ROJO}; border-radius:10px; padding:8px 26px; mix-blend-mode:multiply; opacity:0; white-space:nowrap; }}
+#stamp {{ font-family:Archivo, sans-serif; font-weight:700; font-size:58px; letter-spacing:.08em; color:{AMAR};
+  border:7px solid {AMAR}; border-radius:10px; padding:8px 26px; background:rgba(90,50,168,.35); opacity:0; white-space:nowrap; }}
 .fila {{ white-space:nowrap; }}
 .grain {{ position:absolute; left:-200px; top:-200px; width:1480px; height:2320px; pointer-events:none; opacity:.09; mix-blend-mode:multiply;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }}
