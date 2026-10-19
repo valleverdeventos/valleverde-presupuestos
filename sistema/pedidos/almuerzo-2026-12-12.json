@@ -1,0 +1,36 @@
+{
+  "slug": "almuerzo-2026-12-12",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/almuerzo-2026-12-12/",
+  "conversationId": null,
+  "mensaje_cliente": "Hola! Acá va la propuesta para tu evento del 12/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/almuerzo-2026-12-12/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2260000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      3640320
+    ],
+    [
+      "Opción B — Finger Food",
+      4018480
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "con_barra": false,
+    "fecha": "2026-12-12",
+    "fechas_extra": [],
+    "horario": "12:30 a 17:30",
+    "invitados": 40,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "otro",
+    "titulo": "almuerzo"
+  }
+}
