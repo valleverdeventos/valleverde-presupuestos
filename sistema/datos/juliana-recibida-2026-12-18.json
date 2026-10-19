@@ -11,14 +11,19 @@
     {
       "nombre": "Salón (incluye personal de servicio, DJ y uso de cocina)",
       "precio": 38000
+    },
+    {
+      "nombre": "Barra de tragos con alcohol",
+      "precio": 22500
     }
   ],
-  "nota": "Adicionales a elección: degustación de pizzas, $14.000 por invitado. La barra de tragos también puede sumarse; si les interesa, les pasamos el valor aparte. La mesa de postres y las bebidas quedan a cargo del cliente.",
+  "nota": "La propuesta incluye el salón con personal de servicio, DJ y uso de cocina, más la barra de tragos con alcohol atendida por nuestro barman. Adicional a elección: degustación de pizzas, $14.000 por invitado. La mesa de postres y las bebidas de mesa quedan a cargo del cliente.",
   "terminos": [
     "Valor mínimo de contratación: $1.750.000.",
     "Seña 35%: con la reserva del salón.",
     "Saldo 65%: 20 días antes del evento.",
     "Cancelaciones no reintegran la seña.",
     "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
-  ]
+  ],
+  "recibida_con_barra": true
 }
