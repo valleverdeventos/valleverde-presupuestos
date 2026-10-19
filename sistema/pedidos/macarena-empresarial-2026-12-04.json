@@ -1,0 +1,38 @@
+{
+  "slug": "macarena-empresarial-2026-12-04",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/macarena-empresarial-2026-12-04/",
+  "conversationId": "6ad61c324b0f3b11b30d6a39",
+  "mensaje_cliente": "Hola Macarena! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/macarena-empresarial-2026-12-04/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2452500
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      4612860
+    ],
+    [
+      "Opción B — Finger Food",
+      5038290
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": true,
+    "catering": "si",
+    "cliente": "Macarena",
+    "con_barra": false,
+    "conversationId": "6ad61c324b0f3b11b30d6a39",
+    "fecha": "2026-12-04",
+    "fechas_extra": [
+      "2026-12-11"
+    ],
+    "horario": "21:00 a 03:00",
+    "invitados": 45,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "empresarial",
+    "titulo": "Fin de año Globant"
+  }
+}
