@@ -7,12 +7,12 @@
   "invitados": 50,
   "servicios": [
     {
-      "nombre": "Salón (incluye personal de servicio, DJ y uso de cocina)",
+      "nombre": "Salón (incluye personal de servicio, equipo de sonido y uso de cocina)",
       "precio": 15000,
       "cantidad": 50
     }
   ],
-  "aviso": "Propuesta de almuerzo: el salón se entrega con personal de servicio, DJ, decoración de VALLEVERDE Eventos y uso de cocina. La comida, la bebida y la mesa de postres quedan a cargo del cliente. Si prefieren que los proveamos nosotros, les pasamos el presupuesto aparte.",
+  "aviso": "Propuesta de almuerzo: el salón se entrega con personal de servicio, decoración de VALLEVERDE Eventos, uso de cocina y equipo de sonido con conexión Bluetooth, para que puedan poner su propia música. La comida, la bebida y la mesa de postres quedan a cargo del cliente. Si prefieren que los proveamos nosotros, les pasamos el presupuesto aparte.",
   "nota": "La barra de tragos puede sumarse como servicio adicional; si les interesa, les pasamos el valor. La mesa de postres y las bebidas quedan a cargo del cliente.",
   "bebida_aviso": false,
   "terminos": [
@@ -20,5 +20,6 @@
     "Saldo 65%: 20 días antes del evento.",
     "Cancelaciones no reintegran la seña.",
     "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
-  ]
+  ],
+  "sin_dj": true
 }
