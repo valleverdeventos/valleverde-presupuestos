@@ -1,0 +1,127 @@
+{
+  "emitido": "20/10/2026",
+  "titulo": "Cumpleaños de 15",
+  "cliente": "Sil",
+  "fecha": "Sábado 16/01/2027 o Sábado 23/01/2027 (a elección)",
+  "horario": "21:00 a 03:00 (6 horas) — alternativa: 21:00 a 05:00 (8 horas)",
+  "invitados": 90,
+  "servicios": [
+    {
+      "nombre": "Salón 6 horas (incluye personal completo y DJ)",
+      "precio": 34000,
+      "cantidad": 90
+    },
+    {
+      "nombre": "Barra de tragos adultos — 6 horas",
+      "precio": 22500,
+      "cantidad": 35
+    },
+    {
+      "nombre": "Barra de tragos adolescentes, sin alcohol — 6 horas",
+      "precio": 15750,
+      "cantidad": 55
+    },
+    {
+      "nombre": "Salón 8 horas (incluye personal completo y DJ)",
+      "precio": 45333,
+      "cantidad": 90
+    },
+    {
+      "nombre": "Barra de tragos adultos — 8 horas",
+      "precio": 30000,
+      "cantidad": 35
+    },
+    {
+      "nombre": "Barra de tragos adolescentes, sin alcohol — 8 horas",
+      "precio": 21000,
+      "cantidad": 55
+    },
+    {
+      "nombre": "Degustación de Pizzas",
+      "precio": 18500,
+      "cantidad": 90
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 25000,
+      "cantidad": 90
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 90
+    }
+  ],
+  "aviso": "Propuesta armada para 90 invitados, 55 adolescentes y 35 adultos, según los datos que nos pasaste. Se presentan dos duraciones: el paquete base de 21:00 a 03:00 y la alternativa extendida hasta las 05:00. El salón y las barras acompañan la duración elegida; el catering es el mismo en los dos casos. Las dos fechas de enero están disponibles y el valor es el mismo en cualquiera de las dos. El servicio de salón incluye personal completo y DJ.",
+  "opciones": [
+    {
+      "tag": "21:00 a 03:00 — Salón + Barras",
+      "label": "Total (Salón y las dos barras, 6 horas)",
+      "servicios": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "tag": "21:00 a 03:00 — con Pizzas y Mesa de Postres",
+      "label": "Total (Salón, Barras, Degustación de Pizzas y Mesa de Postres, 6 horas)",
+      "servicios": [
+        0,
+        1,
+        2,
+        6,
+        8
+      ]
+    },
+    {
+      "tag": "21:00 a 03:00 — con Finger Food y Mesa de Postres",
+      "label": "Total (Salón, Barras, Finger Food y Mesa de Postres, 6 horas)",
+      "servicios": [
+        0,
+        1,
+        2,
+        7,
+        8
+      ]
+    },
+    {
+      "tag": "21:00 a 05:00 — Salón + Barras",
+      "label": "Total (Salón y las dos barras, 8 horas)",
+      "servicios": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "tag": "21:00 a 05:00 — con Pizzas y Mesa de Postres",
+      "label": "Total (Salón, Barras, Degustación de Pizzas y Mesa de Postres, 8 horas)",
+      "servicios": [
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "tag": "21:00 a 05:00 — con Finger Food y Mesa de Postres",
+      "label": "Total (Salón, Barras, Finger Food y Mesa de Postres, 8 horas)",
+      "servicios": [
+        3,
+        4,
+        5,
+        7,
+        8
+      ]
+    }
+  ],
+  "nota": "Si entre los invitados hay menores de 12 años, avisanos cuántos son: el salón de los menores se cotiza a mitad de valor y no llevan barra, así ajustamos el total.",
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
