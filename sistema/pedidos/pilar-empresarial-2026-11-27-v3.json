@@ -2,25 +2,40 @@
   "slug": "pilar-empresarial-2026-11-27-v3",
   "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/pilar-empresarial-2026-11-27-v3/",
   "conversationId": "6ad64eeb07ea6a1133bd6cbd",
-  "mensaje_cliente": "Hola Pilar! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/pilar-empresarial-2026-11-27-v3/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "mensaje_cliente": "Hola Pilar! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/pilar-empresarial-2026-11-27-v3/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
   "totales": [
     [
-      "Total",
-      2117500
+      "Opción Base — Salón + Barra",
+      2467500
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      3715145
+    ],
+    [
+      "Opción B — Finger Food",
+      4047400
     ]
   ],
-  "avisos": [],
+  "avisos": [
+    "Barra de tragos (con alcohol): precio a mano $22.500 (tabla $22.500).",
+    "Salón (incluye personal completo y DJ): precio a mano $48.000 (tabla $38.000)."
+  ],
   "pedido": {
     "bebida_mesa": false,
-    "catering": "no",
+    "catering": "si",
     "cliente": "Pilar",
     "con_barra": false,
     "conversationId": "6ad64eeb07ea6a1133bd6cbd",
-    "fecha": "2026-11-27",
+    "fecha": "2026-11-28",
     "fechas_extra": [
-      "2026-11-28"
+      "2026-11-27"
     ],
     "invitados": 35,
+    "precios": {
+      "barra": 22500,
+      "salon": 48000
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "empresarial"
