@@ -6,15 +6,15 @@
   "totales": [
     [
       "Opción Base — Salón + Barra",
-      3070000
+      3370000
     ],
     [
       "Opción A — Degustación de Pizzas",
-      5259184
+      5559184
     ],
     [
       "Opción B — Finger Food",
-      5732912
+      6032912
     ]
   ],
   "avisos": [
@@ -25,7 +25,7 @@
     "Salón niños (menores de 12): precio a mano $14.500 (tabla $14.500).",
     "Degustación de Pizzas: precio a mano $18.500 (tabla $18.500).",
     "Mesa de Postres: precio a mano $15.706 (tabla $15.706).",
-    "Salón (incluye personal completo y DJ): precio a mano $29.000 (tabla $29.000)."
+    "Salón (incluye personal completo y DJ): precio a mano $34.000 (tabla $29.000)."
   ],
   "pedido": {
     "adolescentes": 18,
@@ -47,7 +47,7 @@
       "ninos": 14500,
       "pizza": 18500,
       "postres": 15706,
-      "salon": 29000
+      "salon": 34000
     },
     "sin_alcohol": 0,
     "sin_barra": false,
