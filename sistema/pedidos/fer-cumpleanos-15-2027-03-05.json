@@ -2,7 +2,7 @@
   "slug": "fer-cumpleanos-15-2027-03-05",
   "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/fer-cumpleanos-15-2027-03-05/",
   "conversationId": "6ad6a7ea702b2b8b45055306",
-  "mensaje_cliente": "Hola Fer! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/fer-cumpleanos-15-2027-03-05/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "mensaje_cliente": "Hola Fer! Acá va la propuesta para tu evento del 05/03, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/fer-cumpleanos-15-2027-03-05/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
   "totales": [
     [
       "Opción Base — Salón + Barra",
@@ -18,7 +18,14 @@
     ]
   ],
   "avisos": [
-    "El pedido decía 60 invitados; el desglose suma 67 y se usó ese."
+    "El pedido decía 60 invitados; el desglose suma 67 y se usó ese.",
+    "Barra de tragos adultos (con alcohol): precio a mano $22.500 (tabla $22.500).",
+    "Barra de tragos adolescentes (sin alcohol): precio a mano $15.750 (tabla $15.750).",
+    "Finger Food: precio a mano $25.902 (tabla $25.902).",
+    "Salón niños (menores de 12): precio a mano $14.500 (tabla $14.500).",
+    "Degustación de Pizzas: precio a mano $18.500 (tabla $18.500).",
+    "Mesa de Postres: precio a mano $15.706 (tabla $15.706).",
+    "Salón (incluye personal completo y DJ): precio a mano $29.000 (tabla $29.000)."
   ],
   "pedido": {
     "adolescentes": 18,
@@ -30,11 +37,18 @@
     "conversationId": "6ad6a7ea702b2b8b45055306",
     "edad": 15,
     "fecha": "2027-03-05",
-    "fechas_extra": [
-      "2027-03-06"
-    ],
+    "fechas_extra": [],
     "invitados": 60,
     "ninos": 7,
+    "precios": {
+      "barra": 22500,
+      "barra_teen": 15750,
+      "finger": 25902,
+      "ninos": 14500,
+      "pizza": 18500,
+      "postres": 15706,
+      "salon": 29000
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "cumple_15"
