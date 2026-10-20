@@ -1,0 +1,28 @@
+{
+  "slug": "pilar-empresarial-2026-11-27-v3",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/pilar-empresarial-2026-11-27-v3/",
+  "conversationId": "6ad64eeb07ea6a1133bd6cbd",
+  "mensaje_cliente": "Hola Pilar! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/pilar-empresarial-2026-11-27-v3/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      2117500
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Pilar",
+    "con_barra": false,
+    "conversationId": "6ad64eeb07ea6a1133bd6cbd",
+    "fecha": "2026-11-27",
+    "fechas_extra": [
+      "2026-11-28"
+    ],
+    "invitados": 35,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "empresarial"
+  }
+}
