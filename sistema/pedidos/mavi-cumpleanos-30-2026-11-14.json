@@ -1,0 +1,35 @@
+{
+  "slug": "mavi-cumpleanos-30-2026-11-14",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/mavi-cumpleanos-30-2026-11-14/",
+  "conversationId": "6ad7b02eb5a090ccc276b46c",
+  "mensaje_cliente": "Hola Mavi! Acá va la propuesta para tu evento del 14/11, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/mavi-cumpleanos-30-2026-11-14/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2625000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      5010300
+    ],
+    [
+      "Opción B — Finger Food",
+      5439250
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": true,
+    "catering": "si",
+    "cliente": "mavi",
+    "con_barra": false,
+    "conversationId": "6ad7b02eb5a090ccc276b46c",
+    "edad": 30,
+    "fecha": "2026-11-14",
+    "fechas_extra": [],
+    "invitados": 50,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumpleanos"
+  }
+}
