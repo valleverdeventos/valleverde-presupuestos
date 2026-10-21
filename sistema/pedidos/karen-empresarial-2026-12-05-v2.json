@@ -1,0 +1,39 @@
+{
+  "slug": "karen-empresarial-2026-12-05-v2",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/karen-empresarial-2026-12-05-v2/",
+  "conversationId": "6ad924cdf388f0b573c29438",
+  "mensaje_cliente": "Hola Karen! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/karen-empresarial-2026-12-05-v2/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón",
+      1740000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      3792360
+    ],
+    [
+      "Opción B — Finger Food",
+      4236480
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B.",
+    "Sin barra de tragos, como pediste."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Karen",
+    "con_barra": false,
+    "conversationId": "6ad924cdf388f0b573c29438",
+    "fecha": "2026-12-05",
+    "fechas_extra": [
+      "2026-12-06"
+    ],
+    "invitados": 60,
+    "sin_alcohol": 0,
+    "sin_barra": true,
+    "tipo": "empresarial"
+  }
+}
