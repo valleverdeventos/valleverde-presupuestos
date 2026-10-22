@@ -1,0 +1,36 @@
+{
+  "slug": "malena-casamiento-2027-02-13",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/malena-casamiento-2027-02-13/",
+  "conversationId": "6ada8ce8fcb94f6d6cccbc1c",
+  "mensaje_cliente": "Hola Malena! Acá va la propuesta para tu evento del 13/02, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/malena-casamiento-2027-02-13/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      3535000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      5929420
+    ],
+    [
+      "Opción B — Finger Food",
+      6384420
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Malena",
+    "con_barra": false,
+    "conversationId": "6ada8ce8fcb94f6d6cccbc1c",
+    "fecha": "2027-02-13",
+    "fechas_extra": [],
+    "invitados": 70,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "casamiento"
+  }
+}
