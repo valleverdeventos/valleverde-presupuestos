@@ -1,5 +1,5 @@
 {
-  "emitido": "21/10/2026",
+  "emitido": "22/10/2026",
   "titulo": "Evento empresarial",
   "cliente": "Karen",
   "fecha": "Domingo 06/12/2026",
@@ -8,12 +8,12 @@
   "servicios": [
     {
       "nombre": "Salón (incluye personal completo y DJ)",
-      "precio": 29000,
+      "precio": 38000,
       "cantidad": 60
     },
     {
       "nombre": "Barra de tragos (con alcohol)",
-      "precio": 22500,
+      "precio": 24500,
       "cantidad": 60
     },
     {
