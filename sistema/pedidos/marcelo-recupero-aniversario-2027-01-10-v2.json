@@ -1,0 +1,38 @@
+{
+  "slug": "marcelo-recupero-aniversario-2027-01-10-v2",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/marcelo-recupero-aniversario-2027-01-10-v2/",
+  "conversationId": "6adb6f97a5c1d33df323e4eb",
+  "mensaje_cliente": "Hola Marcelo! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/marcelo-recupero-aniversario-2027-01-10-v2/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      4662000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      8478480
+    ],
+    [
+      "Opción B — Finger Food",
+      8998480
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": true,
+    "catering": "si",
+    "cliente": "Marcelo Recupero",
+    "con_barra": false,
+    "conversationId": "6adb6f97a5c1d33df323e4eb",
+    "fecha": "2027-01-10",
+    "fechas_extra": [
+      "2027-01-09",
+      "2027-01-10"
+    ],
+    "invitados": 80,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "otro",
+    "titulo": "Aniversario"
+  }
+}
