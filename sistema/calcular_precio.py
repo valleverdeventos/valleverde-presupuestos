@@ -39,17 +39,19 @@ BASE = {
 # Historial del valor:
 #   11/07/2026 -> 19500
 #   03/08/2026 -> 21500
-#   22/09/2026 -> 22500  (vigente)
-BARRA_ADULTOS_FIJO = 22500
+#   22/09/2026 -> 22500
+#   22/10/2026 -> 25875  (vigente, +15%)
+BARRA_ADULTOS_FIJO = 25875
 
-# Salon: tabla propia por cantidad de invitados (fijada por Gian el 27/09/2026).
+# Salon: tabla propia por cantidad de invitados (fijada por Gian el 27/09/2026,
+# aumentada un 20% el 22/10/2026).
 # Es el valor final por persona para 6 horas, con o sin catering: reemplaza la
 # columna "salon" de BASE, el factor de ajuste y los pisos del salon del
 # 17/09/2026 ($29.000 y $33.000 sin catering), que dejan de regir.
 # Entre filas se toma la de abajo; menos de 25 va con 25 y mas de 90 con 90.
 # Vale para presupuestos nuevos: los ya emitidos solo se actualizan por INDEC.
-SALON_TABLA = {25: 52000, 30: 44000, 35: 38000, 40: 34000, 45: 32000,
-               50: 30000, 60: 29000, 70: 28000, 80: 27000, 90: 26000}
+SALON_TABLA = {25: 62400, 30: 52800, 35: 45600, 40: 40800, 45: 38400,
+               50: 36000, 60: 34800, 70: 33600, 80: 32400, 90: 31200}
 
 # Piso por persona de la degustacion de pizzas (17/09/2026): nunca baja de este
 # valor; en escalas chicas, donde la tabla ya da mas, se mantiene la tabla.
