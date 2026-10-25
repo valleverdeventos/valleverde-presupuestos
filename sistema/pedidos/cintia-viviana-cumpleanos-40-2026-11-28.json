@@ -1,0 +1,36 @@
+{
+  "slug": "cintia-viviana-cumpleanos-40-2026-11-28",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/cintia-viviana-cumpleanos-40-2026-11-28/",
+  "conversationId": "6addf929aea1d23d9b959b2c",
+  "mensaje_cliente": "Hola Cintia! Acá va la propuesta para tu evento del 28/11, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/cintia-viviana-cumpleanos-40-2026-11-28/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2892375
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      4445235
+    ],
+    [
+      "Opción B — Finger Food",
+      4870665
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "si",
+    "cliente": "Cintia Viviana Pulgar",
+    "con_barra": false,
+    "conversationId": "6addf929aea1d23d9b959b2c",
+    "edad": 40,
+    "fecha": "2026-11-28",
+    "fechas_extra": [],
+    "horario": "18:00 a 00:00",
+    "invitados": 45,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumpleanos"
+  }
+}
