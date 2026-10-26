@@ -6,18 +6,20 @@
   "totales": [
     [
       "Opción Base — Salón + Barra",
-      4163250
+      4261250
     ],
     [
       "Opción A — Degustación de Pizzas",
-      7502670
+      7600670
     ],
     [
       "Opción B — Finger Food",
-      7957670
+      8055670
     ]
   ],
-  "avisos": [],
+  "avisos": [
+    "Salón (incluye personal completo y DJ): precio a mano $35.000 (tabla $33.600)."
+  ],
   "pedido": {
     "bebida_mesa": true,
     "catering": "si",
@@ -27,6 +29,9 @@
     "fecha": "2026-11-14",
     "fechas_extra": [],
     "invitados": 70,
+    "precios": {
+      "salon": 35000
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "empresarial"
