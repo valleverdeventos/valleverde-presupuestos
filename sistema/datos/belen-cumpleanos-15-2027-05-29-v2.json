@@ -1,5 +1,5 @@
 {
-  "emitido": "25/10/2026",
+  "emitido": "26/10/2026",
   "titulo": "Cumpleaños de 15",
   "cliente": "Belen",
   "fecha": "Sábado 29/05/2027",
@@ -9,7 +9,7 @@
   "servicios": [
     {
       "nombre": "Salón (incluye personal completo y DJ)",
-      "precio": 32400,
+      "precio": 39000,
       "cantidad": 80
     },
     {

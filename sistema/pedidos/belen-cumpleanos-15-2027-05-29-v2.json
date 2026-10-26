@@ -6,10 +6,12 @@
   "totales": [
     [
       "Total",
-      4351480
+      4879480
     ]
   ],
-  "avisos": [],
+  "avisos": [
+    "Salón (incluye personal completo y DJ): precio a mano $39.000 (tabla $32.400)."
+  ],
   "pedido": {
     "adolescentes": 40,
     "adultos": 40,
@@ -22,6 +24,9 @@
     "fecha": "2027-05-29",
     "fechas_extra": [],
     "invitados": 80,
+    "precios": {
+      "salon": 39000
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "cumple_15"
