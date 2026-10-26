@@ -1,0 +1,29 @@
+{
+  "slug": "belen-cumpleanos-15-2027-05-29-v2",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/belen-cumpleanos-15-2027-05-29-v2/",
+  "conversationId": "6adeb73c3a3f8f7ab19547c9",
+  "mensaje_cliente": "Hola Belen! Acá va la propuesta para tu evento del 29/05, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/belen-cumpleanos-15-2027-05-29-v2/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      4351480
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "adolescentes": 40,
+    "adultos": 40,
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Belen",
+    "con_barra": false,
+    "conversationId": "6adeb73c3a3f8f7ab19547c9",
+    "edad": 15,
+    "fecha": "2027-05-29",
+    "fechas_extra": [],
+    "invitados": 80,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumple_15"
+  }
+}
