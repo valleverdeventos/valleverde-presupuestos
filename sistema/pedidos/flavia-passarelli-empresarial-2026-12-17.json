@@ -1,0 +1,36 @@
+{
+  "slug": "flavia-passarelli-empresarial-2026-12-17",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/flavia-passarelli-empresarial-2026-12-17/",
+  "conversationId": "6ae0ff6d0b4f99dea9d954da",
+  "mensaje_cliente": "Hola Flavia! Acá va la propuesta para tu evento del 17/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/flavia-passarelli-empresarial-2026-12-17/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2360250
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      3429660
+    ],
+    [
+      "Opción B — Finger Food",
+      3714450
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Flavia Passarelli",
+    "con_barra": false,
+    "conversationId": "6ae0ff6d0b4f99dea9d954da",
+    "fecha": "2026-12-17",
+    "fechas_extra": [],
+    "invitados": 30,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "empresarial"
+  }
+}
