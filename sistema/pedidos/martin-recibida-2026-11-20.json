@@ -5,23 +5,27 @@
   "mensaje_cliente": "Hola Martin! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/martin-recibida-2026-11-20/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
   "totales": [
     [
-      "Total salón",
-      1900000
+      "Total salón + barra",
+      3193750
     ]
   ],
-  "avisos": [],
+  "avisos": [
+    "Con barra de tragos de adultos, como pediste."
+  ],
   "pedido": {
     "bebida_mesa": false,
     "catering": "no_dice",
     "cliente": "Martin",
-    "con_barra": false,
+    "con_barra": true,
     "conversationId": "6ae1070f76de4ba40afc9e92",
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-27",
     "fechas_extra": [
-      "2026-11-27",
       "2026-12-04"
     ],
     "invitados": 50,
+    "precios": {
+      "salon": 38000
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "recibida"
