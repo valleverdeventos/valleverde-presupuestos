@@ -2,31 +2,33 @@
   "slug": "ariela-graduacion-2026-12-18-v2",
   "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/ariela-graduacion-2026-12-18-v2/",
   "conversationId": "6adfea7e680ac51f4bd330c5",
-  "mensaje_cliente": "Hola Ariela! Acá va la propuesta para tu evento del 18/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/ariela-graduacion-2026-12-18-v2/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "mensaje_cliente": "Hola Ariela! Acá va la propuesta para tu evento del 18/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/ariela-graduacion-2026-12-18-v2/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
   "totales": [
     [
-      "Opción Base — Salón + Barra",
+      "Total",
       2667000
-    ],
-    [
-      "Opción A — Degustación de Pizzas",
-      4047320
-    ],
-    [
-      "Opción B — Finger Food",
-      4425480
     ]
   ],
-  "avisos": [],
+  "avisos": [
+    "Barra de tragos (con alcohol): precio a mano $25.875 (tabla $25.875).",
+    "Salón (incluye personal completo y DJ): precio a mano $40.800 (tabla $40.800)."
+  ],
   "pedido": {
     "bebida_mesa": false,
-    "catering": "si",
+    "catering": "no",
     "cliente": "Ariela",
     "con_barra": false,
     "conversationId": "6adfea7e680ac51f4bd330c5",
     "fecha": "2026-12-18",
     "fechas_extra": [],
     "invitados": 40,
+    "precios": {
+      "barra": 25875,
+      "finger": 28256,
+      "pizza": 18802,
+      "postres": 0,
+      "salon": 40800
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "otro",
