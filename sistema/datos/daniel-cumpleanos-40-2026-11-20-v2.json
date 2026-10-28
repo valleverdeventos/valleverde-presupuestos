@@ -1,5 +1,5 @@
 {
-  "emitido": "27/10/2026",
+  "emitido": "28/10/2026",
   "titulo": "Cumpleaños 40 años",
   "cliente": "Daniel",
   "fecha": "Viernes 20/11/2026",
@@ -8,7 +8,7 @@
   "servicios": [
     {
       "nombre": "Salón (incluye personal completo y DJ)",
-      "precio": 36000,
+      "precio": 39000,
       "cantidad": 50
     },
     {

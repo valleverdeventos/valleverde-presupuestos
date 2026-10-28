@@ -6,10 +6,13 @@
   "totales": [
     [
       "Total",
-      3093750
+      3243750
     ]
   ],
-  "avisos": [],
+  "avisos": [
+    "Barra de tragos (con alcohol): precio a mano $25.875 (tabla $25.875).",
+    "Salón (incluye personal completo y DJ): precio a mano $39.000 (tabla $36.000)."
+  ],
   "pedido": {
     "bebida_mesa": false,
     "catering": "no",
@@ -20,6 +23,10 @@
     "fecha": "2026-11-20",
     "fechas_extra": [],
     "invitados": 50,
+    "precios": {
+      "barra": 25875,
+      "salon": 39000
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "cumpleanos"
