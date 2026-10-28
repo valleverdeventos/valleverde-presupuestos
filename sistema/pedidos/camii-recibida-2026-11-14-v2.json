@@ -5,18 +5,19 @@
   "mensaje_cliente": "Hola Camii! Acá va la propuesta para tu evento del 14/11, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/camii-recibida-2026-11-14-v2/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
   "totales": [
     [
-      "Total salón",
-      1216000
+      "Total salón + barra",
+      2044000
     ]
   ],
   "avisos": [
+    "Con barra de tragos de adultos, como pediste.",
     "La recibida se ofrece sólo viernes y la fecha pedida no es viernes."
   ],
   "pedido": {
     "bebida_mesa": false,
-    "catering": "no_dice",
+    "catering": "si",
     "cliente": "camii",
-    "con_barra": false,
+    "con_barra": true,
     "conversationId": "6ae21d1fe2d7c2980c1484e3",
     "fecha": "2026-11-14",
     "fechas_extra": [],
