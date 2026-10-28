@@ -1,0 +1,27 @@
+{
+  "slug": "daniel-cumpleanos-40-2026-11-20-v2",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/daniel-cumpleanos-40-2026-11-20-v2/",
+  "conversationId": "6ae1630b455db8bd59dff072",
+  "mensaje_cliente": "Hola Daniel! Acá va la propuesta para tu evento del 20/11, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/daniel-cumpleanos-40-2026-11-20-v2/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      3093750
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Daniel",
+    "con_barra": false,
+    "conversationId": "6ae1630b455db8bd59dff072",
+    "edad": 40,
+    "fecha": "2026-11-20",
+    "fechas_extra": [],
+    "invitados": 50,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumpleanos"
+  }
+}
