@@ -1,0 +1,28 @@
+{
+  "slug": "fiore-recibida-2026-12-18-v2",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/fiore-recibida-2026-12-18-v2/",
+  "conversationId": "6ae2a9631d1bd613133ff013",
+  "mensaje_cliente": "Hola Fiore! Acá va la propuesta para tu evento del 18/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/fiore-recibida-2026-12-18-v2/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total salón",
+      4560000
+    ]
+  ],
+  "avisos": [
+    "Más de 90 invitados: los unitarios salen de la escala 90."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Fiore",
+    "con_barra": false,
+    "conversationId": "6ae2a9631d1bd613133ff013",
+    "fecha": "2026-12-18",
+    "fechas_extra": [],
+    "invitados": 120,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "recibida"
+  }
+}
