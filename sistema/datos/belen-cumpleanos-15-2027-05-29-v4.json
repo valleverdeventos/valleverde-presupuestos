@@ -9,7 +9,7 @@
   "servicios": [
     {
       "nombre": "Salón (incluye personal completo y DJ)",
-      "precio": 32400,
+      "precio": 39000,
       "cantidad": 80
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "nombre": "Barra de tragos adolescentes (sin alcohol)",
-      "precio": 18112,
+      "precio": 19500,
       "cantidad": 40
     },
     {
