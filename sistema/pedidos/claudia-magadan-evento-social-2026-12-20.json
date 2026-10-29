@@ -1,0 +1,35 @@
+{
+  "slug": "claudia-magadan-evento-social-2026-12-20",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/claudia-magadan-evento-social-2026-12-20/",
+  "conversationId": null,
+  "mensaje_cliente": "Hola Claudia! Acá va la propuesta para tu evento del 20/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/claudia-magadan-evento-social-2026-12-20/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      3640500
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      5692860
+    ],
+    [
+      "Opción B — Finger Food",
+      6136980
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "si",
+    "cliente": "Claudia Magadan",
+    "con_barra": true,
+    "fecha": "2026-12-20",
+    "fechas_extra": [],
+    "horario": "12:30 a 17:30",
+    "invitados": 60,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "otro",
+    "titulo": "evento social"
+  }
+}
