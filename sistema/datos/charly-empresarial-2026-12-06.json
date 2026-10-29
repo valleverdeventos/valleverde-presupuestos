@@ -1,13 +1,13 @@
 {
   "emitido": "29/10/2026",
   "titulo": "Evento empresarial",
-  "cliente": "Charly",
+  "cliente": "ap Tienda de Aromas (atención Charly)",
   "fecha": "Domingo 06/12/2026",
   "horario": "21:00 a 03:00",
   "invitados": 30,
   "servicios": [
     {
-      "nombre": "Salón (incluye personal completo y DJ)",
+      "nombre": "Salón (incluye personal completo, DJ y música de ambiente)",
       "precio": 52800,
       "cantidad": 30
     },
@@ -17,7 +17,7 @@
       "cantidad": 30
     }
   ],
-  "aviso": "Esta propuesta corresponde a nuestra opción base \"Salón + Barra de tragos\" para el total de invitados. El catering puede estar a cargo del cliente; si están interesados, les enviamos aparte el presupuesto actualizado con nuestro catering (finger food, degustación de pizzas, mesa de postres, bebida de mesa) a elección. El servicio de salón incluye personal completo y DJ.",
+  "aviso": "Esta propuesta corresponde a nuestra opción base \"Salón + Barra de tragos\" para el total de invitados. El catering puede estar a cargo del cliente; si están interesados, les enviamos aparte el presupuesto actualizado con nuestro catering (finger food, degustación de pizzas, mesa de postres, bebida de mesa) a elección. El servicio de salón incluye personal completo, DJ y música de ambiente.",
   "terminos": [
     "Seña 35%: con la reserva del salón.",
     "Saldo 65%: 20 días antes del evento.",
