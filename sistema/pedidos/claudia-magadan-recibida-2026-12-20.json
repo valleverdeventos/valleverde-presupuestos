@@ -1,0 +1,29 @@
+{
+  "slug": "claudia-magadan-recibida-2026-12-20",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/claudia-magadan-recibida-2026-12-20/",
+  "conversationId": "6ae383ef834db45ebddb34ea",
+  "mensaje_cliente": "Hola Claudia! Acá va la propuesta para tu evento del 20/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/claudia-magadan-recibida-2026-12-20/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total salón",
+      2280000
+    ]
+  ],
+  "avisos": [
+    "La recibida se ofrece sólo viernes y la fecha pedida no es viernes."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "si",
+    "cliente": "Claudia Magadan",
+    "con_barra": false,
+    "conversationId": "6ae383ef834db45ebddb34ea",
+    "fecha": "2026-12-20",
+    "fechas_extra": [],
+    "horario": "12:30 a 17:30",
+    "invitados": 60,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "recibida"
+  }
+}
