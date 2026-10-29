@@ -8,12 +8,12 @@
   "servicios": [
     {
       "nombre": "Salón (incluye personal completo y DJ)",
-      "precio": 34800,
+      "precio": 29000,
       "cantidad": 60
     },
     {
       "nombre": "Barra de tragos (con alcohol)",
-      "precio": 25875,
+      "precio": 21000,
       "cantidad": 60
     },
     {
