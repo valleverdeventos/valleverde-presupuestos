@@ -45,7 +45,7 @@ El slug es el nombre de la carpeta en `presupuestos/`, con el formato
   "invitados": 50,
   "aviso": "Propuesta: Salón + Barra de tragos + Finger Food...",
   "servicios": [
-    { "nombre": "Salón (incluye personal completo y DJ)", "precio": 26200 },
+    { "nombre": "Salón (incluye personal completo, DJ y música de ambiente)", "precio": 26200 },
     { "nombre": "Barra de tragos (con alcohol)", "precio": 21000 }
   ],
   "terminos": [
