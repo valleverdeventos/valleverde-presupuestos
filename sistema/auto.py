@@ -100,7 +100,7 @@ AVISO_CON_CATERING_SIN_BARRA = (
     "final se ajusta según los servicios que efectivamente se elijan. Ambas opciones incluyen "
     "mesa de postres."
 )
-AVISO_SALON = "El servicio de salón incluye personal completo y DJ."
+AVISO_SALON = "El servicio de salón incluye personal completo, DJ y música de ambiente."
 
 # Formato recibida: paquete cerrado de /presu (13/09/2026), no usa el motor.
 RECIBIDA_SALON = 38000
@@ -236,7 +236,7 @@ def servicios_con_motor(tipo, adultos, adolescentes, ninos, catering, bebida, ex
         servicios.append({"nombre": nombre, "precio": precio, "cantidad": cantidad})
 
     # En cumple de 15 el salón va en una sola línea con el total (regla 17/08/2026).
-    agregar("salon", "Salón (incluye personal completo y DJ)",
+    agregar("salon", "Salón (incluye personal completo, DJ y música de ambiente)",
             items["Salón"]["precio_unitario"], adultos + adolescentes)
     barra = items["Barra adultos"]["precio_unitario"]
     # El motor no calcula la barra sin alcohol (adolescentes o adultos que no toman): 70% de la vigente.
@@ -326,6 +326,12 @@ def armar_datos(p):
             datos["recibida_con_barra"] = True
         if fecha and fecha.weekday() != 4:
             avisos.append("La recibida se ofrece sólo viernes y la fecha pedida no es viernes.")
+        if (p.get("catering") or "no_dice") == "si" or p.get("bebida_mesa"):
+            # El paquete de recibida no lleva catering ni bebida: si se pidieron, se avisa
+            # en vez de descartarlos en silencio (Claudia, 29/10/2026).
+            avisos.append("Pediste catering o bebida de mesa, pero el paquete de recibida no los "
+                          "incluye y salieron afuera. Si los querés adentro, armalo como evento "
+                          "social en vez de recibida.")
         return armar_slug(p, tipo_slug, fecha_slug), datos, avisos
 
     catering = (p.get("catering") or "no_dice") != "no"
