@@ -24,6 +24,7 @@
     "horario": "12:30 a 17:30",
     "invitados": 60,
     "precios": {
+      "barra": 25875,
       "salon": 38000
     },
     "sin_alcohol": 0,
