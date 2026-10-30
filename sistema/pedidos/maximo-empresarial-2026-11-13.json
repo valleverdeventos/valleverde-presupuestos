@@ -1,0 +1,36 @@
+{
+  "slug": "maximo-empresarial-2026-11-13",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/maximo-empresarial-2026-11-13/",
+  "conversationId": "6ae49d460747ee630310c109",
+  "mensaje_cliente": "Hola Maximo! Acá va la propuesta para tu evento del 13/11, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/maximo-empresarial-2026-11-13/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2501625
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      4221770
+    ],
+    [
+      "Opción B — Finger Food",
+      4554025
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": true,
+    "catering": "no_dice",
+    "cliente": "Maximo",
+    "con_barra": false,
+    "conversationId": "6ae49d460747ee630310c109",
+    "fecha": "2026-11-13",
+    "fechas_extra": [],
+    "invitados": 35,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "empresarial"
+  }
+}
