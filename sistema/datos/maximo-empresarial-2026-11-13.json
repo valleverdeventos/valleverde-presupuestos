@@ -1,5 +1,5 @@
 {
-  "emitido": "30/10/2026",
+  "emitido": "31/10/2026",
   "titulo": "Evento empresarial",
   "cliente": "Maximo",
   "fecha": "Viernes 13/11/2026",
@@ -30,11 +30,6 @@
       "nombre": "Mesa de Postres",
       "precio": 15706,
       "cantidad": 35
-    },
-    {
-      "nombre": "Bebida de Mesa",
-      "precio": 13500,
-      "cantidad": 35
     }
   ],
   "aviso": "Esta propuesta contempla dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores. El presupuesto final se ajusta según los servicios que efectivamente se elijan, manteniendo siempre nuestra opción base \"Salón + Barra de tragos\". Ambas opciones incluyen mesa de postres. El servicio de salón incluye personal completo, DJ y música de ambiente.",
@@ -49,24 +44,22 @@
     },
     {
       "tag": "Opción A — Degustación de Pizzas",
-      "label": "Total (incluye Salón, Barra, Degustación de Pizzas, Mesa de Postres y Bebida de Mesa)",
+      "label": "Total (incluye Salón, Barra, Degustación de Pizzas y Mesa de Postres)",
       "servicios": [
         0,
         1,
         2,
-        4,
-        5
+        4
       ]
     },
     {
       "tag": "Opción B — Finger Food",
-      "label": "Total (incluye Salón, Barra, Finger Food, Mesa de Postres y Bebida de Mesa)",
+      "label": "Total (incluye Salón, Barra, Finger Food y Mesa de Postres)",
       "servicios": [
         0,
         1,
         3,
-        4,
-        5
+        4
       ]
     }
   ],

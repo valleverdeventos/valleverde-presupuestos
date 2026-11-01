@@ -10,18 +10,23 @@
     ],
     [
       "Opción A — Degustación de Pizzas",
-      4221770
+      3749270
     ],
     [
       "Opción B — Finger Food",
-      4554025
+      4081525
     ]
   ],
   "avisos": [
-    "El cliente no dijo si quiere catering: van las opciones A y B."
+    "El cliente no dijo si quiere catering: van las opciones A y B.",
+    "Barra de tragos (con alcohol): precio a mano $25.875 (tabla $25.875).",
+    "Finger Food: precio a mano $29.434 (tabla $29.434).",
+    "Degustación de Pizzas: precio a mano $19.941 (tabla $19.941).",
+    "Mesa de Postres: precio a mano $15.706 (tabla $15.706).",
+    "Salón (incluye personal completo, DJ y música de ambiente): precio a mano $45.600 (tabla $45.600)."
   ],
   "pedido": {
-    "bebida_mesa": true,
+    "bebida_mesa": false,
     "catering": "no_dice",
     "cliente": "Maximo",
     "con_barra": false,
@@ -29,6 +34,14 @@
     "fecha": "2026-11-13",
     "fechas_extra": [],
     "invitados": 35,
+    "precios": {
+      "barra": 25875,
+      "bebida": 13500,
+      "finger": 29434,
+      "pizza": 19941,
+      "postres": 15706,
+      "salon": 45600
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "empresarial"
