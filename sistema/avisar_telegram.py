@@ -1,11 +1,13 @@
 """Manda a Gian, por el bot de presupuestos, el presupuesto armado por auto.py.
 
-    python sistema/avisar_telegram.py <slug> [--url URL]
+    python sistema/avisar_telegram.py <slug> [--url URL] [--demorado]
     python sistema/avisar_telegram.py --error <archivo con el error> [pedido.json]
 
 Lee `sistema/pedidos/<slug>.json`. Con `--url` cambia el link (por ejemplo al
 espejo de Cloudflare si Pages no respondió) y lo reescribe en el registro y en
-el mensaje para el cliente.
+el mensaje para el cliente. Con `--demorado` avisa que la página todavía no se
+servía cuando se armó: el presupuesto está bien, el link puede tardar unos
+minutos en abrir.
 
 Botones: "Aprobar y enviar" (sólo si el pedido vino de un WhatsApp, callback
 `ok:<slug>`), "Ajustar" (callback `aj:<slug>`) y "Ver presupuesto" (link).
@@ -23,6 +25,10 @@ import urllib.request
 
 SISTEMA = pathlib.Path(__file__).resolve().parent
 PEDIDOS = SISTEMA / "pedidos"
+
+DEMORA = ("GitHub Pages todavía no servía la página cuando se armó. El presupuesto está "
+          "publicado igual: si el link no abre o muestra una versión vieja, esperá un par "
+          "de minutos y recargá antes de mandárselo al cliente.")
 
 
 def pesos(n):
@@ -48,7 +54,7 @@ def enviar(texto, botones=None):
         return json.load(r)
 
 
-def avisar_presupuesto(slug, url=None):
+def avisar_presupuesto(slug, url=None, demorado=False):
     archivo = PEDIDOS / f"{slug}.json"
     reg = json.loads(archivo.read_text(encoding="utf-8"))
     if url and url != reg["url"]:
@@ -63,6 +69,8 @@ def avisar_presupuesto(slug, url=None):
     lineas += [f"{e(k)}: <b>{pesos(v)}</b>" for k, v in reg["totales"]]
     if reg["avisos"]:
         lineas += [""] + [f"• {e(a)}" for a in reg["avisos"]]
+    if demorado:
+        lineas += ["", f"⏳ {e(DEMORA)}"]
     if not reg.get("conversationId"):
         lineas += ["", "No vino de un WhatsApp: el link lo mandás vos."]
     # El link del bot lleva ?v=: el navegador guarda la versión anterior de la página y, tras
@@ -90,10 +98,10 @@ def avisar_error(archivo_error, archivo_pedido=None):
 def main():
     args = sys.argv[1:]
     if args[:1] == ["--error"] and len(args) >= 2:
-        avisar_error(*args[1:3])
+        avisar_error(*[a for a in args[1:3] if not a.startswith("--")])
     elif args and not args[0].startswith("--"):
         url = args[args.index("--url") + 1] if "--url" in args else None
-        avisar_presupuesto(args[0], url)
+        avisar_presupuesto(args[0], url, "--demorado" in args)
     else:
         print(__doc__)
         return 1
