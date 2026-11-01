@@ -27,7 +27,7 @@ env:
 jobs:
   armar:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -84,21 +84,25 @@ jobs:
           slug="${{ steps.armar.outputs.slug }}"
           local=$(sha256sum "presupuestos/$slug/index.html" | cut -d' ' -f1)
           pages="https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/$slug/"
-          # Pages es el default; Cloudflare sólo si Pages no sirve la versión nueva en 5 minutos.
-          for i in $(seq 1 30); do
+          # Pages es el default; Cloudflare sólo si Pages no sirve la versión nueva en 10 minutos.
+          for i in $(seq 1 60); do
             remoto=$(curl -sfL "$pages?v=$GITHUB_RUN_ID" | sha256sum | cut -d' ' -f1)
             if [ "$remoto" = "$local" ]; then echo "url=$pages" >> "$GITHUB_OUTPUT"; exit 0; fi
             sleep 10
           done
           cf="$CLOUDFLARE$slug/"
           if curl -sfL "$cf" -o /dev/null; then echo "url=$cf" >> "$GITHUB_OUTPUT"; exit 0; fi
-          echo "Ni Pages ni Cloudflare sirven $slug" > "$RUNNER_TEMP/error.txt"
-          exit 1
+          # El presupuesto ya está publicado: que Pages tarde no puede dejar a Gian sin el
+          # link (Máximo, 30/10/2026). Se manda igual, avisando que puede demorar en verse.
+          echo "url=$pages" >> "$GITHUB_OUTPUT"
+          echo "demorado=1" >> "$GITHUB_OUTPUT"
 
       - name: Mandar al bot de presupuestos
         run: |
           slug="${{ steps.armar.outputs.slug }}"
-          python sistema/avisar_telegram.py "$slug" --url "${{ steps.link.outputs.url }}"
+          demorado=""
+          [ "${{ steps.link.outputs.demorado }}" = "1" ] && demorado="--demorado"
+          python sistema/avisar_telegram.py "$slug" --url "${{ steps.link.outputs.url }}" $demorado
           # Si el link terminó siendo el de Cloudflare, el registro cambió: se sube.
           if ! git diff --quiet; then
             git commit -am "Presupuesto automático: $slug (link de respaldo)"
