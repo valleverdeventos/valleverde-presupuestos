@@ -10,11 +10,12 @@
     ]
   ],
   "avisos": [
-    "Con barra de tragos de adultos, como pediste."
+    "Con barra de tragos de adultos, como pediste.",
+    "Pediste catering o bebida de mesa, pero el paquete de recibida no los incluye y salieron afuera. Si los querés adentro, armalo como evento social en vez de recibida."
   ],
   "pedido": {
     "bebida_mesa": false,
-    "catering": "no_dice",
+    "catering": "si",
     "cliente": "Carmen",
     "con_barra": true,
     "conversationId": "6ae7b4f4787533f0695abd72",
@@ -25,6 +26,7 @@
     ],
     "invitados": 50,
     "precios": {
+      "barra": 25875,
       "salon": 38000
     },
     "sin_alcohol": 0,
