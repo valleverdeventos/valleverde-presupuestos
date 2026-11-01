@@ -12,6 +12,11 @@
       "cantidad": 50
     },
     {
+      "nombre": "Barra de tragos (con alcohol)",
+      "precio": 25875,
+      "cantidad": 50
+    },
+    {
       "nombre": "Degustación de Pizzas",
       "precio": 18500,
       "cantidad": 50
@@ -25,38 +30,34 @@
       "nombre": "Mesa de Postres",
       "precio": 15706,
       "cantidad": 50
-    },
-    {
-      "nombre": "Bebida de Mesa",
-      "precio": 13500,
-      "cantidad": 50
     }
   ],
-  "aviso": "Esta propuesta contempla el salón sin barra de tragos y dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores. El presupuesto final se ajusta según los servicios que efectivamente se elijan. Ambas opciones incluyen mesa de postres. El servicio de salón incluye personal completo, DJ y música de ambiente.",
+  "aviso": "Esta propuesta contempla dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores. El presupuesto final se ajusta según los servicios que efectivamente se elijan, manteniendo siempre nuestra opción base \"Salón + Barra de tragos\". Ambas opciones incluyen mesa de postres. El servicio de salón incluye personal completo, DJ y música de ambiente.",
   "opciones": [
     {
-      "tag": "Opción Base — Salón",
-      "label": "Total (Salón)",
+      "tag": "Opción Base — Salón + Barra",
+      "label": "Total (Salón + Barra de tragos)",
       "servicios": [
-        0
+        0,
+        1
       ]
     },
     {
       "tag": "Opción A — Degustación de Pizzas",
-      "label": "Total (incluye Salón, Degustación de Pizzas, Mesa de Postres y Bebida de Mesa)",
+      "label": "Total (incluye Salón, Barra, Degustación de Pizzas y Mesa de Postres)",
       "servicios": [
         0,
         1,
-        3,
+        2,
         4
       ]
     },
     {
       "tag": "Opción B — Finger Food",
-      "label": "Total (incluye Salón, Finger Food, Mesa de Postres y Bebida de Mesa)",
+      "label": "Total (incluye Salón, Barra, Finger Food y Mesa de Postres)",
       "servicios": [
         0,
-        2,
+        1,
         3,
         4
       ]

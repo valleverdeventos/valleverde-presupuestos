@@ -5,27 +5,30 @@
   "mensaje_cliente": "Hola Carmen! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/carmen-recibida-2026-11-28/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
   "totales": [
     [
-      "Opción Base — Salón",
-      1900000
+      "Opción Base — Salón + Barra",
+      3193750
     ],
     [
       "Opción A — Degustación de Pizzas",
-      4285300
+      4904050
     ],
     [
       "Opción B — Finger Food",
-      4714250
+      5333000
     ]
   ],
   "avisos": [
-    "Sin barra de tragos, como pediste.",
+    "Barra de tragos (con alcohol): precio a mano $25.875 (tabla $25.875).",
+    "Finger Food: precio a mano $27.079 (tabla $27.079).",
+    "Degustación de Pizzas: precio a mano $18.500 (tabla $18.500).",
+    "Mesa de Postres: precio a mano $15.706 (tabla $15.706).",
     "Salón (incluye personal completo, DJ y música de ambiente): precio a mano $38.000 (tabla $36.000)."
   ],
   "pedido": {
-    "bebida_mesa": true,
+    "bebida_mesa": false,
     "catering": "si",
     "cliente": "Carmen",
-    "con_barra": false,
+    "con_barra": true,
     "conversationId": "6ae7b4f4787533f0695abd72",
     "fecha": "2026-12-04",
     "fechas_extra": [
@@ -35,10 +38,14 @@
     "invitados": 50,
     "precios": {
       "barra": 25875,
+      "bebida": 13500,
+      "finger": 27079,
+      "pizza": 18500,
+      "postres": 15706,
       "salon": 38000
     },
     "sin_alcohol": 0,
-    "sin_barra": true,
+    "sin_barra": false,
     "tipo": "recibida"
   }
 }
