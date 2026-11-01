@@ -105,6 +105,7 @@ AVISO_SALON = "El servicio de salón incluye personal completo, DJ y música de 
 # viernes, sin catering ni bebida). Lo sacó Gian porque le ataba las manos: ahora una
 # recibida se cotiza como cualquier otro evento, con todos los servicios disponibles.
 # Lo único que conserva es el título "Fiesta de Recibida".
+RECIBIDA_SALON_VIEJO = 38000   # para no arrastrarlo al ajustar una recibida de antes
 
 
 class PedidoInvalido(ValueError):
@@ -310,7 +311,15 @@ def armar_datos(p):
     servicios, idx = servicios_con_motor(tipo, adultos, adolescentes, ninos, catering, bebida, extra,
                                          sin_alcohol, sin_barra)
     # Precios que Gian fija a mano desde el bot ("poné el salón a 15.000"): pisan la tabla.
-    for clave, precio in (p.get("precios") or {}).items():
+    precios = dict(p.get("precios") or {})
+    if tipo == "recibida" and precios.get("salon") == RECIBIDA_SALON_VIEJO:
+        # Los ajustes conservan los precios del presupuesto original, y los de una recibida
+        # vieja son los del paquete cerrado que ya no existe: el salón quedaba clavado en
+        # $38.000 para siempre (Carmen, 01/11/2026). No es un precio que haya puesto Gian.
+        precios.pop("salon")
+        avisos.append(f"Era del paquete viejo de recibida: el salón sale de la tabla, "
+                      f"no de los {pesos(RECIBIDA_SALON_VIEJO)} de aquel formato.")
+    for clave, precio in precios.items():
         if precio and clave in idx:
             s = servicios[idx[clave]]
             avisos.append(f"{s['nombre']}: precio a mano {pesos(precio)} (tabla {pesos(s['precio'])}).")
