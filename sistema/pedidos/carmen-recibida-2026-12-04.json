@@ -1,0 +1,33 @@
+{
+  "slug": "carmen-recibida-2026-12-04",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/carmen-recibida-2026-12-04/",
+  "conversationId": "6ae7b4f4787533f0695abd72",
+  "mensaje_cliente": "Hola Carmen! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/carmen-recibida-2026-12-04/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      3093750
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      4804050
+    ],
+    [
+      "Opción B — Finger Food",
+      5233000
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "tipo": "recibida",
+    "cliente": "Carmen",
+    "fecha": "2026-12-04",
+    "fechas_extra": [
+      "2026-12-05"
+    ],
+    "invitados": 50,
+    "catering": "si",
+    "bebida_mesa": false,
+    "conversationId": "6ae7b4f4787533f0695abd72"
+  }
+}
