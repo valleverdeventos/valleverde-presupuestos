@@ -1,0 +1,35 @@
+{
+  "slug": "eliana-cumpleanos-2027-03-06",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/eliana-cumpleanos-2027-03-06/",
+  "conversationId": "6ab93dec36170acb616a7ecc",
+  "mensaje_cliente": "Hola Eliana! Acá va la propuesta para tu evento del 06/03, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/eliana-cumpleanos-2027-03-06/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      3640500
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      5692860
+    ],
+    [
+      "Opción B — Finger Food",
+      6136980
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "si",
+    "cliente": "Eliana",
+    "con_barra": true,
+    "conversationId": "6ab93dec36170acb616a7ecc",
+    "fecha": "2027-03-06",
+    "fechas_extra": [],
+    "invitados": 60,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumpleanos",
+    "titulo": "Cumple de Sofi"
+  }
+}
