@@ -1,0 +1,40 @@
+{
+  "slug": "seven-eventos-empresarial-2026-11-29",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/seven-eventos-empresarial-2026-11-29/",
+  "conversationId": "6ae9f0b3d4e199fa3813579c",
+  "mensaje_cliente": "Hola Seven! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/seven-eventos-empresarial-2026-11-29/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2360250
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      3429660
+    ],
+    [
+      "Opción B — Finger Food",
+      3714450
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Seven Eventos",
+    "con_barra": true,
+    "conversationId": "6ae9f0b3d4e199fa3813579c",
+    "fecha": "2026-11-29",
+    "fechas_extra": [
+      "2026-11-28"
+    ],
+    "horario": "13:00 a 18:00",
+    "invitados": 30,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "empresarial",
+    "titulo": "Capacitación"
+  }
+}
