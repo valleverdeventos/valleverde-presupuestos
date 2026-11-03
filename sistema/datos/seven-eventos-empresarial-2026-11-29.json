@@ -8,12 +8,7 @@
   "servicios": [
     {
       "nombre": "Salón (incluye personal completo, DJ y música de ambiente)",
-      "precio": 52800,
-      "cantidad": 30
-    },
-    {
-      "nombre": "Barra de tragos (con alcohol)",
-      "precio": 25875,
+      "precio": 16667,
       "cantidad": 30
     },
     {
@@ -32,34 +27,31 @@
       "cantidad": 30
     }
   ],
-  "aviso": "Esta propuesta contempla dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores. El presupuesto final se ajusta según los servicios que efectivamente se elijan, manteniendo siempre nuestra opción base \"Salón + Barra de tragos\". Ambas opciones incluyen mesa de postres. El servicio de salón incluye personal completo, DJ y música de ambiente.",
+  "aviso": "Esta propuesta contempla el salón sin barra de tragos y dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores. El presupuesto final se ajusta según los servicios que efectivamente se elijan. Ambas opciones incluyen mesa de postres. El servicio de salón incluye personal completo, DJ y música de ambiente.",
   "opciones": [
     {
-      "tag": "Opción Base — Salón + Barra",
-      "label": "Total (Salón + Barra de tragos)",
+      "tag": "Opción Base — Salón",
+      "label": "Total (Salón)",
       "servicios": [
-        0,
-        1
+        0
       ]
     },
     {
       "tag": "Opción A — Degustación de Pizzas",
-      "label": "Total (incluye Salón, Barra, Degustación de Pizzas y Mesa de Postres)",
+      "label": "Total (incluye Salón, Degustación de Pizzas y Mesa de Postres)",
       "servicios": [
         0,
         1,
-        2,
-        4
+        3
       ]
     },
     {
       "tag": "Opción B — Finger Food",
-      "label": "Total (incluye Salón, Barra, Finger Food y Mesa de Postres)",
+      "label": "Total (incluye Salón, Finger Food y Mesa de Postres)",
       "servicios": [
         0,
-        1,
-        3,
-        4
+        2,
+        3
       ]
     }
   ],

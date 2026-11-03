@@ -5,26 +5,31 @@
   "mensaje_cliente": "Hola Seven! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/seven-eventos-empresarial-2026-11-29/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
   "totales": [
     [
-      "Opción Base — Salón + Barra",
-      2360250
+      "Opción Base — Salón",
+      500010
     ],
     [
       "Opción A — Degustación de Pizzas",
-      3429660
+      1569420
     ],
     [
       "Opción B — Finger Food",
-      3714450
+      1854210
     ]
   ],
   "avisos": [
-    "El cliente no dijo si quiere catering: van las opciones A y B."
+    "El cliente no dijo si quiere catering: van las opciones A y B.",
+    "Sin barra de tragos, como pediste.",
+    "Finger Food: precio a mano $29.434 (tabla $29.434).",
+    "Degustación de Pizzas: precio a mano $19.941 (tabla $19.941).",
+    "Mesa de Postres: precio a mano $15.706 (tabla $15.706).",
+    "Salón (incluye personal completo, DJ y música de ambiente): precio a mano $16.667 (tabla $52.800)."
   ],
   "pedido": {
     "bebida_mesa": false,
     "catering": "no_dice",
     "cliente": "Seven Eventos",
-    "con_barra": true,
+    "con_barra": false,
     "conversationId": "6ae9f0b3d4e199fa3813579c",
     "fecha": "2026-11-29",
     "fechas_extra": [
@@ -32,8 +37,15 @@
     ],
     "horario": "13:00 a 18:00",
     "invitados": 30,
+    "precios": {
+      "barra": 25875,
+      "finger": 29434,
+      "pizza": 19941,
+      "postres": 15706,
+      "salon": 16667
+    },
     "sin_alcohol": 0,
-    "sin_barra": false,
+    "sin_barra": true,
     "tipo": "empresarial",
     "titulo": "Capacitación"
   }
