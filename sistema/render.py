@@ -8,8 +8,10 @@ Usa  sistema/plantilla.html
 Deja presupuestos/<slug>/index.html
 """
 import datetime
+import itertools
 import json
 import pathlib
+import re
 import sys
 
 SISTEMA = pathlib.Path(__file__).resolve().parent
@@ -140,6 +142,19 @@ def aplicar_barra_propia(html, tragos):
     return html.replace(
         "Incluida en el servicio base, con opción adicional de barra sin alcohol "
         "para adolescentes.", "Incluida en el servicio base.")
+
+
+def aplicar_solo_salon(html):
+    """Alquiler del salon como servicio unico: sin paginas de lo que no se contrata.
+
+    Se activa con "solo_salon": true en el JSON. Saca lo que incluye el evento,
+    el catering y la barra, y renumera las paginas que quedan.
+    """
+    for etiqueta in ("04", "05", "06", "07"):
+        html = quitar_seccion(html, etiqueta)
+    html = re.sub(r'(?s)\s*<div class="timeline-fotos">.*?(?=\s*<div class="eyebrow")', "", html)
+    numeros = itertools.count(2)
+    return re.sub(r'PÁG\. \d+', lambda m: f"PÁG. {next(numeros):02}", html)
 
 
 BADGE_DJ = '      <div class="incluye-badge"><img src="../recursos-visuales/assets/icons/dj-incluido.jpg" alt="DJ incluido"></div>\n'
@@ -315,6 +330,8 @@ def render(slug):
         html = aplicar_formato_recibida(html, bool(d.get("recibida_con_barra")))
     if d.get("barra_tragos"):
         html = aplicar_barra_propia(html, d["barra_tragos"])
+    if d.get("solo_salon"):
+        html = aplicar_solo_salon(html)
 
     destino = RAIZ / "presupuestos" / slug
     destino.mkdir(parents=True, exist_ok=True)
