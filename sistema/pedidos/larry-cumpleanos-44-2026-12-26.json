@@ -1,0 +1,29 @@
+{
+  "slug": "larry-cumpleanos-44-2026-12-26",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/larry-cumpleanos-44-2026-12-26/",
+  "conversationId": "6aea66c75c7d9a679d70688e",
+  "mensaje_cliente": "Hola Larry! Acá va la propuesta para tu evento del 26/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/larry-cumpleanos-44-2026-12-26/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      3309750
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "adultos": 50,
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Larry",
+    "con_barra": true,
+    "conversationId": "6aea66c75c7d9a679d70688e",
+    "edad": 44,
+    "fecha": "2026-12-26",
+    "fechas_extra": [],
+    "invitados": 70,
+    "ninos": 20,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumpleanos"
+  }
+}
