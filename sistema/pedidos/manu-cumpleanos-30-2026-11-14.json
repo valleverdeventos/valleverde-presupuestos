@@ -1,0 +1,27 @@
+{
+  "slug": "manu-cumpleanos-30-2026-11-14",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/manu-cumpleanos-30-2026-11-14/",
+  "conversationId": "6aeb7c7edb99747813da0aad",
+  "mensaje_cliente": "Hola Manu! Acá va la propuesta para tu evento del 14/11, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/manu-cumpleanos-30-2026-11-14/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      3640500
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Manu",
+    "con_barra": false,
+    "conversationId": "6aeb7c7edb99747813da0aad",
+    "edad": 30,
+    "fecha": "2026-11-14",
+    "fechas_extra": [],
+    "invitados": 60,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumpleanos"
+  }
+}
