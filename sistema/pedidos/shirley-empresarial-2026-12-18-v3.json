@@ -1,0 +1,35 @@
+{
+  "slug": "shirley-empresarial-2026-12-18-v3",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/shirley-empresarial-2026-12-18-v3/",
+  "conversationId": "6aea361c2d3a573d0edfa453",
+  "mensaje_cliente": "Hola Shirley! Acá va la propuesta para tu evento del 18/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/shirley-empresarial-2026-12-18-v3/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      1942050
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      3023284
+    ],
+    [
+      "Opción B — Finger Food",
+      3232130
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": true,
+    "catering": "si",
+    "cliente": "Shirley",
+    "con_barra": true,
+    "conversationId": "6aea361c2d3a573d0edfa453",
+    "fecha": "2026-12-18",
+    "fechas_extra": [],
+    "invitados": 22,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "empresarial",
+    "titulo": "Cena de empresa con entrega de premios"
+  }
+}
