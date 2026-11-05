@@ -10,6 +10,7 @@
     ]
   ],
   "avisos": [
+    "Barra de tragos (con alcohol): precio a mano $25.875 (tabla $25.875).",
     "Salón (incluye personal completo, DJ y música de ambiente): precio a mano $40.800 (tabla $40.800)."
   ],
   "pedido": {
@@ -23,6 +24,7 @@
     "horario": "12:30 a 17:30",
     "invitados": 40,
     "precios": {
+      "barra": 25875,
       "salon": 40800
     },
     "sin_alcohol": 0,
