@@ -6,24 +6,27 @@
   "totales": [
     [
       "Total",
-      1632000
+      2667000
     ]
   ],
   "avisos": [
-    "Sin barra de tragos, como pediste."
+    "Salón (incluye personal completo, DJ y música de ambiente): precio a mano $40.800 (tabla $40.800)."
   ],
   "pedido": {
     "bebida_mesa": false,
     "catering": "no",
     "cliente": "Agustin",
-    "con_barra": false,
+    "con_barra": true,
     "conversationId": "6ac3aca504737617ded0e065",
     "fecha": "2026-12-23",
     "fechas_extra": [],
     "horario": "12:30 a 17:30",
     "invitados": 40,
+    "precios": {
+      "salon": 40800
+    },
     "sin_alcohol": 0,
-    "sin_barra": true,
+    "sin_barra": false,
     "tipo": "empresarial"
   }
 }
