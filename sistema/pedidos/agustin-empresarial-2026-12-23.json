@@ -1,0 +1,29 @@
+{
+  "slug": "agustin-empresarial-2026-12-23",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/agustin-empresarial-2026-12-23/",
+  "conversationId": "6ac3aca504737617ded0e065",
+  "mensaje_cliente": "Hola Agustin! Acá va la propuesta para tu evento del 23/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/agustin-empresarial-2026-12-23/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      1632000
+    ]
+  ],
+  "avisos": [
+    "Sin barra de tragos, como pediste."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Agustin",
+    "con_barra": false,
+    "conversationId": "6ac3aca504737617ded0e065",
+    "fecha": "2026-12-23",
+    "fechas_extra": [],
+    "horario": "12:30 a 17:30",
+    "invitados": 40,
+    "sin_alcohol": 0,
+    "sin_barra": true,
+    "tipo": "empresarial"
+  }
+}
