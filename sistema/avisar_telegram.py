@@ -11,7 +11,11 @@ minutos en abrir.
 
 Botones: "Aprobar y enviar" (sólo si el pedido vino de un WhatsApp, callback
 `ok:<slug>`), "Ajustar" (callback `aj:<slug>`) y "Ver presupuesto" (link).
-Los callbacks los atiende el escenario 2 de Make.
+Los callbacks los atiende el agente en Railway.
+
+Al terminar le avisa al agente que este presupuesto llegó a destino, para que
+no lo dé por perdido: el agente vigila cada pedido que manda y reclama los que
+no vuelven en 12 minutos (09/11/2026).
 
 Necesita TELEGRAM_PRESUPUESTOS_TOKEN y TELEGRAM_PRESUPUESTOS_CHAT_ID en el entorno.
 """
@@ -29,6 +33,8 @@ PEDIDOS = SISTEMA / "pedidos"
 DEMORA = ("GitHub Pages todavía no servía la página cuando se armó. El presupuesto está "
           "publicado igual: si el link no abre o muestra una versión vieja, esperá un par "
           "de minutos y recargá antes de mandárselo al cliente.")
+
+AGENTE = "https://agente-production-55f4.up.railway.app/listo"
 
 
 def pesos(n):
@@ -52,6 +58,22 @@ def enviar(texto, botones=None):
     )
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r)
+
+
+def avisar_al_agente(conversation_id):
+    # Cierra el despacho que el agente dejó esperando. Si falla, no pasa nada grave: el
+    # vigilante va a reclamar el pedido y Gian lo reintenta con un botón.
+    req = urllib.request.Request(
+        AGENTE,
+        data=json.dumps({"conversationId": conversation_id or ""}).encode(),
+        headers={"Content-Type": "application/json"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.load(r)
+    except Exception as e:
+        print(f"no pude avisarle al agente: {e}", file=sys.stderr)
+        return None
 
 
 def avisar_presupuesto(slug, url=None, demorado=False):
@@ -84,15 +106,23 @@ def avisar_presupuesto(slug, url=None, demorado=False):
         fila.append({"text": "✅ Aprobar y enviar", "callback_data": f"ok:{slug}"})
     fila.append({"text": "✏️ Ajustar", "callback_data": f"aj:{slug}"})
     enviar("\n".join(lineas), [fila, [{"text": "Ver presupuesto", "url": fresco}]])
+    avisar_al_agente(reg.get("conversationId"))
 
 
 def avisar_error(archivo_error, archivo_pedido=None):
     error = pathlib.Path(archivo_error).read_text(encoding="utf-8", errors="replace").strip() or "error sin detalle"
     texto = f"⚠️ <b>No se pudo armar el presupuesto automático</b>\n\n{html.escape(error[-1500:])}"
+    cid = ""
     if archivo_pedido and pathlib.Path(archivo_pedido).exists():
         pedido = pathlib.Path(archivo_pedido).read_text(encoding="utf-8")
         texto += f"\n\nPedido:\n<pre>{html.escape(pedido[:1500])}</pre>"
+        try:
+            cid = json.loads(pedido).get("conversationId") or ""
+        except Exception:
+            cid = ""
     enviar(texto)
+    # El error ya se avisó acá: el vigilante no tiene que reclamarlo de nuevo a los 12 minutos.
+    avisar_al_agente(cid)
 
 
 def main():
