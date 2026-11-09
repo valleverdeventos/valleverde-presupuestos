@@ -1,0 +1,41 @@
+{
+  "slug": "jesica-marsico-cumpleanos-15-2027-03-26-v2",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/jesica-marsico-cumpleanos-15-2027-03-26-v2/",
+  "conversationId": "6af23ac9303c94b568f3296f",
+  "mensaje_cliente": "Hola Jesica! Acá va la propuesta para tu evento del 26/03, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/jesica-marsico-cumpleanos-15-2027-03-26-v2/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      4694134
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      7088554
+    ],
+    [
+      "Opción B — Finger Food",
+      7543554
+    ]
+  ],
+  "avisos": [
+    "Horario de 7 h: salón y barra llevan 1 h extra.",
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "tipo": "cumple_15",
+    "cliente": "Jesica Marsico",
+    "edad": 15,
+    "fecha": "2027-03-26",
+    "horario": "21:00 a 04:00",
+    "fechas_extra": [],
+    "invitados": 70,
+    "adultos": 52,
+    "adolescentes": 18,
+    "catering": "no_dice",
+    "con_barra": true,
+    "sin_barra": false,
+    "sin_alcohol": 0,
+    "bebida_mesa": false,
+    "conversationId": "6af23ac9303c94b568f3296f"
+  }
+}
