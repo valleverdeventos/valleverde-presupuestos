@@ -1,0 +1,37 @@
+{
+  "slug": "gisela-cumpleanos-45-2027-02-21",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/gisela-cumpleanos-45-2027-02-21/",
+  "conversationId": "6af393dae3e045016a387a97",
+  "mensaje_cliente": "Hola Gisela! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/gisela-cumpleanos-45-2027-02-21/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      2667000
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      4047320
+    ],
+    [
+      "Opción B — Finger Food",
+      4425480
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "si",
+    "cliente": "Gisela",
+    "con_barra": true,
+    "conversationId": "6af393dae3e045016a387a97",
+    "edad": 45,
+    "fecha": "2027-02-21",
+    "fechas_extra": [
+      "2027-02-27"
+    ],
+    "invitados": 40,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumpleanos"
+  }
+}
