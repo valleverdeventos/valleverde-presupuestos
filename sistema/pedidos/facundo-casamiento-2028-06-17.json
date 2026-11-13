@@ -6,10 +6,14 @@
   "totales": [
     [
       "Total",
-      4662000
+      5439040
     ]
   ],
-  "avisos": [],
+  "avisos": [
+    "Horario de 7 h: salón y barra llevan 1 h extra.",
+    "Barra de tragos (con alcohol): precio a mano $30.188 (tabla $30.188).",
+    "Salón (incluye personal completo, DJ y música de ambiente): precio a mano $37.800 (tabla $37.800)."
+  ],
   "pedido": {
     "bebida_mesa": false,
     "catering": "no",
@@ -18,7 +22,12 @@
     "conversationId": "6af666ae2decd208edbe7cc6",
     "fecha": "2028-06-17",
     "fechas_extra": [],
+    "horario": "21:00 a 04:00",
     "invitados": 80,
+    "precios": {
+      "barra": 30188,
+      "salon": 37800
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "casamiento"
