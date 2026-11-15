@@ -6,10 +6,15 @@
   "totales": [
     [
       "Total",
-      3794615
+      4340615
     ]
   ],
-  "avisos": [],
+  "avisos": [
+    "Barra de tragos adultos (con alcohol): precio a mano $25.875 (tabla $25.875).",
+    "Barra de tragos adolescentes (sin alcohol): precio a mano $18.112 (tabla $18.112).",
+    "Salón niños (menores de 12): precio a mano $16.800 (tabla $16.800).",
+    "Salón (incluye personal completo, DJ y música de ambiente): precio a mano $42.000 (tabla $33.600)."
+  ],
   "pedido": {
     "adolescentes": 20,
     "adultos": 45,
@@ -22,6 +27,12 @@
     "fechas_extra": [],
     "invitados": 70,
     "ninos": 5,
+    "precios": {
+      "barra": 25875,
+      "barra_teen": 18112,
+      "ninos": 16800,
+      "salon": 42000
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "cumple_15"

@@ -1,5 +1,5 @@
 {
-  "emitido": "14/11/2026",
+  "emitido": "15/11/2026",
   "titulo": "Cumpleaños de 15",
   "cliente": "Melisa",
   "fecha": "Sábado 30/10/2027",
@@ -9,7 +9,7 @@
   "servicios": [
     {
       "nombre": "Salón (incluye personal completo, DJ y música de ambiente)",
-      "precio": 33600,
+      "precio": 42000,
       "cantidad": 65
     },
     {
