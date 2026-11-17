@@ -1,0 +1,27 @@
+{
+  "slug": "virginia-cumpleanos-17-2026-12-18",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/virginia-cumpleanos-17-2026-12-18/",
+  "conversationId": "6afc4f4a655cbf501a77215d",
+  "mensaje_cliente": "Hola Virginia! Acá va la propuesta para tu evento del 18/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/virginia-cumpleanos-17-2026-12-18/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      2667000
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Virginia",
+    "con_barra": true,
+    "conversationId": "6afc4f4a655cbf501a77215d",
+    "edad": 17,
+    "fecha": "2026-12-18",
+    "fechas_extra": [],
+    "invitados": 40,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumpleanos"
+  }
+}
