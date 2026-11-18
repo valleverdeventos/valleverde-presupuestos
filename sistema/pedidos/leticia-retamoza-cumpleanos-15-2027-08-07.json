@@ -1,0 +1,39 @@
+{
+  "slug": "leticia-retamoza-cumpleanos-15-2027-08-07",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/leticia-retamoza-cumpleanos-15-2027-08-07/",
+  "conversationId": "6afcd1ddad1b46905c8a3d73",
+  "mensaje_cliente": "Hola Leticia! Acá va la propuesta para tu evento del 07/08, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/leticia-retamoza-cumpleanos-15-2027-08-07/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      4007990
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      6402410
+    ],
+    [
+      "Opción B — Finger Food",
+      6857410
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "adolescentes": 20,
+    "adultos": 50,
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Leticia Retamoza",
+    "con_barra": true,
+    "conversationId": "6afcd1ddad1b46905c8a3d73",
+    "edad": 15,
+    "fecha": "2027-08-07",
+    "fechas_extra": [],
+    "invitados": 70,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumple_15"
+  }
+}
