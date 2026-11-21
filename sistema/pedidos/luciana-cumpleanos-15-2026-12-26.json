@@ -1,0 +1,30 @@
+{
+  "slug": "luciana-cumpleanos-15-2026-12-26",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/luciana-cumpleanos-15-2026-12-26/",
+  "conversationId": "6b020c00f9b9fcc7e24d3bd5",
+  "mensaje_cliente": "Hola Luciana! Acá va la propuesta para tu evento del 26/12, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/luciana-cumpleanos-15-2026-12-26/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      2715334
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "adolescentes": 7,
+    "adultos": 34,
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Luciana",
+    "con_barra": false,
+    "conversationId": "6b020c00f9b9fcc7e24d3bd5",
+    "edad": 15,
+    "fecha": "2026-12-26",
+    "fechas_extra": [],
+    "invitados": 48,
+    "ninos": 7,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumple_15"
+  }
+}

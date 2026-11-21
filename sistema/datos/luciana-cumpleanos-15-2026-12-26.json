@@ -1,0 +1,38 @@
+{
+  "emitido": "21/11/2026",
+  "titulo": "Cumpleaños de 15",
+  "cliente": "Luciana",
+  "fecha": "Sábado 26/12/2026",
+  "horario": "21:00 a 03:00",
+  "invitados": 48,
+  "invitados_texto": "34 adultos + 7 adolescentes",
+  "servicios": [
+    {
+      "nombre": "Salón (incluye personal completo, DJ y música de ambiente)",
+      "precio": 38400,
+      "cantidad": 41
+    },
+    {
+      "nombre": "Barra de tragos adultos (con alcohol)",
+      "precio": 25875,
+      "cantidad": 34
+    },
+    {
+      "nombre": "Barra de tragos adolescentes (sin alcohol)",
+      "precio": 18112,
+      "cantidad": 7
+    },
+    {
+      "nombre": "Salón niños (menores de 12)",
+      "precio": 19200,
+      "cantidad": 7
+    }
+  ],
+  "aviso": "Esta propuesta corresponde a nuestra opción base \"Salón + Barra de tragos\" para el total de invitados. El catering puede estar a cargo del cliente; si están interesados, les enviamos aparte el presupuesto actualizado con nuestro catering (finger food, degustación de pizzas, mesa de postres, bebida de mesa) a elección. El servicio de salón incluye personal completo, DJ y música de ambiente.",
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
