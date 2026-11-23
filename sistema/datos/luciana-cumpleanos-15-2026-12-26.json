@@ -1,5 +1,5 @@
 {
-  "emitido": "21/11/2026",
+  "emitido": "23/11/2026",
   "titulo": "Cumpleaños de 15",
   "cliente": "Luciana",
   "fecha": "Sábado 26/12/2026",
@@ -9,12 +9,12 @@
   "servicios": [
     {
       "nombre": "Salón (incluye personal completo, DJ y música de ambiente)",
-      "precio": 38400,
+      "precio": 45000,
       "cantidad": 41
     },
     {
       "nombre": "Barra de tragos adultos (con alcohol)",
-      "precio": 25875,
+      "precio": 26500,
       "cantidad": 34
     },
     {
