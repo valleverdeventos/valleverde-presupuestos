@@ -6,21 +6,27 @@
   "totales": [
     [
       "Opción Base — Salón + Barra",
-      8407500
+      7772000
     ],
     [
       "Opción A — Degustación de Pizzas",
-      12512220
+      11876720
     ],
     [
       "Opción B — Finger Food",
-      13292220
+      12656720
     ]
   ],
   "avisos": [
     "Más de 90 invitados: los unitarios salen de la escala 90.",
     "Horario de 8 h: salón y barra llevan 2 h extra.",
-    "El cliente no dijo si quiere catering: van las opciones A y B."
+    "El cliente no dijo si quiere catering: van las opciones A y B.",
+    "Barra de tragos adultos (con alcohol): precio a mano $29.000 (tabla $34.500).",
+    "Barra de tragos adolescentes (sin alcohol): precio a mano $19.000 (tabla $24.150).",
+    "Finger Food: precio a mano $25.000 (tabla $25.000).",
+    "Degustación de Pizzas: precio a mano $18.500 (tabla $18.500).",
+    "Mesa de Postres: precio a mano $15.706 (tabla $15.706).",
+    "Salón (incluye personal completo, DJ y música de ambiente): precio a mano $41.600 (tabla $41.600)."
   ],
   "pedido": {
     "adolescentes": 70,
@@ -37,6 +43,14 @@
     ],
     "horario": "21:00 a 05:00",
     "invitados": 120,
+    "precios": {
+      "barra": 29000,
+      "barra_teen": 19000,
+      "finger": 25000,
+      "pizza": 18500,
+      "postres": 15706,
+      "salon": 41600
+    },
     "sin_alcohol": 0,
     "sin_barra": false,
     "tipo": "cumple_15"
