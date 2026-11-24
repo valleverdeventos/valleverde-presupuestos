@@ -1,0 +1,39 @@
+{
+  "slug": "tia-paola-cumpleanos-15-2028-02-12",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/tia-paola-cumpleanos-15-2028-02-12/",
+  "conversationId": "6b04d843bf38487fe8b6308e",
+  "mensaje_cliente": "Hola Tía! Acá va la propuesta para tu evento del 12/02, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/tia-paola-cumpleanos-15-2028-02-12/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      3407610
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      5459970
+    ],
+    [
+      "Opción B — Finger Food",
+      5904090
+    ]
+  ],
+  "avisos": [
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "adolescentes": 30,
+    "adultos": 30,
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Tía Paola Regalería",
+    "con_barra": true,
+    "conversationId": "6b04d843bf38487fe8b6308e",
+    "edad": 15,
+    "fecha": "2028-02-12",
+    "fechas_extra": [],
+    "invitados": 60,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumple_15"
+  }
+}
