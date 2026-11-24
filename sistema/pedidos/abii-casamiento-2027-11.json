@@ -1,0 +1,26 @@
+{
+  "slug": "abii-casamiento-2027-11",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/abii-casamiento-2027-11/",
+  "conversationId": "6b05b80f3284ff9a7b17d6eb",
+  "mensaje_cliente": "Hola Abii! Acá va la propuesta para tu evento de noviembre, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/abii-casamiento-2027-11/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      3822540
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Abii",
+    "con_barra": true,
+    "conversationId": "6b05b80f3284ff9a7b17d6eb",
+    "fecha": "2027-11",
+    "fechas_extra": [],
+    "invitados": 60,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "casamiento"
+  }
+}
