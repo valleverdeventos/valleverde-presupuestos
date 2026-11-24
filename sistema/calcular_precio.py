@@ -19,16 +19,18 @@ import sys
 # Tabla BASE (precio por invitado segun escala de invitados), tal cual la
 # hoja BASE del Excel. NO modificar estos numeros sin recalibrar contra
 # un presupuesto real ya confirmado por Gian.
+# 24/11/2026: todos los valores subieron un 5% (pedido de Gian). Rigen para los
+# presupuestos nuevos desde esa fecha; los ya emitidos conservan sus valores.
 # ---------------------------------------------------------------------------
 BASE = {
-    20: {"salon": 51696, "barra": 39459, "finger": 29434, "pizza": 19941, "postre": 15706, "bebida": 13500},
-    30: {"salon": 39388, "barra": 29813, "finger": 29434, "pizza": 19941, "postre": 15706, "bebida": 13500},
-    40: {"salon": 30772, "barra": 20606, "finger": 28256, "pizza": 18802, "postre": 15706, "bebida": 13500},
-    50: {"salon": 27079, "barra": 18414, "finger": 27079, "pizza": 17662, "postre": 15706, "bebida": 13500},
-    60: {"salon": 24617, "barra": 17537, "finger": 25902, "pizza": 16523, "postre": 15706, "bebida": 13500},
-    70: {"salon": 23386, "barra": 16222, "finger": 25000, "pizza": 15383, "postre": 15706, "bebida": 13500},
-    80: {"salon": 22771, "barra": 15564, "finger": 25000, "pizza": 14814, "postre": 15706, "bebida": 13500},
-    90: {"salon": 22156, "barra": 14907, "finger": 25000, "pizza": 14244, "postre": 15706, "bebida": 13500},
+    20: {"salon": 54281, "barra": 41432, "finger": 30906, "pizza": 20938, "postre": 16491, "bebida": 14175},
+    30: {"salon": 41357, "barra": 31304, "finger": 30906, "pizza": 20938, "postre": 16491, "bebida": 14175},
+    40: {"salon": 32311, "barra": 21636, "finger": 29669, "pizza": 19742, "postre": 16491, "bebida": 14175},
+    50: {"salon": 28433, "barra": 19335, "finger": 28433, "pizza": 18545, "postre": 16491, "bebida": 14175},
+    60: {"salon": 25848, "barra": 18414, "finger": 27197, "pizza": 17349, "postre": 16491, "bebida": 14175},
+    70: {"salon": 24555, "barra": 17033, "finger": 26250, "pizza": 16152, "postre": 16491, "bebida": 14175},
+    80: {"salon": 23910, "barra": 16342, "finger": 26250, "pizza": 15555, "postre": 16491, "bebida": 14175},
+    90: {"salon": 23264, "barra": 15652, "finger": 26250, "pizza": 14956, "postre": 16491, "bebida": 14175},
 }
 
 # La barra de tragos (adultos) ya NO se busca en la tabla BASE por escala de
@@ -40,24 +42,26 @@ BASE = {
 #   11/07/2026 -> 19500
 #   03/08/2026 -> 21500
 #   22/09/2026 -> 22500
-#   22/10/2026 -> 25875  (vigente, +15%)
-BARRA_ADULTOS_FIJO = 25875
+#   22/10/2026 -> 25875  (+15%)
+#   24/11/2026 -> 27169  (vigente, +5%)
+BARRA_ADULTOS_FIJO = 27169
 
 # Salon: tabla propia por cantidad de invitados (fijada por Gian el 27/09/2026,
-# aumentada un 20% el 22/10/2026).
+# aumentada un 20% el 22/10/2026 y un 5% el 24/11/2026).
 # Es el valor final por persona para 6 horas, con o sin catering: reemplaza la
 # columna "salon" de BASE, el factor de ajuste y los pisos del salon del
 # 17/09/2026 ($29.000 y $33.000 sin catering), que dejan de regir.
 # Entre filas se toma la de abajo; menos de 25 va con 25 y mas de 90 con 90.
 # Vale para presupuestos nuevos: los ya emitidos solo se actualizan por INDEC.
-SALON_TABLA = {25: 62400, 30: 52800, 35: 45600, 40: 40800, 45: 38400,
-               50: 36000, 60: 34800, 70: 33600, 80: 32400, 90: 31200}
+SALON_TABLA = {25: 65520, 30: 55440, 35: 47880, 40: 42840, 45: 40320,
+               50: 37800, 60: 36540, 70: 35280, 80: 34020, 90: 32760}
 
-# Piso por persona de la degustacion de pizzas (17/09/2026): nunca baja de este
-# valor; en escalas chicas, donde la tabla ya da mas, se mantiene la tabla.
-PIZZA_PISO = 18500
+# Piso por persona de la degustacion de pizzas (17/09/2026, +5% el 24/11/2026): nunca
+# baja de este valor; en escalas chicas, donde la tabla ya da mas, se mantiene la tabla.
+PIZZA_PISO = 19425
 
-# Finger food: desde la escala 70 va fijo a $25.000 por persona (22/09/2026).
+# Finger food: desde la escala 70 va fijo por persona (22/09/2026: $25.000; desde el
+# 24/11/2026: $26.250).
 # Antes: 70 -> 24724, 80 -> 23547, 90 -> 22370.
 
 
