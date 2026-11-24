@@ -1,0 +1,81 @@
+{
+  "emitido": "24/11/2026",
+  "titulo": "Cumpleaños de 15",
+  "cliente": "Mariel",
+  "fecha": "Sábado 12/02/2028 o Sábado 19/02/2028 (a elección)",
+  "horario": "21:00 a 05:00",
+  "invitados": 120,
+  "invitados_texto": "50 adultos + 70 adolescentes",
+  "servicios": [
+    {
+      "nombre": "Salón (incluye personal completo, DJ y música de ambiente)",
+      "precio": 41600,
+      "cantidad": 120
+    },
+    {
+      "nombre": "Barra de tragos adultos (con alcohol)",
+      "precio": 34500,
+      "cantidad": 50
+    },
+    {
+      "nombre": "Barra de tragos adolescentes (sin alcohol)",
+      "precio": 24150,
+      "cantidad": 70
+    },
+    {
+      "nombre": "Degustación de Pizzas",
+      "precio": 18500,
+      "cantidad": 120
+    },
+    {
+      "nombre": "Finger Food",
+      "precio": 25000,
+      "cantidad": 120
+    },
+    {
+      "nombre": "Mesa de Postres",
+      "precio": 15706,
+      "cantidad": 120
+    }
+  ],
+  "aviso": "Esta propuesta contempla dos opciones de catering (Degustación de Pizzas y Finger Food) a modo de referencia de valores. El presupuesto final se ajusta según los servicios que efectivamente se elijan, manteniendo siempre nuestra opción base \"Salón + Barra de tragos\". Ambas opciones incluyen mesa de postres. El servicio de salón incluye personal completo, DJ y música de ambiente.",
+  "opciones": [
+    {
+      "tag": "Opción Base — Salón + Barra",
+      "label": "Total (Salón + Barra de tragos)",
+      "servicios": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "tag": "Opción A — Degustación de Pizzas",
+      "label": "Total (incluye Salón, Barra, Degustación de Pizzas y Mesa de Postres)",
+      "servicios": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "tag": "Opción B — Finger Food",
+      "label": "Total (incluye Salón, Barra, Finger Food y Mesa de Postres)",
+      "servicios": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ]
+    }
+  ],
+  "terminos": [
+    "Seña 35%: con la reserva del salón.",
+    "Saldo 65%: 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}

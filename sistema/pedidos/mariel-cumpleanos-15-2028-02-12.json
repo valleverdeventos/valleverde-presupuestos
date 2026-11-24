@@ -1,0 +1,44 @@
+{
+  "slug": "mariel-cumpleanos-15-2028-02-12",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/mariel-cumpleanos-15-2028-02-12/",
+  "conversationId": "6ab93e9a1827ce9621fd0f87",
+  "mensaje_cliente": "Hola Mariel! Acá va la propuesta para tu evento con las fechas posibles que charlamos, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/mariel-cumpleanos-15-2028-02-12/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      8407500
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      12512220
+    ],
+    [
+      "Opción B — Finger Food",
+      13292220
+    ]
+  ],
+  "avisos": [
+    "Más de 90 invitados: los unitarios salen de la escala 90.",
+    "Horario de 8 h: salón y barra llevan 2 h extra.",
+    "El cliente no dijo si quiere catering: van las opciones A y B."
+  ],
+  "pedido": {
+    "adolescentes": 70,
+    "adultos": 50,
+    "bebida_mesa": false,
+    "catering": "no_dice",
+    "cliente": "Mariel",
+    "con_barra": true,
+    "conversationId": "6ab93e9a1827ce9621fd0f87",
+    "edad": 15,
+    "fecha": "2028-02-12",
+    "fechas_extra": [
+      "2028-02-19"
+    ],
+    "horario": "21:00 a 05:00",
+    "invitados": 120,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumple_15"
+  }
+}
