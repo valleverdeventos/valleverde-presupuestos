@@ -159,8 +159,10 @@ def aplicar_solo_salon(html):
 
 BADGE_DJ = '      <div class="incluye-badge"><img src="../recursos-visuales/assets/icons/dj-incluido.jpg" alt="DJ incluido"></div>\n'
 
-BEBIDA_AVISO = ("La bebida de mesa queda a cargo del cliente, "
-                "salvo que se acuerde lo contrario.")
+# 24/11/2026: se aclara qué es bebida de mesa, porque el bot la confundió con la barra.
+BEBIDA_AVISO = ("La bebida de mesa (vino, cerveza, gaseosas, jugos y agua) queda a cargo "
+                "del cliente, salvo que se acuerde lo contrario. La barra de tragos incluye "
+                "solo tragos.")
 
 
 def pesos(n):
