@@ -1,0 +1,30 @@
+{
+  "slug": "ro-cumpleanos-15-2028-04-22",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/ro-cumpleanos-15-2028-04-22/",
+  "conversationId": "6b0703e28ac4fdf661a3cc8b",
+  "mensaje_cliente": "Hola Ro! Acá va la propuesta para tu evento del 22/04, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/ro-cumpleanos-15-2028-04-22/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      3805677
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "adolescentes": 30,
+    "adultos": 33,
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Ro",
+    "con_barra": true,
+    "conversationId": "6b0703e28ac4fdf661a3cc8b",
+    "edad": 15,
+    "fecha": "2028-04-22",
+    "fechas_extra": [],
+    "invitados": 65,
+    "ninos": 2,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumple_15"
+  }
+}
