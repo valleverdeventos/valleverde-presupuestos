@@ -1,0 +1,38 @@
+{
+  "slug": "victoria-cumpleanos-15-2027-02-07",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/victoria-cumpleanos-15-2027-02-07/",
+  "conversationId": "6b08b3dcf6230c667561e9c9",
+  "mensaje_cliente": "Hola Victoria! Acá va la propuesta para tu evento del 07/02, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/victoria-cumpleanos-15-2027-02-07/\n\nAhí tenés las opciones de catering con sus valores y las condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Opción Base — Salón + Barra",
+      3578010
+    ],
+    [
+      "Opción A — Degustación de Pizzas",
+      5732970
+    ],
+    [
+      "Opción B — Finger Food",
+      6199290
+    ]
+  ],
+  "avisos": [],
+  "pedido": {
+    "adolescentes": 30,
+    "adultos": 30,
+    "bebida_mesa": false,
+    "catering": "si",
+    "cliente": "Victoria",
+    "con_barra": true,
+    "conversationId": "6b08b3dcf6230c667561e9c9",
+    "edad": 15,
+    "fecha": "2027-02-07",
+    "fechas_extra": [],
+    "horario": "21:00 a 03:00",
+    "invitados": 60,
+    "sin_alcohol": 0,
+    "sin_barra": false,
+    "tipo": "cumple_15"
+  }
+}
