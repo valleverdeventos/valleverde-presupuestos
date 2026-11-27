@@ -1,0 +1,44 @@
+{
+  "emitido": "26/11/2026",
+  "titulo": "Cumpleaños de 15",
+  "cliente": "Victoria",
+  "fecha": "Domingo 07/02/2027",
+  "horario": "21:00 a 03:00",
+  "invitados": 69,
+  "invitados_texto": "30 adultos + 30 adolescentes + 6 niños + 3 menores de 5 años",
+  "sin_dj": true,
+  "servicios": [
+    {
+      "nombre": "Salón (incluye personal completo)",
+      "precio": 36540,
+      "cantidad": 60
+    },
+    {
+      "nombre": "Salón — niños de 6 a 11 años (6 niños, equivalen a 3)",
+      "precio": 36540,
+      "cantidad": 3
+    },
+    {
+      "nombre": "Barra de tragos adultos (con alcohol)",
+      "precio": 27169,
+      "cantidad": 30
+    },
+    {
+      "nombre": "Barra de tragos adolescentes (sin alcohol)",
+      "precio": 19018,
+      "cantidad": 30
+    },
+    {
+      "nombre": "Barra de tragos sin alcohol — niños de 6 a 11 años (6 niños, equivalen a 3)",
+      "precio": 19018,
+      "cantidad": 3
+    }
+  ],
+  "aviso": "Esta propuesta corresponde a nuestra opción base \"Salón + Barra de tragos\" para el total de invitados. El catering puede estar a cargo del cliente; si están interesados, les enviamos aparte el presupuesto actualizado con nuestro catering (finger food, degustación de pizzas, mesa de postres, bebida de mesa) a elección. El servicio de salón incluye personal completo. Los menores de 5 años no abonan.",
+  "terminos": [
+    "Seña 35% (sobre Salón y Barras de tragos): $1.310.639, con la reserva del salón.",
+    "Saldo 65%: $2.434.045, 20 días antes del evento.",
+    "Cancelaciones no reintegran la seña.",
+    "Valores expresados a valor del día de la fecha de emisión de este presupuesto. Se actualizarán según inflación oficial (INDEC) entre la emisión y la fecha del evento."
+  ]
+}
