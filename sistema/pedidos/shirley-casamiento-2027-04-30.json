@@ -1,0 +1,29 @@
+{
+  "slug": "shirley-casamiento-2027-04-30",
+  "url": "https://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/shirley-casamiento-2027-04-30/",
+  "conversationId": "6b08d9f52c1d7c50ca6b92fc",
+  "mensaje_cliente": "Hola Shirley! Acá va la propuesta para tu evento del 30/04, armada con lo que nos comentaste.\n\nhttps://valleverdeventos.github.io/valleverde-presupuestos/presupuestos/shirley-casamiento-2027-04-30/\n\nAhí tenés el detalle de servicios, valores y condiciones. La fecha se reserva con la seña.\n\nCualquier consulta o ajuste que necesiten, escribinos.\n\nGracias y saludos,\nGian",
+  "totales": [
+    [
+      "Total",
+      5177800
+    ]
+  ],
+  "avisos": [
+    "Más de 90 invitados: los unitarios salen de la escala 90.",
+    "100 adultos con barra sin alcohol (precio barra adolescentes)."
+  ],
+  "pedido": {
+    "bebida_mesa": false,
+    "catering": "no",
+    "cliente": "Shirley",
+    "con_barra": true,
+    "conversationId": "6b08d9f52c1d7c50ca6b92fc",
+    "fecha": "2027-04-30",
+    "fechas_extra": [],
+    "invitados": 100,
+    "sin_alcohol": 100,
+    "sin_barra": false,
+    "tipo": "casamiento"
+  }
+}
